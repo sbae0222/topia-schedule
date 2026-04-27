@@ -1,0 +1,1984 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>토피아 라이브 — 6월 학기 강사별 시간표</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,400&family=IBM+Plex+Sans+KR:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --ink: #1a1818;
+  --paper: #FAF7F2;
+  --paper-2: #F0EBE3;
+  --line: #2d2724;
+  --line-soft: #d8d2c8;
+  --accent: #C8553D;
+  --accent-2: #5C8A8A;
+  --gold: #D4A24C;
+  --muted: #8B8378;
+  --muted-soft: #B8AFA1;
+  --avail-bg: #FFF8E8;
+  --avail-border: #E8C76C;
+  --avail-fg: #8B6914;
+  --offduty-bg: #F5F2EC;
+  --final-green: #2F6B47;
+}
+
+html, body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: 'IBM Plex Sans KR', sans-serif;
+  font-weight: 400;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+body {
+  background:
+    radial-gradient(circle at 15% 10%, rgba(200, 85, 61, 0.05), transparent 40%),
+    radial-gradient(circle at 85% 85%, rgba(92, 138, 138, 0.05), transparent 40%),
+    var(--paper);
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 48px 32px 64px;
+}
+
+.masthead {
+  border-top: 4px double var(--ink);
+  border-bottom: 1px solid var(--ink);
+  padding: 32px 0 28px;
+  margin-bottom: 8px;
+}
+
+.masthead-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  color: var(--muted);
+  margin-bottom: 24px;
+  text-transform: uppercase;
+}
+
+.final-badge {
+  background: var(--final-green);
+  color: var(--paper);
+  padding: 4px 12px;
+  font-weight: 700;
+  letter-spacing: 0.25em;
+  font-size: 10px;
+}
+
+.masthead h1 {
+  font-family: 'Fraunces', serif;
+  font-weight: 400;
+  font-size: clamp(48px, 7vw, 88px);
+  line-height: 0.95;
+  letter-spacing: -0.03em;
+  font-style: italic;
+}
+
+.masthead h1 em {
+  font-style: normal;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.masthead-en {
+  margin-top: 8px;
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  font-weight: 300;
+  font-size: 24px;
+  color: var(--ink);
+  letter-spacing: -0.01em;
+  opacity: 0.7;
+}
+
+.masthead-sub {
+  margin-top: 18px;
+  font-family: 'Fraunces', serif;
+  font-size: 18px;
+  color: var(--muted);
+  font-style: italic;
+}
+
+.masthead-sub-en {
+  font-family: 'JetBrains Mono', monospace;
+  font-style: normal;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  margin-top: 6px;
+  opacity: 0.6;
+}
+
+.teacher-rail {
+  margin: 40px 0 32px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  padding: 4px 0;
+  background: var(--paper-2);
+}
+
+.teacher-tab {
+  flex: 0 0 auto;
+  padding: 12px 20px;
+  font-family: 'IBM Plex Sans KR', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  color: var(--muted);
+  transition: all 0.2s ease;
+  letter-spacing: -0.01em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  line-height: 1.2;
+}
+
+.teacher-tab .en {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.15em;
+  opacity: 0.6;
+  text-transform: uppercase;
+}
+
+.teacher-tab:hover {
+  color: var(--ink);
+  background: rgba(212, 162, 76, 0.08);
+}
+
+.teacher-tab.active {
+  color: var(--paper);
+  background: var(--ink);
+  font-weight: 600;
+}
+
+.teacher-tab .count {
+  display: inline-block;
+  margin-left: 6px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  font-weight: 400;
+  opacity: 0.7;
+  vertical-align: 1px;
+}
+
+.teacher-view {
+  display: none;
+  animation: fadeIn 0.4s ease;
+}
+
+.teacher-view.active { display: block; }
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.teacher-meta {
+  display: grid;
+  grid-template-columns: auto 1fr auto auto;
+  align-items: center;
+  gap: 24px;
+  padding: 32px 0 24px;
+  border-bottom: 2px solid var(--ink);
+  margin-bottom: 32px;
+}
+
+.teacher-name {
+  font-family: 'Fraunces', serif;
+  font-size: 64px;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: -0.025em;
+}
+
+.teacher-name .en-name {
+  display: block;
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  font-weight: 300;
+  font-size: 24px;
+  color: var(--muted);
+  margin-top: 6px;
+  letter-spacing: 0;
+}
+
+.teacher-name .role {
+  display: block;
+  font-size: 11px;
+  font-family: 'JetBrains Mono', monospace;
+  color: var(--muted);
+  font-weight: 400;
+  letter-spacing: 0.18em;
+  margin-top: 8px;
+  text-transform: uppercase;
+}
+
+.teacher-stats {
+  text-align: right;
+  font-family: 'JetBrains Mono', monospace;
+  border-left: 1px solid var(--line-soft);
+  padding-left: 24px;
+}
+
+.stat-num {
+  font-family: 'Fraunces', serif;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 1;
+}
+
+.stat-num.classes { color: var(--accent); }
+.stat-num.avail { color: var(--gold); }
+
+.stat-label {
+  font-size: 10px;
+  color: var(--muted);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-top: 6px;
+}
+
+.stat-label .kr {
+  display: block;
+  font-family: 'IBM Plex Sans KR', sans-serif;
+  font-size: 9px;
+  letter-spacing: 0.1em;
+  margin-top: 2px;
+  opacity: 0.7;
+}
+
+.calendar {
+  display: grid;
+  grid-template-columns: 90px repeat(4, 1fr);
+  gap: 0;
+  background: var(--ink);
+  border: 1px solid var(--ink);
+  margin-bottom: 32px;
+}
+
+.cal-header {
+  background: var(--ink);
+  color: var(--paper);
+  padding: 14px 16px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.cal-header.day {
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.cal-header.day .en {
+  display: block;
+  font-family: 'JetBrains Mono', monospace;
+  font-style: normal;
+  font-size: 9px;
+  letter-spacing: 0.2em;
+  margin-top: 4px;
+  opacity: 0.5;
+}
+
+.cal-time {
+  background: var(--paper-2);
+  border-top: 1px solid var(--line);
+  padding: 18px 12px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  text-align: center;
+  color: var(--muted);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 110px;
+}
+
+.cal-time .h {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--ink);
+  font-family: 'Fraunces', serif;
+}
+
+.cal-time .h-suffix {
+  font-size: 10px;
+  font-family: 'JetBrains Mono', monospace;
+  color: var(--muted);
+  font-weight: 400;
+}
+
+.cal-time .part {
+  font-size: 9px;
+  letter-spacing: 0.2em;
+  margin-top: 4px;
+  text-transform: uppercase;
+  opacity: 0.7;
+}
+
+.cell {
+  background: var(--paper);
+  border-top: 1px solid var(--line);
+  border-left: 1px solid var(--line);
+  padding: 14px;
+  min-height: 110px;
+  position: relative;
+  transition: background 0.2s;
+}
+
+.cell.offduty {
+  background: var(--offduty-bg);
+}
+
+.cell.available {
+  background: var(--avail-bg);
+  border-left-color: var(--avail-border);
+  cursor: default;
+}
+
+.available-mark {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  pointer-events: none;
+  width: 100%;
+}
+
+.available-mark .label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  color: var(--avail-fg);
+  text-transform: uppercase;
+}
+
+.available-mark .sub {
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  font-size: 11px;
+  color: var(--avail-fg);
+  opacity: 0.7;
+  margin-top: 4px;
+}
+
+.available-mark .dot {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  background: var(--avail-border);
+  border-radius: 50%;
+  margin-right: 6px;
+  vertical-align: middle;
+  animation: pulse 2.4s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.4; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.3); }
+}
+
+.class-card {
+  background: var(--paper);
+  border: 1.5px solid var(--ink);
+  padding: 12px 14px;
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  transition: all 0.2s ease;
+}
+
+.class-card:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 4px 4px 0 var(--ink);
+}
+
+.class-card.subj-GD { border-color: #9D174D; background: #FFE4E1; }
+.class-card.subj-GW { border-color: #1E3A5F; background: #DBEAFE; }
+.class-card.subj-SG { border-color: #14532D; background: #DCFCE7; }
+.class-card.subj-SR { border-color: #7C2D12; background: #FED7AA; }
+
+.class-card.new::before {
+  content: "NEW";
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background: var(--accent);
+  color: var(--paper);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px;
+  font-weight: 700;
+  padding: 2px 6px;
+  letter-spacing: 0.1em;
+  z-index: 2;
+}
+
+.class-card.kept::before {
+  content: "KEEP";
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background: var(--gold);
+  color: var(--ink);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px;
+  font-weight: 700;
+  padding: 2px 6px;
+  letter-spacing: 0.1em;
+  z-index: 2;
+}
+
+.class-subj {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.class-subj.GD { color: #9D174D; }
+.class-subj.GW { color: #1E3A5F; }
+.class-subj.SG { color: #14532D; }
+.class-subj.SR { color: #7C2D12; }
+
+.class-code {
+  font-family: 'Fraunces', serif;
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+
+.class-orig {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px;
+  color: var(--muted);
+  margin-top: auto;
+  letter-spacing: 0.05em;
+  opacity: 0.7;
+}
+
+.legend {
+  margin-top: 32px;
+  padding: 24px 0;
+  border-top: 1px solid var(--line-soft);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  font-family: 'IBM Plex Sans KR', sans-serif;
+  font-size: 13px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--muted);
+}
+
+.legend-item .en {
+  display: block;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.15em;
+  opacity: 0.6;
+  margin-top: 2px;
+}
+
+.legend-item .text {
+  line-height: 1.3;
+}
+
+.legend-swatch {
+  width: 24px;
+  height: 24px;
+  border: 1.5px solid;
+  flex-shrink: 0;
+}
+
+.legend-swatch.GD { background: #FFE4E1; border-color: #9D174D; }
+.legend-swatch.GW { background: #DBEAFE; border-color: #1E3A5F; }
+.legend-swatch.SG { background: #DCFCE7; border-color: #14532D; }
+.legend-swatch.SR { background: #FED7AA; border-color: #7C2D12; }
+.legend-swatch.avail {
+  background: var(--avail-bg);
+  border-color: var(--avail-border);
+}
+.legend-swatch.off {
+  background: var(--offduty-bg);
+  border-color: var(--line-soft);
+}
+
+.footer {
+  margin-top: 64px;
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: var(--muted);
+  letter-spacing: 0.15em;
+  display: flex;
+  justify-content: space-between;
+  text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+  .container { padding: 24px 16px; }
+  .calendar { grid-template-columns: 60px repeat(4, 1fr); }
+  .cal-header { padding: 8px 4px; font-size: 10px; }
+  .cell { padding: 6px; min-height: 80px; }
+  .cal-time { padding: 8px 4px; }
+  .cal-time .h { font-size: 14px; }
+  .class-code { font-size: 16px; }
+  .class-subj { font-size: 8px; }
+  .teacher-name { font-size: 40px; }
+  .teacher-name .en-name { font-size: 16px; }
+  .stat-num { font-size: 32px; }
+  .available-mark .label { font-size: 9px; letter-spacing: 0.1em; }
+  .available-mark .sub { font-size: 9px; }
+  .masthead-en { font-size: 16px; }
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <header class="masthead">
+    <div class="masthead-top">
+      <span>TOPIA LIVE · 2026 SUMMER (JUNE)</span>
+      <span class="final-badge">FINAL</span>
+    </div>
+    <h1>6월 학기 <em>강사별</em> 시간표</h1>
+    <div class="masthead-en">June Term — Faculty Schedule by Instructor</div>
+    <div class="masthead-sub">— 본인의 수업이 무엇인지 한눈에 확인하세요 —</div>
+    <div class="masthead-sub-en">Check your assigned classes at a glance</div>
+  </header>
+
+  <nav class="teacher-rail" id="rail">
+    <button class="teacher-tab active" data-teacher="박수정">
+      <span>박수정<span class="count">·10</span></span>
+      <span class="en">Skye</span>
+    </button>
+    <button class="teacher-tab" data-teacher="최민아">
+      <span>최민아<span class="count">·5</span></span>
+      <span class="en">Mina</span>
+    </button>
+    <button class="teacher-tab" data-teacher="Kimberley">
+      <span>Kimberley<span class="count">·6</span></span>
+      
+    </button>
+    <button class="teacher-tab" data-teacher="홍주현">
+      <span>홍주현<span class="count">·3</span></span>
+      <span class="en">Elle</span>
+    </button>
+    <button class="teacher-tab" data-teacher="황예슬">
+      <span>황예슬<span class="count">·1</span></span>
+      <span class="en">Noelle</span>
+    </button>
+    <button class="teacher-tab" data-teacher="남유진">
+      <span>남유진<span class="count">·1</span></span>
+      <span class="en">Rachel</span>
+    </button>
+    <button class="teacher-tab" data-teacher="김지연">
+      <span>김지연<span class="count">·3</span></span>
+      <span class="en">Jiyeon</span>
+    </button>
+    <button class="teacher-tab" data-teacher="김예원">
+      <span>김예원<span class="count">·4</span></span>
+      <span class="en">Yewon</span>
+    </button>
+    <button class="teacher-tab" data-teacher="David">
+      <span>David<span class="count">·7</span></span>
+      
+    </button>
+    <button class="teacher-tab" data-teacher="김태은">
+      <span>김태은<span class="count">·2</span></span>
+      <span class="en">Taeun</span>
+    </button>
+    <button class="teacher-tab" data-teacher="Andrew">
+      <span>Andrew<span class="count">·6</span></span>
+      
+    </button>
+  </nav>
+  <section class="teacher-view active" data-teacher="박수정">
+    <div class="teacher-meta">
+      <div>
+        <div class="teacher-name">
+          박수정
+          <span class="en-name">Skye</span>
+          <span class="role">Topia Live · Instructor</span>
+        </div>
+      </div>
+      <div></div>
+      <div class="teacher-stats">
+        <div class="stat-num classes">10</div>
+        <div class="stat-label">Classes<span class="kr">수업</span></div>
+      </div>
+      <div class="teacher-stats">
+        <div class="stat-num avail">3</div>
+        <div class="stat-label">Available<span class="kr">가능 시간</span></div>
+      </div>
+    </div>
+    <div class="calendar">
+      <div class="cal-header">시간 / TIME</div>
+      <div class="cal-header day">
+        화요일
+        <span class="en">TUE</span>
+      </div>
+      <div class="cal-header day">
+        목요일
+        <span class="en">THU</span>
+      </div>
+      <div class="cal-header day">
+        토요일
+        <span class="en">SAT</span>
+      </div>
+      <div class="cal-header day">
+        일요일
+        <span class="en">SUN</span>
+      </div>
+      <div class="cal-time"><div class="h">9<span class="h-suffix">:00</span></div><div class="part">주말 1부</div></div>
+      <div class="cell offduty"></div>
+      <div class="cell offduty"></div>
+      <div class="cell">
+        <div class="class-card subj-SR new">
+          <div class="class-subj SR">📚 Reading</div>
+          <div class="class-code">SR3A</div>
+          <div class="class-orig">NEW · 신설</div>
+        </div>
+      </div>
+      <div class="cell available">
+        <div class="available-mark">
+          <div class="label"><span class="dot"></span>AVAILABLE</div>
+          <div class="sub">언제든 배치 가능</div>
+        </div>
+      </div>
+      <div class="cal-time"><div class="h">11<span class="h-suffix">:00</span></div><div class="part">주말 2부</div></div>
+      <div class="cell offduty"></div>
+      <div class="cell offduty"></div>
+      <div class="cell">
+        <div class="class-card subj-SG">
+          <div class="class-subj SG">📖 Grammar</div>
+          <div class="class-code">SG3A</div>
+          <div class="class-orig"></div>
+        </div>
+      </div>
+      <div class="cell">
+        <div class="class-card subj-SR">
+          <div class="class-subj SR">📚 Reading</div>
+          <div class="class-code">SR4A</div>
+          <div class="class-orig"></div>
+        </div>
+      </div>
+      <div class="cal-time"><div class="h">15<span class="h-suffix">:00</span></div><div class="part">주말 3부</div></div>
+      <div class="cell offduty"></div>
+      <div class="cell offduty"></div>
+      <div class="cell">
+        <div class="class-card subj-SG">
+          <div class="class-subj SG">📖 Grammar</div>
+          <div class="class-code">SG4A</div>
+          <div class="class-orig"></div>
+        </div>
+      </div>
+      <div class="cell">
+        <div class="class-card subj-SG">
+          <div class="class-subj SG">📖 Grammar</div>
+          <div class="class-code">SG4A</div>
+          <div class="class-orig">← SG3_11</div>
+        </div>
+      </div>
+      <div class="cal-time"><div class="h">17<span class="h-suffix">:00</span></div><div class="part">4부 / 1부</div></div>
+      <div class="cell">
+        <div class="class-card subj-SG new">
+          <div class="class-subj SG">📖 Grammar</div>
+          <div class="class-code">SG3A</div>
+          <div class="class-orig">NEW · 신설</div>
+        </div>
+      </div>
+      <div class="cell offduty"></div>
+      <div class="cell">
+        <div class="class-card subj-SG">
+          <div class="class-subj SG">📖 Grammar</div>
+          <div class="class-code">SG3A</div>
+          <div class="class-orig">← SG2_15</div>
+        </div>
+      </div>
+      <div class="cell">
+        <div class="class-card subj-SG">
+          <div class="class-subj SG">📖 Grammar</div>
+          <div class="class-code">SG3A</div>
+          <div class="class-orig">← SG2_8</div>
+        </div>
+      </div>
+      <div class="cal-time"><div class="h">19<span class="h-suffix">:00</span></div><div class="part">5부 / 2부</div></div>
+      <div class="cell">
+        <div class="class-card subj-SG">
+          <div class="class-subj SG">📖 Grammar</div>
+          <div class="class-code">SG5A</div>
+          <div class="class-orig"></div>
+        </div>
+      </div>
+      <div class="cell offduty"></div>
+      <div class="cell available">
+        <div class="available-mark">
+          <div class="label"><span class="dot"></span>AVAILABLE</div>
+          <div class="sub">언제든 배치 가능</div>
+        </div>
+      </div>
+      <div class="cell available">
+        <div class="available-mark">
+          <div class="label"><span class="dot"></span>AVAILABLE</div>
+          <div class="sub">언제든 배치 가능</div>
+        </div>
+      </div>
+      <div class="cal-time"><div class="h">21<span class="h-suffix">:00</span></div><div class="part">평일 3부</div></div>
+      <div class="cell">
+        <div class="class-card subj-SG">
+          <div class="class-subj SG">📖 Grammar</div>
+          <div class="class-code">SG4A</div>
+          <div class="class-orig"></div>
+        </div>
+      </div>
+      <div class="cell offduty"></div>
+      <div class="cell offduty"></div>
+      <div class="cell offduty"></div>
+    </div>
+    <div class="legend">
+      <div class="legend-item"><div class="legend-swatch GD"></div><div class="text">🎤 Debate <span class="en">GD · 토론</span></div></div>
+      <div class="legend-item"><div class="legend-swatch GW"></div><div class="text">✍️ Writing <span class="en">GW · 작문</span></div></div>
+      <div class="legend-item"><div class="legend-swatch SG"></div><div class="text">📖 Grammar <span class="en">SG · 문법</span></div></div>
+      <div class="legend-item"><div class="legend-swatch SR"></div><div class="text">📚 Reading <span class="en">SR · 독해</span></div></div>
+      <div class="legend-item"><div class="legend-swatch avail"></div><div class="text">AVAILABLE <span class="en">가능 시간 · Open slot</span></div></div>
+      <div class="legend-item"><div class="legend-swatch off"></div><div class="text">운영 외 시간 <span class="en">Off-duty</span></div></div>
+    </div>
+  </section>
+  <section class="teacher-view" data-teacher="최민아">
+    <div class="teacher-meta">
+      <div>
+        <div class="teacher-name">
+          최민아
+          <span class="en-name">Mina</span>
+          <span class="role">Topia Live · Instructor</span>
+        </div>
+      </div>
+      <div></div>
+      <div class="teacher-stats">
+        <div class="stat-num classes">5</div>
+        <div class="stat-label">Classes<span class="kr">수업</span></div>
+      </div>
+      <div class="teacher-stats">
+        <div class="stat-num avail">1</div>
+        <div class="stat-label">Available<span class="kr">가능 시간</span></div>
+      </div>
+    </div>
+    <div class="calendar">
+      <div class="cal-header">시간 / TIME</div>
+      <div class="cal-header day">
+        화요일
+        <span class="en">TUE</span>
+      </div>
+      <div class="cal-header day">
+        목요일
+        <span class="en">THU</span>
+      </div>
+      <div class="cal-header day">
+        토요일
+        <span class="en">SAT</span>
+      </div>
+      <div class="cal-header day">
+        일요일
+        <span class="en">SUN</span>
+      </div>
+      <div class="cal-time"><div class="h">9<span class="h-suffix">:00</span></div><div class="part">주말 1부</div></div>
+      <div class="cell offduty"></div>
+      <div class="cell offduty"></div>
+      <div class="cell">
+        <div class="class-card subj-SG">
+          <div class="class-subj SG">📖 Grammar</div>
+          <div class="class-code">SG2A</div>
+          <div class="class-orig"></div>
+        </div>
+      </div>
+      <div class="cell">
+        <div class="class-card subj-SR">
+          <div class="class-subj SR">📚 Reading</div>
+          <div class="class-code">SR2A</div>
+          <div class="class-orig"></div>
+        </div>
+      </div>
+      <div class="cal-time"><div class="h">11<span class="h-suffix">:00</span></div><div class="part">주말 2부</div></div>
+      <div class="cell offduty"></div>
+      <div class="cell offduty"></div>
+      <div class="cell available">
+        <div class="available-mark">
+          <div class="label"><span class="dot"></span>AVAILABLE</div>
+          <div class="sub">언제든 배치 가능</div>
+        </div>
+      </div>
+      <div class="cell">
+        <div class="class-card subj-SG">
+          <div class="class-subj SG">📖 Grammar</div>
+          <div class="class-code">SG4A</div>
+          <div class="class-orig"></div>
+        </div>
+      </div>
+      <div class="cal-time"><div class="h">15<span class="h-suffix">:00</span></div><div class="part">주말 3부</div></div>
+      <div class="cell offduty"></div>
+      <div class="cell offduty"></div>
+      <div class="cell offduty"></div>
+      <div class="cell offduty"></div>
+      <div class="cal-time"><div class="h">17<span class="h-suffix">:00</span></div><div class="part">4부 / 1부</div></div>
+      <div class="cell offduty"></div>
+      <div class="cell offduty"></div>
+      <div class="cell offduty"></div>
+      <div class="cell offduty"></div>
+      <div class="cal-time"><div class="h">19<span class="h-suffix">:00</span></div><div class="part">5부 / 2부</div></div>
+      <div class="cell offduty"></div>
+      <div class="cell offduty"></div>
+      <div class="cell offduty"></div>
+      <div class="cell offduty"></div>
+      <div class="cal-time"><div class="h">21<span class="h-suffix">:00</span></div><div class="part">평일 3부</div></div>
+      <div class="cell">
+        <div class="class-card subj-SG">
+          <div class="class-subj SG">📖 Grammar</div>
+          <div class="class-code">SG2A</div>
+          <div class="class-orig"></div>
+        </div>
+      </div>
+      <div class="cell">
+        <div class="class-card subj-SG">
+          <div class="class-subj SG">📖 Grammar</div>
+          <div class="class-code">SG4A</div>
+          <div class="class-orig"></div>
+        </div>
+      </div>
+      <div class="cell offduty"></div>
+      <div class="cell offduty"></div>
+    </div>
+    <div class="legend">
+      <div class="legend-item"><div class="legend-swatch GD"></div><div class="text">🎤 Debate <span class="en">GD · 토론</span></div></div>
+      <div class="legend-item"><div class="legend-swatch GW"></div><div class="text">✍️ Writing <span class="en">GW · 작문</span></div></div>
+      <div class="legend-item"><div class="legend-swatch SG"></div><div class="text">📖 Grammar <span class="en">SG · 문법</span></div></div>
+      <div class="legend-item"><div class="legend-swatch SR"></div><div class="text">📚 Reading <span class="en">SR · 독해</span></div></div>
+      <div class="legend-item"><div class="legend-swatch avail"></div><div class="text">AVAILABLE <span class="en">가능 시간 · Open slot</span></div></div>
+      <div class="legend-item"><div class="legend-swatch off"></div><div class="text">운영 외 시간 <span class="en">Off-duty</span></div></div>
+    </div>
+  </section>
+  <section class="teacher-view" data-teacher="Kimberley">
+    <div class="teacher-meta">
+      <div>
+        <div class="teacher-name">
+          Kimberley
+          
+          <span class="role">Topia Live · Instructor</span>
+        </div>
+      </div>
+      <div></div>
+      <div class="teacher-stats">
+        <div class="stat-num classes">6</div>
+        <div class="stat-label">Classes<span class="kr">수업</span></div>
+      </div>
+      <div class="teacher-stats">
+        <div class="stat-num avail">3</div>
+        <div class="stat-label">Available<span class="kr">가능 시간</span></div>
+      </div>
+    </div>
+    <div class="calendar">
+      <div class="cal-header">시간 / TIME</div>
+      <div class="cal-header day">
+        화요일
+        <span class="en">TUE</span>
+      </div>
+      <div class="cal-header day">
+        목요일
+        <span class="en">THU</span>
+      </div>
+      <div class="cal-header day">
+        토요일
+        <span class="en">SAT</span>
+      </div>
+      <div class="cal-header day">
+        일요일
+        <span class="en">SUN</span>
+      </div>
+      <div class="cal-time"><div class="h">9<span class="h-suffix">:00</span></div><div class="part">주말 1부</div></div>
+      <div class="cell offduty"></div>
+      <div class="cell offduty"></div>
+      <div class="cell offduty"></div>
+      <div class="cell offduty"></div>
+      <div class="cal-time"><div class="h">11<span class="h-suffix">:00</span></div><div class="part">주말 2부</div></div>
+      <div class="cell offduty"></div>
+      <div class="cell offduty"></div>
+      <div class="cell offduty"></div>
+      <div class="cell offduty"></div>
+      <div class="cal-time"><div class="h">15<span class="h-suffix">:00</span></div><div class="part">주말 3부</div></div>
+      <div class="cell offduty"></div>
+      <div class="cell offduty"></div>
+      <div class="cell">
+        <div class="class-card subj-GD">
+          <div class="class-subj GD">🎤 Debate</div>
+          <div class="class-code">GD5A</div>
+          <div class="class-orig"></div>
+        </div>
+      </div>
+      <div class="cell offduty"></div>
+      <div class="cal-time"><div class="h">17<span class="h-suffix">:00</span></div><div class="part">4부 / 1부</div></div>
+      <div class="cell">
+        <div class="class-card subj-GD">
+          <div class="class-subj GD">🎤 Debate</div>
+          <div class="class-code">GD4A</div>
+          <div class="class-orig"></div>
+        </div>
+      </div>
+      <div class="cell available">
+        <div class="available-mark">
+          <div class="label"><span class="dot"></span>AVAILABLE</div>
+          <div class="sub">언제든 배치 가능</div>
+        </div>
+      </div>
+      <div class="cell">
+        <div class="class-card subj-GD">
+          <div class="class-subj GD">🎤 Debate</div>
+          <div class="class-code">GD5A</div>
+          <div class="class-orig">← GD4_2</div>
+        </div>
+      </div>
+      <div class="cell offduty"></div>
+      <div class="cal-time"><div class="h">19<span class="h-suffix">:00</span></div><div class="part">5부 / 2부</div></div>
+      <div class="cell">
+        <div class="class-card subj-GD">
+          <div class="class-subj GD">🎤 Debate</div>
+          <div class="class-code">GD5A</div>
+          <div class="class-orig"></div>
+        </div>
+      </div>
+      <div class="cell">
+        <div class="class-card subj-GD">
+          <div class="class-subj GD">🎤 Debate</div>
+          <div class="class-code">GD4A</div>
+          <div class="class-orig"></div>
+        </div>
+      </div>
+      <div class="cell offduty"></div>
+      <div class="cell offduty"></div>
+      <div class="cal-time"><div class="h">21<span class="h-suffix">:00</span></div><div class="part">평일 3부</div></div>
+      <div class="cell offduty"></div>
+      <div class="cell">
+        <div class="class-card subj-GD">
+          <div class="class-subj GD">🎤 Debate</div>
+          <div class="class-code">GD4A</div>
+          <div class="class-orig"></div>
+        </div>
+      </div>
+      <div class="cell offduty"></div>
+      <div class="cell offduty"></div>
+    </div>
+    <div class="legend">
+      <div class="legend-item"><div class="legend-swatch GD"></div><div class="text">🎤 Debate <span class="en">GD · 토론</span></div></div>
+      <div class="legend-item"><div class="legend-swatch GW"></div><div class="text">✍️ Writing <span class="en">GW · 작문</span></div></div>
+      <div class="legend-item"><div class="legend-swatch SG"></div><div class="text">📖 Grammar <span class="en">SG · 문법</span></div></div>
+      <div class="legend-item"><div class="legend-swatch SR"></div><div class="text">📚 Reading <span class="en">SR · 독해</span></div></div>
+      <div class="legend-item"><div class="legend-swatch avail"></div><div class="text">AVAILABLE <span class="en">가능 시간 · Open slot</span></div></div>
+      <div class="legend-item"><div class="legend-swatch off"></div><div class="text">운영 외 시간 <span class="en">Off-duty</span></div></div>
+    </div>
+  </section>
+  <section class="teacher-view" data-teacher="홍주현">
+    <div class="teacher-meta">
+      <div>
+        <div class="teacher-name">
+          홍주현
+          <span class="en-name">Elle</span>
+          <span class="role">Topia Live · Instructor</span>
+        </div>
+      </div>
+      <div></div>
+      <div class="teacher-stats">
+        <div class="stat-num classes">3</div>
+        <div class="stat-label">Classes<span class="kr">수업</span></div>
+      </div>
+      <div class="teacher-stats">
+        <div class="stat-num avail">7</div>
+        <div class="stat-label">Available<span class="kr">가능 시간</span></div>
+      </div>
+    </div>
+    <div class="calendar">
+      <div class="cal-header">시간 / TIME</div>
+      <div class="cal-header day">
+        화요일
+        <span class="en">TUE</span>
+      </div>
+      <div class="cal-header day">
+        목요일
+        <span class="en">THU</span>
+      </div>
+      <div class="cal-header day">
+        토요일
+        <span class="en">SAT</span>
+      </div>
+      <div class="cal-header day">
+        일요일
+        <span class="en">SUN</span>
+      </div>
+      <div class="cal-time"><div class="h">9<span class="h-suffix">:00</span></div><div class="part">주말 1부</div></div>
+      <div class="cell offduty"></div>
+      <div class="cell offduty"></div>
+      <div class="cell offduty"></div>
+      <div class="cell offduty"></div>
+      <div class="cal-time"><div class="h">11<span class="h-suffix">:00</span></div><div class="part">주말 2부</div></div>
+      <div class="cell offduty"></div>
+      <div class="cell offduty"></div>
+      <div class="cell offduty"></div>
+      <div class="cell offduty"></div>
+      <div class="cal-time"><div class="h">15<span class="h-suffix">:00</span></div><div class="part">주말 3부</div></div>
+      <div class="cell offduty"></div>
+      <div class="cell offduty"></div>
+      <div class="cell offduty"></div>
+      <div class="cell available">
+        <div class="available-mark">
+          <div class="label"><span class="dot"></span>AVAILABLE</div>
+          <div class="sub">언제든 배치 가능</div>
+        </div>
+      </div>
+      <div class="cal-time"><div class="h">17<span class="h-suffix">:00</span></div><div class="part">4부 / 1부</div></div>
+      <div class="cell available">
+        <div class="available-mark">
+          <div class="label"><span class="dot"></span>AVAILABLE</div>
+          <div class="sub">언제든 배치 가능</div>
+        </div>
+      </div>
+      <div class="cell">
+        <div class="class-card subj-GW">
+          <div class="class-subj GW">✍️ Writing</div>
+          <div class="class-code">GW3A</div>
+          <div class="class-orig"></div>
+        </div>
+      </div>
+      <div class="cell offduty"></div>
+      <div class="cell">
+        <div class="class-card subj-GW">
+          <div class="class-subj GW">✍️ Writing</div>
+          <div class="class-code">GW3A</div>
+          <div class="class-orig">← GW2_14</div>
+        </div>
+      </div>
+      <div class="cal-time"><div class="h">19<span class="h-suffix">:00</span></div><div class="part">5부 / 2부</div></div>
+      <div class="cell available">
+        <div class="available-mark">
+          <div class="label"><span class="dot"></span>AVAILABLE</div>
+          <div class="sub">언제든 배치 가능</div>
+        </div>
+      </div>
+      <div class="cell">
+        <div class="class-card subj-GW">
+          <div class="class-subj GW">✍️ Writing</div>
+          <div class="class-code">GW4B</div>
+          <div class="class-orig"></div>
+        </div>
+      </div>
+      <div class="cell available">
+        <div class="available-mark">
+          <div class="label"><span class="dot"></span>AVAILABLE</div>
+          <div class="sub">언제든 배치 가능</div>
+        </div>
+      </div>
+      <div class="cell available">
+        <div class="available-mark">
+          <div class="label"><span class="dot"></span>AVAILABLE</div>
+          <div class="sub">언제든 배치 가능</div>
+        </div>
+      </div>
+      <div class="cal-time"><div class="h">21<span class="h-suffix">:00</span></div><div class="part">평일 3부</div></div>
+      <div class="cell offduty"></div>
+      <div class="cell offduty"></div>
+      <div class="cell offduty"></div>
+      <div class="cell offduty"></div>
+    </div>
+    <div class="legend">
+      <div class="legend-item"><div class="legend-swatch GD"></div><div class="text">🎤 Debate <span class="en">GD · 토론</span></div></div>
+      <div class="legend-item"><div class="legend-swatch GW"></div><div class="text">✍️ Writing <span class="en">GW · 작문</span></div></div>
+      <div class="legend-item"><div class="legend-swatch SG"></div><div class="text">📖 Grammar <span class="en">SG · 문법</span></div></div>
+      <div class="legend-item"><div class="legend-swatch SR"></div><div class="text">📚 Reading <span class="en">SR · 독해</span></div></div>
+      <div class="legend-item"><div class="legend-swatch avail"></div><div class="text">AVAILABLE <span class="en">가능 시간 · Open slot</span></div></div>
+      <div class="legend-item"><div class="legend-swatch off"></div><div class="text">운영 외 시간 <span class="en">Off-duty</span></div></div>
+    </div>
+  </section>
+  <section class="teacher-view" data-teacher="황예슬">
+    <div class="teacher-meta">
+      <div>
+        <div class="teacher-name">
+          황예슬
+          <span class="en-name">Noelle</span>
+          <span class="role">Topia Live · Instructor</span>
+        </div>
+      </div>
+      <div></div>
+      <div class="teacher-stats">
+        <div class="stat-num classes">1</div>
+        <div class="stat-label">Classes<span class="kr">수업</span></div>
+      </div>
+      <div class="teacher-stats">
+        <div class="stat-num avail">0</div>
+        <div class="stat-label">Available<span class="kr">가능 시간</span></div>
+      </div>
+    </div>
+    <div class="calendar">
+      <div class="cal-header">시간 / TIME</div>
+      <div class="cal-header day">
+        화요일
+        <span class="en">TUE</span>
+      </div>
+      <div class="cal-header day">
+        목요일
+        <span class="en">THU</span>
+      </div>
+      <div class="cal-header day">
+        토요일
+        <span class="en">SAT</span>
+      </div>
+      <div class="cal-header day">
+        일요일
+        <span class="en">SUN</span>
+      </div>
+      <div class="cal-time"><div class="h">9<span class="h-suffix">:00</span></div><div class="part">주말 1부</div></div>
+      <div class="cell offduty"></div>
+      <div class="cell offduty"></div>
+      <div class="cell offduty"></div>
+      <div class="cell offduty"></div>
+      <div class="cal-time"><div class="h">11<span class="h-suffix">:00</span></div><div class="part">주말 2부</div></div>
+      <div class="cell offduty"></div>
+      <div class="cell offduty"></div>
+      <div class="cell offduty"></div>
+      <div class="cell offduty"></div>
+      <div class="cal-time"><div class="h">15<span class="h-suffix">:00</span></div><div class="part">주말 3부</div></div>
+      <div class="cell offduty"></div>
+      <div class="cell offduty"></div>
+      <div class="cell offduty"></div>
+      <div class="cell offduty"></div>
+      <div class="cal-time"><div class="h">17<span class="h-suffix">:00</span></div><div class="part">4부 / 1부</div></div>
+      <div class="cell offduty"></div>
+      <div class="cell offduty"></div>
+      <div class="cell offduty"></div>
+      <div class="cell offduty"></div>
+      <div class="cal-time"><div class="h">19<span class="h-suffix">:00</span></div><div class="part">5부 / 2부</div></div>
+      <div class="cell offduty"></div>
+      <div class="cell offduty"></div>
+      <div class="cell offduty"></div>
+      <div class="cell">
+        <div class="class-card subj-SR kept">
+          <div class="class-subj SR">📚 Reading</div>
+          <div class="class-code">SR5A</div>
+          <div class="class-orig">← 기존레벨 유지</div>
+        </div>
+      </div>
+      <div class="cal-time"><div class="h">21<span class="h-suffix">:00</span></div><div class="part">평일 3부</div></div>
+      <div class="cell offduty"></div>
+      <div class="cell offduty"></div>
+      <div class="cell offduty"></div>
+      <div class="cell offduty"></div>
+    </div>
+    <div class="legend">
+      <div class="legend-item"><div class="legend-swatch GD"></div><div class="text">🎤 Debate <span class="en">GD · 토론</span></div></div>
+      <div class="legend-item"><div class="legend-swatch GW"></div><div class="text">✍️ Writing <span class="en">GW · 작문</span></div></div>
+      <div class="legend-item"><div class="legend-swatch SG"></div><div class="text">📖 Grammar <span class="en">SG · 문법</span></div></div>
+      <div class="legend-item"><div class="legend-swatch SR"></div><div class="text">📚 Reading <span class="en">SR · 독해</span></div></div>
+      <div class="legend-item"><div class="legend-swatch avail"></div><div class="text">AVAILABLE <span class="en">가능 시간 · Open slot</span></div></div>
+      <div class="legend-item"><div class="legend-swatch off"></div><div class="text">운영 외 시간 <span class="en">Off-duty</span></div></div>
+    </div>
+  </section>
+  <section class="teacher-view" data-teacher="남유진">
+    <div class="teacher-meta">
+      <div>
+        <div class="teacher-name">
+          남유진
+          <span class="en-name">Rachel</span>
+          <span class="role">Topia Live · Instructor</span>
+        </div>
+      </div>
+      <div></div>
+      <div class="teacher-stats">
+        <div class="stat-num classes">1</div>
+        <div class="stat-label">Classes<span class="kr">수업</span></div>
+      </div>
+      <div class="teacher-stats">
+        <div class="stat-num avail">3</div>
+        <div class="stat-label">Available<span class="kr">가능 시간</span></div>
+      </div>
+    </div>
+    <div class="calendar">
+      <div class="cal-header">시간 / TIME</div>
+      <div class="cal-header day">
+        화요일
+        <span class="en">TUE</span>
+      </div>
+      <div class="cal-header day">
+        목요일
+        <span class="en">THU</span>
+      </div>
+      <div class="cal-header day">
+        토요일
+        <span class="en">SAT</span>
+      </div>
+      <div class="cal-header day">
+        일요일
+        <span class="en">SUN</span>
+      </div>
+      <div class="cal-time"><div class="h">9<span class="h-suffix">:00</span></div><div class="part">주말 1부</div></div>
+      <div class="cell offduty"></div>
+      <div class="cell offduty"></div>
+      <div class="cell">
+        <div class="class-card subj-SG">
+          <div class="class-subj SG">📖 Grammar</div>
+          <div class="class-code">SG3A</div>
+          <div class="class-orig"></div>
+        </div>
+      </div>
+      <div class="cell available">
+        <div class="available-mark">
+          <div class="label"><span class="dot"></span>AVAILABLE</div>
+          <div class="sub">언제든 배치 가능</div>
+        </div>
+      </div>
+      <div class="cal-time"><div class="h">11<span class="h-suffix">:00</span></div><div class="part">주말 2부</div></div>
+      <div class="cell offduty"></div>
+      <div class="cell offduty"></div>
+      <div class="cell available">
+        <div class="available-mark">
+          <div class="label"><span class="dot"></span>AVAILABLE</div>
+          <div class="sub">언제든 배치 가능</div>
+        </div>
+      </div>
+      <div class="cell available">
+        <div class="available-mark">
+          <div class="label"><span class="dot"></span>AVAILABLE</div>
+          <div class="sub">언제든 배치 가능</div>
+        </div>
+      </div>
+      <div class="cal-time"><div class="h">15<span class="h-suffix">:00</span></div><div class="part">주말 3부</div></div>
+      <div class="cell offduty"></div>
+      <div class="cell offduty"></div>
+      <div class="cell offduty"></div>
+      <div class="cell offduty"></div>
+      <div class="cal-time"><div class="h">17<span class="h-suffix">:00</span></div><div class="part">4부 / 1부</div></div>
+      <div class="cell offduty"></div>
+      <div class="cell offduty"></div>
+      <div class="cell offduty"></div>
+      <div class="cell offduty"></div>
+      <div class="cal-time"><div class="h">19<span class="h-suffix">:00</span></div><div class="part">5부 / 2부</div></div>
+      <div class="cell offduty"></div>
+      <div class="cell offduty"></div>
+      <div class="cell offduty"></div>
+      <div class="cell offduty"></div>
+      <div class="cal-time"><div class="h">21<span class="h-suffix">:00</span></div><div class="part">평일 3부</div></div>
+      <div class="cell offduty"></div>
+      <div class="cell offduty"></div>
+      <div class="cell offduty"></div>
+      <div class="cell offduty"></div>
+    </div>
+    <div class="legend">
+      <div class="legend-item"><div class="legend-swatch GD"></div><div class="text">🎤 Debate <span class="en">GD · 토론</span></div></div>
+      <div class="legend-item"><div class="legend-swatch GW"></div><div class="text">✍️ Writing <span class="en">GW · 작문</span></div></div>
+      <div class="legend-item"><div class="legend-swatch SG"></div><div class="text">📖 Grammar <span class="en">SG · 문법</span></div></div>
+      <div class="legend-item"><div class="legend-swatch SR"></div><div class="text">📚 Reading <span class="en">SR · 독해</span></div></div>
+      <div class="legend-item"><div class="legend-swatch avail"></div><div class="text">AVAILABLE <span class="en">가능 시간 · Open slot</span></div></div>
+      <div class="legend-item"><div class="legend-swatch off"></div><div class="text">운영 외 시간 <span class="en">Off-duty</span></div></div>
+    </div>
+  </section>
+  <section class="teacher-view" data-teacher="김지연">
+    <div class="teacher-meta">
+      <div>
+        <div class="teacher-name">
+          김지연
+          <span class="en-name">Jiyeon</span>
+          <span class="role">Topia Live · Instructor</span>
+        </div>
+      </div>
+      <div></div>
+      <div class="teacher-stats">
+        <div class="stat-num classes">3</div>
+        <div class="stat-label">Classes<span class="kr">수업</span></div>
+      </div>
+      <div class="teacher-stats">
+        <div class="stat-num avail">1</div>
+        <div class="stat-label">Available<span class="kr">가능 시간</span></div>
+      </div>
+    </div>
+    <div class="calendar">
+      <div class="cal-header">시간 / TIME</div>
+      <div class="cal-header day">
+        화요일
+        <span class="en">TUE</span>
+      </div>
+      <div class="cal-header day">
+        목요일
+        <span class="en">THU</span>
+      </div>
+      <div class="cal-header day">
+        토요일
+        <span class="en">SAT</span>
+      </div>
+      <div class="cal-header day">
+        일요일
+        <span class="en">SUN</span>
+      </div>
+      <div class="cal-time"><div class="h">9<span class="h-suffix">:00</span></div><div class="part">주말 1부</div></div>
+      <div class="cell offduty"></div>
+      <div class="cell offduty"></div>
+      <div class="cell offduty"></div>
+      <div class="cell offduty"></div>
+      <div class="cal-time"><div class="h">11<span class="h-suffix">:00</span></div><div class="part">주말 2부</div></div>
+      <div class="cell offduty"></div>
+      <div class="cell offduty"></div>
+      <div class="cell offduty"></div>
+      <div class="cell offduty"></div>
+      <div class="cal-time"><div class="h">15<span class="h-suffix">:00</span></div><div class="part">주말 3부</div></div>
+      <div class="cell offduty"></div>
+      <div class="cell offduty"></div>
+      <div class="cell available">
+        <div class="available-mark">
+          <div class="label"><span class="dot"></span>AVAILABLE</div>
+          <div class="sub">언제든 배치 가능</div>
+        </div>
+      </div>
+      <div class="cell">
+        <div class="class-card subj-GW">
+          <div class="class-subj GW">✍️ Writing</div>
+          <div class="class-code">GW4A</div>
+          <div class="class-orig"></div>
+        </div>
+      </div>
+      <div class="cal-time"><div class="h">17<span class="h-suffix">:00</span></div><div class="part">4부 / 1부</div></div>
+      <div class="cell offduty"></div>
+      <div class="cell offduty"></div>
+      <div class="cell offduty"></div>
+      <div class="cell offduty"></div>
+      <div class="cal-time"><div class="h">19<span class="h-suffix">:00</span></div><div class="part">5부 / 2부</div></div>
+      <div class="cell">
+        <div class="class-card subj-GW">
+          <div class="class-subj GW">✍️ Writing</div>
+          <div class="class-code">GW3A</div>
+          <div class="class-orig"></div>
+        </div>
+      </div>
+      <div class="cell">
+        <div class="class-card subj-GW">
+          <div class="class-subj GW">✍️ Writing</div>
+          <div class="class-code">GW3A</div>
+          <div class="class-orig"></div>
+        </div>
+      </div>
+      <div class="cell offduty"></div>
+      <div class="cell offduty"></div>
+      <div class="cal-time"><div class="h">21<span class="h-suffix">:00</span></div><div class="part">평일 3부</div></div>
+      <div class="cell offduty"></div>
+      <div class="cell offduty"></div>
+      <div class="cell offduty"></div>
+      <div class="cell offduty"></div>
+    </div>
+    <div class="legend">
+      <div class="legend-item"><div class="legend-swatch GD"></div><div class="text">🎤 Debate <span class="en">GD · 토론</span></div></div>
+      <div class="legend-item"><div class="legend-swatch GW"></div><div class="text">✍️ Writing <span class="en">GW · 작문</span></div></div>
+      <div class="legend-item"><div class="legend-swatch SG"></div><div class="text">📖 Grammar <span class="en">SG · 문법</span></div></div>
+      <div class="legend-item"><div class="legend-swatch SR"></div><div class="text">📚 Reading <span class="en">SR · 독해</span></div></div>
+      <div class="legend-item"><div class="legend-swatch avail"></div><div class="text">AVAILABLE <span class="en">가능 시간 · Open slot</span></div></div>
+      <div class="legend-item"><div class="legend-swatch off"></div><div class="text">운영 외 시간 <span class="en">Off-duty</span></div></div>
+    </div>
+  </section>
+  <section class="teacher-view" data-teacher="김예원">
+    <div class="teacher-meta">
+      <div>
+        <div class="teacher-name">
+          김예원
+          <span class="en-name">Yewon</span>
+          <span class="role">Topia Live · Instructor</span>
+        </div>
+      </div>
+      <div></div>
+      <div class="teacher-stats">
+        <div class="stat-num classes">4</div>
+        <div class="stat-label">Classes<span class="kr">수업</span></div>
+      </div>
+      <div class="teacher-stats">
+        <div class="stat-num avail">14</div>
+        <div class="stat-label">Available<span class="kr">가능 시간</span></div>
+      </div>
+    </div>
+    <div class="calendar">
+      <div class="cal-header">시간 / TIME</div>
+      <div class="cal-header day">
+        화요일
+        <span class="en">TUE</span>
+      </div>
+      <div class="cal-header day">
+        목요일
+        <span class="en">THU</span>
+      </div>
+      <div class="cal-header day">
+        토요일
+        <span class="en">SAT</span>
+      </div>
+      <div class="cal-header day">
+        일요일
+        <span class="en">SUN</span>
+      </div>
+      <div class="cal-time"><div class="h">9<span class="h-suffix">:00</span></div><div class="part">주말 1부</div></div>
+      <div class="cell offduty"></div>
+      <div class="cell offduty"></div>
+      <div class="cell available">
+        <div class="available-mark">
+          <div class="label"><span class="dot"></span>AVAILABLE</div>
+          <div class="sub">언제든 배치 가능</div>
+        </div>
+      </div>
+      <div class="cell offduty"></div>
+      <div class="cal-time"><div class="h">11<span class="h-suffix">:00</span></div><div class="part">주말 2부</div></div>
+      <div class="cell offduty"></div>
+      <div class="cell offduty"></div>
+      <div class="cell available">
+        <div class="available-mark">
+          <div class="label"><span class="dot"></span>AVAILABLE</div>
+          <div class="sub">언제든 배치 가능</div>
+        </div>
+      </div>
+      <div class="cell offduty"></div>
+      <div class="cal-time"><div class="h">15<span class="h-suffix">:00</span></div><div class="part">주말 3부</div></div>
+      <div class="cell offduty"></div>
+      <div class="cell offduty"></div>
+      <div class="cell">
+        <div class="class-card subj-GW">
+          <div class="class-subj GW">✍️ Writing</div>
+          <div class="class-code">GW4A</div>
+          <div class="class-orig"></div>
+        </div>
+      </div>
+      <div class="cell offduty"></div>
+      <div class="cal-time"><div class="h">17<span class="h-suffix">:00</span></div><div class="part">4부 / 1부</div></div>
+      <div class="cell available">
+        <div class="available-mark">
+          <div class="label"><span class="dot"></span>AVAILABLE</div>
+          <div class="sub">언제든 배치 가능</div>
+        </div>
+      </div>
+      <div class="cell">
+        <div class="class-card subj-SR">
+          <div class="class-subj SR">📚 Reading</div>
+          <div class="class-code">SR3A</div>
+          <div class="class-orig"></div>
+        </div>
+      </div>
+      <div class="cell available">
+        <div class="available-mark">
+          <div class="label"><span class="dot"></span>AVAILABLE</div>
+          <div class="sub">언제든 배치 가능</div>
+        </div>
+      </div>
+      <div class="cell offduty"></div>
+      <div class="cal-time"><div class="h">19<span class="h-suffix">:00</span></div><div class="part">5부 / 2부</div></div>
+      <div class="cell">
+        <div class="class-card subj-GW">
+          <div class="class-subj GW">✍️ Writing</div>
+          <div class="class-code">GW4A</div>
+          <div class="class-orig"></div>
+        </div>
+      </div>
+      <div class="cell available">
+        <div class="available-mark">
+          <div class="label"><span class="dot"></span>AVAILABLE</div>
+          <div class="sub">언제든 배치 가능</div>
+        </div>
+      </div>
+      <div class="cell available">
+        <div class="available-mark">
+          <div class="label"><span class="dot"></span>AVAILABLE</div>
+          <div class="sub">언제든 배치 가능</div>
+        </div>
+      </div>
+      <div class="cell offduty"></div>
+      <div class="cal-time"><div class="h">21<span class="h-suffix">:00</span></div><div class="part">평일 3부</div></div>
+      <div class="cell available">
+        <div class="available-mark">
+          <div class="label"><span class="dot"></span>AVAILABLE</div>
+          <div class="sub">언제든 배치 가능</div>
+        </div>
+      </div>
+      <div class="cell">
+        <div class="class-card subj-GD">
+          <div class="class-subj GD">🎤 Debate</div>
+          <div class="class-code">GD5A</div>
+          <div class="class-orig"></div>
+        </div>
+      </div>
+      <div class="cell available">
+        <div class="available-mark">
+          <div class="label"><span class="dot"></span>AVAILABLE</div>
+          <div class="sub">언제든 배치 가능</div>
+        </div>
+      </div>
+      <div class="cell offduty"></div>
+    </div>
+    <div class="legend">
+      <div class="legend-item"><div class="legend-swatch GD"></div><div class="text">🎤 Debate <span class="en">GD · 토론</span></div></div>
+      <div class="legend-item"><div class="legend-swatch GW"></div><div class="text">✍️ Writing <span class="en">GW · 작문</span></div></div>
+      <div class="legend-item"><div class="legend-swatch SG"></div><div class="text">📖 Grammar <span class="en">SG · 문법</span></div></div>
+      <div class="legend-item"><div class="legend-swatch SR"></div><div class="text">📚 Reading <span class="en">SR · 독해</span></div></div>
+      <div class="legend-item"><div class="legend-swatch avail"></div><div class="text">AVAILABLE <span class="en">가능 시간 · Open slot</span></div></div>
+      <div class="legend-item"><div class="legend-swatch off"></div><div class="text">운영 외 시간 <span class="en">Off-duty</span></div></div>
+    </div>
+  </section>
+  <section class="teacher-view" data-teacher="David">
+    <div class="teacher-meta">
+      <div>
+        <div class="teacher-name">
+          David
+          
+          <span class="role">Topia Live · Instructor</span>
+        </div>
+      </div>
+      <div></div>
+      <div class="teacher-stats">
+        <div class="stat-num classes">7</div>
+        <div class="stat-label">Classes<span class="kr">수업</span></div>
+      </div>
+      <div class="teacher-stats">
+        <div class="stat-num avail">9</div>
+        <div class="stat-label">Available<span class="kr">가능 시간</span></div>
+      </div>
+    </div>
+    <div class="calendar">
+      <div class="cal-header">시간 / TIME</div>
+      <div class="cal-header day">
+        화요일
+        <span class="en">TUE</span>
+      </div>
+      <div class="cal-header day">
+        목요일
+        <span class="en">THU</span>
+      </div>
+      <div class="cal-header day">
+        토요일
+        <span class="en">SAT</span>
+      </div>
+      <div class="cal-header day">
+        일요일
+        <span class="en">SUN</span>
+      </div>
+      <div class="cal-time"><div class="h">9<span class="h-suffix">:00</span></div><div class="part">주말 1부</div></div>
+      <div class="cell offduty"></div>
+      <div class="cell offduty"></div>
+      <div class="cell">
+        <div class="class-card subj-GW">
+          <div class="class-subj GW">✍️ Writing</div>
+          <div class="class-code">GW4A</div>
+          <div class="class-orig"></div>
+        </div>
+      </div>
+      <div class="cell">
+        <div class="class-card subj-GW">
+          <div class="class-subj GW">✍️ Writing</div>
+          <div class="class-code">GW4A</div>
+          <div class="class-orig"></div>
+        </div>
+      </div>
+      <div class="cal-time"><div class="h">11<span class="h-suffix">:00</span></div><div class="part">주말 2부</div></div>
+      <div class="cell offduty"></div>
+      <div class="cell offduty"></div>
+      <div class="cell available">
+        <div class="available-mark">
+          <div class="label"><span class="dot"></span>AVAILABLE</div>
+          <div class="sub">언제든 배치 가능</div>
+        </div>
+      </div>
+      <div class="cell available">
+        <div class="available-mark">
+          <div class="label"><span class="dot"></span>AVAILABLE</div>
+          <div class="sub">언제든 배치 가능</div>
+        </div>
+      </div>
+      <div class="cal-time"><div class="h">15<span class="h-suffix">:00</span></div><div class="part">주말 3부</div></div>
+      <div class="cell offduty"></div>
+      <div class="cell offduty"></div>
+      <div class="cell available">
+        <div class="available-mark">
+          <div class="label"><span class="dot"></span>AVAILABLE</div>
+          <div class="sub">언제든 배치 가능</div>
+        </div>
+      </div>
+      <div class="cell">
+        <div class="class-card subj-GW">
+          <div class="class-subj GW">✍️ Writing</div>
+          <div class="class-code">GW4B</div>
+          <div class="class-orig">← GW4_5</div>
+        </div>
+      </div>
+      <div class="cal-time"><div class="h">17<span class="h-suffix">:00</span></div><div class="part">4부 / 1부</div></div>
+      <div class="cell available">
+        <div class="available-mark">
+          <div class="label"><span class="dot"></span>AVAILABLE</div>
+          <div class="sub">언제든 배치 가능</div>
+        </div>
+      </div>
+      <div class="cell available">
+        <div class="available-mark">
+          <div class="label"><span class="dot"></span>AVAILABLE</div>
+          <div class="sub">언제든 배치 가능</div>
+        </div>
+      </div>
+      <div class="cell">
+        <div class="class-card subj-GW">
+          <div class="class-subj GW">✍️ Writing</div>
+          <div class="class-code">GW3A</div>
+          <div class="class-orig">← GW2_1</div>
+        </div>
+      </div>
+      <div class="cell">
+        <div class="class-card subj-GW">
+          <div class="class-subj GW">✍️ Writing</div>
+          <div class="class-code">GW4A</div>
+          <div class="class-orig">← GW3_15</div>
+        </div>
+      </div>
+      <div class="cal-time"><div class="h">19<span class="h-suffix">:00</span></div><div class="part">5부 / 2부</div></div>
+      <div class="cell">
+        <div class="class-card subj-GW">
+          <div class="class-subj GW">✍️ Writing</div>
+          <div class="class-code">GW4A</div>
+          <div class="class-orig"></div>
+        </div>
+      </div>
+      <div class="cell available">
+        <div class="available-mark">
+          <div class="label"><span class="dot"></span>AVAILABLE</div>
+          <div class="sub">언제든 배치 가능</div>
+        </div>
+      </div>
+      <div class="cell available">
+        <div class="available-mark">
+          <div class="label"><span class="dot"></span>AVAILABLE</div>
+          <div class="sub">언제든 배치 가능</div>
+        </div>
+      </div>
+      <div class="cell available">
+        <div class="available-mark">
+          <div class="label"><span class="dot"></span>AVAILABLE</div>
+          <div class="sub">언제든 배치 가능</div>
+        </div>
+      </div>
+      <div class="cal-time"><div class="h">21<span class="h-suffix">:00</span></div><div class="part">평일 3부</div></div>
+      <div class="cell available">
+        <div class="available-mark">
+          <div class="label"><span class="dot"></span>AVAILABLE</div>
+          <div class="sub">언제든 배치 가능</div>
+        </div>
+      </div>
+      <div class="cell">
+        <div class="class-card subj-GW">
+          <div class="class-subj GW">✍️ Writing</div>
+          <div class="class-code">GW4A</div>
+          <div class="class-orig"></div>
+        </div>
+      </div>
+      <div class="cell offduty"></div>
+      <div class="cell offduty"></div>
+    </div>
+    <div class="legend">
+      <div class="legend-item"><div class="legend-swatch GD"></div><div class="text">🎤 Debate <span class="en">GD · 토론</span></div></div>
+      <div class="legend-item"><div class="legend-swatch GW"></div><div class="text">✍️ Writing <span class="en">GW · 작문</span></div></div>
+      <div class="legend-item"><div class="legend-swatch SG"></div><div class="text">📖 Grammar <span class="en">SG · 문법</span></div></div>
+      <div class="legend-item"><div class="legend-swatch SR"></div><div class="text">📚 Reading <span class="en">SR · 독해</span></div></div>
+      <div class="legend-item"><div class="legend-swatch avail"></div><div class="text">AVAILABLE <span class="en">가능 시간 · Open slot</span></div></div>
+      <div class="legend-item"><div class="legend-swatch off"></div><div class="text">운영 외 시간 <span class="en">Off-duty</span></div></div>
+    </div>
+  </section>
+  <section class="teacher-view" data-teacher="김태은">
+    <div class="teacher-meta">
+      <div>
+        <div class="teacher-name">
+          김태은
+          <span class="en-name">Taeun</span>
+          <span class="role">Topia Live · Instructor</span>
+        </div>
+      </div>
+      <div></div>
+      <div class="teacher-stats">
+        <div class="stat-num classes">2</div>
+        <div class="stat-label">Classes<span class="kr">수업</span></div>
+      </div>
+      <div class="teacher-stats">
+        <div class="stat-num avail">3</div>
+        <div class="stat-label">Available<span class="kr">가능 시간</span></div>
+      </div>
+    </div>
+    <div class="calendar">
+      <div class="cal-header">시간 / TIME</div>
+      <div class="cal-header day">
+        화요일
+        <span class="en">TUE</span>
+      </div>
+      <div class="cal-header day">
+        목요일
+        <span class="en">THU</span>
+      </div>
+      <div class="cal-header day">
+        토요일
+        <span class="en">SAT</span>
+      </div>
+      <div class="cal-header day">
+        일요일
+        <span class="en">SUN</span>
+      </div>
+      <div class="cal-time"><div class="h">9<span class="h-suffix">:00</span></div><div class="part">주말 1부</div></div>
+      <div class="cell offduty"></div>
+      <div class="cell offduty"></div>
+      <div class="cell">
+        <div class="class-card subj-SR new">
+          <div class="class-subj SR">📚 Reading</div>
+          <div class="class-code">SR2A</div>
+          <div class="class-orig">NEW · 신설</div>
+        </div>
+      </div>
+      <div class="cell offduty"></div>
+      <div class="cal-time"><div class="h">11<span class="h-suffix">:00</span></div><div class="part">주말 2부</div></div>
+      <div class="cell offduty"></div>
+      <div class="cell offduty"></div>
+      <div class="cell available">
+        <div class="available-mark">
+          <div class="label"><span class="dot"></span>AVAILABLE</div>
+          <div class="sub">언제든 배치 가능</div>
+        </div>
+      </div>
+      <div class="cell offduty"></div>
+      <div class="cal-time"><div class="h">15<span class="h-suffix">:00</span></div><div class="part">주말 3부</div></div>
+      <div class="cell offduty"></div>
+      <div class="cell offduty"></div>
+      <div class="cell offduty"></div>
+      <div class="cell available">
+        <div class="available-mark">
+          <div class="label"><span class="dot"></span>AVAILABLE</div>
+          <div class="sub">언제든 배치 가능</div>
+        </div>
+      </div>
+      <div class="cal-time"><div class="h">17<span class="h-suffix">:00</span></div><div class="part">4부 / 1부</div></div>
+      <div class="cell offduty"></div>
+      <div class="cell offduty"></div>
+      <div class="cell offduty"></div>
+      <div class="cell">
+        <div class="class-card subj-SG">
+          <div class="class-subj SG">📖 Grammar</div>
+          <div class="class-code">SG3A</div>
+          <div class="class-orig"></div>
+        </div>
+      </div>
+      <div class="cal-time"><div class="h">19<span class="h-suffix">:00</span></div><div class="part">5부 / 2부</div></div>
+      <div class="cell offduty"></div>
+      <div class="cell offduty"></div>
+      <div class="cell offduty"></div>
+      <div class="cell available">
+        <div class="available-mark">
+          <div class="label"><span class="dot"></span>AVAILABLE</div>
+          <div class="sub">언제든 배치 가능</div>
+        </div>
+      </div>
+      <div class="cal-time"><div class="h">21<span class="h-suffix">:00</span></div><div class="part">평일 3부</div></div>
+      <div class="cell offduty"></div>
+      <div class="cell offduty"></div>
+      <div class="cell offduty"></div>
+      <div class="cell offduty"></div>
+    </div>
+    <div class="legend">
+      <div class="legend-item"><div class="legend-swatch GD"></div><div class="text">🎤 Debate <span class="en">GD · 토론</span></div></div>
+      <div class="legend-item"><div class="legend-swatch GW"></div><div class="text">✍️ Writing <span class="en">GW · 작문</span></div></div>
+      <div class="legend-item"><div class="legend-swatch SG"></div><div class="text">📖 Grammar <span class="en">SG · 문법</span></div></div>
+      <div class="legend-item"><div class="legend-swatch SR"></div><div class="text">📚 Reading <span class="en">SR · 독해</span></div></div>
+      <div class="legend-item"><div class="legend-swatch avail"></div><div class="text">AVAILABLE <span class="en">가능 시간 · Open slot</span></div></div>
+      <div class="legend-item"><div class="legend-swatch off"></div><div class="text">운영 외 시간 <span class="en">Off-duty</span></div></div>
+    </div>
+  </section>
+  <section class="teacher-view" data-teacher="Andrew">
+    <div class="teacher-meta">
+      <div>
+        <div class="teacher-name">
+          Andrew
+          
+          <span class="role">Topia Live · Instructor</span>
+        </div>
+      </div>
+      <div></div>
+      <div class="teacher-stats">
+        <div class="stat-num classes">6</div>
+        <div class="stat-label">Classes<span class="kr">수업</span></div>
+      </div>
+      <div class="teacher-stats">
+        <div class="stat-num avail">4</div>
+        <div class="stat-label">Available<span class="kr">가능 시간</span></div>
+      </div>
+    </div>
+    <div class="calendar">
+      <div class="cal-header">시간 / TIME</div>
+      <div class="cal-header day">
+        화요일
+        <span class="en">TUE</span>
+      </div>
+      <div class="cal-header day">
+        목요일
+        <span class="en">THU</span>
+      </div>
+      <div class="cal-header day">
+        토요일
+        <span class="en">SAT</span>
+      </div>
+      <div class="cal-header day">
+        일요일
+        <span class="en">SUN</span>
+      </div>
+      <div class="cal-time"><div class="h">9<span class="h-suffix">:00</span></div><div class="part">주말 1부</div></div>
+      <div class="cell offduty"></div>
+      <div class="cell offduty"></div>
+      <div class="cell">
+        <div class="class-card subj-GD">
+          <div class="class-subj GD">🎤 Debate</div>
+          <div class="class-code">GD4A</div>
+          <div class="class-orig"></div>
+        </div>
+      </div>
+      <div class="cell">
+        <div class="class-card subj-GW">
+          <div class="class-subj GW">✍️ Writing</div>
+          <div class="class-code">GW3A</div>
+          <div class="class-orig"></div>
+        </div>
+      </div>
+      <div class="cal-time"><div class="h">11<span class="h-suffix">:00</span></div><div class="part">주말 2부</div></div>
+      <div class="cell offduty"></div>
+      <div class="cell offduty"></div>
+      <div class="cell">
+        <div class="class-card subj-GD">
+          <div class="class-subj GD">🎤 Debate</div>
+          <div class="class-code">GD4A</div>
+          <div class="class-orig"></div>
+        </div>
+      </div>
+      <div class="cell">
+        <div class="class-card subj-GD">
+          <div class="class-subj GD">🎤 Debate</div>
+          <div class="class-code">GD3A</div>
+          <div class="class-orig"></div>
+        </div>
+      </div>
+      <div class="cal-time"><div class="h">15<span class="h-suffix">:00</span></div><div class="part">주말 3부</div></div>
+      <div class="cell offduty"></div>
+      <div class="cell offduty"></div>
+      <div class="cell available">
+        <div class="available-mark">
+          <div class="label"><span class="dot"></span>AVAILABLE</div>
+          <div class="sub">언제든 배치 가능</div>
+        </div>
+      </div>
+      <div class="cell">
+        <div class="class-card subj-GD">
+          <div class="class-subj GD">🎤 Debate</div>
+          <div class="class-code">GD2A</div>
+          <div class="class-orig"></div>
+        </div>
+      </div>
+      <div class="cal-time"><div class="h">17<span class="h-suffix">:00</span></div><div class="part">4부 / 1부</div></div>
+      <div class="cell offduty"></div>
+      <div class="cell offduty"></div>
+      <div class="cell available">
+        <div class="available-mark">
+          <div class="label"><span class="dot"></span>AVAILABLE</div>
+          <div class="sub">언제든 배치 가능</div>
+        </div>
+      </div>
+      <div class="cell">
+        <div class="class-card subj-GD">
+          <div class="class-subj GD">🎤 Debate</div>
+          <div class="class-code">GD4A</div>
+          <div class="class-orig">← GD3_12</div>
+        </div>
+      </div>
+      <div class="cal-time"><div class="h">19<span class="h-suffix">:00</span></div><div class="part">5부 / 2부</div></div>
+      <div class="cell offduty"></div>
+      <div class="cell offduty"></div>
+      <div class="cell available">
+        <div class="available-mark">
+          <div class="label"><span class="dot"></span>AVAILABLE</div>
+          <div class="sub">언제든 배치 가능</div>
+        </div>
+      </div>
+      <div class="cell available">
+        <div class="available-mark">
+          <div class="label"><span class="dot"></span>AVAILABLE</div>
+          <div class="sub">언제든 배치 가능</div>
+        </div>
+      </div>
+      <div class="cal-time"><div class="h">21<span class="h-suffix">:00</span></div><div class="part">평일 3부</div></div>
+      <div class="cell offduty"></div>
+      <div class="cell offduty"></div>
+      <div class="cell offduty"></div>
+      <div class="cell offduty"></div>
+    </div>
+    <div class="legend">
+      <div class="legend-item"><div class="legend-swatch GD"></div><div class="text">🎤 Debate <span class="en">GD · 토론</span></div></div>
+      <div class="legend-item"><div class="legend-swatch GW"></div><div class="text">✍️ Writing <span class="en">GW · 작문</span></div></div>
+      <div class="legend-item"><div class="legend-swatch SG"></div><div class="text">📖 Grammar <span class="en">SG · 문법</span></div></div>
+      <div class="legend-item"><div class="legend-swatch SR"></div><div class="text">📚 Reading <span class="en">SR · 독해</span></div></div>
+      <div class="legend-item"><div class="legend-swatch avail"></div><div class="text">AVAILABLE <span class="en">가능 시간 · Open slot</span></div></div>
+      <div class="legend-item"><div class="legend-swatch off"></div><div class="text">운영 외 시간 <span class="en">Off-duty</span></div></div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <span>TOPIA LIVE · FINAL · 2026 SUMMER (JUNE)</span>
+    <span>11 INSTRUCTORS · 48 CLASSES</span>
+  </footer>
+
+</div>
+
+<script>
+const tabs = document.querySelectorAll('.teacher-tab');
+const views = document.querySelectorAll('.teacher-view');
+tabs.forEach(tab => {
+  tab.addEventListener('click', () => {
+    const t = tab.dataset.teacher;
+    tabs.forEach(x => x.classList.remove('active'));
+    tab.classList.add('active');
+    views.forEach(v => {
+      v.classList.toggle('active', v.dataset.teacher === t);
+    });
+    window.scrollTo({top: 0, behavior: 'smooth'});
+  });
+});
+</script>
+
+</body>
+</html>
