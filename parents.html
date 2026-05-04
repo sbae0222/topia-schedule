@@ -1,0 +1,1067 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>토피아 라이브 — 6월 학기 시간표 안내</title>
+<link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --primary: #1849D6;
+  --primary-dark: #0F3AB8;
+  --primary-light: #E8EFFF;
+  --primary-50: #F5F8FF;
+  --ink: #0A1628;
+  --text: #1F2937;
+  --text-2: #4B5563;
+  --text-3: #6B7280;
+  --bg: #FFFFFF;
+  --bg-2: #F9FAFB;
+  --bg-3: #F3F4F6;
+  --border: #E5E7EB;
+}
+
+html, body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.5;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.hero {
+  background: linear-gradient(180deg, var(--primary-50) 0%, #FFFFFF 100%);
+  padding: 64px 0 48px;
+  border-bottom: 1px solid var(--border);
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--primary-light);
+  color: var(--primary);
+  padding: 6px 14px;
+  border-radius: 100px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  margin-bottom: 20px;
+}
+
+.hero-badge .dot {
+  width: 6px;
+  height: 6px;
+  background: var(--primary);
+  border-radius: 50%;
+}
+
+.hero h1 {
+  font-size: clamp(32px, 5vw, 48px);
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  color: var(--ink);
+  line-height: 1.15;
+  margin-bottom: 12px;
+}
+
+.hero h1 .highlight { color: var(--primary); }
+
+.hero-sub {
+  font-size: 18px;
+  color: var(--text-2);
+  letter-spacing: -0.01em;
+  margin-bottom: 32px;
+}
+
+.hero-stats {
+  display: flex;
+  gap: 32px;
+  flex-wrap: wrap;
+  margin-top: 32px;
+}
+
+.hero-stat .num {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--primary);
+  letter-spacing: -0.02em;
+  font-family: 'Inter', sans-serif;
+}
+
+.hero-stat .label {
+  font-size: 13px;
+  color: var(--text-3);
+  font-weight: 500;
+}
+
+/* === TERM INFO === */
+.term-info {
+  margin: 48px 0 32px;
+}
+
+.term-info-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--ink);
+  letter-spacing: -0.02em;
+  margin-bottom: 16px;
+}
+
+.term-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 12px;
+}
+
+.term-card {
+  padding: 20px 22px;
+  background: #FFFFFF;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  transition: all 0.15s ease;
+}
+
+.term-card:hover {
+  border-color: var(--primary);
+  box-shadow: 0 4px 12px rgba(24, 73, 214, 0.08);
+}
+
+.term-card .day {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.term-card .day-kr {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--ink);
+  letter-spacing: -0.01em;
+}
+
+.term-card .day-en {
+  font-size: 11px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  color: var(--text-3);
+  text-transform: uppercase;
+}
+
+.term-card .period {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--primary);
+  letter-spacing: -0.01em;
+  font-family: 'Inter', sans-serif;
+  margin-bottom: 6px;
+}
+
+.term-card .holiday {
+  font-size: 12px;
+  color: #B45309;
+  background: #FFFBEB;
+  padding: 4px 10px;
+  border-radius: 6px;
+  display: inline-block;
+  font-weight: 500;
+}
+
+.term-card .holiday::before {
+  content: "🏖 ";
+}
+
+.term-card .no-holiday {
+  font-size: 12px;
+  color: var(--text-3);
+  font-weight: 500;
+}
+
+/* === NOTICE === */
+.notice {
+  margin: 32px 0;
+  padding: 20px 24px;
+  background: var(--primary-50);
+  border: 1px solid var(--primary-light);
+  border-radius: 12px;
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.notice .icon { font-size: 22px; line-height: 1; flex-shrink: 0; margin-top: 2px; }
+.notice .text {
+  font-size: 14px;
+  color: var(--text-2);
+  line-height: 1.6;
+}
+
+.notice .text strong {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.filter-bar {
+  margin: 40px 0 24px;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.filter-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-3);
+  margin-right: 8px;
+  letter-spacing: -0.01em;
+}
+
+.filter-btn {
+  padding: 8px 16px;
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  background: #FFFFFF;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-2);
+  cursor: pointer;
+  transition: all 0.15s ease;
+  font-family: inherit;
+  letter-spacing: -0.01em;
+}
+
+.filter-btn:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.filter-btn.active {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: #FFFFFF;
+}
+
+.section-header {
+  margin: 48px 0 16px;
+}
+
+.section-header h2 {
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+}
+
+.day-section { margin-bottom: 40px; }
+
+.day-header {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  padding: 16px 20px;
+  background: var(--ink);
+  color: #FFFFFF;
+  border-radius: 12px 12px 0 0;
+  flex-wrap: wrap;
+}
+
+.day-header .kr {
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.day-header .en {
+  font-size: 12px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  opacity: 0.6;
+  text-transform: uppercase;
+}
+
+.day-header .period-tag {
+  font-size: 12px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  background: rgba(255,255,255,0.12);
+  padding: 4px 10px;
+  border-radius: 6px;
+  margin-left: 8px;
+}
+
+.day-header .count {
+  margin-left: auto;
+  font-size: 13px;
+  font-weight: 500;
+  opacity: 0.7;
+}
+
+.time-slot {
+  border: 1px solid var(--border);
+  border-top: none;
+  background: #FFFFFF;
+  display: grid;
+  grid-template-columns: 140px 1fr;
+}
+
+.time-slot:last-child {
+  border-radius: 0 0 12px 12px;
+}
+
+.time-label {
+  padding: 20px 18px;
+  background: var(--bg-2);
+  border-right: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  justify-content: center;
+}
+
+.time-label .hour {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--ink);
+  letter-spacing: -0.02em;
+  font-family: 'Inter', sans-serif;
+}
+
+.time-label .part {
+  font-size: 11px;
+  color: var(--text-3);
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.classes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 8px;
+  padding: 12px;
+}
+
+.class-item {
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--bg-2);
+  transition: all 0.15s ease;
+}
+
+.class-item:hover {
+  border-color: var(--primary);
+  background: var(--primary-50);
+  transform: translateY(-1px);
+}
+
+.class-item.GD { border-left: 3px solid #BE185D; }
+.class-item.GW { border-left: 3px solid #1E3A8A; }
+.class-item.SG { border-left: 3px solid #047857; }
+.class-item.SR { border-left: 3px solid #C2410C; }
+
+.class-subj {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+.class-subj.GD { color: #BE185D; }
+.class-subj.GW { color: #1E3A8A; }
+.class-subj.SG { color: #047857; }
+.class-subj.SR { color: #C2410C; }
+
+.class-code {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--ink);
+  letter-spacing: -0.02em;
+  font-family: 'Inter', sans-serif;
+  margin-bottom: 4px;
+}
+
+.class-teacher {
+  font-size: 13px;
+  color: var(--text-2);
+  font-weight: 500;
+}
+
+.class-teacher .en {
+  color: var(--text-3);
+  font-weight: 400;
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  margin-left: 4px;
+}
+
+.day-holiday-banner {
+  font-size: 12px;
+  color: #B45309;
+  background: #FFFBEB;
+  padding: 10px 16px;
+  border-bottom: 1px solid #FDE68A;
+  border-left: 1px solid var(--border);
+  border-right: 1px solid var(--border);
+  font-weight: 500;
+}
+
+.legend-section {
+  margin-top: 48px;
+  padding: 32px;
+  background: var(--bg-2);
+  border-radius: 16px;
+}
+
+.legend-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 20px;
+}
+
+.legend-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 16px;
+}
+
+.legend-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 13px;
+  color: var(--text-2);
+}
+
+.legend-color {
+  width: 4px;
+  height: 24px;
+  border-radius: 2px;
+}
+
+.legend-color.GD { background: #BE185D; }
+.legend-color.GW { background: #1E3A8A; }
+.legend-color.SG { background: #047857; }
+.legend-color.SR { background: #C2410C; }
+
+.legend-row strong {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.legend-row .en {
+  color: var(--text-3);
+  font-size: 11px;
+  font-family: 'Inter', sans-serif;
+  margin-left: 4px;
+}
+
+.footer {
+  margin-top: 80px;
+  padding: 40px 0;
+  border-top: 1px solid var(--border);
+  text-align: center;
+}
+
+.footer-logo {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--ink);
+  letter-spacing: -0.02em;
+  margin-bottom: 8px;
+  font-family: 'Inter', sans-serif;
+}
+
+.footer-text {
+  font-size: 13px;
+  color: var(--text-3);
+}
+
+@media (max-width: 768px) {
+  .hero { padding: 40px 0 32px; }
+  .hero-stats { gap: 20px; }
+  .hero-stat .num { font-size: 24px; }
+  .term-grid { grid-template-columns: 1fr 1fr; gap: 8px; }
+  .term-card { padding: 16px; }
+  .term-card .period { font-size: 16px; }
+  .time-slot { grid-template-columns: 90px 1fr; }
+  .time-label { padding: 14px 12px; }
+  .time-label .hour { font-size: 18px; }
+  .classes-grid {
+    grid-template-columns: 1fr 1fr;
+    padding: 8px;
+    gap: 6px;
+  }
+  .class-item { padding: 10px 12px; }
+  .class-code { font-size: 16px; }
+  .class-teacher { font-size: 12px; }
+  .day-header .period-tag { display: none; }
+}
+
+@media (max-width: 480px) {
+  .term-grid { grid-template-columns: 1fr; }
+  .classes-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<section class="hero">
+  <div class="container">
+    <div class="hero-badge">
+      <span class="dot"></span>
+      <span>2026년 6월 학기 · June Term</span>
+    </div>
+    <h1>6월 학기 <span class="highlight">시간표</span> 안내</h1>
+    <div class="hero-sub">학부모님께 다음 학기 개설 수업을 안내드립니다</div>
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <div class="num">48</div>
+        <div class="label">개설 수업</div>
+      </div>
+      <div class="hero-stat">
+        <div class="num">4</div>
+        <div class="label">과목 영역</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="container">
+
+  <!-- TERM INFO -->
+  <div class="term-info">
+    <div class="term-info-title">📅 학기 기간 안내</div>
+    <div class="term-grid">
+      <div class="term-card">
+        <div class="day">
+          <div class="day-kr">화요일</div>
+          <div class="day-en">Tuesday</div>
+        </div>
+        <div class="period">6/2 ~ 8/18</div>
+        <div class="no-holiday">휴원일 없음</div>
+      </div>
+      <div class="term-card">
+        <div class="day">
+          <div class="day-kr">목요일</div>
+          <div class="day-en">Thursday</div>
+        </div>
+        <div class="period">6/4 ~ 8/27</div>
+        <div class="holiday">7/30 (여름방학 휴원)</div>
+      </div>
+      <div class="term-card">
+        <div class="day">
+          <div class="day-kr">토요일</div>
+          <div class="day-en">Saturday</div>
+        </div>
+        <div class="period">6/6 ~ 8/29</div>
+        <div class="holiday">8/1 (여름방학 연장 휴원)</div>
+      </div>
+      <div class="term-card">
+        <div class="day">
+          <div class="day-kr">일요일</div>
+          <div class="day-en">Sunday</div>
+        </div>
+        <div class="period">6/7 ~ 8/30</div>
+        <div class="holiday">8/2 (여름방학 연장 휴원)</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="notice">
+    <div class="icon">📌</div>
+    <div class="text">
+      <strong>현재 확정된 수업을 안내드립니다.</strong> 추가로 개설될 가능성이 있습니다.
+    </div>
+  </div>
+
+  <div class="filter-bar">
+    <span class="filter-label">과목 필터</span>
+    <button class="filter-btn active" data-subj="ALL">전체</button>
+    <button class="filter-btn" data-subj="GD">🎤 Debate · 토론</button>
+    <button class="filter-btn" data-subj="GW">✍️ Writing · 작문</button>
+    <button class="filter-btn" data-subj="SG">📖 Grammar · 문법</button>
+    <button class="filter-btn" data-subj="SR">📚 Reading · 독해</button>
+  </div>
+
+  <div class="section-header">
+    <h2>요일별 개설 수업</h2>
+  </div>
+
+  <div class="day-section">
+    <div class="day-header">
+      <div class="kr">화요일</div>
+      <div class="en">Tuesday</div>
+      <div class="period-tag">6/2 ~ 8/18</div>
+      <div class="count">9개 수업</div>
+    </div>
+    <div class="time-slot">
+      <div class="time-label">
+        <div class="hour">17:00</div>
+        <div class="part">17–19시 · 1부</div>
+      </div>
+      <div class="classes-grid">
+        <div class="class-item GD" data-subj="GD">
+          <div class="class-subj GD">Debate</div>
+          <div class="class-code">GD4A</div>
+          <div class="class-teacher">Kimberley</div>
+        </div>
+        <div class="class-item SG" data-subj="SG">
+          <div class="class-subj SG">Grammar</div>
+          <div class="class-code">SG3A</div>
+          <div class="class-teacher">박수정 <span class="en">Skye</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="time-slot">
+      <div class="time-label">
+        <div class="hour">19:00</div>
+        <div class="part">19–21시 · 2부</div>
+      </div>
+      <div class="classes-grid">
+        <div class="class-item GD" data-subj="GD">
+          <div class="class-subj GD">Debate</div>
+          <div class="class-code">GD5A</div>
+          <div class="class-teacher">Kimberley</div>
+        </div>
+        <div class="class-item GW" data-subj="GW">
+          <div class="class-subj GW">Writing</div>
+          <div class="class-code">GW3A</div>
+          <div class="class-teacher">김지연 <span class="en">Jiyeon</span></div>
+        </div>
+        <div class="class-item GW" data-subj="GW">
+          <div class="class-subj GW">Writing</div>
+          <div class="class-code">GW4A</div>
+          <div class="class-teacher">김예원 <span class="en">Yewon</span></div>
+        </div>
+        <div class="class-item GW" data-subj="GW">
+          <div class="class-subj GW">Writing</div>
+          <div class="class-code">GW4A</div>
+          <div class="class-teacher">David</div>
+        </div>
+        <div class="class-item SG" data-subj="SG">
+          <div class="class-subj SG">Grammar</div>
+          <div class="class-code">SG5A</div>
+          <div class="class-teacher">박수정 <span class="en">Skye</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="time-slot">
+      <div class="time-label">
+        <div class="hour">21:00</div>
+        <div class="part">21–23시 · 3부</div>
+      </div>
+      <div class="classes-grid">
+        <div class="class-item SG" data-subj="SG">
+          <div class="class-subj SG">Grammar</div>
+          <div class="class-code">SG2A</div>
+          <div class="class-teacher">최민아 <span class="en">Mina</span></div>
+        </div>
+        <div class="class-item SG" data-subj="SG">
+          <div class="class-subj SG">Grammar</div>
+          <div class="class-code">SG4A</div>
+          <div class="class-teacher">박수정 <span class="en">Skye</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="day-section">
+    <div class="day-header">
+      <div class="kr">목요일</div>
+      <div class="en">Thursday</div>
+      <div class="period-tag">6/4 ~ 8/27</div>
+      <div class="count">9개 수업</div>
+    </div>
+    <div class="day-holiday-banner">🏖 휴원일: 7/30 (여름방학 휴원)</div>
+    <div class="time-slot">
+      <div class="time-label">
+        <div class="hour">17:00</div>
+        <div class="part">17–19시 · 1부</div>
+      </div>
+      <div class="classes-grid">
+        <div class="class-item GW" data-subj="GW">
+          <div class="class-subj GW">Writing</div>
+          <div class="class-code">GW3A</div>
+          <div class="class-teacher">홍주현 <span class="en">Elle</span></div>
+        </div>
+        <div class="class-item SR" data-subj="SR">
+          <div class="class-subj SR">Reading</div>
+          <div class="class-code">SR3A</div>
+          <div class="class-teacher">김예원 <span class="en">Yewon</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="time-slot">
+      <div class="time-label">
+        <div class="hour">19:00</div>
+        <div class="part">19–21시 · 2부</div>
+      </div>
+      <div class="classes-grid">
+        <div class="class-item GD" data-subj="GD">
+          <div class="class-subj GD">Debate</div>
+          <div class="class-code">GD4A</div>
+          <div class="class-teacher">Kimberley</div>
+        </div>
+        <div class="class-item GW" data-subj="GW">
+          <div class="class-subj GW">Writing</div>
+          <div class="class-code">GW3A</div>
+          <div class="class-teacher">김지연 <span class="en">Jiyeon</span></div>
+        </div>
+        <div class="class-item GW" data-subj="GW">
+          <div class="class-subj GW">Writing</div>
+          <div class="class-code">GW4B</div>
+          <div class="class-teacher">홍주현 <span class="en">Elle</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="time-slot">
+      <div class="time-label">
+        <div class="hour">21:00</div>
+        <div class="part">21–23시 · 3부</div>
+      </div>
+      <div class="classes-grid">
+        <div class="class-item GD" data-subj="GD">
+          <div class="class-subj GD">Debate</div>
+          <div class="class-code">GD4A</div>
+          <div class="class-teacher">Kimberley</div>
+        </div>
+        <div class="class-item GD" data-subj="GD">
+          <div class="class-subj GD">Debate</div>
+          <div class="class-code">GD5A</div>
+          <div class="class-teacher">김예원 <span class="en">Yewon</span></div>
+        </div>
+        <div class="class-item GW" data-subj="GW">
+          <div class="class-subj GW">Writing</div>
+          <div class="class-code">GW4A</div>
+          <div class="class-teacher">David</div>
+        </div>
+        <div class="class-item SG" data-subj="SG">
+          <div class="class-subj SG">Grammar</div>
+          <div class="class-code">SG4A</div>
+          <div class="class-teacher">최민아 <span class="en">Mina</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="day-section">
+    <div class="day-header">
+      <div class="kr">토요일</div>
+      <div class="en">Saturday</div>
+      <div class="period-tag">6/6 ~ 8/29</div>
+      <div class="count">14개 수업</div>
+    </div>
+    <div class="day-holiday-banner">🏖 휴원일: 8/1 (여름방학 연장 휴원)</div>
+    <div class="time-slot">
+      <div class="time-label">
+        <div class="hour">9:00</div>
+        <div class="part">9–11시 · 1부</div>
+      </div>
+      <div class="classes-grid">
+        <div class="class-item GD" data-subj="GD">
+          <div class="class-subj GD">Debate</div>
+          <div class="class-code">GD4A</div>
+          <div class="class-teacher">Andrew</div>
+        </div>
+        <div class="class-item GW" data-subj="GW">
+          <div class="class-subj GW">Writing</div>
+          <div class="class-code">GW4A</div>
+          <div class="class-teacher">David</div>
+        </div>
+        <div class="class-item SG" data-subj="SG">
+          <div class="class-subj SG">Grammar</div>
+          <div class="class-code">SG2A</div>
+          <div class="class-teacher">최민아 <span class="en">Mina</span></div>
+        </div>
+        <div class="class-item SG" data-subj="SG">
+          <div class="class-subj SG">Grammar</div>
+          <div class="class-code">SG3A</div>
+          <div class="class-teacher">남유진 <span class="en">Rachel</span></div>
+        </div>
+        <div class="class-item SR" data-subj="SR">
+          <div class="class-subj SR">Reading</div>
+          <div class="class-code">SR2A</div>
+          <div class="class-teacher">김태은 <span class="en">Taeun</span></div>
+        </div>
+        <div class="class-item SR" data-subj="SR">
+          <div class="class-subj SR">Reading</div>
+          <div class="class-code">SR3A</div>
+          <div class="class-teacher">박수정 <span class="en">Skye</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="time-slot">
+      <div class="time-label">
+        <div class="hour">11:00</div>
+        <div class="part">11–13시 · 2부</div>
+      </div>
+      <div class="classes-grid">
+        <div class="class-item GD" data-subj="GD">
+          <div class="class-subj GD">Debate</div>
+          <div class="class-code">GD4A</div>
+          <div class="class-teacher">Andrew</div>
+        </div>
+        <div class="class-item SG" data-subj="SG">
+          <div class="class-subj SG">Grammar</div>
+          <div class="class-code">SG3A</div>
+          <div class="class-teacher">박수정 <span class="en">Skye</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="time-slot">
+      <div class="time-label">
+        <div class="hour">15:00</div>
+        <div class="part">15–17시 · 3부</div>
+      </div>
+      <div class="classes-grid">
+        <div class="class-item GD" data-subj="GD">
+          <div class="class-subj GD">Debate</div>
+          <div class="class-code">GD5A</div>
+          <div class="class-teacher">Kimberley</div>
+        </div>
+        <div class="class-item GW" data-subj="GW">
+          <div class="class-subj GW">Writing</div>
+          <div class="class-code">GW4A</div>
+          <div class="class-teacher">김예원 <span class="en">Yewon</span></div>
+        </div>
+        <div class="class-item SG" data-subj="SG">
+          <div class="class-subj SG">Grammar</div>
+          <div class="class-code">SG4A</div>
+          <div class="class-teacher">박수정 <span class="en">Skye</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="time-slot">
+      <div class="time-label">
+        <div class="hour">17:00</div>
+        <div class="part">17–19시 · 4부</div>
+      </div>
+      <div class="classes-grid">
+        <div class="class-item GD" data-subj="GD">
+          <div class="class-subj GD">Debate</div>
+          <div class="class-code">GD5A</div>
+          <div class="class-teacher">Kimberley</div>
+        </div>
+        <div class="class-item GW" data-subj="GW">
+          <div class="class-subj GW">Writing</div>
+          <div class="class-code">GW3A</div>
+          <div class="class-teacher">David</div>
+        </div>
+        <div class="class-item SG" data-subj="SG">
+          <div class="class-subj SG">Grammar</div>
+          <div class="class-code">SG3A</div>
+          <div class="class-teacher">박수정 <span class="en">Skye</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="day-section">
+    <div class="day-header">
+      <div class="kr">일요일</div>
+      <div class="en">Sunday</div>
+      <div class="period-tag">6/7 ~ 8/30</div>
+      <div class="count">16개 수업</div>
+    </div>
+    <div class="day-holiday-banner">🏖 휴원일: 8/2 (여름방학 연장 휴원)</div>
+    <div class="time-slot">
+      <div class="time-label">
+        <div class="hour">9:00</div>
+        <div class="part">9–11시 · 1부</div>
+      </div>
+      <div class="classes-grid">
+        <div class="class-item GW" data-subj="GW">
+          <div class="class-subj GW">Writing</div>
+          <div class="class-code">GW3A</div>
+          <div class="class-teacher">Andrew</div>
+        </div>
+        <div class="class-item GW" data-subj="GW">
+          <div class="class-subj GW">Writing</div>
+          <div class="class-code">GW4A</div>
+          <div class="class-teacher">David</div>
+        </div>
+        <div class="class-item SR" data-subj="SR">
+          <div class="class-subj SR">Reading</div>
+          <div class="class-code">SR2A</div>
+          <div class="class-teacher">최민아 <span class="en">Mina</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="time-slot">
+      <div class="time-label">
+        <div class="hour">11:00</div>
+        <div class="part">11–13시 · 2부</div>
+      </div>
+      <div class="classes-grid">
+        <div class="class-item GD" data-subj="GD">
+          <div class="class-subj GD">Debate</div>
+          <div class="class-code">GD3A</div>
+          <div class="class-teacher">Andrew</div>
+        </div>
+        <div class="class-item SG" data-subj="SG">
+          <div class="class-subj SG">Grammar</div>
+          <div class="class-code">SG4A</div>
+          <div class="class-teacher">최민아 <span class="en">Mina</span></div>
+        </div>
+        <div class="class-item SR" data-subj="SR">
+          <div class="class-subj SR">Reading</div>
+          <div class="class-code">SR4A</div>
+          <div class="class-teacher">박수정 <span class="en">Skye</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="time-slot">
+      <div class="time-label">
+        <div class="hour">15:00</div>
+        <div class="part">15–17시 · 3부</div>
+      </div>
+      <div class="classes-grid">
+        <div class="class-item GD" data-subj="GD">
+          <div class="class-subj GD">Debate</div>
+          <div class="class-code">GD2A</div>
+          <div class="class-teacher">Andrew</div>
+        </div>
+        <div class="class-item GW" data-subj="GW">
+          <div class="class-subj GW">Writing</div>
+          <div class="class-code">GW4A</div>
+          <div class="class-teacher">김지연 <span class="en">Jiyeon</span></div>
+        </div>
+        <div class="class-item GW" data-subj="GW">
+          <div class="class-subj GW">Writing</div>
+          <div class="class-code">GW4B</div>
+          <div class="class-teacher">David</div>
+        </div>
+        <div class="class-item SG" data-subj="SG">
+          <div class="class-subj SG">Grammar</div>
+          <div class="class-code">SG4A</div>
+          <div class="class-teacher">박수정 <span class="en">Skye</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="time-slot">
+      <div class="time-label">
+        <div class="hour">17:00</div>
+        <div class="part">17–19시 · 4부</div>
+      </div>
+      <div class="classes-grid">
+        <div class="class-item GD" data-subj="GD">
+          <div class="class-subj GD">Debate</div>
+          <div class="class-code">GD4A</div>
+          <div class="class-teacher">Andrew</div>
+        </div>
+        <div class="class-item GW" data-subj="GW">
+          <div class="class-subj GW">Writing</div>
+          <div class="class-code">GW3A</div>
+          <div class="class-teacher">홍주현 <span class="en">Elle</span></div>
+        </div>
+        <div class="class-item GW" data-subj="GW">
+          <div class="class-subj GW">Writing</div>
+          <div class="class-code">GW4A</div>
+          <div class="class-teacher">David</div>
+        </div>
+        <div class="class-item SG" data-subj="SG">
+          <div class="class-subj SG">Grammar</div>
+          <div class="class-code">SG3A</div>
+          <div class="class-teacher">박수정 <span class="en">Skye</span></div>
+        </div>
+        <div class="class-item SG" data-subj="SG">
+          <div class="class-subj SG">Grammar</div>
+          <div class="class-code">SG3A</div>
+          <div class="class-teacher">김태은 <span class="en">Taeun</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="time-slot">
+      <div class="time-label">
+        <div class="hour">19:00</div>
+        <div class="part">19–21시 · 5부</div>
+      </div>
+      <div class="classes-grid">
+        <div class="class-item SR" data-subj="SR">
+          <div class="class-subj SR">Reading</div>
+          <div class="class-code">SR5A</div>
+          <div class="class-teacher">황예슬 <span class="en">Noelle</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="legend-section">
+    <div class="legend-title">과목 안내</div>
+    <div class="legend-grid">
+      <div class="legend-row">
+        <div class="legend-color GD"></div>
+        <div><strong>🎤 Debate</strong><span class="en">토론</span></div>
+      </div>
+      <div class="legend-row">
+        <div class="legend-color GW"></div>
+        <div><strong>✍️ Writing</strong><span class="en">작문</span></div>
+      </div>
+      <div class="legend-row">
+        <div class="legend-color SG"></div>
+        <div><strong>📖 Grammar</strong><span class="en">문법</span></div>
+      </div>
+      <div class="legend-row">
+        <div class="legend-color SR"></div>
+        <div><strong>📚 Reading</strong><span class="en">독해</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="footer-logo">TOPIA Live</div>
+    <div class="footer-text">실시간 온라인 영어학원 · 6월 학기 시간표 안내 · 2026 Summer</div>
+  </div>
+
+</div>
+
+<script>
+const filterBtns = document.querySelectorAll('.filter-btn');
+const classItems = document.querySelectorAll('.class-item');
+const timeSlots = document.querySelectorAll('.time-slot');
+const daySections = document.querySelectorAll('.day-section');
+
+filterBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    const subj = btn.dataset.subj;
+    
+    filterBtns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    
+    if (subj === 'ALL') {
+      classItems.forEach(item => item.style.display = '');
+    } else {
+      classItems.forEach(item => {
+        item.style.display = item.dataset.subj === subj ? '' : 'none';
+      });
+    }
+    
+    timeSlots.forEach(slot => {
+      const visible = Array.from(slot.querySelectorAll('.class-item')).some(i => i.style.display !== 'none');
+      slot.style.display = visible ? '' : 'none';
+    });
+    
+    daySections.forEach(sec => {
+      const visible = Array.from(sec.querySelectorAll('.class-item')).some(i => i.style.display !== 'none');
+      sec.style.display = visible ? '' : 'none';
+    });
+  });
+});
+</script>
+
+</body>
+</html>
