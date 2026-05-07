@@ -108,6 +108,11 @@ html, body { background: var(--bg); color: var(--text); font-family: 'Pretendard
   .term-grid { grid-template-columns: 1fr; }
   .classes-grid { grid-template-columns: 1fr; }
 }
+
+.notice.urgent { background: #FEF2F2; border-color: #FCA5A5; }
+.notice.urgent .text strong { color: #B91C1C; }
+.notice.update { background: #ECFDF5; border-color: #A7F3D0; }
+.notice.update .text strong { color: #047857; }
 </style>
 </head>
 <body>
@@ -117,7 +122,7 @@ html, body { background: var(--bg); color: var(--text); font-family: 'Pretendard
     <h1>6월 학기 <span class="highlight">시간표</span> 안내</h1>
     <div class="hero-sub">학부모님께 다음 학기 개설 수업을 안내드립니다</div>
     <div class="hero-stats">
-      <div class="hero-stat"><div class="num">53</div><div class="label">개설 수업</div></div>
+      <div class="hero-stat"><div class="num">57</div><div class="label">개설 수업</div></div>
       <div class="hero-stat"><div class="num">4</div><div class="label">과목 영역</div></div>
     </div>
   </div>
@@ -152,6 +157,14 @@ html, body { background: var(--bg); color: var(--text); font-family: 'Pretendard
     <div class="icon">📌</div>
     <div class="text"><strong>현재 확정된 수업을 안내드립니다.</strong> 추가로 개설될 가능성이 있습니다.</div>
   </div>
+  <div class="notice update">
+    <div class="icon">🔔</div>
+    <div class="text"><strong>시간표는 수시로 업데이트됩니다.</strong> 새로운 수업이 추가되거나 변경될 수 있으니 자주 확인해주세요.</div>
+  </div>
+  <div class="notice urgent">
+    <div class="icon">⏰</div>
+    <div class="text"><strong>등록은 빠를수록 좋습니다.</strong> 등록이 빠르게 차지 않을 경우, 수요가 더 많은 다른 수업으로 변경될 수 있는 점 양해 부탁드립니다.</div>
+  </div>
   <div class="filter-bar">
     <span class="filter-label">과목 필터</span>
     <button class="filter-btn active" data-subj="ALL">전체</button>
@@ -166,7 +179,7 @@ html, body { background: var(--bg); color: var(--text); font-family: 'Pretendard
       <div class="kr">화요일</div>
       <div class="en">Tuesday</div>
       <div class="period-tag">6/2 ~ 8/18</div>
-      <div class="count">10개 수업</div>
+      <div class="count">11개 수업</div>
     </div>
     <div class="time-slot">
       <div class="time-label">
@@ -230,6 +243,11 @@ html, body { background: var(--bg); color: var(--text); font-family: 'Pretendard
         <div class="part">21–23시 · 3부</div>
       </div>
       <div class="classes-grid">
+        <div class="class-item GW" data-subj="GW">
+          <div class="class-subj GW">Writing</div>
+          <div class="class-code">GW2A</div>
+          <div class="class-teacher">김예원 <span class="en">Yewon</span></div>
+        </div>
         <div class="class-item SG" data-subj="SG">
           <div class="class-subj SG">Grammar</div>
           <div class="class-code">SG2A</div>
@@ -264,7 +282,7 @@ html, body { background: var(--bg); color: var(--text); font-family: 'Pretendard
         </div>
         <div class="class-item GW" data-subj="GW">
           <div class="class-subj GW">Writing</div>
-          <div class="class-code">GW3A</div>
+          <div class="class-code">GW2A</div>
           <div class="class-teacher">홍주현 <span class="en">Elle</span></div>
         </div>
         <div class="class-item SR" data-subj="SR">
@@ -331,7 +349,7 @@ html, body { background: var(--bg); color: var(--text); font-family: 'Pretendard
       <div class="kr">토요일</div>
       <div class="en">Saturday</div>
       <div class="period-tag">6/6 ~ 8/29</div>
-      <div class="count">16개 수업</div>
+      <div class="count">17개 수업</div>
     </div>
     <div class="day-holiday-banner">🏖 휴원일: 8/1 (여름방학 연장 휴원)</div>
     <div class="time-slot">
@@ -446,13 +464,26 @@ html, body { background: var(--bg); color: var(--text); font-family: 'Pretendard
         </div>
       </div>
     </div>
+    <div class="time-slot">
+      <div class="time-label">
+        <div class="hour">19:00</div>
+        <div class="part">19–21시 · 5부</div>
+      </div>
+      <div class="classes-grid">
+        <div class="class-item SG" data-subj="SG">
+          <div class="class-subj SG">Grammar</div>
+          <div class="class-code">SG1A</div>
+          <div class="class-teacher">박수정 <span class="en">Skye</span></div>
+        </div>
+      </div>
+    </div>
   </div>
   <div class="day-section">
     <div class="day-header">
       <div class="kr">일요일</div>
       <div class="en">Sunday</div>
       <div class="period-tag">6/7 ~ 8/30</div>
-      <div class="count">17개 수업</div>
+      <div class="count">19개 수업</div>
     </div>
     <div class="day-holiday-banner">🏖 휴원일: 8/2 (여름방학 연장 휴원)</div>
     <div class="time-slot">
@@ -573,6 +604,16 @@ html, body { background: var(--bg); color: var(--text); font-family: 'Pretendard
         <div class="part">19–21시 · 5부</div>
       </div>
       <div class="classes-grid">
+        <div class="class-item GD" data-subj="GD">
+          <div class="class-subj GD">Debate</div>
+          <div class="class-code">GD2A</div>
+          <div class="class-teacher">Andrew</div>
+        </div>
+        <div class="class-item SG" data-subj="SG">
+          <div class="class-subj SG">Grammar</div>
+          <div class="class-code">SG2A</div>
+          <div class="class-teacher">박수정 <span class="en">Skye</span></div>
+        </div>
         <div class="class-item SR" data-subj="SR">
           <div class="class-subj SR">Reading</div>
           <div class="class-code">SR5A</div>

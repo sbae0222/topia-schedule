@@ -107,6 +107,12 @@ body { background: radial-gradient(circle at 15% 10%, rgba(200, 85, 61, 0.05), t
   .available-mark .sub { font-size: 9px; }
   .masthead-en { font-size: 16px; }
 }
+
+.update-notice { margin: 24px 0 0; padding: 16px 20px; background: rgba(200, 85, 61, 0.06); border-left: 3px solid var(--accent); display: flex; gap: 14px; align-items: flex-start; }
+.update-notice .icon { font-size: 20px; line-height: 1; flex-shrink: 0; margin-top: 1px; }
+.update-notice .text { font-size: 14px; color: var(--ink); line-height: 1.5; font-family: 'IBM Plex Sans KR', sans-serif; }
+.update-notice .text strong { font-weight: 600; color: var(--accent); }
+.update-notice .text .en { display: block; font-family: 'Fraunces', serif; font-style: italic; font-size: 12px; color: var(--muted); margin-top: 4px; }
 </style>
 </head>
 <body>
@@ -121,9 +127,16 @@ body { background: radial-gradient(circle at 15% 10%, rgba(200, 85, 61, 0.05), t
     <div class="masthead-sub">— 본인의 수업이 무엇인지 한눈에 확인하세요 —</div>
     <div class="masthead-sub-en">Check your assigned classes at a glance</div>
   </header>
+  <div class="update-notice">
+    <div class="icon">🔔</div>
+    <div class="text">
+      <strong>이 시간표는 수시로 업데이트됩니다.</strong> 새로운 수업이 추가되거나 변경될 수 있으니 자주 확인해주세요.
+      <span class="en">This schedule is updated regularly. Classes may be added or changed — please check back often.</span>
+    </div>
+  </div>
   <nav class="teacher-rail" id="rail">
     <button class="teacher-tab active" data-teacher="박수정">
-      <span>박수정<span class="count">·10</span></span>
+      <span>박수정<span class="count">·12</span></span>
       <span class="en">Skye</span>
     </button>
     <button class="teacher-tab" data-teacher="최민아">
@@ -151,7 +164,7 @@ body { background: radial-gradient(circle at 15% 10%, rgba(200, 85, 61, 0.05), t
       <span class="en">Rachel</span>
     </button>
     <button class="teacher-tab" data-teacher="김예원">
-      <span>김예원<span class="count">·7</span></span>
+      <span>김예원<span class="count">·8</span></span>
       <span class="en">Yewon</span>
     </button>
     <button class="teacher-tab" data-teacher="David">
@@ -163,7 +176,7 @@ body { background: radial-gradient(circle at 15% 10%, rgba(200, 85, 61, 0.05), t
       <span class="en">Taeun</span>
     </button>
     <button class="teacher-tab" data-teacher="Andrew">
-      <span>Andrew<span class="count">·6</span></span>
+      <span>Andrew<span class="count">·7</span></span>
       
     </button>
   </nav>
@@ -178,11 +191,11 @@ body { background: radial-gradient(circle at 15% 10%, rgba(200, 85, 61, 0.05), t
       </div>
       <div></div>
       <div class="teacher-stats">
-        <div class="stat-num classes">10</div>
+        <div class="stat-num classes">12</div>
         <div class="stat-label">Classes<span class="kr">수업</span></div>
       </div>
       <div class="teacher-stats">
-        <div class="stat-num avail">3</div>
+        <div class="stat-num avail">1</div>
         <div class="stat-label">Available<span class="kr">가능 시간</span></div>
       </div>
     </div>
@@ -286,16 +299,18 @@ body { background: radial-gradient(circle at 15% 10%, rgba(200, 85, 61, 0.05), t
         </div>
       </div>
       <div class="cell offduty"></div>
-      <div class="cell available">
-        <div class="available-mark">
-          <div class="label"><span class="dot"></span>AVAILABLE</div>
-          <div class="sub">언제든 배치 가능</div>
+      <div class="cell">
+        <div class="class-card subj-SG new">
+          <div class="class-subj SG">📖 Grammar</div>
+          <div class="class-code">SG1A</div>
+          <div class="class-orig">NEW · 신설</div>
         </div>
       </div>
-      <div class="cell available">
-        <div class="available-mark">
-          <div class="label"><span class="dot"></span>AVAILABLE</div>
-          <div class="sub">언제든 배치 가능</div>
+      <div class="cell">
+        <div class="class-card subj-SG new">
+          <div class="class-subj SG">📖 Grammar</div>
+          <div class="class-code">SG2A</div>
+          <div class="class-orig">NEW · 신설</div>
         </div>
       </div>
       <div class="cal-time"><div class="h">21<span class="h-suffix">:00</span></div><div class="part">평일 3부</div></div>
@@ -618,8 +633,8 @@ body { background: radial-gradient(circle at 15% 10%, rgba(200, 85, 61, 0.05), t
       <div class="cell">
         <div class="class-card subj-GW">
           <div class="class-subj GW">✍️ Writing</div>
-          <div class="class-code">GW3A</div>
-          <div class="class-orig"></div>
+          <div class="class-code">GW2A</div>
+          <div class="class-orig">← 변경: GW3A → GW2A</div>
         </div>
       </div>
       <div class="cell offduty"></div>
@@ -957,11 +972,11 @@ body { background: radial-gradient(circle at 15% 10%, rgba(200, 85, 61, 0.05), t
       </div>
       <div></div>
       <div class="teacher-stats">
-        <div class="stat-num classes">7</div>
+        <div class="stat-num classes">8</div>
         <div class="stat-label">Classes<span class="kr">수업</span></div>
       </div>
       <div class="teacher-stats">
-        <div class="stat-num avail">11</div>
+        <div class="stat-num avail">10</div>
         <div class="stat-label">Available<span class="kr">가능 시간</span></div>
       </div>
     </div>
@@ -1060,10 +1075,11 @@ body { background: radial-gradient(circle at 15% 10%, rgba(200, 85, 61, 0.05), t
       </div>
       <div class="cell offduty"></div>
       <div class="cal-time"><div class="h">21<span class="h-suffix">:00</span></div><div class="part">평일 3부</div></div>
-      <div class="cell available">
-        <div class="available-mark">
-          <div class="label"><span class="dot"></span>AVAILABLE</div>
-          <div class="sub">언제든 배치 가능</div>
+      <div class="cell">
+        <div class="class-card subj-GW new">
+          <div class="class-subj GW">✍️ Writing</div>
+          <div class="class-code">GW2A</div>
+          <div class="class-orig">NEW · 신설</div>
         </div>
       </div>
       <div class="cell">
@@ -1370,11 +1386,11 @@ body { background: radial-gradient(circle at 15% 10%, rgba(200, 85, 61, 0.05), t
       </div>
       <div></div>
       <div class="teacher-stats">
-        <div class="stat-num classes">6</div>
+        <div class="stat-num classes">7</div>
         <div class="stat-label">Classes<span class="kr">수업</span></div>
       </div>
       <div class="teacher-stats">
-        <div class="stat-num avail">4</div>
+        <div class="stat-num avail">3</div>
         <div class="stat-label">Available<span class="kr">가능 시간</span></div>
       </div>
     </div>
@@ -1471,10 +1487,11 @@ body { background: radial-gradient(circle at 15% 10%, rgba(200, 85, 61, 0.05), t
           <div class="sub">언제든 배치 가능</div>
         </div>
       </div>
-      <div class="cell available">
-        <div class="available-mark">
-          <div class="label"><span class="dot"></span>AVAILABLE</div>
-          <div class="sub">언제든 배치 가능</div>
+      <div class="cell">
+        <div class="class-card subj-GD new">
+          <div class="class-subj GD">🎤 Debate</div>
+          <div class="class-code">GD2A</div>
+          <div class="class-orig">NEW · 신설</div>
         </div>
       </div>
       <div class="cal-time"><div class="h">21<span class="h-suffix">:00</span></div><div class="part">평일 3부</div></div>
@@ -1495,7 +1512,7 @@ body { background: radial-gradient(circle at 15% 10%, rgba(200, 85, 61, 0.05), t
 
   <footer class="footer">
     <span>TOPIA LIVE · FINAL · 2026 SUMMER (JUNE)</span>
-    <span>11 INSTRUCTORS · 53 CLASSES</span>
+    <span>11 INSTRUCTORS · 57 CLASSES</span>
   </footer>
 </div>
 <script>
