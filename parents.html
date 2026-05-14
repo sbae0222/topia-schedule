@@ -8,584 +8,122 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
 * { margin: 0; padding: 0; box-sizing: border-box; }
-
 :root {
-  /* 차분한 브라운 톤 */
-  --bg: #FAF8F4;
-  --bg-2: #F4EFE7;
-  --bg-3: #ECE4D5;
-  --ink: #2B2420;
-  --text: #3E332C;
-  --text-2: #6B5D52;
-  --text-3: #8B7D6F;
-  --text-4: #B0A395;
-  --border: #DDD2BF;
-  --border-soft: #E8DFCE;
-  --accent: #8B6F47;        /* 진한 브라운 */
-  --accent-deep: #6B5337;
-  --accent-soft: #F0E8DA;
-  --gold: #B5934F;
-  --paper: #FFFFFF;
-  --warm: #9D7E5C;          /* 따뜻한 브라운 */
-  --notice-bg: #F7F1E5;
-  --notice-line: #C9B894;
-  --urgent-bg: #F5EBE0;
-  --urgent-line: #B59275;
+  --bg: #FAF8F4; --bg-2: #F4EFE7; --bg-3: #ECE4D5;
+  --ink: #2B2420; --text: #3E332C; --text-2: #6B5D52; --text-3: #8B7D6F; --text-4: #B0A395;
+  --border: #DDD2BF; --border-soft: #E8DFCE;
+  --accent: #8B6F47; --accent-deep: #6B5337; --accent-soft: #F0E8DA;
+  --gold: #B5934F; --paper: #FFFFFF; --warm: #9D7E5C;
+  --notice-bg: #F7F1E5; --notice-line: #C9B894;
+  --urgent-bg: #F5EBE0; --urgent-line: #B59275;
 }
-
-html, body {
-  background: var(--bg);
-  color: var(--text);
-  font-family: 'Pretendard', -apple-system, sans-serif;
-  font-weight: 400;
-  -webkit-font-smoothing: antialiased;
-  line-height: 1.55;
-  letter-spacing: -0.01em;
-}
-
-.container {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 32px;
-}
-
-/* === MASTHEAD === */
-.masthead {
-  padding: 72px 0 56px;
-  border-bottom: 1px solid var(--border);
-}
-
-.brand-line {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-family: 'Inter', sans-serif;
-  font-size: 11px;
-  font-weight: 500;
-  letter-spacing: 0.18em;
-  color: var(--text-3);
-  text-transform: uppercase;
-  margin-bottom: 32px;
-}
-
-.brand-line .term {
-  border: 1px solid var(--border);
-  padding: 5px 14px;
-  border-radius: 2px;
-}
-
-h1.headline {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(40px, 6vw, 60px);
-  font-weight: 500;
-  line-height: 1.05;
-  letter-spacing: -0.02em;
-  color: var(--ink);
-  margin-bottom: 8px;
-}
-
-h1.headline em {
-  font-style: italic;
-  font-weight: 400;
-  color: var(--accent);
-}
-
-.headline-en {
-  font-family: 'Cormorant Garamond', serif;
-  font-style: italic;
-  font-size: 22px;
-  color: var(--text-3);
-  font-weight: 400;
-  margin-bottom: 24px;
-}
-
-.summary {
-  font-size: 15px;
-  color: var(--text-2);
-  max-width: 580px;
-  line-height: 1.7;
-}
-
-.summary-stats {
-  margin-top: 36px;
-  display: flex;
-  gap: 48px;
-  flex-wrap: wrap;
-  padding-top: 28px;
-  border-top: 1px solid var(--border-soft);
-}
-
-.stat {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-}
-
-.stat-num {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 36px;
-  font-weight: 500;
-  color: var(--accent-deep);
-  letter-spacing: -0.02em;
-  line-height: 1;
-}
-
-.stat-label {
-  font-family: 'Inter', sans-serif;
-  font-size: 11px;
-  color: var(--text-3);
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  font-weight: 500;
-}
-
-/* === TERM INFO === */
-.section {
-  padding: 56px 0;
-  border-bottom: 1px solid var(--border-soft);
-}
-
-.section-title {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 28px;
-  font-weight: 500;
-  color: var(--ink);
-  letter-spacing: -0.015em;
-  margin-bottom: 4px;
-}
-
-.section-title-en {
-  font-family: 'Inter', sans-serif;
-  font-size: 11px;
-  color: var(--text-3);
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  font-weight: 500;
-  margin-bottom: 28px;
-}
-
-.term-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 1px;
-  background: var(--border);
-  border: 1px solid var(--border);
-}
-
-.term-card {
-  padding: 28px 28px;
-  background: var(--paper);
-}
-
-.term-card .day-label {
-  font-family: 'Inter', sans-serif;
-  font-size: 11px;
-  color: var(--text-3);
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  font-weight: 600;
-  margin-bottom: 10px;
-}
-
-.term-card .day-kr {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 24px;
-  font-weight: 500;
-  color: var(--ink);
-  margin-bottom: 12px;
-}
-
-.term-card .period {
-  font-size: 14px;
-  color: var(--text);
-  font-weight: 500;
-  margin-bottom: 12px;
-  letter-spacing: -0.005em;
-}
-
-.term-card .holiday {
-  font-size: 13px;
-  color: var(--accent);
-  font-weight: 500;
-  padding-top: 10px;
-  border-top: 1px dashed var(--border);
-}
-
-.term-card .no-holiday {
-  font-size: 13px;
-  color: var(--text-4);
-  padding-top: 10px;
-  border-top: 1px dashed var(--border);
-  font-style: italic;
-}
-
-/* === NOTICES === */
-.notice-stack {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-.notice {
-  padding: 22px 28px;
-  background: var(--notice-bg);
-  border-left: 3px solid var(--notice-line);
-  font-size: 14px;
-  line-height: 1.65;
-  color: var(--text);
-}
-
-.notice strong {
-  font-weight: 600;
-  color: var(--ink);
-}
-
-.notice.urgent {
-  background: var(--urgent-bg);
-  border-left-color: var(--urgent-line);
-}
-
-.notice.urgent strong {
-  color: var(--accent-deep);
-}
-
-.notice .label {
-  display: inline-block;
-  font-family: 'Inter', sans-serif;
-  font-size: 10px;
-  font-weight: 700;
-  letter-spacing: 0.2em;
-  color: var(--accent);
-  text-transform: uppercase;
-  margin-bottom: 8px;
-}
-
-.notice.urgent .label {
-  color: var(--accent-deep);
-}
-
-/* === FILTERS === */
-.filter-section {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  margin-bottom: 32px;
-}
-
-.filter-row {
-  display: flex;
-  gap: 8px;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-.filter-row-label {
-  font-family: 'Inter', sans-serif;
-  font-size: 11px;
-  font-weight: 600;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: var(--text-3);
-  min-width: 80px;
-}
-
-.filter-btn {
-  padding: 8px 18px;
-  border: 1px solid var(--border);
-  background: var(--paper);
-  font-size: 13px;
-  font-weight: 500;
-  color: var(--text-2);
-  cursor: pointer;
-  transition: all 0.15s ease;
-  font-family: inherit;
-  letter-spacing: -0.005em;
-}
-
-.filter-btn:hover {
-  border-color: var(--accent);
-  color: var(--accent);
-}
-
-.filter-btn.active {
-  background: var(--ink);
-  border-color: var(--ink);
-  color: var(--paper);
-}
-
-/* === SCHEDULE === */
-.day-section {
-  margin-bottom: 48px;
-}
-
-.day-header {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  padding: 20px 0 16px;
-  border-bottom: 2px solid var(--ink);
-  margin-bottom: 0;
-  flex-wrap: wrap;
-  gap: 12px;
-}
-
-.day-header-left {
-  display: flex;
-  align-items: baseline;
-  gap: 16px;
-}
-
-.day-header .day-kr {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 32px;
-  font-weight: 500;
-  color: var(--ink);
-  letter-spacing: -0.02em;
-}
-
-.day-header .day-en {
-  font-family: 'Cormorant Garamond', serif;
-  font-style: italic;
-  font-size: 18px;
-  color: var(--text-3);
-  font-weight: 400;
-}
-
-.day-header .day-meta {
-  font-family: 'Inter', sans-serif;
-  font-size: 11px;
-  color: var(--text-3);
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-}
-
-.day-period {
-  margin-top: 4px;
-  font-size: 13px;
-  color: var(--text-3);
-  font-weight: 400;
-}
-
-.day-period .holiday {
-  color: var(--accent);
-  margin-left: 12px;
-  font-weight: 500;
-}
-
-.time-block {
-  padding: 24px 0 8px;
-  border-bottom: 1px solid var(--border-soft);
-}
-
+html, body { background: var(--bg); color: var(--text); font-family: 'Pretendard', -apple-system, sans-serif; -webkit-font-smoothing: antialiased; line-height: 1.55; letter-spacing: -0.01em; }
+.container { max-width: 1100px; margin: 0 auto; padding: 0 32px; }
+.masthead { padding: 72px 0 56px; border-bottom: 1px solid var(--border); }
+.brand-line { display: flex; justify-content: space-between; align-items: center; font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 500; letter-spacing: 0.18em; color: var(--text-3); text-transform: uppercase; margin-bottom: 32px; }
+.brand-line .term { border: 1px solid var(--border); padding: 5px 14px; border-radius: 2px; }
+h1.headline { font-family: 'Cormorant Garamond', serif; font-size: clamp(40px, 6vw, 60px); font-weight: 500; line-height: 1.05; letter-spacing: -0.02em; color: var(--ink); margin-bottom: 8px; }
+h1.headline em { font-style: italic; font-weight: 400; color: var(--accent); }
+.headline-en { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 22px; color: var(--text-3); font-weight: 400; margin-bottom: 24px; }
+.summary { font-size: 15px; color: var(--text-2); max-width: 580px; line-height: 1.7; }
+.summary-stats { margin-top: 36px; display: flex; gap: 48px; flex-wrap: wrap; padding-top: 28px; border-top: 1px solid var(--border-soft); }
+.stat { display: flex; flex-direction: column; gap: 4px; }
+.stat-num { font-family: 'Cormorant Garamond', serif; font-size: 36px; font-weight: 500; color: var(--accent-deep); letter-spacing: -0.02em; line-height: 1; }
+.stat-label { font-family: 'Inter', sans-serif; font-size: 11px; color: var(--text-3); letter-spacing: 0.15em; text-transform: uppercase; font-weight: 500; }
+.section { padding: 56px 0; border-bottom: 1px solid var(--border-soft); }
+.section-title { font-family: 'Cormorant Garamond', serif; font-size: 28px; font-weight: 500; color: var(--ink); letter-spacing: -0.015em; margin-bottom: 4px; }
+.section-title-en { font-family: 'Inter', sans-serif; font-size: 11px; color: var(--text-3); letter-spacing: 0.2em; text-transform: uppercase; font-weight: 500; margin-bottom: 28px; }
+.term-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1px; background: var(--border); border: 1px solid var(--border); }
+.term-card { padding: 28px 28px; background: var(--paper); }
+.term-card .day-label { font-family: 'Inter', sans-serif; font-size: 11px; color: var(--text-3); letter-spacing: 0.15em; text-transform: uppercase; font-weight: 600; margin-bottom: 10px; }
+.term-card .day-kr { font-family: 'Cormorant Garamond', serif; font-size: 24px; font-weight: 500; color: var(--ink); margin-bottom: 12px; }
+.term-card .period { font-size: 14px; color: var(--text); font-weight: 500; margin-bottom: 12px; letter-spacing: -0.005em; }
+.term-card .holiday { font-size: 13px; color: var(--accent); font-weight: 500; padding-top: 10px; border-top: 1px dashed var(--border); }
+.term-card .no-holiday { font-size: 13px; color: var(--text-4); padding-top: 10px; border-top: 1px dashed var(--border); font-style: italic; }
+.notice-stack { display: flex; flex-direction: column; gap: 16px; }
+.notice { padding: 22px 28px; background: var(--notice-bg); border-left: 3px solid var(--notice-line); font-size: 14px; line-height: 1.65; color: var(--text); }
+.notice strong { font-weight: 600; color: var(--ink); }
+.notice.urgent { background: var(--urgent-bg); border-left-color: var(--urgent-line); }
+.notice.urgent strong { color: var(--accent-deep); }
+.notice .label { display: inline-block; font-family: 'Inter', sans-serif; font-size: 10px; font-weight: 700; letter-spacing: 0.2em; color: var(--accent); text-transform: uppercase; margin-bottom: 8px; }
+.notice.urgent .label { color: var(--accent-deep); }
+.filter-section { display: flex; flex-direction: column; gap: 16px; margin-bottom: 32px; }
+.filter-row { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+.filter-row-label { font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-3); min-width: 80px; }
+.filter-btn { padding: 8px 18px; border: 1px solid var(--border); background: var(--paper); font-size: 13px; font-weight: 500; color: var(--text-2); cursor: pointer; transition: all 0.15s ease; font-family: inherit; letter-spacing: -0.005em; }
+.filter-btn:hover { border-color: var(--accent); color: var(--accent); }
+.filter-btn.active { background: var(--ink); border-color: var(--ink); color: var(--paper); }
+.day-section { margin-bottom: 48px; }
+.day-header { display: flex; align-items: baseline; justify-content: space-between; padding: 20px 0 16px; border-bottom: 2px solid var(--ink); flex-wrap: wrap; gap: 12px; }
+.day-header-left { display: flex; align-items: baseline; gap: 16px; }
+.day-header .day-kr { font-family: 'Cormorant Garamond', serif; font-size: 32px; font-weight: 500; color: var(--ink); letter-spacing: -0.02em; }
+.day-header .day-en { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 18px; color: var(--text-3); font-weight: 400; }
+.day-header .day-meta { font-family: 'Inter', sans-serif; font-size: 11px; color: var(--text-3); letter-spacing: 0.1em; text-transform: uppercase; }
+.day-period { margin-top: 4px; font-size: 13px; color: var(--text-3); font-weight: 400; }
+.day-period .holiday { color: var(--accent); margin-left: 12px; font-weight: 500; }
+.time-block { padding: 24px 0 8px; border-bottom: 1px solid var(--border-soft); }
 .time-block:last-child { border-bottom: none; }
-
-.time-block-header {
-  display: flex;
-  align-items: baseline;
-  gap: 14px;
-  margin-bottom: 16px;
-  padding-bottom: 12px;
-  border-bottom: 1px dashed var(--border);
-}
-
-.time-block-header .hour {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 26px;
-  font-weight: 500;
-  color: var(--ink);
-  letter-spacing: -0.02em;
-}
-
-.time-block-header .span {
-  font-family: 'Inter', sans-serif;
-  font-size: 12px;
-  color: var(--text-3);
-  font-weight: 400;
-}
-
-.time-block-header .part {
-  font-family: 'Inter', sans-serif;
-  font-size: 11px;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: var(--text-3);
-  margin-left: auto;
-}
-
-.classes-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 12px;
-  padding-bottom: 16px;
-}
-
-.class-card {
-  padding: 22px 24px;
-  background: var(--paper);
-  border: 1px solid var(--border);
-  position: relative;
-  transition: all 0.2s ease;
-  min-height: 140px;
-  display: flex;
-  flex-direction: column;
-}
-
-.class-card:hover {
-  border-color: var(--accent);
-  background: var(--bg-2);
-}
-
-.class-card .subj-line {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 14px;
-}
-
-.class-card .subj {
-  font-family: 'Inter', sans-serif;
-  font-size: 10px;
-  font-weight: 700;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-}
-
+.time-block-header { display: flex; align-items: baseline; gap: 14px; margin-bottom: 16px; padding-bottom: 12px; border-bottom: 1px dashed var(--border); }
+.time-block-header .hour { font-family: 'Cormorant Garamond', serif; font-size: 26px; font-weight: 500; color: var(--ink); letter-spacing: -0.02em; }
+.time-block-header .span { font-family: 'Inter', sans-serif; font-size: 12px; color: var(--text-3); font-weight: 400; }
+.time-block-header .part { font-family: 'Inter', sans-serif; font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-3); margin-left: auto; }
+.classes-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 12px; padding-bottom: 16px; }
+.class-card { padding: 22px 24px; background: var(--paper); border: 1px solid var(--border); transition: all 0.2s ease; min-height: 140px; display: flex; flex-direction: column; }
+.class-card:hover { border-color: var(--accent); background: var(--bg-2); }
+.class-card .subj-line { display: flex; align-items: center; justify-content: space-between; margin-bottom: 14px; }
+.class-card .subj { font-family: 'Inter', sans-serif; font-size: 10px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; }
 .class-card.GD .subj { color: #8B4A6B; }
 .class-card.GW .subj { color: #4A6585; }
 .class-card.SG .subj { color: #4F6B4A; }
 .class-card.SR .subj { color: #8B5C3D; }
+.class-card .level-badge { font-family: 'Inter', sans-serif; font-size: 10px; font-weight: 600; color: var(--text-3); letter-spacing: 0.05em; padding: 2px 8px; border: 1px solid var(--border); border-radius: 2px; }
+.class-card .code { font-family: 'Cormorant Garamond', serif; font-size: 32px; font-weight: 500; color: var(--ink); letter-spacing: -0.025em; line-height: 1; margin-bottom: 10px; }
+.class-card .teacher { font-size: 14px; color: var(--text); font-weight: 500; }
+.class-card .teacher .en { color: var(--text-3); font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 400; margin-left: 6px; letter-spacing: 0.02em; }
+.class-card .note { margin-top: auto; padding-top: 14px; border-top: 1px dashed var(--border); font-size: 12px; color: var(--text-3); font-style: italic; line-height: 1.5; min-height: 24px; }
+.class-card .note:not(:empty) { color: var(--accent-deep); background: var(--accent-soft); padding: 10px 12px; border-top: none; margin-top: auto; font-style: normal; font-weight: 500; font-size: 12px; border-left: 2px solid var(--accent); border-radius: 0 2px 2px 0; }
 
-.class-card .level-badge {
-  font-family: 'Inter', sans-serif;
-  font-size: 10px;
-  font-weight: 600;
-  color: var(--text-3);
-  letter-spacing: 0.05em;
-  padding: 2px 8px;
-  border: 1px solid var(--border);
-  border-radius: 2px;
-}
-
-.class-card .code {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 32px;
-  font-weight: 500;
-  color: var(--ink);
-  letter-spacing: -0.025em;
-  line-height: 1;
-  margin-bottom: 10px;
-}
-
-.class-card .teacher {
-  font-size: 14px;
-  color: var(--text);
-  font-weight: 500;
-}
-
-.class-card .teacher .en {
-  color: var(--text-3);
-  font-family: 'Inter', sans-serif;
-  font-size: 11px;
-  font-weight: 400;
-  margin-left: 6px;
-  letter-spacing: 0.02em;
-}
-
-.class-card .note {
-  margin-top: auto;
-  padding-top: 14px;
-  border-top: 1px dashed var(--border);
-  font-size: 12px;
-  color: var(--text-3);
-  font-style: italic;
-  line-height: 1.5;
-  min-height: 24px;
-}
+/* === BOOKS === */
+.books-group { margin-bottom: 48px; }
+.books-group:last-child { margin-bottom: 0; }
+.books-group-title { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 500; color: var(--ink); margin-bottom: 6px; letter-spacing: -0.01em; }
+.books-group-en { font-family: 'Inter', sans-serif; font-size: 11px; color: var(--text-3); letter-spacing: 0.15em; text-transform: uppercase; font-weight: 500; margin-bottom: 8px; }
+.books-group-desc { font-size: 13px; color: var(--text-2); margin-bottom: 24px; max-width: 720px; line-height: 1.65; }
+.books-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 16px; }
+.book-card { background: var(--paper); border: 1px solid var(--border); padding: 0; display: flex; flex-direction: column; transition: all 0.2s ease; }
+.book-card:hover { border-color: var(--accent); box-shadow: 0 4px 16px rgba(139, 111, 71, 0.08); }
+.book-cover { width: 100%; aspect-ratio: 3/4; background: var(--bg-2); display: flex; align-items: center; justify-content: center; overflow: hidden; position: relative; }
+.book-cover img { width: 100%; height: 100%; object-fit: contain; background: var(--paper); }
+.book-cover .no-image { font-family: 'Cormorant Garamond', serif; font-size: 36px; color: var(--text-4); font-style: italic; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; }
+.book-info { padding: 16px 18px 18px; display: flex; flex-direction: column; flex: 1; }
+.book-code { font-family: 'Inter', sans-serif; font-size: 10px; font-weight: 700; letter-spacing: 0.18em; color: var(--accent); margin-bottom: 6px; text-transform: uppercase; }
+.book-title { font-size: 14px; font-weight: 600; color: var(--ink); margin-bottom: 10px; line-height: 1.4; letter-spacing: -0.005em; min-height: 38px; }
+.book-meta { font-size: 12px; color: var(--text-3); margin-bottom: 8px; line-height: 1.5; }
+.book-meta strong { color: var(--text); font-weight: 600; }
+.book-tag { display: inline-block; font-size: 10px; font-weight: 600; letter-spacing: 0.05em; padding: 3px 8px; background: var(--accent-soft); color: var(--accent-deep); border-radius: 2px; margin-bottom: 10px; align-self: flex-start; }
+.book-link { margin-top: auto; padding-top: 12px; border-top: 1px dashed var(--border); }
+.book-link a { font-family: 'Inter', sans-serif; font-size: 11px; color: var(--accent); text-decoration: none; font-weight: 600; letter-spacing: 0.05em; display: inline-flex; align-items: center; gap: 4px; transition: color 0.15s; }
+.book-link a:hover { color: var(--accent-deep); }
+.book-link a::after { content: " →"; }
+.voca-notice { padding: 22px 28px; background: var(--accent-soft); border-left: 3px solid var(--accent); font-size: 14px; line-height: 1.65; color: var(--text); margin-bottom: 24px; }
+.voca-notice strong { font-weight: 600; color: var(--ink); }
+.voca-notice .label { display: inline-block; font-family: 'Inter', sans-serif; font-size: 10px; font-weight: 700; letter-spacing: 0.2em; color: var(--accent); text-transform: uppercase; margin-bottom: 8px; }
 
 /* === SUBJECT INTRO === */
-.subject-intro {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 1px;
-  background: var(--border);
-  border: 1px solid var(--border);
-}
-
-.subj-card {
-  padding: 28px;
-  background: var(--paper);
-}
-
-.subj-card .subj-mark {
-  width: 32px;
-  height: 2px;
-  margin-bottom: 16px;
-}
-
+.subject-intro { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1px; background: var(--border); border: 1px solid var(--border); }
+.subj-card { padding: 28px; background: var(--paper); }
+.subj-card .subj-mark { width: 32px; height: 2px; margin-bottom: 16px; }
 .subj-card.GD .subj-mark { background: #8B4A6B; }
 .subj-card.GW .subj-mark { background: #4A6585; }
 .subj-card.SG .subj-mark { background: #4F6B4A; }
 .subj-card.SR .subj-mark { background: #8B5C3D; }
+.subj-card .code { font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.2em; color: var(--text-3); text-transform: uppercase; margin-bottom: 6px; }
+.subj-card .name { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 500; color: var(--ink); margin-bottom: 4px; }
+.subj-card .name-kr { font-size: 13px; color: var(--text-2); }
 
-.subj-card .code {
-  font-family: 'Inter', sans-serif;
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.2em;
-  color: var(--text-3);
-  text-transform: uppercase;
-  margin-bottom: 6px;
-}
-
-.subj-card .name {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 22px;
-  font-weight: 500;
-  color: var(--ink);
-  margin-bottom: 4px;
-}
-
-.subj-card .name-kr {
-  font-size: 13px;
-  color: var(--text-2);
-}
-
-/* === FOOTER === */
-.footer {
-  padding: 56px 0 64px;
-  text-align: center;
-}
-
-.footer-mark {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 24px;
-  font-weight: 500;
-  color: var(--ink);
-  letter-spacing: -0.01em;
-  margin-bottom: 6px;
-}
-
-.footer-text {
-  font-family: 'Inter', sans-serif;
-  font-size: 11px;
-  color: var(--text-3);
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-}
-
-
-.class-card .note:not(:empty) {
-  color: var(--accent-deep);
-  background: var(--accent-soft);
-  padding: 10px 12px;
-  border-top: none;
-  margin-top: auto;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 12px;
-  border-left: 2px solid var(--accent);
-  border-radius: 0 2px 2px 0;
-}
+.footer { padding: 56px 0 64px; text-align: center; }
+.footer-mark { font-family: 'Cormorant Garamond', serif; font-size: 24px; font-weight: 500; color: var(--ink); letter-spacing: -0.01em; margin-bottom: 6px; }
+.footer-text { font-family: 'Inter', sans-serif; font-size: 11px; color: var(--text-3); letter-spacing: 0.15em; text-transform: uppercase; }
 
 @media (max-width: 768px) {
   .container { padding: 0 20px; }
@@ -601,14 +139,18 @@ h1.headline em {
   .class-card .code { font-size: 26px; }
   .filter-row-label { min-width: 100%; }
   .term-card { padding: 22px; }
+  .books-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
+  .book-title { font-size: 13px; min-height: 36px; }
+  .book-info { padding: 12px 14px 14px; }
+}
+@media (max-width: 480px) {
+  .books-grid { grid-template-columns: 1fr 1fr; }
 }
 </style>
 </head>
 <body>
-
 <div class="container">
 
-  <!-- MASTHEAD -->
   <header class="masthead">
     <div class="brand-line">
       <span>Topia Live</span>
@@ -616,26 +158,14 @@ h1.headline em {
     </div>
     <h1 class="headline">6월 학기 <em>시간표</em> 안내</h1>
     <div class="headline-en">June Term Class Schedule</div>
-    <p class="summary">
-      학부모님께 다음 학기 개설 예정 수업을 안내드립니다. 본 안내는 현재 확정된 수업을 기준으로 작성되었으며, 수강 신청 현황에 따라 변동이 있을 수 있습니다.
-    </p>
+    <p class="summary">학부모님께 다음 학기 개설 예정 수업을 안내드립니다. 본 안내는 현재 확정된 수업을 기준으로 작성되었으며, 수강 신청 현황에 따라 변동이 있을 수 있습니다.</p>
     <div class="summary-stats">
-      <div class="stat">
-        <div class="stat-num">55</div>
-        <div class="stat-label">개설 수업</div>
-      </div>
-      <div class="stat">
-        <div class="stat-num">4</div>
-        <div class="stat-label">과목 영역</div>
-      </div>
-      <div class="stat">
-        <div class="stat-num">5</div>
-        <div class="stat-label">레벨 구성</div>
-      </div>
+      <div class="stat"><div class="stat-num">55</div><div class="stat-label">개설 수업</div></div>
+      <div class="stat"><div class="stat-num">4</div><div class="stat-label">과목 영역</div></div>
+      <div class="stat"><div class="stat-num">5</div><div class="stat-label">레벨 구성</div></div>
     </div>
   </header>
 
-  <!-- TERM INFO -->
   <section class="section">
     <h2 class="section-title">학기 기간</h2>
     <div class="section-title-en">Term Period</div>
@@ -667,7 +197,6 @@ h1.headline em {
     </div>
   </section>
 
-  <!-- NOTICES -->
   <section class="section">
     <h2 class="section-title">수강 안내</h2>
     <div class="section-title-en">Important Notes</div>
@@ -683,11 +212,9 @@ h1.headline em {
     </div>
   </section>
 
-  <!-- SCHEDULE -->
   <section class="section">
     <h2 class="section-title">개설 수업</h2>
     <div class="section-title-en">Class Schedule</div>
-
     <div class="filter-section">
       <div class="filter-row">
         <span class="filter-row-label">Subject</span>
@@ -725,28 +252,19 @@ h1.headline em {
         </div>
         <div class="classes-grid">
           <div class="class-card GD" data-subj="GD" data-lvl="4">
-            <div class="subj-line">
-              <span class="subj">Debate</span>
-              <span class="level-badge">Level 4</span>
-            </div>
+            <div class="subj-line"><span class="subj">Debate</span><span class="level-badge">Level 4</span></div>
             <div class="code">GD4A</div>
             <div class="teacher">Kimberley</div>
-            <div class="note"></div>
+            <div class="note">5월 17일까지 등록 없을 시 삭제/변경 예정</div>
           </div>
           <div class="class-card GW" data-subj="GW" data-lvl="2">
-            <div class="subj-line">
-              <span class="subj">Writing</span>
-              <span class="level-badge">Level 2</span>
-            </div>
+            <div class="subj-line"><span class="subj">Writing</span><span class="level-badge">Level 2</span></div>
             <div class="code">GW2A</div>
             <div class="teacher">김예원<span class="en">Yewon</span></div>
             <div class="note"></div>
           </div>
           <div class="class-card SG" data-subj="SG" data-lvl="3">
-            <div class="subj-line">
-              <span class="subj">Grammar</span>
-              <span class="level-badge">Level 3</span>
-            </div>
+            <div class="subj-line"><span class="subj">Grammar</span><span class="level-badge">Level 3</span></div>
             <div class="code">SG3A</div>
             <div class="teacher">박수정<span class="en">Skye</span></div>
             <div class="note"></div>
@@ -761,46 +279,31 @@ h1.headline em {
         </div>
         <div class="classes-grid">
           <div class="class-card GD" data-subj="GD" data-lvl="3">
-            <div class="subj-line">
-              <span class="subj">Debate</span>
-              <span class="level-badge">Level 3</span>
-            </div>
+            <div class="subj-line"><span class="subj">Debate</span><span class="level-badge">Level 3</span></div>
             <div class="code">GD3A</div>
             <div class="teacher">홍주현<span class="en">Elle</span></div>
             <div class="note"></div>
           </div>
           <div class="class-card GD" data-subj="GD" data-lvl="5">
-            <div class="subj-line">
-              <span class="subj">Debate</span>
-              <span class="level-badge">Level 5</span>
-            </div>
+            <div class="subj-line"><span class="subj">Debate</span><span class="level-badge">Level 5</span></div>
             <div class="code">GD5A</div>
             <div class="teacher">Kimberley</div>
             <div class="note"></div>
           </div>
           <div class="class-card GW" data-subj="GW" data-lvl="4">
-            <div class="subj-line">
-              <span class="subj">Writing</span>
-              <span class="level-badge">Level 4</span>
-            </div>
+            <div class="subj-line"><span class="subj">Writing</span><span class="level-badge">Level 4</span></div>
             <div class="code">GW4A</div>
             <div class="teacher">김예원<span class="en">Yewon</span></div>
             <div class="note"></div>
           </div>
           <div class="class-card GW" data-subj="GW" data-lvl="4">
-            <div class="subj-line">
-              <span class="subj">Writing</span>
-              <span class="level-badge">Level 4</span>
-            </div>
+            <div class="subj-line"><span class="subj">Writing</span><span class="level-badge">Level 4</span></div>
             <div class="code">GW4A</div>
             <div class="teacher">David</div>
             <div class="note"></div>
           </div>
           <div class="class-card SG" data-subj="SG" data-lvl="5">
-            <div class="subj-line">
-              <span class="subj">Grammar</span>
-              <span class="level-badge">Level 5</span>
-            </div>
+            <div class="subj-line"><span class="subj">Grammar</span><span class="level-badge">Level 5</span></div>
             <div class="code">SG5A</div>
             <div class="teacher">박수정<span class="en">Skye</span></div>
             <div class="note"></div>
@@ -815,22 +318,16 @@ h1.headline em {
         </div>
         <div class="classes-grid">
           <div class="class-card SG" data-subj="SG" data-lvl="2">
-            <div class="subj-line">
-              <span class="subj">Grammar</span>
-              <span class="level-badge">Level 2</span>
-            </div>
+            <div class="subj-line"><span class="subj">Grammar</span><span class="level-badge">Level 2</span></div>
             <div class="code">SG2A</div>
-            <div class="teacher">최민아<span class="en">Mina</span></div>
+            <div class="teacher">조경<span class="en">Danny</span></div>
             <div class="note"></div>
           </div>
           <div class="class-card SG" data-subj="SG" data-lvl="4">
-            <div class="subj-line">
-              <span class="subj">Grammar</span>
-              <span class="level-badge">Level 4</span>
-            </div>
+            <div class="subj-line"><span class="subj">Grammar</span><span class="level-badge">Level 4</span></div>
             <div class="code">SG4A</div>
             <div class="teacher">박수정<span class="en">Skye</span></div>
-            <div class="note">5월 18일까지 등록 없을 시 변경 예정</div>
+            <div class="note">5월 17일까지 등록 없을 시 삭제/변경 예정</div>
           </div>
         </div>
       </div>
@@ -852,31 +349,22 @@ h1.headline em {
         </div>
         <div class="classes-grid">
           <div class="class-card GD" data-subj="GD" data-lvl="2">
-            <div class="subj-line">
-              <span class="subj">Debate</span>
-              <span class="level-badge">Level 2</span>
-            </div>
+            <div class="subj-line"><span class="subj">Debate</span><span class="level-badge">Level 2</span></div>
             <div class="code">GD2A</div>
             <div class="teacher">Kimberley</div>
-            <div class="note"></div>
+            <div class="note">5월 17일까지 등록 없을 시 삭제/변경 예정</div>
           </div>
           <div class="class-card GW" data-subj="GW" data-lvl="2">
-            <div class="subj-line">
-              <span class="subj">Writing</span>
-              <span class="level-badge">Level 2</span>
-            </div>
+            <div class="subj-line"><span class="subj">Writing</span><span class="level-badge">Level 2</span></div>
             <div class="code">GW2A</div>
             <div class="teacher">홍주현<span class="en">Elle</span></div>
-            <div class="note"></div>
+            <div class="note">5월 17일까지 등록 없을 시 삭제/변경 예정</div>
           </div>
           <div class="class-card SR" data-subj="SR" data-lvl="3">
-            <div class="subj-line">
-              <span class="subj">Reading</span>
-              <span class="level-badge">Level 3</span>
-            </div>
+            <div class="subj-line"><span class="subj">Reading</span><span class="level-badge">Level 3</span></div>
             <div class="code">SR3A</div>
             <div class="teacher">김예원<span class="en">Yewon</span></div>
-            <div class="note"></div>
+            <div class="note">5월 17일까지 등록 없을 시 삭제/변경 예정</div>
           </div>
         </div>
       </div>
@@ -888,28 +376,19 @@ h1.headline em {
         </div>
         <div class="classes-grid">
           <div class="class-card GD" data-subj="GD" data-lvl="4">
-            <div class="subj-line">
-              <span class="subj">Debate</span>
-              <span class="level-badge">Level 4</span>
-            </div>
+            <div class="subj-line"><span class="subj">Debate</span><span class="level-badge">Level 4</span></div>
             <div class="code">GD4A</div>
             <div class="teacher">Kimberley</div>
             <div class="note"></div>
           </div>
           <div class="class-card GW" data-subj="GW" data-lvl="3">
-            <div class="subj-line">
-              <span class="subj">Writing</span>
-              <span class="level-badge">Level 3</span>
-            </div>
+            <div class="subj-line"><span class="subj">Writing</span><span class="level-badge">Level 3</span></div>
             <div class="code">GW3A</div>
             <div class="teacher">김예원<span class="en">Yewon</span></div>
             <div class="note"></div>
           </div>
           <div class="class-card GW" data-subj="GW" data-lvl="4">
-            <div class="subj-line">
-              <span class="subj">Writing</span>
-              <span class="level-badge">Level 4</span>
-            </div>
+            <div class="subj-line"><span class="subj">Writing</span><span class="level-badge">Level 4</span></div>
             <div class="code">GW4B</div>
             <div class="teacher">홍주현<span class="en">Elle</span></div>
             <div class="note"></div>
@@ -924,39 +403,27 @@ h1.headline em {
         </div>
         <div class="classes-grid">
           <div class="class-card GD" data-subj="GD" data-lvl="4">
-            <div class="subj-line">
-              <span class="subj">Debate</span>
-              <span class="level-badge">Level 4</span>
-            </div>
+            <div class="subj-line"><span class="subj">Debate</span><span class="level-badge">Level 4</span></div>
             <div class="code">GD4A</div>
             <div class="teacher">Kimberley</div>
-            <div class="note"></div>
+            <div class="note">5월 17일까지 등록 없을 시 삭제/변경 예정</div>
           </div>
           <div class="class-card GD" data-subj="GD" data-lvl="5">
-            <div class="subj-line">
-              <span class="subj">Debate</span>
-              <span class="level-badge">Level 5</span>
-            </div>
+            <div class="subj-line"><span class="subj">Debate</span><span class="level-badge">Level 5</span></div>
             <div class="code">GD5A</div>
             <div class="teacher">김예원<span class="en">Yewon</span></div>
-            <div class="note"></div>
+            <div class="note">5월 17일까지 등록 없을 시 삭제/변경 예정</div>
           </div>
           <div class="class-card GW" data-subj="GW" data-lvl="4">
-            <div class="subj-line">
-              <span class="subj">Writing</span>
-              <span class="level-badge">Level 4</span>
-            </div>
+            <div class="subj-line"><span class="subj">Writing</span><span class="level-badge">Level 4</span></div>
             <div class="code">GW4A</div>
             <div class="teacher">David</div>
             <div class="note"></div>
           </div>
           <div class="class-card SG" data-subj="SG" data-lvl="4">
-            <div class="subj-line">
-              <span class="subj">Grammar</span>
-              <span class="level-badge">Level 4</span>
-            </div>
+            <div class="subj-line"><span class="subj">Grammar</span><span class="level-badge">Level 4</span></div>
             <div class="code">SG4A</div>
-            <div class="teacher">최민아<span class="en">Mina</span></div>
+            <div class="teacher">조경<span class="en">Danny</span></div>
             <div class="note"></div>
           </div>
         </div>
@@ -979,55 +446,37 @@ h1.headline em {
         </div>
         <div class="classes-grid">
           <div class="class-card GD" data-subj="GD" data-lvl="4">
-            <div class="subj-line">
-              <span class="subj">Debate</span>
-              <span class="level-badge">Level 4</span>
-            </div>
+            <div class="subj-line"><span class="subj">Debate</span><span class="level-badge">Level 4</span></div>
             <div class="code">GD4A</div>
             <div class="teacher">Andrew</div>
             <div class="note"></div>
           </div>
           <div class="class-card GW" data-subj="GW" data-lvl="2">
-            <div class="subj-line">
-              <span class="subj">Writing</span>
-              <span class="level-badge">Level 2</span>
-            </div>
+            <div class="subj-line"><span class="subj">Writing</span><span class="level-badge">Level 2</span></div>
             <div class="code">GW2A</div>
             <div class="teacher">김예원<span class="en">Yewon</span></div>
-            <div class="note"></div>
+            <div class="note">5월 17일까지 등록 없을 시 삭제/변경 예정</div>
           </div>
           <div class="class-card SG" data-subj="SG" data-lvl="2">
-            <div class="subj-line">
-              <span class="subj">Grammar</span>
-              <span class="level-badge">Level 2</span>
-            </div>
+            <div class="subj-line"><span class="subj">Grammar</span><span class="level-badge">Level 2</span></div>
             <div class="code">SG2A</div>
-            <div class="teacher">최민아<span class="en">Mina</span></div>
+            <div class="teacher">조경<span class="en">Danny</span></div>
             <div class="note"></div>
           </div>
           <div class="class-card SG" data-subj="SG" data-lvl="3">
-            <div class="subj-line">
-              <span class="subj">Grammar</span>
-              <span class="level-badge">Level 3</span>
-            </div>
+            <div class="subj-line"><span class="subj">Grammar</span><span class="level-badge">Level 3</span></div>
             <div class="code">SG3A</div>
             <div class="teacher">남유진<span class="en">Rachel</span></div>
             <div class="note"></div>
           </div>
           <div class="class-card SR" data-subj="SR" data-lvl="2">
-            <div class="subj-line">
-              <span class="subj">Reading</span>
-              <span class="level-badge">Level 2</span>
-            </div>
+            <div class="subj-line"><span class="subj">Reading</span><span class="level-badge">Level 2</span></div>
             <div class="code">SR2A</div>
             <div class="teacher">김태은<span class="en">Taeun</span></div>
             <div class="note"></div>
           </div>
           <div class="class-card SR" data-subj="SR" data-lvl="3">
-            <div class="subj-line">
-              <span class="subj">Reading</span>
-              <span class="level-badge">Level 3</span>
-            </div>
+            <div class="subj-line"><span class="subj">Reading</span><span class="level-badge">Level 3</span></div>
             <div class="code">SR3A</div>
             <div class="teacher">박수정<span class="en">Skye</span></div>
             <div class="note"></div>
@@ -1042,31 +491,22 @@ h1.headline em {
         </div>
         <div class="classes-grid">
           <div class="class-card GD" data-subj="GD" data-lvl="4">
-            <div class="subj-line">
-              <span class="subj">Debate</span>
-              <span class="level-badge">Level 4</span>
-            </div>
+            <div class="subj-line"><span class="subj">Debate</span><span class="level-badge">Level 4</span></div>
             <div class="code">GD4A</div>
             <div class="teacher">Andrew</div>
             <div class="note"></div>
           </div>
           <div class="class-card SG" data-subj="SG" data-lvl="1">
-            <div class="subj-line">
-              <span class="subj">Grammar</span>
-              <span class="level-badge">Level 1</span>
-            </div>
+            <div class="subj-line"><span class="subj">Grammar</span><span class="level-badge">Level 1</span></div>
             <div class="code">SG1A</div>
             <div class="teacher">김태은<span class="en">Taeun</span></div>
             <div class="note"></div>
           </div>
           <div class="class-card SG" data-subj="SG" data-lvl="3">
-            <div class="subj-line">
-              <span class="subj">Grammar</span>
-              <span class="level-badge">Level 3</span>
-            </div>
+            <div class="subj-line"><span class="subj">Grammar</span><span class="level-badge">Level 3</span></div>
             <div class="code">SG3A</div>
             <div class="teacher">박수정<span class="en">Skye</span></div>
-            <div class="note"></div>
+            <div class="note">5월 17일까지 등록 없을 시 삭제/변경 예정</div>
           </div>
         </div>
       </div>
@@ -1078,31 +518,22 @@ h1.headline em {
         </div>
         <div class="classes-grid">
           <div class="class-card GD" data-subj="GD" data-lvl="5">
-            <div class="subj-line">
-              <span class="subj">Debate</span>
-              <span class="level-badge">Level 5</span>
-            </div>
+            <div class="subj-line"><span class="subj">Debate</span><span class="level-badge">Level 5</span></div>
             <div class="code">GD5A</div>
             <div class="teacher">Kimberley</div>
-            <div class="note"></div>
+            <div class="note">5월 17일까지 등록 없을 시 삭제/변경 예정</div>
           </div>
           <div class="class-card GW" data-subj="GW" data-lvl="4">
-            <div class="subj-line">
-              <span class="subj">Writing</span>
-              <span class="level-badge">Level 4</span>
-            </div>
+            <div class="subj-line"><span class="subj">Writing</span><span class="level-badge">Level 4</span></div>
             <div class="code">GW4A</div>
             <div class="teacher">김예원<span class="en">Yewon</span></div>
             <div class="note"></div>
           </div>
           <div class="class-card SR" data-subj="SR" data-lvl="4">
-            <div class="subj-line">
-              <span class="subj">Reading</span>
-              <span class="level-badge">Level 4</span>
-            </div>
+            <div class="subj-line"><span class="subj">Reading</span><span class="level-badge">Level 4</span></div>
             <div class="code">SR4A</div>
             <div class="teacher">박수정<span class="en">Skye</span></div>
-            <div class="note"></div>
+            <div class="note">5월 17일까지 등록 없을 시 삭제/변경 예정</div>
           </div>
         </div>
       </div>
@@ -1114,37 +545,25 @@ h1.headline em {
         </div>
         <div class="classes-grid">
           <div class="class-card GD" data-subj="GD" data-lvl="5">
-            <div class="subj-line">
-              <span class="subj">Debate</span>
-              <span class="level-badge">Level 5</span>
-            </div>
+            <div class="subj-line"><span class="subj">Debate</span><span class="level-badge">Level 5</span></div>
             <div class="code">GD5A</div>
             <div class="teacher">Kimberley</div>
-            <div class="note"></div>
+            <div class="note">5월 17일까지 등록 없을 시 삭제/변경 예정</div>
           </div>
           <div class="class-card GW" data-subj="GW" data-lvl="2">
-            <div class="subj-line">
-              <span class="subj">Writing</span>
-              <span class="level-badge">Level 2</span>
-            </div>
+            <div class="subj-line"><span class="subj">Writing</span><span class="level-badge">Level 2</span></div>
             <div class="code">GW2A</div>
             <div class="teacher">김예원<span class="en">Yewon</span></div>
             <div class="note"></div>
           </div>
           <div class="class-card GW" data-subj="GW" data-lvl="3">
-            <div class="subj-line">
-              <span class="subj">Writing</span>
-              <span class="level-badge">Level 3</span>
-            </div>
+            <div class="subj-line"><span class="subj">Writing</span><span class="level-badge">Level 3</span></div>
             <div class="code">GW3A</div>
             <div class="teacher">David</div>
             <div class="note"></div>
           </div>
           <div class="class-card SG" data-subj="SG" data-lvl="3">
-            <div class="subj-line">
-              <span class="subj">Grammar</span>
-              <span class="level-badge">Level 3</span>
-            </div>
+            <div class="subj-line"><span class="subj">Grammar</span><span class="level-badge">Level 3</span></div>
             <div class="code">SG3A</div>
             <div class="teacher">박수정<span class="en">Skye</span></div>
             <div class="note"></div>
@@ -1159,10 +578,7 @@ h1.headline em {
         </div>
         <div class="classes-grid">
           <div class="class-card SG" data-subj="SG" data-lvl="5">
-            <div class="subj-line">
-              <span class="subj">Grammar</span>
-              <span class="level-badge">Level 5</span>
-            </div>
+            <div class="subj-line"><span class="subj">Grammar</span><span class="level-badge">Level 5</span></div>
             <div class="code">SG5A</div>
             <div class="teacher">박수정<span class="en">Skye</span></div>
             <div class="note"></div>
@@ -1187,40 +603,28 @@ h1.headline em {
         </div>
         <div class="classes-grid">
           <div class="class-card GW" data-subj="GW" data-lvl="3">
-            <div class="subj-line">
-              <span class="subj">Writing</span>
-              <span class="level-badge">Level 3</span>
-            </div>
+            <div class="subj-line"><span class="subj">Writing</span><span class="level-badge">Level 3</span></div>
             <div class="code">GW3A</div>
             <div class="teacher">Andrew</div>
             <div class="note"></div>
           </div>
           <div class="class-card GW" data-subj="GW" data-lvl="4">
-            <div class="subj-line">
-              <span class="subj">Writing</span>
-              <span class="level-badge">Level 4</span>
-            </div>
+            <div class="subj-line"><span class="subj">Writing</span><span class="level-badge">Level 4</span></div>
             <div class="code">GW4A</div>
             <div class="teacher">David</div>
             <div class="note"></div>
           </div>
           <div class="class-card SR" data-subj="SR" data-lvl="1">
-            <div class="subj-line">
-              <span class="subj">Reading</span>
-              <span class="level-badge">Level 1</span>
-            </div>
+            <div class="subj-line"><span class="subj">Reading</span><span class="level-badge">Level 1</span></div>
             <div class="code">SR1A</div>
             <div class="teacher">남유진<span class="en">Rachel</span></div>
             <div class="note"></div>
           </div>
           <div class="class-card SR" data-subj="SR" data-lvl="2">
-            <div class="subj-line">
-              <span class="subj">Reading</span>
-              <span class="level-badge">Level 2</span>
-            </div>
+            <div class="subj-line"><span class="subj">Reading</span><span class="level-badge">Level 2</span></div>
             <div class="code">SR2A</div>
-            <div class="teacher">최민아<span class="en">Mina</span></div>
-            <div class="note"></div>
+            <div class="teacher">박수정<span class="en">Skye</span></div>
+            <div class="note">5월 17일까지 등록 없을 시 삭제/변경 예정</div>
           </div>
         </div>
       </div>
@@ -1232,28 +636,19 @@ h1.headline em {
         </div>
         <div class="classes-grid">
           <div class="class-card GD" data-subj="GD" data-lvl="3">
-            <div class="subj-line">
-              <span class="subj">Debate</span>
-              <span class="level-badge">Level 3</span>
-            </div>
+            <div class="subj-line"><span class="subj">Debate</span><span class="level-badge">Level 3</span></div>
             <div class="code">GD3A</div>
             <div class="teacher">Andrew</div>
             <div class="note"></div>
           </div>
           <div class="class-card SG" data-subj="SG" data-lvl="4">
-            <div class="subj-line">
-              <span class="subj">Grammar</span>
-              <span class="level-badge">Level 4</span>
-            </div>
+            <div class="subj-line"><span class="subj">Grammar</span><span class="level-badge">Level 4</span></div>
             <div class="code">SG4A</div>
-            <div class="teacher">최민아<span class="en">Mina</span></div>
+            <div class="teacher">남유진<span class="en">Rachel</span></div>
             <div class="note"></div>
           </div>
           <div class="class-card SR" data-subj="SR" data-lvl="4">
-            <div class="subj-line">
-              <span class="subj">Reading</span>
-              <span class="level-badge">Level 4</span>
-            </div>
+            <div class="subj-line"><span class="subj">Reading</span><span class="level-badge">Level 4</span></div>
             <div class="code">SR4A</div>
             <div class="teacher">박수정<span class="en">Skye</span></div>
             <div class="note"></div>
@@ -1268,40 +663,28 @@ h1.headline em {
         </div>
         <div class="classes-grid">
           <div class="class-card GD" data-subj="GD" data-lvl="2">
-            <div class="subj-line">
-              <span class="subj">Debate</span>
-              <span class="level-badge">Level 2</span>
-            </div>
+            <div class="subj-line"><span class="subj">Debate</span><span class="level-badge">Level 2</span></div>
             <div class="code">GD2A</div>
             <div class="teacher">Andrew</div>
-            <div class="note"></div>
+            <div class="note">5월 17일까지 등록 없을 시 삭제/변경 예정</div>
           </div>
           <div class="class-card GW" data-subj="GW" data-lvl="4">
-            <div class="subj-line">
-              <span class="subj">Writing</span>
-              <span class="level-badge">Level 4</span>
-            </div>
+            <div class="subj-line"><span class="subj">Writing</span><span class="level-badge">Level 4</span></div>
             <div class="code">GW4A</div>
             <div class="teacher">홍주현<span class="en">Elle</span></div>
             <div class="note"></div>
           </div>
           <div class="class-card GW" data-subj="GW" data-lvl="4">
-            <div class="subj-line">
-              <span class="subj">Writing</span>
-              <span class="level-badge">Level 4</span>
-            </div>
+            <div class="subj-line"><span class="subj">Writing</span><span class="level-badge">Level 4</span></div>
             <div class="code">GW4B</div>
             <div class="teacher">David</div>
             <div class="note"></div>
           </div>
           <div class="class-card SG" data-subj="SG" data-lvl="4">
-            <div class="subj-line">
-              <span class="subj">Grammar</span>
-              <span class="level-badge">Level 4</span>
-            </div>
+            <div class="subj-line"><span class="subj">Grammar</span><span class="level-badge">Level 4</span></div>
             <div class="code">SG4A</div>
             <div class="teacher">박수정<span class="en">Skye</span></div>
-            <div class="note"></div>
+            <div class="note">5월 17일까지 등록 없을 시 삭제/변경 예정</div>
           </div>
         </div>
       </div>
@@ -1313,49 +696,34 @@ h1.headline em {
         </div>
         <div class="classes-grid">
           <div class="class-card GD" data-subj="GD" data-lvl="4">
-            <div class="subj-line">
-              <span class="subj">Debate</span>
-              <span class="level-badge">Level 4</span>
-            </div>
+            <div class="subj-line"><span class="subj">Debate</span><span class="level-badge">Level 4</span></div>
             <div class="code">GD4A</div>
             <div class="teacher">Andrew</div>
-            <div class="note"></div>
+            <div class="note">5월 17일까지 등록 없을 시 삭제/변경 예정</div>
           </div>
           <div class="class-card GW" data-subj="GW" data-lvl="3">
-            <div class="subj-line">
-              <span class="subj">Writing</span>
-              <span class="level-badge">Level 3</span>
-            </div>
+            <div class="subj-line"><span class="subj">Writing</span><span class="level-badge">Level 3</span></div>
             <div class="code">GW3A</div>
             <div class="teacher">홍주현<span class="en">Elle</span></div>
-            <div class="note"></div>
+            <div class="note">5월 17일까지 등록 없을 시 삭제/변경 예정</div>
           </div>
           <div class="class-card GW" data-subj="GW" data-lvl="4">
-            <div class="subj-line">
-              <span class="subj">Writing</span>
-              <span class="level-badge">Level 4</span>
-            </div>
+            <div class="subj-line"><span class="subj">Writing</span><span class="level-badge">Level 4</span></div>
             <div class="code">GW4A</div>
             <div class="teacher">David</div>
             <div class="note"></div>
           </div>
           <div class="class-card SG" data-subj="SG" data-lvl="3">
-            <div class="subj-line">
-              <span class="subj">Grammar</span>
-              <span class="level-badge">Level 3</span>
-            </div>
+            <div class="subj-line"><span class="subj">Grammar</span><span class="level-badge">Level 3</span></div>
             <div class="code">SG3A</div>
             <div class="teacher">박수정<span class="en">Skye</span></div>
-            <div class="note"></div>
+            <div class="note">5월 17일까지 등록 없을 시 삭제/변경 예정</div>
           </div>
           <div class="class-card SG" data-subj="SG" data-lvl="3">
-            <div class="subj-line">
-              <span class="subj">Grammar</span>
-              <span class="level-badge">Level 3</span>
-            </div>
+            <div class="subj-line"><span class="subj">Grammar</span><span class="level-badge">Level 3</span></div>
             <div class="code">SG3A</div>
             <div class="teacher">김태은<span class="en">Taeun</span></div>
-            <div class="note"></div>
+            <div class="note">5월 17일까지 등록 없을 시 삭제/변경 예정</div>
           </div>
         </div>
       </div>
@@ -1367,19 +735,13 @@ h1.headline em {
         </div>
         <div class="classes-grid">
           <div class="class-card SG" data-subj="SG" data-lvl="2">
-            <div class="subj-line">
-              <span class="subj">Grammar</span>
-              <span class="level-badge">Level 2</span>
-            </div>
+            <div class="subj-line"><span class="subj">Grammar</span><span class="level-badge">Level 2</span></div>
             <div class="code">SG2A</div>
             <div class="teacher">박수정<span class="en">Skye</span></div>
             <div class="note"></div>
           </div>
           <div class="class-card SR" data-subj="SR" data-lvl="5">
-            <div class="subj-line">
-              <span class="subj">Reading</span>
-              <span class="level-badge">Level 5</span>
-            </div>
+            <div class="subj-line"><span class="subj">Reading</span><span class="level-badge">Level 5</span></div>
             <div class="code">SR5A</div>
             <div class="teacher">황예슬<span class="en">Noelle</span></div>
             <div class="note"></div>
@@ -1390,35 +752,314 @@ h1.headline em {
 
   </section>
 
-  <!-- SUBJECT INTRO -->
+  <section class="section">
+    <h2 class="section-title">교재 안내</h2>
+    <div class="section-title-en">Textbooks</div>
+
+    <div class="voca-notice" style="margin-bottom: 32px;">
+      <div class="label">Bookmall</div>
+      <strong>북몰에서 교재를 직접 구매하실 수 있습니다.</strong> 단, 해외 배송은 지원하지 않습니다. 또한 북몰에는 학생이 배정된 레벨의 교재만 표시되니 참고 부탁드립니다.
+    </div>
+
+    <div class="books-group">
+      <div class="books-group-title">본 수업 교재</div>
+      <div class="books-group-en">Main Class Textbooks</div>
+      <p class="books-group-desc">학생이 등록한 수업 레벨에 따라 사용되는 교재입니다. 6개월 교재는 한 권으로 두 학기를 사용합니다.</p>
+      <div class="books-grid">
+<div class="book-card">
+      <div class="book-cover"><img src="https://contents.kyobobook.co.kr/sih/fit-in/300x0/pdt/9788961983952.jpg" alt="Debating Challenge 3" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="no-image" style="display:none;">GD1</div></div>
+      <div class="book-info">
+        <div class="book-code">GD1 · Global Debate</div>
+        <div class="book-title">Debating Challenge 3</div>
+        
+        <span class="book-tag">6개월 교재</span>
+        <div class="book-link"><a href="https://topialive.co.kr/book-mall" target="_blank" rel="noopener">북몰에서 보기</a></div>
+      </div>
+    </div><div class="book-card">
+      <div class="book-cover"><img src="https://contents.kyobobook.co.kr/sih/fit-in/300x0/pdt/9788961983051.jpg" alt="Exploring Debate 2" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="no-image" style="display:none;">GD2</div></div>
+      <div class="book-info">
+        <div class="book-code">GD2 · Global Debate</div>
+        <div class="book-title">Exploring Debate 2</div>
+        
+        <span class="book-tag">6개월 교재</span>
+        <div class="book-link"><a href="https://topialive.co.kr/book-mall" target="_blank" rel="noopener">북몰에서 보기</a></div>
+      </div>
+    </div><div class="book-card">
+      <div class="book-cover"><img src="https://contents.kyobobook.co.kr/sih/fit-in/300x0/pdt/9788927706878.jpg" alt="DEBATE Pro Book 3" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="no-image" style="display:none;">GD3</div></div>
+      <div class="book-info">
+        <div class="book-code">GD3 · Global Debate</div>
+        <div class="book-title">DEBATE Pro Book 3</div>
+        
+        
+        <div class="book-link"><a href="https://topialive.co.kr/book-mall" target="_blank" rel="noopener">북몰에서 보기</a></div>
+      </div>
+    </div><div class="book-card">
+      <div class="book-cover"><img src="https://contents.kyobobook.co.kr/sih/fit-in/300x0/pdt/9788927707271.jpg" alt="DEBATE Pro Book 5" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="no-image" style="display:none;">GD4</div></div>
+      <div class="book-info">
+        <div class="book-code">GD4 · Global Debate</div>
+        <div class="book-title">DEBATE Pro Book 5</div>
+        
+        
+        <div class="book-link"><a href="https://topialive.co.kr/book-mall" target="_blank" rel="noopener">북몰에서 보기</a></div>
+      </div>
+    </div><div class="book-card">
+      <div class="book-cover"><img src="https://contents.kyobobook.co.kr/sih/fit-in/300x0/pdt/9788927707462.jpg" alt="DEBATE Pro Book 7" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="no-image" style="display:none;">GD5</div></div>
+      <div class="book-info">
+        <div class="book-code">GD5 · Global Debate</div>
+        <div class="book-title">DEBATE Pro Book 7</div>
+        
+        
+        <div class="book-link"><a href="https://topialive.co.kr/book-mall" target="_blank" rel="noopener">북몰에서 보기</a></div>
+      </div>
+    </div><div class="book-card">
+      <div class="book-cover"><img src="https://contents.kyobobook.co.kr/sih/fit-in/300x0/pdt/9780136769996.jpg" alt="Longman Academic Writing Series 2" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="no-image" style="display:none;">GW1</div></div>
+      <div class="book-info">
+        <div class="book-code">GW1 · Global Writing</div>
+        <div class="book-title">Longman Academic Writing Series 2</div>
+        
+        
+        <div class="book-link"><a href="https://topialive.co.kr/book-mall" target="_blank" rel="noopener">북몰에서 보기</a></div>
+      </div>
+    </div><div class="book-card">
+      <div class="book-cover"><img src="https://contents.kyobobook.co.kr/sih/fit-in/300x0/pdt/9780136838531.jpg" alt="Longman Academic Writing Series 3" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="no-image" style="display:none;">GW2</div></div>
+      <div class="book-info">
+        <div class="book-code">GW2 · Global Writing</div>
+        <div class="book-title">Longman Academic Writing Series 3</div>
+        
+        <span class="book-tag">6개월 교재</span>
+        <div class="book-link"><a href="https://topialive.co.kr/book-mall" target="_blank" rel="noopener">북몰에서 보기</a></div>
+      </div>
+    </div><div class="book-card">
+      <div class="book-cover"><img src="https://contents.kyobobook.co.kr/sih/fit-in/300x0/pdt/9780136838630.jpg" alt="Longman Academic Writing Series 4" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="no-image" style="display:none;">GW3</div></div>
+      <div class="book-info">
+        <div class="book-code">GW3 · Global Writing</div>
+        <div class="book-title">Longman Academic Writing Series 4</div>
+        
+        <span class="book-tag">6개월 교재</span>
+        <div class="book-link"><a href="https://topialive.co.kr/book-mall" target="_blank" rel="noopener">북몰에서 보기</a></div>
+      </div>
+    </div><div class="book-card">
+      <div class="book-cover"><img src="https://contents.kyobobook.co.kr/sih/fit-in/300x0/pdt/9780136838555.jpg" alt="Longman Academic Writing Series 5" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="no-image" style="display:none;">GW4</div></div>
+      <div class="book-info">
+        <div class="book-code">GW4 · Global Writing</div>
+        <div class="book-title">Longman Academic Writing Series 5</div>
+        
+        <span class="book-tag">6개월 교재</span>
+        <div class="book-link"><a href="https://topialive.co.kr/book-mall" target="_blank" rel="noopener">북몰에서 보기</a></div>
+      </div>
+    </div><div class="book-card">
+      <div class="book-cover"><div class="no-image">GW5</div></div>
+      <div class="book-info">
+        <div class="book-code">GW5 · Global Writing</div>
+        <div class="book-title">The Norton Field Guide to Writing</div>
+        
+        <span class="book-tag">6개월 교재</span>
+        
+      </div>
+    </div><div class="book-card">
+      <div class="book-cover"><img src="https://contents.kyobobook.co.kr/sih/fit-in/300x0/pdt/9791125337072.jpg" alt="Grammar Inside Level 1(2022)" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="no-image" style="display:none;">SG1</div></div>
+      <div class="book-info">
+        <div class="book-code">SG1 · Summit Grammar</div>
+        <div class="book-title">Grammar Inside Level 1(2022)</div>
+        
+        
+        <div class="book-link"><a href="https://topialive.co.kr/book-mall" target="_blank" rel="noopener">북몰에서 보기</a></div>
+      </div>
+    </div><div class="book-card">
+      <div class="book-cover"><img src="https://contents.kyobobook.co.kr/sih/fit-in/300x0/pdt/9791125337089.jpg" alt="Grammar Inside Level 2(2022)" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="no-image" style="display:none;">SG2</div></div>
+      <div class="book-info">
+        <div class="book-code">SG2 · Summit Grammar</div>
+        <div class="book-title">Grammar Inside Level 2(2022)</div>
+        
+        
+        <div class="book-link"><a href="https://topialive.co.kr/book-mall" target="_blank" rel="noopener">북몰에서 보기</a></div>
+      </div>
+    </div><div class="book-card">
+      <div class="book-cover"><img src="https://contents.kyobobook.co.kr/sih/fit-in/300x0/pdt/9791125337096.jpg" alt="Grammar Inside Level 3(2022)" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="no-image" style="display:none;">SG3</div></div>
+      <div class="book-info">
+        <div class="book-code">SG3 · Summit Grammar</div>
+        <div class="book-title">Grammar Inside Level 3(2022)</div>
+        
+        
+        <div class="book-link"><a href="https://topialive.co.kr/book-mall" target="_blank" rel="noopener">북몰에서 보기</a></div>
+      </div>
+    </div><div class="book-card">
+      <div class="book-cover"><img src="https://contents.kyobobook.co.kr/sih/fit-in/300x0/pdt/9788968062902.jpg" alt="천일문 고등 GRAMMAR" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="no-image" style="display:none;">SG4</div></div>
+      <div class="book-info">
+        <div class="book-code">SG4 · Summit Grammar</div>
+        <div class="book-title">천일문 고등 GRAMMAR</div>
+        
+        
+        <div class="book-link"><a href="https://topialive.co.kr/book-mall" target="_blank" rel="noopener">북몰에서 보기</a></div>
+      </div>
+    </div><div class="book-card">
+      <div class="book-cover"><img src="https://contents.kyobobook.co.kr/sih/fit-in/300x0/pdt/9788968065873.jpg" alt="어법끝 Essential(이센셜)(2025)" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="no-image" style="display:none;">SG5</div></div>
+      <div class="book-info">
+        <div class="book-code">SG5 · Summit Grammar</div>
+        <div class="book-title">어법끝 Essential(이센셜)(2025)</div>
+        
+        
+        <div class="book-link"><a href="https://topialive.co.kr/book-mall" target="_blank" rel="noopener">북몰에서 보기</a></div>
+      </div>
+    </div><div class="book-card">
+      <div class="book-cover"><img src="https://contents.kyobobook.co.kr/sih/fit-in/300x0/pdt/9791125342939.jpg" alt="중학 천문장 1" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="no-image" style="display:none;">SR1</div></div>
+      <div class="book-info">
+        <div class="book-code">SR1 · Summit Reading</div>
+        <div class="book-title">중학 천문장 1</div>
+        
+        
+        <div class="book-link"><a href="https://topialive.co.kr/book-mall" target="_blank" rel="noopener">북몰에서 보기</a></div>
+      </div>
+    </div><div class="book-card">
+      <div class="book-cover"><img src="https://contents.kyobobook.co.kr/sih/fit-in/300x0/pdt/9791125342946.jpg" alt="중학 천문장 2" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="no-image" style="display:none;">SR2</div></div>
+      <div class="book-info">
+        <div class="book-code">SR2 · Summit Reading</div>
+        <div class="book-title">중학 천문장 2</div>
+        
+        
+        <div class="book-link"><a href="https://topialive.co.kr/book-mall" target="_blank" rel="noopener">북몰에서 보기</a></div>
+      </div>
+    </div><div class="book-card">
+      <div class="book-cover"><img src="https://contents.kyobobook.co.kr/sih/fit-in/300x0/pdt/9791125342953.jpg" alt="중학 천문장 3" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="no-image" style="display:none;">SR3</div></div>
+      <div class="book-info">
+        <div class="book-code">SR3 · Summit Reading</div>
+        <div class="book-title">중학 천문장 3</div>
+        
+        
+        <div class="book-link"><a href="https://topialive.co.kr/book-mall" target="_blank" rel="noopener">북몰에서 보기</a></div>
+      </div>
+    </div><div class="book-card">
+      <div class="book-cover"><img src="https://contents.kyobobook.co.kr/sih/fit-in/300x0/pdt/9791125335085.jpg" alt="천문장 완성" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="no-image" style="display:none;">SR4</div></div>
+      <div class="book-info">
+        <div class="book-code">SR4 · Summit Reading</div>
+        <div class="book-title">천문장 완성</div>
+        
+        
+        <div class="book-link"><a href="https://topialive.co.kr/book-mall" target="_blank" rel="noopener">북몰에서 보기</a></div>
+      </div>
+    </div><div class="book-card">
+      <div class="book-cover"><img src="https://contents.kyobobook.co.kr/sih/fit-in/300x0/pdt/9791125348948.jpg" alt="빠른독해 바른독해 수능실전" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="no-image" style="display:none;">SR5</div></div>
+      <div class="book-info">
+        <div class="book-code">SR5 · Summit Reading</div>
+        <div class="book-title">빠른독해 바른독해 수능실전</div>
+        
+        
+        <div class="book-link"><a href="https://topialive.co.kr/book-mall" target="_blank" rel="noopener">북몰에서 보기</a></div>
+      </div>
+    </div>      </div>
+    </div>
+
+    <div class="books-group">
+      <div class="books-group-title">보카(어휘) 교재</div>
+      <div class="books-group-en">Vocabulary Textbooks</div>
+      <p class="books-group-desc">학생이 스스로 학습하는 보카 테스트용 교재입니다. 현재 학생의 본 수업 레벨에 맞춰 동일 레벨로 배정되어 있습니다.</p>
+      <div class="voca-notice">
+        <div class="label">Customization</div>
+        <strong>학생별 어휘 수준에 따라 변경 가능합니다.</strong> 본 수업 레벨과 보카 레벨은 학생마다 편차가 있을 수 있으니, 변경을 원하실 경우 학원으로 연락 부탁드립니다. 각 책 카드의 미리보기 링크를 클릭하시면 난이도를 확인하실 수 있습니다.
+      </div>
+      <div class="books-grid">
+<div class="book-card">
+      <div class="book-cover"><img src="https://contents.kyobobook.co.kr/sih/fit-in/300x0/pdt/9780838877029.jpg" alt="Wordly Wise 3000 Book 3 (4/E)" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="no-image" style="display:none;">GV1</div></div>
+      <div class="book-info">
+        <div class="book-code">GV1 · Global Vocabulary</div>
+        <div class="book-title">Wordly Wise 3000 Book 3 (4/E)</div>
+        
+        
+        <div class="book-link"><a href="https://topialive.co.kr/book-mall" target="_blank" rel="noopener">북몰에서 보기</a></div>
+      </div>
+    </div><div class="book-card">
+      <div class="book-cover"><img src="https://contents.kyobobook.co.kr/sih/fit-in/300x0/pdt/9780838877036.jpg" alt="Wordly Wise 3000 Book 5 (4/E)" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="no-image" style="display:none;">GV2</div></div>
+      <div class="book-info">
+        <div class="book-code">GV2 · Global Vocabulary</div>
+        <div class="book-title">Wordly Wise 3000 Book 5 (4/E)</div>
+        
+        
+        <div class="book-link"><a href="https://topialive.co.kr/book-mall" target="_blank" rel="noopener">북몰에서 보기</a></div>
+      </div>
+    </div><div class="book-card">
+      <div class="book-cover"><img src="https://contents.kyobobook.co.kr/sih/fit-in/300x0/pdt/9780838877074.jpg" alt="Wordly Wise 3000 Book 7 (4/E)" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="no-image" style="display:none;">GV3</div></div>
+      <div class="book-info">
+        <div class="book-code">GV3 · Global Vocabulary</div>
+        <div class="book-title">Wordly Wise 3000 Book 7 (4/E)</div>
+        
+        
+        <div class="book-link"><a href="https://topialive.co.kr/book-mall" target="_blank" rel="noopener">북몰에서 보기</a></div>
+      </div>
+    </div><div class="book-card">
+      <div class="book-cover"><img src="https://contents.kyobobook.co.kr/sih/fit-in/300x0/pdt/9780838877098.jpg" alt="Wordly Wise 3000 Book 9 (4/E)" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="no-image" style="display:none;">GV4</div></div>
+      <div class="book-info">
+        <div class="book-code">GV4 · Global Vocabulary</div>
+        <div class="book-title">Wordly Wise 3000 Book 9 (4/E)</div>
+        
+        
+        <div class="book-link"><a href="https://topialive.co.kr/book-mall" target="_blank" rel="noopener">북몰에서 보기</a></div>
+      </div>
+    </div><div class="book-card">
+      <div class="book-cover"><img src="https://contents.kyobobook.co.kr/sih/fit-in/300x0/pdt/9780838877111.jpg" alt="Wordly Wise 3000 Book 11 (4/E)" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="no-image" style="display:none;">GV5</div></div>
+      <div class="book-info">
+        <div class="book-code">GV5 · Global Vocabulary</div>
+        <div class="book-title">Wordly Wise 3000 Book 11 (4/E)</div>
+        
+        
+        <div class="book-link"><a href="https://topialive.co.kr/book-mall" target="_blank" rel="noopener">북몰에서 보기</a></div>
+      </div>
+    </div><div class="book-card">
+      <div class="book-cover"><img src="https://contents.kyobobook.co.kr/sih/fit-in/300x0/pdt/9791125350743.jpg" alt="능률 VOCA 중등 필수" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="no-image" style="display:none;">SV1</div></div>
+      <div class="book-info">
+        <div class="book-code">SV1 · Summit Vocabulary</div>
+        <div class="book-title">능률 VOCA 중등 필수</div>
+        
+        
+        <div class="book-link"><a href="https://topialive.co.kr/book-mall" target="_blank" rel="noopener">북몰에서 보기</a></div>
+      </div>
+    </div><div class="book-card">
+      <div class="book-cover"><img src="https://contents.kyobobook.co.kr/sih/fit-in/300x0/pdt/9791125350750.jpg" alt="능률 VOCA 중등 고난도" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="no-image" style="display:none;">SV2</div></div>
+      <div class="book-info">
+        <div class="book-code">SV2 · Summit Vocabulary</div>
+        <div class="book-title">능률 VOCA 중등 고난도</div>
+        
+        
+        <div class="book-link"><a href="https://topialive.co.kr/book-mall" target="_blank" rel="noopener">북몰에서 보기</a></div>
+      </div>
+    </div><div class="book-card">
+      <div class="book-cover"><img src="https://contents.kyobobook.co.kr/sih/fit-in/300x0/pdt/9791125350811.jpg" alt="능률 VOCA 고등 기본" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="no-image" style="display:none;">SV3</div></div>
+      <div class="book-info">
+        <div class="book-code">SV3 · Summit Vocabulary</div>
+        <div class="book-title">능률 VOCA 고등 기본</div>
+        
+        
+        <div class="book-link"><a href="https://topialive.co.kr/book-mall" target="_blank" rel="noopener">북몰에서 보기</a></div>
+      </div>
+    </div><div class="book-card">
+      <div class="book-cover"><img src="https://contents.kyobobook.co.kr/sih/fit-in/300x0/pdt/9791125350828.jpg" alt="능률 VOCA 수능 필수" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="no-image" style="display:none;">SV4</div></div>
+      <div class="book-info">
+        <div class="book-code">SV4 · Summit Vocabulary</div>
+        <div class="book-title">능률 VOCA 수능 필수</div>
+        
+        
+        <div class="book-link"><a href="https://topialive.co.kr/book-mall" target="_blank" rel="noopener">북몰에서 보기</a></div>
+      </div>
+    </div><div class="book-card">
+      <div class="book-cover"><img src="https://contents.kyobobook.co.kr/sih/fit-in/300x0/pdt/9791125350835.jpg" alt="능률 VOCA 수능 고난도" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="no-image" style="display:none;">SV5</div></div>
+      <div class="book-info">
+        <div class="book-code">SV5 · Summit Vocabulary</div>
+        <div class="book-title">능률 VOCA 수능 고난도</div>
+        
+        
+        <div class="book-link"><a href="https://topialive.co.kr/book-mall" target="_blank" rel="noopener">북몰에서 보기</a></div>
+      </div>
+    </div>      </div>
+    </div>
+  </section>
+
   <section class="section">
     <h2 class="section-title">과목 안내</h2>
     <div class="section-title-en">Subjects</div>
     <div class="subject-intro">
-      <div class="subj-card GD">
-        <div class="subj-mark"></div>
-        <div class="code">GD</div>
-        <div class="name">Debate</div>
-        <div class="name-kr">토론</div>
-      </div>
-      <div class="subj-card GW">
-        <div class="subj-mark"></div>
-        <div class="code">GW</div>
-        <div class="name">Writing</div>
-        <div class="name-kr">작문</div>
-      </div>
-      <div class="subj-card SG">
-        <div class="subj-mark"></div>
-        <div class="code">SG</div>
-        <div class="name">Grammar</div>
-        <div class="name-kr">문법</div>
-      </div>
-      <div class="subj-card SR">
-        <div class="subj-mark"></div>
-        <div class="code">SR</div>
-        <div class="name">Reading</div>
-        <div class="name-kr">독해</div>
-      </div>
+      <div class="subj-card GD"><div class="subj-mark"></div><div class="code">GD</div><div class="name">Debate</div><div class="name-kr">토론</div></div>
+      <div class="subj-card GW"><div class="subj-mark"></div><div class="code">GW</div><div class="name">Writing</div><div class="name-kr">작문</div></div>
+      <div class="subj-card SG"><div class="subj-mark"></div><div class="code">SG</div><div class="name">Grammar</div><div class="name-kr">문법</div></div>
+      <div class="subj-card SR"><div class="subj-mark"></div><div class="code">SR</div><div class="name">Reading</div><div class="name-kr">독해</div></div>
     </div>
   </section>
 
