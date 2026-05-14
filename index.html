@@ -452,6 +452,101 @@ h1.headline em { font-style: italic; font-weight: 400; color: var(--accent); }
   text-transform: uppercase;
 }
 
+
+.books-section {
+  padding: 24px 0 56px;
+  border-top: 1px solid var(--border-soft);
+  margin-top: 24px;
+}
+.books-section-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 24px;
+  font-weight: 500;
+  color: var(--ink);
+  letter-spacing: -0.015em;
+  margin-bottom: 4px;
+}
+.books-section-en {
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  color: var(--text-3);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+.books-section-desc {
+  font-size: 13px;
+  color: var(--text-2);
+  margin-bottom: 24px;
+  max-width: 620px;
+  line-height: 1.65;
+}
+.books-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 14px;
+}
+.book-card {
+  background: var(--paper);
+  border: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  transition: all 0.2s ease;
+}
+.book-card:hover { border-color: var(--accent); box-shadow: 0 4px 14px rgba(139, 111, 71, 0.08); }
+.book-cover {
+  width: 100%;
+  aspect-ratio: 3/4;
+  background: var(--bg-2);
+  overflow: hidden;
+  position: relative;
+}
+.book-cover img { width: 100%; height: 100%; object-fit: contain; background: var(--paper); }
+.book-cover .no-image {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 32px;
+  color: var(--text-4);
+  font-style: italic;
+  width: 100%; height: 100%;
+  display: flex; align-items: center; justify-content: center;
+}
+.book-info { padding: 14px 16px 16px; display: flex; flex-direction: column; flex: 1; }
+.book-code {
+  font-family: 'Inter', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  color: var(--accent);
+  margin-bottom: 6px;
+  text-transform: uppercase;
+}
+.book-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 8px;
+  line-height: 1.4;
+  letter-spacing: -0.005em;
+  min-height: 36px;
+}
+.book-tag {
+  display: inline-block;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  padding: 3px 8px;
+  background: var(--accent-soft);
+  color: var(--accent-deep);
+  border-radius: 2px;
+  align-self: flex-start;
+  margin-top: auto;
+}
+@media (max-width: 768px) {
+  .books-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
+  .book-title { font-size: 12px; min-height: 34px; }
+}
+
 @media (max-width: 900px) {
   .container { padding: 0 20px; }
   .masthead { padding: 48px 0 36px; }
@@ -711,6 +806,69 @@ h1.headline em { font-style: italic; font-weight: 400; color: var(--accent); }
       </div>
     </div>
 
+    <section class="books-section">
+      <div class="books-section-title">사용 교재</div>
+      <div class="books-section-en">Your Textbooks</div>
+      <p class="books-section-desc">선생님이 가르치시는 반의 교재입니다. 6개월 교재는 한 권으로 두 학기를 사용합니다.</p>
+      <div class="books-grid">
+        <div class="book-card">
+      <div class="book-cover"><img src="https://contents.kyobobook.co.kr/sih/fit-in/300x0/pdt/9791125337089.jpg" alt="Grammar Inside Level 2(2022)" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="no-image" style="display:none;">SG2</div></div>
+      <div class="book-info">
+        <div class="book-code">SG2 · Summit Grammar</div>
+        <div class="book-title">Grammar Inside Level 2(2022)</div>
+        
+      </div>
+    </div>
+        <div class="book-card">
+      <div class="book-cover"><img src="https://contents.kyobobook.co.kr/sih/fit-in/300x0/pdt/9791125337096.jpg" alt="Grammar Inside Level 3(2022)" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="no-image" style="display:none;">SG3</div></div>
+      <div class="book-info">
+        <div class="book-code">SG3 · Summit Grammar</div>
+        <div class="book-title">Grammar Inside Level 3(2022)</div>
+        
+      </div>
+    </div>
+        <div class="book-card">
+      <div class="book-cover"><img src="https://contents.kyobobook.co.kr/sih/fit-in/300x0/pdt/9788968062902.jpg" alt="천일문 고등 GRAMMAR" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="no-image" style="display:none;">SG4</div></div>
+      <div class="book-info">
+        <div class="book-code">SG4 · Summit Grammar</div>
+        <div class="book-title">천일문 고등 GRAMMAR</div>
+        
+      </div>
+    </div>
+        <div class="book-card">
+      <div class="book-cover"><img src="https://contents.kyobobook.co.kr/sih/fit-in/300x0/pdt/9788968065873.jpg" alt="어법끝 Essential(이센셜)(2025)" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="no-image" style="display:none;">SG5</div></div>
+      <div class="book-info">
+        <div class="book-code">SG5 · Summit Grammar</div>
+        <div class="book-title">어법끝 Essential(이센셜)(2025)</div>
+        
+      </div>
+    </div>
+        <div class="book-card">
+      <div class="book-cover"><img src="https://contents.kyobobook.co.kr/sih/fit-in/300x0/pdt/9791125342946.jpg" alt="중학 천문장 2" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="no-image" style="display:none;">SR2</div></div>
+      <div class="book-info">
+        <div class="book-code">SR2 · Summit Reading</div>
+        <div class="book-title">중학 천문장 2</div>
+        
+      </div>
+    </div>
+        <div class="book-card">
+      <div class="book-cover"><img src="https://contents.kyobobook.co.kr/sih/fit-in/300x0/pdt/9791125342953.jpg" alt="중학 천문장 3" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="no-image" style="display:none;">SR3</div></div>
+      <div class="book-info">
+        <div class="book-code">SR3 · Summit Reading</div>
+        <div class="book-title">중학 천문장 3</div>
+        
+      </div>
+    </div>
+        <div class="book-card">
+      <div class="book-cover"><img src="https://contents.kyobobook.co.kr/sih/fit-in/300x0/pdt/9791125335085.jpg" alt="천문장 완성" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="no-image" style="display:none;">SR4</div></div>
+      <div class="book-info">
+        <div class="book-code">SR4 · Summit Reading</div>
+        <div class="book-title">천문장 완성</div>
+        
+      </div>
+    </div>
+      </div>
+    </section>
   </section>
   <section class="teacher-view" data-teacher="Kimberley">
     <div class="teacher-meta">
@@ -847,6 +1005,37 @@ h1.headline em { font-style: italic; font-weight: 400; color: var(--accent); }
       </div>
     </div>
 
+    <section class="books-section">
+      <div class="books-section-title">사용 교재</div>
+      <div class="books-section-en">Your Textbooks</div>
+      <p class="books-section-desc">선생님이 가르치시는 반의 교재입니다. 6개월 교재는 한 권으로 두 학기를 사용합니다.</p>
+      <div class="books-grid">
+        <div class="book-card">
+      <div class="book-cover"><img src="https://contents.kyobobook.co.kr/sih/fit-in/300x0/pdt/9788961983051.jpg" alt="Exploring Debate 2" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="no-image" style="display:none;">GD2</div></div>
+      <div class="book-info">
+        <div class="book-code">GD2 · Global Debate</div>
+        <div class="book-title">Exploring Debate 2</div>
+        <span class="book-tag">6개월 교재</span>
+      </div>
+    </div>
+        <div class="book-card">
+      <div class="book-cover"><img src="https://contents.kyobobook.co.kr/sih/fit-in/300x0/pdt/9788927707271.jpg" alt="DEBATE Pro Book 5" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="no-image" style="display:none;">GD4</div></div>
+      <div class="book-info">
+        <div class="book-code">GD4 · Global Debate</div>
+        <div class="book-title">DEBATE Pro Book 5</div>
+        
+      </div>
+    </div>
+        <div class="book-card">
+      <div class="book-cover"><img src="https://contents.kyobobook.co.kr/sih/fit-in/300x0/pdt/9788927707462.jpg" alt="DEBATE Pro Book 7" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="no-image" style="display:none;">GD5</div></div>
+      <div class="book-info">
+        <div class="book-code">GD5 · Global Debate</div>
+        <div class="book-title">DEBATE Pro Book 7</div>
+        
+      </div>
+    </div>
+      </div>
+    </section>
   </section>
   <section class="teacher-view" data-teacher="홍주현">
     <div class="teacher-meta">
@@ -984,6 +1173,45 @@ h1.headline em { font-style: italic; font-weight: 400; color: var(--accent); }
       </div>
     </div>
 
+    <section class="books-section">
+      <div class="books-section-title">사용 교재</div>
+      <div class="books-section-en">Your Textbooks</div>
+      <p class="books-section-desc">선생님이 가르치시는 반의 교재입니다. 6개월 교재는 한 권으로 두 학기를 사용합니다.</p>
+      <div class="books-grid">
+        <div class="book-card">
+      <div class="book-cover"><img src="https://contents.kyobobook.co.kr/sih/fit-in/300x0/pdt/9788927706878.jpg" alt="DEBATE Pro Book 3" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="no-image" style="display:none;">GD3</div></div>
+      <div class="book-info">
+        <div class="book-code">GD3 · Global Debate</div>
+        <div class="book-title">DEBATE Pro Book 3</div>
+        
+      </div>
+    </div>
+        <div class="book-card">
+      <div class="book-cover"><img src="https://contents.kyobobook.co.kr/sih/fit-in/300x0/pdt/9780136838531.jpg" alt="Longman Academic Writing Series 3" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="no-image" style="display:none;">GW2</div></div>
+      <div class="book-info">
+        <div class="book-code">GW2 · Global Writing</div>
+        <div class="book-title">Longman Academic Writing Series 3</div>
+        <span class="book-tag">6개월 교재</span>
+      </div>
+    </div>
+        <div class="book-card">
+      <div class="book-cover"><img src="https://contents.kyobobook.co.kr/sih/fit-in/300x0/pdt/9780136838630.jpg" alt="Longman Academic Writing Series 4" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="no-image" style="display:none;">GW3</div></div>
+      <div class="book-info">
+        <div class="book-code">GW3 · Global Writing</div>
+        <div class="book-title">Longman Academic Writing Series 4</div>
+        <span class="book-tag">6개월 교재</span>
+      </div>
+    </div>
+        <div class="book-card">
+      <div class="book-cover"><img src="https://contents.kyobobook.co.kr/sih/fit-in/300x0/pdt/9780136838555.jpg" alt="Longman Academic Writing Series 5" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="no-image" style="display:none;">GW4</div></div>
+      <div class="book-info">
+        <div class="book-code">GW4 · Global Writing</div>
+        <div class="book-title">Longman Academic Writing Series 5</div>
+        <span class="book-tag">6개월 교재</span>
+      </div>
+    </div>
+      </div>
+    </section>
   </section>
   <section class="teacher-view" data-teacher="조경">
     <div class="teacher-meta">
@@ -1107,6 +1335,29 @@ h1.headline em { font-style: italic; font-weight: 400; color: var(--accent); }
       </div>
     </div>
 
+    <section class="books-section">
+      <div class="books-section-title">사용 교재</div>
+      <div class="books-section-en">Your Textbooks</div>
+      <p class="books-section-desc">선생님이 가르치시는 반의 교재입니다. 6개월 교재는 한 권으로 두 학기를 사용합니다.</p>
+      <div class="books-grid">
+        <div class="book-card">
+      <div class="book-cover"><img src="https://contents.kyobobook.co.kr/sih/fit-in/300x0/pdt/9791125337089.jpg" alt="Grammar Inside Level 2(2022)" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="no-image" style="display:none;">SG2</div></div>
+      <div class="book-info">
+        <div class="book-code">SG2 · Summit Grammar</div>
+        <div class="book-title">Grammar Inside Level 2(2022)</div>
+        
+      </div>
+    </div>
+        <div class="book-card">
+      <div class="book-cover"><img src="https://contents.kyobobook.co.kr/sih/fit-in/300x0/pdt/9788968062902.jpg" alt="천일문 고등 GRAMMAR" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="no-image" style="display:none;">SG4</div></div>
+      <div class="book-info">
+        <div class="book-code">SG4 · Summit Grammar</div>
+        <div class="book-title">천일문 고등 GRAMMAR</div>
+        
+      </div>
+    </div>
+      </div>
+    </section>
   </section>
   <section class="teacher-view" data-teacher="황예슬">
     <div class="teacher-meta">
@@ -1201,6 +1452,21 @@ h1.headline em { font-style: italic; font-weight: 400; color: var(--accent); }
       </div>
     </div>
 
+    <section class="books-section">
+      <div class="books-section-title">사용 교재</div>
+      <div class="books-section-en">Your Textbooks</div>
+      <p class="books-section-desc">선생님이 가르치시는 반의 교재입니다. 6개월 교재는 한 권으로 두 학기를 사용합니다.</p>
+      <div class="books-grid">
+        <div class="book-card">
+      <div class="book-cover"><img src="https://contents.kyobobook.co.kr/sih/fit-in/300x0/pdt/9791125348948.jpg" alt="빠른독해 바른독해 수능실전" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="no-image" style="display:none;">SR5</div></div>
+      <div class="book-info">
+        <div class="book-code">SR5 · Summit Reading</div>
+        <div class="book-title">빠른독해 바른독해 수능실전</div>
+        
+      </div>
+    </div>
+      </div>
+    </section>
   </section>
   <section class="teacher-view" data-teacher="남유진">
     <div class="teacher-meta">
@@ -1314,6 +1580,37 @@ h1.headline em { font-style: italic; font-weight: 400; color: var(--accent); }
       </div>
     </div>
 
+    <section class="books-section">
+      <div class="books-section-title">사용 교재</div>
+      <div class="books-section-en">Your Textbooks</div>
+      <p class="books-section-desc">선생님이 가르치시는 반의 교재입니다. 6개월 교재는 한 권으로 두 학기를 사용합니다.</p>
+      <div class="books-grid">
+        <div class="book-card">
+      <div class="book-cover"><img src="https://contents.kyobobook.co.kr/sih/fit-in/300x0/pdt/9791125337096.jpg" alt="Grammar Inside Level 3(2022)" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="no-image" style="display:none;">SG3</div></div>
+      <div class="book-info">
+        <div class="book-code">SG3 · Summit Grammar</div>
+        <div class="book-title">Grammar Inside Level 3(2022)</div>
+        
+      </div>
+    </div>
+        <div class="book-card">
+      <div class="book-cover"><img src="https://contents.kyobobook.co.kr/sih/fit-in/300x0/pdt/9788968062902.jpg" alt="천일문 고등 GRAMMAR" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="no-image" style="display:none;">SG4</div></div>
+      <div class="book-info">
+        <div class="book-code">SG4 · Summit Grammar</div>
+        <div class="book-title">천일문 고등 GRAMMAR</div>
+        
+      </div>
+    </div>
+        <div class="book-card">
+      <div class="book-cover"><img src="https://contents.kyobobook.co.kr/sih/fit-in/300x0/pdt/9791125342939.jpg" alt="중학 천문장 1" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="no-image" style="display:none;">SR1</div></div>
+      <div class="book-info">
+        <div class="book-code">SR1 · Summit Reading</div>
+        <div class="book-title">중학 천문장 1</div>
+        
+      </div>
+    </div>
+      </div>
+    </section>
   </section>
   <section class="teacher-view" data-teacher="김예원">
     <div class="teacher-meta">
@@ -1477,6 +1774,53 @@ h1.headline em { font-style: italic; font-weight: 400; color: var(--accent); }
       </div>
     </div>
 
+    <section class="books-section">
+      <div class="books-section-title">사용 교재</div>
+      <div class="books-section-en">Your Textbooks</div>
+      <p class="books-section-desc">선생님이 가르치시는 반의 교재입니다. 6개월 교재는 한 권으로 두 학기를 사용합니다.</p>
+      <div class="books-grid">
+        <div class="book-card">
+      <div class="book-cover"><img src="https://contents.kyobobook.co.kr/sih/fit-in/300x0/pdt/9788927707462.jpg" alt="DEBATE Pro Book 7" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="no-image" style="display:none;">GD5</div></div>
+      <div class="book-info">
+        <div class="book-code">GD5 · Global Debate</div>
+        <div class="book-title">DEBATE Pro Book 7</div>
+        
+      </div>
+    </div>
+        <div class="book-card">
+      <div class="book-cover"><img src="https://contents.kyobobook.co.kr/sih/fit-in/300x0/pdt/9780136838531.jpg" alt="Longman Academic Writing Series 3" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="no-image" style="display:none;">GW2</div></div>
+      <div class="book-info">
+        <div class="book-code">GW2 · Global Writing</div>
+        <div class="book-title">Longman Academic Writing Series 3</div>
+        <span class="book-tag">6개월 교재</span>
+      </div>
+    </div>
+        <div class="book-card">
+      <div class="book-cover"><img src="https://contents.kyobobook.co.kr/sih/fit-in/300x0/pdt/9780136838630.jpg" alt="Longman Academic Writing Series 4" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="no-image" style="display:none;">GW3</div></div>
+      <div class="book-info">
+        <div class="book-code">GW3 · Global Writing</div>
+        <div class="book-title">Longman Academic Writing Series 4</div>
+        <span class="book-tag">6개월 교재</span>
+      </div>
+    </div>
+        <div class="book-card">
+      <div class="book-cover"><img src="https://contents.kyobobook.co.kr/sih/fit-in/300x0/pdt/9780136838555.jpg" alt="Longman Academic Writing Series 5" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="no-image" style="display:none;">GW4</div></div>
+      <div class="book-info">
+        <div class="book-code">GW4 · Global Writing</div>
+        <div class="book-title">Longman Academic Writing Series 5</div>
+        <span class="book-tag">6개월 교재</span>
+      </div>
+    </div>
+        <div class="book-card">
+      <div class="book-cover"><img src="https://contents.kyobobook.co.kr/sih/fit-in/300x0/pdt/9791125342953.jpg" alt="중학 천문장 3" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="no-image" style="display:none;">SR3</div></div>
+      <div class="book-info">
+        <div class="book-code">SR3 · Summit Reading</div>
+        <div class="book-title">중학 천문장 3</div>
+        
+      </div>
+    </div>
+      </div>
+    </section>
   </section>
   <section class="teacher-view" data-teacher="David">
     <div class="teacher-meta">
@@ -1606,6 +1950,29 @@ h1.headline em { font-style: italic; font-weight: 400; color: var(--accent); }
       </div>
     </div>
 
+    <section class="books-section">
+      <div class="books-section-title">사용 교재</div>
+      <div class="books-section-en">Your Textbooks</div>
+      <p class="books-section-desc">선생님이 가르치시는 반의 교재입니다. 6개월 교재는 한 권으로 두 학기를 사용합니다.</p>
+      <div class="books-grid">
+        <div class="book-card">
+      <div class="book-cover"><img src="https://contents.kyobobook.co.kr/sih/fit-in/300x0/pdt/9780136838630.jpg" alt="Longman Academic Writing Series 4" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="no-image" style="display:none;">GW3</div></div>
+      <div class="book-info">
+        <div class="book-code">GW3 · Global Writing</div>
+        <div class="book-title">Longman Academic Writing Series 4</div>
+        <span class="book-tag">6개월 교재</span>
+      </div>
+    </div>
+        <div class="book-card">
+      <div class="book-cover"><img src="https://contents.kyobobook.co.kr/sih/fit-in/300x0/pdt/9780136838555.jpg" alt="Longman Academic Writing Series 5" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="no-image" style="display:none;">GW4</div></div>
+      <div class="book-info">
+        <div class="book-code">GW4 · Global Writing</div>
+        <div class="book-title">Longman Academic Writing Series 5</div>
+        <span class="book-tag">6개월 교재</span>
+      </div>
+    </div>
+      </div>
+    </section>
   </section>
   <section class="teacher-view" data-teacher="김태은">
     <div class="teacher-meta">
@@ -1724,6 +2091,37 @@ h1.headline em { font-style: italic; font-weight: 400; color: var(--accent); }
       </div>
     </div>
 
+    <section class="books-section">
+      <div class="books-section-title">사용 교재</div>
+      <div class="books-section-en">Your Textbooks</div>
+      <p class="books-section-desc">선생님이 가르치시는 반의 교재입니다. 6개월 교재는 한 권으로 두 학기를 사용합니다.</p>
+      <div class="books-grid">
+        <div class="book-card">
+      <div class="book-cover"><img src="https://contents.kyobobook.co.kr/sih/fit-in/300x0/pdt/9791125337072.jpg" alt="Grammar Inside Level 1(2022)" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="no-image" style="display:none;">SG1</div></div>
+      <div class="book-info">
+        <div class="book-code">SG1 · Summit Grammar</div>
+        <div class="book-title">Grammar Inside Level 1(2022)</div>
+        
+      </div>
+    </div>
+        <div class="book-card">
+      <div class="book-cover"><img src="https://contents.kyobobook.co.kr/sih/fit-in/300x0/pdt/9791125337096.jpg" alt="Grammar Inside Level 3(2022)" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="no-image" style="display:none;">SG3</div></div>
+      <div class="book-info">
+        <div class="book-code">SG3 · Summit Grammar</div>
+        <div class="book-title">Grammar Inside Level 3(2022)</div>
+        
+      </div>
+    </div>
+        <div class="book-card">
+      <div class="book-cover"><img src="https://contents.kyobobook.co.kr/sih/fit-in/300x0/pdt/9791125342946.jpg" alt="중학 천문장 2" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="no-image" style="display:none;">SR2</div></div>
+      <div class="book-info">
+        <div class="book-code">SR2 · Summit Reading</div>
+        <div class="book-title">중학 천문장 2</div>
+        
+      </div>
+    </div>
+      </div>
+    </section>
   </section>
   <section class="teacher-view" data-teacher="Andrew">
     <div class="teacher-meta">
@@ -1873,6 +2271,45 @@ h1.headline em { font-style: italic; font-weight: 400; color: var(--accent); }
       </div>
     </div>
 
+    <section class="books-section">
+      <div class="books-section-title">사용 교재</div>
+      <div class="books-section-en">Your Textbooks</div>
+      <p class="books-section-desc">선생님이 가르치시는 반의 교재입니다. 6개월 교재는 한 권으로 두 학기를 사용합니다.</p>
+      <div class="books-grid">
+        <div class="book-card">
+      <div class="book-cover"><img src="https://contents.kyobobook.co.kr/sih/fit-in/300x0/pdt/9788961983051.jpg" alt="Exploring Debate 2" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="no-image" style="display:none;">GD2</div></div>
+      <div class="book-info">
+        <div class="book-code">GD2 · Global Debate</div>
+        <div class="book-title">Exploring Debate 2</div>
+        <span class="book-tag">6개월 교재</span>
+      </div>
+    </div>
+        <div class="book-card">
+      <div class="book-cover"><img src="https://contents.kyobobook.co.kr/sih/fit-in/300x0/pdt/9788927706878.jpg" alt="DEBATE Pro Book 3" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="no-image" style="display:none;">GD3</div></div>
+      <div class="book-info">
+        <div class="book-code">GD3 · Global Debate</div>
+        <div class="book-title">DEBATE Pro Book 3</div>
+        
+      </div>
+    </div>
+        <div class="book-card">
+      <div class="book-cover"><img src="https://contents.kyobobook.co.kr/sih/fit-in/300x0/pdt/9788927707271.jpg" alt="DEBATE Pro Book 5" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="no-image" style="display:none;">GD4</div></div>
+      <div class="book-info">
+        <div class="book-code">GD4 · Global Debate</div>
+        <div class="book-title">DEBATE Pro Book 5</div>
+        
+      </div>
+    </div>
+        <div class="book-card">
+      <div class="book-cover"><img src="https://contents.kyobobook.co.kr/sih/fit-in/300x0/pdt/9780136838630.jpg" alt="Longman Academic Writing Series 4" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="no-image" style="display:none;">GW3</div></div>
+      <div class="book-info">
+        <div class="book-code">GW3 · Global Writing</div>
+        <div class="book-title">Longman Academic Writing Series 4</div>
+        <span class="book-tag">6개월 교재</span>
+      </div>
+    </div>
+      </div>
+    </section>
   </section>
 
   <footer class="footer">
