@@ -547,6 +547,30 @@ h1.headline em { font-style: italic; font-weight: 400; color: var(--accent); }
   .book-title { font-size: 12px; min-height: 34px; }
 }
 
+
+.class-card.empty {
+  background: var(--bg-2);
+  border-color: var(--border);
+  border-left-color: var(--text-4) !important;
+  opacity: 0.85;
+}
+.class-card.empty .class-code { color: var(--text-3); }
+.class-card.empty .class-subj { opacity: 0.6; }
+.class-card .empty-label {
+  margin-top: 6px;
+  padding: 4px 8px;
+  background: var(--paper);
+  border: 1px dashed var(--border);
+  font-family: 'Inter', sans-serif;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-3);
+  text-align: center;
+  border-radius: 2px;
+}
+
 @media (max-width: 900px) {
   .container { padding: 0 20px; }
   .masthead { padding: 48px 0 36px; }
@@ -659,14 +683,16 @@ h1.headline em { font-style: italic; font-weight: 400; color: var(--accent); }
             <div class="class-subj">Reading</div>
             <div class="class-code">SR3A</div>
             <div class="class-orig">신설</div>
+            
           </div>
         </div>
         <div class="cell">
-          <div class="class-card SR">
+          <div class="class-card SR empty">
             
             <div class="class-subj">Reading</div>
             <div class="class-code">SR2A</div>
             <div class="class-orig"></div>
+            <div class="empty-label">No students yet</div>
           </div>
         </div>
         <div class="cal-time">
@@ -677,11 +703,12 @@ h1.headline em { font-style: italic; font-weight: 400; color: var(--accent); }
         <div class="cell offduty"></div>
         <div class="cell offduty"></div>
         <div class="cell">
-          <div class="class-card SG">
+          <div class="class-card SG empty">
             
             <div class="class-subj">Grammar</div>
             <div class="class-code">SG3A</div>
             <div class="class-orig"></div>
+            <div class="empty-label">No students yet</div>
           </div>
         </div>
         <div class="cell">
@@ -690,6 +717,7 @@ h1.headline em { font-style: italic; font-weight: 400; color: var(--accent); }
             <div class="class-subj">Reading</div>
             <div class="class-code">SR4A</div>
             <div class="class-orig"></div>
+            
           </div>
         </div>
         <div class="cal-time">
@@ -700,19 +728,21 @@ h1.headline em { font-style: italic; font-weight: 400; color: var(--accent); }
         <div class="cell offduty"></div>
         <div class="cell offduty"></div>
         <div class="cell">
-          <div class="class-card SR">
+          <div class="class-card SR empty">
             
             <div class="class-subj">Reading</div>
             <div class="class-code">SR4A</div>
             <div class="class-orig"></div>
+            <div class="empty-label">No students yet</div>
           </div>
         </div>
         <div class="cell">
-          <div class="class-card SG">
+          <div class="class-card SG empty">
             
             <div class="class-subj">Grammar</div>
             <div class="class-code">SG4A</div>
             <div class="class-orig">← SG3_11</div>
+            <div class="empty-label">No students yet</div>
           </div>
         </div>
         <div class="cal-time">
@@ -726,6 +756,7 @@ h1.headline em { font-style: italic; font-weight: 400; color: var(--accent); }
             <div class="class-subj">Grammar</div>
             <div class="class-code">SG3A</div>
             <div class="class-orig">신설</div>
+            
           </div>
         </div>
         <div class="cell offduty"></div>
@@ -735,14 +766,16 @@ h1.headline em { font-style: italic; font-weight: 400; color: var(--accent); }
             <div class="class-subj">Grammar</div>
             <div class="class-code">SG3A</div>
             <div class="class-orig">← SG2_15</div>
+            
           </div>
         </div>
         <div class="cell">
-          <div class="class-card SG">
+          <div class="class-card SG empty">
             
             <div class="class-subj">Grammar</div>
             <div class="class-code">SG3A</div>
             <div class="class-orig">← SG2_8</div>
+            <div class="empty-label">No students yet</div>
           </div>
         </div>
         <div class="cal-time">
@@ -756,6 +789,7 @@ h1.headline em { font-style: italic; font-weight: 400; color: var(--accent); }
             <div class="class-subj">Grammar</div>
             <div class="class-code">SG5A</div>
             <div class="class-orig"></div>
+            
           </div>
         </div>
         <div class="cell offduty"></div>
@@ -765,6 +799,7 @@ h1.headline em { font-style: italic; font-weight: 400; color: var(--accent); }
             <div class="class-subj">Grammar</div>
             <div class="class-code">SG5A</div>
             <div class="class-orig">신설</div>
+            
           </div>
         </div>
         <div class="cell">
@@ -773,6 +808,7 @@ h1.headline em { font-style: italic; font-weight: 400; color: var(--accent); }
             <div class="class-subj">Grammar</div>
             <div class="class-code">SG2A</div>
             <div class="class-orig">신설</div>
+            
           </div>
         </div>
         <div class="cal-time">
@@ -786,6 +822,7 @@ h1.headline em { font-style: italic; font-weight: 400; color: var(--accent); }
             <div class="class-subj">Grammar</div>
             <div class="class-code">SG4A</div>
             <div class="class-orig"></div>
+            
           </div>
         </div>
         <div class="cell offduty"></div>
@@ -913,11 +950,12 @@ h1.headline em { font-style: italic; font-weight: 400; color: var(--accent); }
         <div class="cell offduty"></div>
         <div class="cell offduty"></div>
         <div class="cell">
-          <div class="class-card GD">
+          <div class="class-card GD empty">
             
             <div class="class-subj">Debate</div>
             <div class="class-code">GD5A</div>
             <div class="class-orig"></div>
+            <div class="empty-label">No students yet</div>
           </div>
         </div>
         <div class="cell offduty"></div>
@@ -932,22 +970,25 @@ h1.headline em { font-style: italic; font-weight: 400; color: var(--accent); }
             <div class="class-subj">Debate</div>
             <div class="class-code">GD4A</div>
             <div class="class-orig"></div>
+            
           </div>
         </div>
         <div class="cell">
-          <div class="class-card GD">
+          <div class="class-card GD empty">
             <span class="badge new">NEW</span>
             <div class="class-subj">Debate</div>
             <div class="class-code">GD2A</div>
             <div class="class-orig">신설</div>
+            <div class="empty-label">No students yet</div>
           </div>
         </div>
         <div class="cell">
-          <div class="class-card GD">
+          <div class="class-card GD empty">
             
             <div class="class-subj">Debate</div>
             <div class="class-code">GD5A</div>
             <div class="class-orig">← GD4_2</div>
+            <div class="empty-label">No students yet</div>
           </div>
         </div>
         <div class="cell offduty"></div>
@@ -962,6 +1003,7 @@ h1.headline em { font-style: italic; font-weight: 400; color: var(--accent); }
             <div class="class-subj">Debate</div>
             <div class="class-code">GD5A</div>
             <div class="class-orig"></div>
+            
           </div>
         </div>
         <div class="cell">
@@ -970,6 +1012,7 @@ h1.headline em { font-style: italic; font-weight: 400; color: var(--accent); }
             <div class="class-subj">Debate</div>
             <div class="class-code">GD4A</div>
             <div class="class-orig"></div>
+            
           </div>
         </div>
         <div class="cell offduty"></div>
@@ -986,6 +1029,7 @@ h1.headline em { font-style: italic; font-weight: 400; color: var(--accent); }
             <div class="class-subj">Debate</div>
             <div class="class-code">GD4A</div>
             <div class="class-orig"></div>
+            
           </div>
         </div>
         <div class="cell offduty"></div>
@@ -1086,6 +1130,7 @@ h1.headline em { font-style: italic; font-weight: 400; color: var(--accent); }
             <div class="class-subj">Writing</div>
             <div class="class-code">GW4A</div>
             <div class="class-orig"></div>
+            
           </div>
         </div>
         <div class="cal-time">
@@ -1100,20 +1145,22 @@ h1.headline em { font-style: italic; font-weight: 400; color: var(--accent); }
           </div>
         </div>
         <div class="cell">
-          <div class="class-card GW">
+          <div class="class-card GW empty">
             
             <div class="class-subj">Writing</div>
             <div class="class-code">GW2A</div>
             <div class="class-orig">← 변경: GW3A → GW2A</div>
+            <div class="empty-label">No students yet</div>
           </div>
         </div>
         <div class="cell offduty"></div>
         <div class="cell">
-          <div class="class-card GW">
+          <div class="class-card GW empty">
             
             <div class="class-subj">Writing</div>
             <div class="class-code">GW3A</div>
             <div class="class-orig">← GW2_14</div>
+            <div class="empty-label">No students yet</div>
           </div>
         </div>
         <div class="cal-time">
@@ -1127,6 +1174,7 @@ h1.headline em { font-style: italic; font-weight: 400; color: var(--accent); }
             <div class="class-subj">Debate</div>
             <div class="class-code">GD3A</div>
             <div class="class-orig">신설</div>
+            
           </div>
         </div>
         <div class="cell">
@@ -1135,6 +1183,7 @@ h1.headline em { font-style: italic; font-weight: 400; color: var(--accent); }
             <div class="class-subj">Writing</div>
             <div class="class-code">GW4B</div>
             <div class="class-orig"></div>
+            
           </div>
         </div>
         <div class="cell available">
@@ -1243,6 +1292,7 @@ h1.headline em { font-style: italic; font-weight: 400; color: var(--accent); }
             <div class="class-subj">Grammar</div>
             <div class="class-code">SG2A</div>
             <div class="class-orig"></div>
+            
           </div>
         </div>
         <div class="cell offduty"></div>
@@ -1308,6 +1358,7 @@ h1.headline em { font-style: italic; font-weight: 400; color: var(--accent); }
             <div class="class-subj">Grammar</div>
             <div class="class-code">SG2A</div>
             <div class="class-orig"></div>
+            
           </div>
         </div>
         <div class="cell">
@@ -1316,6 +1367,7 @@ h1.headline em { font-style: italic; font-weight: 400; color: var(--accent); }
             <div class="class-subj">Grammar</div>
             <div class="class-code">SG4A</div>
             <div class="class-orig"></div>
+            
           </div>
         </div>
         <div class="cell offduty"></div>
@@ -1426,6 +1478,7 @@ h1.headline em { font-style: italic; font-weight: 400; color: var(--accent); }
             <div class="class-subj">Reading</div>
             <div class="class-code">SR5A</div>
             <div class="class-orig">기존 유지</div>
+            
           </div>
         </div>
         <div class="cal-time">
@@ -1498,6 +1551,7 @@ h1.headline em { font-style: italic; font-weight: 400; color: var(--accent); }
             <div class="class-subj">Grammar</div>
             <div class="class-code">SG3A</div>
             <div class="class-orig"></div>
+            
           </div>
         </div>
         <div class="cell">
@@ -1506,6 +1560,7 @@ h1.headline em { font-style: italic; font-weight: 400; color: var(--accent); }
             <div class="class-subj">Reading</div>
             <div class="class-code">SR1A</div>
             <div class="class-orig">신설</div>
+            
           </div>
         </div>
         <div class="cal-time">
@@ -1527,6 +1582,7 @@ h1.headline em { font-style: italic; font-weight: 400; color: var(--accent); }
             <div class="class-subj">Grammar</div>
             <div class="class-code">SG4A</div>
             <div class="class-orig"></div>
+            
           </div>
         </div>
         <div class="cal-time">
@@ -1637,11 +1693,12 @@ h1.headline em { font-style: italic; font-weight: 400; color: var(--accent); }
         <div class="cell offduty"></div>
         <div class="cell offduty"></div>
         <div class="cell">
-          <div class="class-card GW">
+          <div class="class-card GW empty">
             <span class="badge new">NEW</span>
             <div class="class-subj">Writing</div>
             <div class="class-code">GW2A</div>
             <div class="class-orig">신설</div>
+            <div class="empty-label">No students yet</div>
           </div>
         </div>
         <div class="cell offduty"></div>
@@ -1672,6 +1729,7 @@ h1.headline em { font-style: italic; font-weight: 400; color: var(--accent); }
             <div class="class-subj">Writing</div>
             <div class="class-code">GW4A</div>
             <div class="class-orig"></div>
+            
           </div>
         </div>
         <div class="cell offduty"></div>
@@ -1686,14 +1744,16 @@ h1.headline em { font-style: italic; font-weight: 400; color: var(--accent); }
             <div class="class-subj">Writing</div>
             <div class="class-code">GW2A</div>
             <div class="class-orig">신설</div>
+            
           </div>
         </div>
         <div class="cell">
-          <div class="class-card SR">
+          <div class="class-card SR empty">
             
             <div class="class-subj">Reading</div>
             <div class="class-code">SR3A</div>
             <div class="class-orig"></div>
+            <div class="empty-label">No students yet</div>
           </div>
         </div>
         <div class="cell">
@@ -1702,6 +1762,7 @@ h1.headline em { font-style: italic; font-weight: 400; color: var(--accent); }
             <div class="class-subj">Writing</div>
             <div class="class-code">GW2A</div>
             <div class="class-orig">신설</div>
+            
           </div>
         </div>
         <div class="cell offduty"></div>
@@ -1716,6 +1777,7 @@ h1.headline em { font-style: italic; font-weight: 400; color: var(--accent); }
             <div class="class-subj">Writing</div>
             <div class="class-code">GW4A</div>
             <div class="class-orig"></div>
+            
           </div>
         </div>
         <div class="cell">
@@ -1724,6 +1786,7 @@ h1.headline em { font-style: italic; font-weight: 400; color: var(--accent); }
             <div class="class-subj">Writing</div>
             <div class="class-code">GW3A</div>
             <div class="class-orig"></div>
+            
           </div>
         </div>
         <div class="cell available">
@@ -1745,11 +1808,12 @@ h1.headline em { font-style: italic; font-weight: 400; color: var(--accent); }
           </div>
         </div>
         <div class="cell">
-          <div class="class-card GD">
+          <div class="class-card GD empty">
             
             <div class="class-subj">Debate</div>
             <div class="class-code">GD5A</div>
             <div class="class-orig"></div>
+            <div class="empty-label">No students yet</div>
           </div>
         </div>
         <div class="cell available">
@@ -1853,6 +1917,7 @@ h1.headline em { font-style: italic; font-weight: 400; color: var(--accent); }
             <div class="class-subj">Writing</div>
             <div class="class-code">GW4A</div>
             <div class="class-orig"></div>
+            
           </div>
         </div>
         <div class="cal-time">
@@ -1878,6 +1943,7 @@ h1.headline em { font-style: italic; font-weight: 400; color: var(--accent); }
             <div class="class-subj">Writing</div>
             <div class="class-code">GW4B</div>
             <div class="class-orig">← GW4_5</div>
+            
           </div>
         </div>
         <div class="cal-time">
@@ -1893,6 +1959,7 @@ h1.headline em { font-style: italic; font-weight: 400; color: var(--accent); }
             <div class="class-subj">Writing</div>
             <div class="class-code">GW3A</div>
             <div class="class-orig">← GW2_1</div>
+            
           </div>
         </div>
         <div class="cell">
@@ -1901,6 +1968,7 @@ h1.headline em { font-style: italic; font-weight: 400; color: var(--accent); }
             <div class="class-subj">Writing</div>
             <div class="class-code">GW4A</div>
             <div class="class-orig">← GW3_15</div>
+            
           </div>
         </div>
         <div class="cal-time">
@@ -1914,6 +1982,7 @@ h1.headline em { font-style: italic; font-weight: 400; color: var(--accent); }
             <div class="class-subj">Writing</div>
             <div class="class-code">GW4A</div>
             <div class="class-orig"></div>
+            
           </div>
         </div>
         <div class="cell offduty"></div>
@@ -1931,6 +2000,7 @@ h1.headline em { font-style: italic; font-weight: 400; color: var(--accent); }
             <div class="class-subj">Writing</div>
             <div class="class-code">GW4A</div>
             <div class="class-orig"></div>
+            
           </div>
         </div>
         <div class="cell offduty"></div>
@@ -2004,6 +2074,7 @@ h1.headline em { font-style: italic; font-weight: 400; color: var(--accent); }
             <div class="class-subj">Reading</div>
             <div class="class-code">SR2A</div>
             <div class="class-orig">신설</div>
+            
           </div>
         </div>
         <div class="cell offduty"></div>
@@ -2020,6 +2091,7 @@ h1.headline em { font-style: italic; font-weight: 400; color: var(--accent); }
             <div class="class-subj">Grammar</div>
             <div class="class-code">SG1A</div>
             <div class="class-orig">신설</div>
+            
           </div>
         </div>
         <div class="cell offduty"></div>
@@ -2046,11 +2118,12 @@ h1.headline em { font-style: italic; font-weight: 400; color: var(--accent); }
         <div class="cell offduty"></div>
         <div class="cell offduty"></div>
         <div class="cell">
-          <div class="class-card SG">
+          <div class="class-card SG empty">
             
             <div class="class-subj">Grammar</div>
             <div class="class-code">SG3A</div>
             <div class="class-orig"></div>
+            <div class="empty-label">No students yet</div>
           </div>
         </div>
         <div class="cal-time">
@@ -2153,6 +2226,7 @@ h1.headline em { font-style: italic; font-weight: 400; color: var(--accent); }
             <div class="class-subj">Debate</div>
             <div class="class-code">GD4A</div>
             <div class="class-orig"></div>
+            
           </div>
         </div>
         <div class="cell">
@@ -2161,6 +2235,7 @@ h1.headline em { font-style: italic; font-weight: 400; color: var(--accent); }
             <div class="class-subj">Writing</div>
             <div class="class-code">GW3A</div>
             <div class="class-orig"></div>
+            
           </div>
         </div>
         <div class="cal-time">
@@ -2176,6 +2251,7 @@ h1.headline em { font-style: italic; font-weight: 400; color: var(--accent); }
             <div class="class-subj">Debate</div>
             <div class="class-code">GD4A</div>
             <div class="class-orig"></div>
+            
           </div>
         </div>
         <div class="cell">
@@ -2184,6 +2260,7 @@ h1.headline em { font-style: italic; font-weight: 400; color: var(--accent); }
             <div class="class-subj">Debate</div>
             <div class="class-code">GD3A</div>
             <div class="class-orig"></div>
+            
           </div>
         </div>
         <div class="cal-time">
@@ -2200,11 +2277,12 @@ h1.headline em { font-style: italic; font-weight: 400; color: var(--accent); }
           </div>
         </div>
         <div class="cell">
-          <div class="class-card GD">
+          <div class="class-card GD empty">
             
             <div class="class-subj">Debate</div>
             <div class="class-code">GD2A</div>
             <div class="class-orig"></div>
+            <div class="empty-label">No students yet</div>
           </div>
         </div>
         <div class="cal-time">
@@ -2221,11 +2299,12 @@ h1.headline em { font-style: italic; font-weight: 400; color: var(--accent); }
           </div>
         </div>
         <div class="cell">
-          <div class="class-card GD">
+          <div class="class-card GD empty">
             
             <div class="class-subj">Debate</div>
             <div class="class-code">GD4A</div>
             <div class="class-orig">← GD3_12</div>
+            <div class="empty-label">No students yet</div>
           </div>
         </div>
         <div class="cal-time">
