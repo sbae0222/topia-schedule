@@ -607,16 +607,19 @@ h1.headline em { font-style: italic; font-weight: 400; color: var(--accent); }
 .class-students .scount{color:var(--text-3,#999);font-size:10px;}
 .class-students .en-name{color:var(--text-3,#999);font-style:italic;font-size:10px;}
 @media(max-width:768px){.class-students{font-size:10px;}}
+
+.class-students{font-size:11px;line-height:1.6;color:var(--text-2,#555);margin-top:6px;padding-top:6px;border-top:1px dashed var(--border,#ddd);}
+.class-students .scount{color:var(--text-3,#999);font-size:10px;}
+.class-students .en-name{color:var(--text-3,#999);font-style:italic;font-size:10px;}
+@media(max-width:768px){.class-students{font-size:10px;}}
 </style>
 <body>
 <div class="container">
 <header class="masthead">
 <div class="brand-line"><span>Topia Live</span><span class="term">2026 September Term · Faculty</span></div>
-<h1 class="headline"><em>강사별</em> 시간표</h1>
-<div class="headline-en">September Term Schedule by Instructor</div>
+<h1 class="headline"><em>강사별</em> 시간표</h1><div class="headline-en">September Term Schedule by Instructor</div>
 <p class="summary">선생님 본인의 다음 학기(9월) 수업과 배정 학생을 한눈에 확인하실 수 있습니다. 상단에서 본인 이름을 선택하세요.</p>
-</header>
-<div class="teacher-rail-wrap"><div class="rail-label">Select Instructor</div>
+</header><div class="teacher-rail-wrap"><div class="rail-label">Select Instructor</div>
 <nav class="teacher-rail">
 <button class="teacher-tab active" data-teacher="박수정"><span>박수정<span class="count">13</span></span><span class="en">Skye</span></button>
 <button class="teacher-tab" data-teacher="Jess"><span>Jess<span class="count">1</span></span></button>
@@ -631,14 +634,7 @@ h1.headline em { font-style: italic; font-weight: 400; color: var(--accent); }
 </nav>
 </div>
 <section class="teacher-view active" data-teacher="박수정">
-<div class="teacher-meta">
-<div class="teacher-name">박수정<span class="en">Skye</span></div>
-<div class="teacher-role">Topia Live · Instructor</div>
-<div class="teacher-stats">
-<div class="stat"><div class="stat-num classes">13</div><div class="stat-label">Classes</div></div>
-<div class="stat"><div class="stat-num avail">3</div><div class="stat-label">Open Slots</div></div>
-</div></div>
-<div class="calendar-section"><div class="calendar">
+<div class="teacher-meta"><div class="teacher-name">박수정<span class="en">Skye</span></div><div class="teacher-role">Topia Live · Instructor</div><div class="teacher-stats"><div class="stat"><div class="stat-num classes">13</div><div class="stat-label">Classes</div></div><div class="stat"><div class="stat-num avail">3</div><div class="stat-label">Open Slots</div></div></div></div><div class="calendar-section"><div class="calendar">
 <div class="cal-header"><div class="label">Time</div></div>
 <div class="cal-header day"><div class="day-kr">화요일</div><div class="day-en">TUE</div></div>
 <div class="cal-header day"><div class="day-kr">목요일</div><div class="day-en">THU</div></div>
@@ -647,43 +643,36 @@ h1.headline em { font-style: italic; font-weight: 400; color: var(--accent); }
 <div class="cal-time"><div class="hour">9</div><div class="span">9 – 11</div><div class="part">주말 1부</div></div>
 <div class="cell offduty"></div>
 <div class="cell offduty"></div>
-<div class="cell"><div class="class-card SR"><div class="class-subj">Reading</div><div class="class-code">SR3_2</div><div class="class-orig"></div><div class="class-students">황시현 <span class="en-name">(Sean)</span> · 장하준 <span class="en-name">(David Jang)</span> · 이승민 <span class="en-name">(Richard)</span> · 이준희 <span class="en-name">(Richard)</span> <span class="scount">(4)</span></div></div></div>
-<div class="cell"><div class="class-card SR"><div class="class-subj">Reading</div><div class="class-code">SR2_1</div><div class="class-orig"></div><div class="class-students">채율 <span class="en-name">(Evelyn)</span> · 김예운 <span class="en-name">(Yeun)</span> · 박영록 <span class="en-name">(Chloe)</span> · 이다빈 <span class="en-name">(Davin)</span> · 이준수 <span class="en-name">(Junsu Lee)</span> <span class="scount">(5)</span></div></div></div>
+<div class="cell"><div class="class-card SR"><div class="class-subj">Reading</div><div class="class-code">SR3_2</div><div class="class-orig"></div><div class="class-students">이승민 <span class="en-name">(Richard)</span> · 이준희 <span class="en-name">(Richard)</span> · 장하준 <span class="en-name">(David Jang)</span> · 최우림 <span class="en-name">(Woorim choi)</span> · 황시현 <span class="en-name">(Sean)</span> <span class="scount">(5)</span></div></div></div>
+<div class="cell"><div class="class-card SR"><div class="class-subj">Reading</div><div class="class-code">SR2_1</div><div class="class-orig"></div><div class="class-students">김예운 <span class="en-name">(Yeun)</span> · 박영록 <span class="en-name">(Chloe)</span> · 이다빈 <span class="en-name">(Davin)</span> · 이준수 <span class="en-name">(Junsu Lee)</span> · 채율 <span class="en-name">(Evelyn)</span> <span class="scount">(5)</span></div></div></div>
 <div class="cal-time"><div class="hour">11</div><div class="span">11 – 13</div><div class="part">주말 2부</div></div>
 <div class="cell offduty"></div>
 <div class="cell offduty"></div>
-<div class="cell"><div class="class-card SG"><div class="class-subj">Grammar</div><div class="class-code">SG3_14</div><div class="class-orig"></div><div class="class-students">송민찬 <span class="en-name">(Chany)</span> · 조현서 <span class="en-name">(Reina)</span> · 정예원 <span class="en-name">(Yewon Chung)</span> <span class="scount">(3)</span></div></div></div>
+<div class="cell"><div class="class-card SG"><div class="class-subj">Grammar</div><div class="class-code">SG3_14</div><div class="class-orig"></div><div class="class-students">박재인 <span class="en-name">(Jade)</span> · 송민찬 <span class="en-name">(Chany)</span> · 정예원 <span class="en-name">(Yewon Chung)</span> · 조현서 <span class="en-name">(Reina)</span> <span class="scount">(4)</span></div></div></div>
 <div class="cell"><div class="class-card SR"><div class="class-subj">Reading</div><div class="class-code">SR4_6</div><div class="class-orig"></div><div class="class-students">이예솔 · 정원준 <span class="en-name">(Ryan)</span> <span class="scount">(2)</span></div></div></div>
 <div class="cal-time"><div class="hour">15</div><div class="span">15 – 17</div><div class="part">주말 3부</div></div>
 <div class="cell offduty"></div>
 <div class="cell offduty"></div>
-<div class="cell"><div class="class-card SR"><div class="class-subj">Reading</div><div class="class-code">SR4_7</div><div class="class-orig"></div><div class="class-students">조하윤 <span class="en-name">(Sophia)</span> · 이승하 <span class="en-name">(Seungha)</span> <span class="scount">(2)</span></div></div></div>
-<div class="cell"><div class="class-card SG"><div class="class-subj">Grammar</div><div class="class-code">SG4_11</div><div class="class-orig"></div><div class="class-students">박정인 <span class="en-name">(Andy)</span> <span class="scount">(1)</span></div></div></div>
+<div class="cell"><div class="class-card SR"><div class="class-subj">Reading</div><div class="class-code">SR4_7</div><div class="class-orig"></div><div class="class-students">이승하 <span class="en-name">(Seungha)</span> · 조하윤 <span class="en-name">(Sophia)</span> <span class="scount">(2)</span></div></div></div>
+<div class="cell"><div class="class-card SG"><div class="class-subj">Grammar</div><div class="class-code">SG4_11</div><div class="class-orig"></div><div class="class-students">문지윤 <span class="en-name">(Jiyun)</span> · 박정인 <span class="en-name">(Andy)</span> <span class="scount">(2)</span></div></div></div>
 <div class="cal-time"><div class="hour">17</div><div class="span">17 – 19</div><div class="part">4부 · 평일1부</div></div>
-<div class="cell"><div class="class-card SG"><div class="class-subj">Grammar</div><div class="class-code">SG3_17</div><div class="class-orig"></div><div class="class-students">김건율 <span class="en-name">(Alvin)</span> · 황시현 <span class="en-name">(Sean)</span> · 장하준 <span class="en-name">(David Jang)</span> · 문정환 <span class="en-name">(Henry Moon)</span> <span class="scount">(4)</span></div></div></div>
+<div class="cell"><div class="class-card SG"><div class="class-subj">Grammar</div><div class="class-code">SG3_17</div><div class="class-orig"></div><div class="class-students">김건율 <span class="en-name">(Alvin)</span> · 문정환 <span class="en-name">(Henry Moon)</span> · 장하준 <span class="en-name">(David Jang)</span> · 함유진 <span class="en-name">(Eugene)</span> · 황시현 <span class="en-name">(Sean)</span> <span class="scount">(5)</span></div></div></div>
 <div class="cell"></div>
 <div class="cell"><div class="class-card SG"><div class="class-subj">Grammar</div><div class="class-code">SG3_15</div><div class="class-orig"></div><div class="class-students">배규원 <span class="en-name">(Jake Bae)</span> <span class="scount">(1)</span></div></div></div>
-<div class="cell"><div class="class-card SG"><div class="class-subj">Grammar</div><div class="class-code">SG3_8</div><div class="class-orig"></div><div class="class-students">함유진 <span class="en-name">(Yujin)</span> · 박재인 · 조하윤 <span class="en-name">(Hayun Cho)</span> · 조하윤 <span class="en-name">(Hayun Cho)</span> · 함유진 <span class="en-name">(Yujin)</span> <span class="scount">(5)</span></div></div></div>
+<div class="cell"><div class="class-card SG"><div class="class-subj">Grammar</div><div class="class-code">SG3_8</div><div class="class-orig"></div><div class="class-students">문정환 <span class="en-name">(Henry Moon)</span> · 박재인 <span class="en-name">(Jade)</span> · 조하윤 <span class="en-name">(Hayun Cho)</span> · 함유진 <span class="en-name">(Yujin)</span> <span class="scount">(4)</span></div></div></div>
 <div class="cal-time"><div class="hour">19</div><div class="span">19 – 21</div><div class="part">5부 · 평일2부</div></div>
-<div class="cell"><div class="class-card SG"><div class="class-subj">Grammar</div><div class="class-code">SG5_3</div><div class="class-orig"></div><div class="class-students">원재이 <span class="en-name">(Jay)</span> · 박종서 <span class="en-name">(Jayden)</span> <span class="scount">(2)</span></div></div></div>
+<div class="cell"><div class="class-card SG"><div class="class-subj">Grammar</div><div class="class-code">SG5_3</div><div class="class-orig"></div><div class="class-students">박종서 <span class="en-name">(Jayden)</span> · 원재이 <span class="en-name">(Jay)</span> <span class="scount">(2)</span></div></div></div>
 <div class="cell"></div>
 <div class="cell"><div class="class-card SG"><div class="class-subj">Grammar</div><div class="class-code">SG5_4</div><div class="class-orig"></div><div class="class-students">김서준 <span class="en-name">(Kim Seo jun)</span> <span class="scount">(1)</span></div></div></div>
-<div class="cell"><div class="class-card SG"><div class="class-subj">Grammar</div><div class="class-code">SG2_5</div><div class="class-orig"></div><div class="class-students">정다원 · 구현우 <span class="en-name">(Hugh)</span> · 이준수 <span class="en-name">(Junsu Lee)</span> <span class="scount">(3)</span></div></div></div>
+<div class="cell"><div class="class-card SG"><div class="class-subj">Grammar</div><div class="class-code">SG2_5</div><div class="class-orig"></div><div class="class-students">구현우 <span class="en-name">(Hugh)</span> · 이준수 <span class="en-name">(Junsu Lee)</span> <span class="scount">(2)</span></div></div></div>
 <div class="cal-time"><div class="hour">21</div><div class="span">21 – 23</div><div class="part">평일 3부</div></div>
-<div class="cell"><div class="class-card SG"><div class="class-subj">Grammar</div><div class="class-code">SG4_14</div><div class="class-orig"></div><div class="class-students">이지유 <span class="en-name">(Vanessa)</span> <span class="scount">(1)</span></div></div></div>
+<div class="cell"><div class="class-card SG"><div class="class-subj">Grammar</div><div class="class-code">SG4_14</div><div class="class-orig"></div><div class="class-students">박정인 <span class="en-name">(Andy)</span> · 이지유 <span class="en-name">(Vanessa)</span> <span class="scount">(2)</span></div></div></div>
 <div class="cell"></div>
 <div class="cell offduty"></div>
 <div class="cell offduty"></div>
 </div></div></section>
 <section class="teacher-view" data-teacher="Jess">
-<div class="teacher-meta">
-<div class="teacher-name">Jess</div>
-<div class="teacher-role">Topia Live · Instructor</div>
-<div class="teacher-stats">
-<div class="stat"><div class="stat-num classes">1</div><div class="stat-label">Classes</div></div>
-<div class="stat"><div class="stat-num avail">15</div><div class="stat-label">Open Slots</div></div>
-</div></div>
-<div class="calendar-section"><div class="calendar">
+<div class="teacher-meta"><div class="teacher-name">Jess</div><div class="teacher-role">Topia Live · Instructor</div><div class="teacher-stats"><div class="stat"><div class="stat-num classes">1</div><div class="stat-label">Classes</div></div><div class="stat"><div class="stat-num avail">15</div><div class="stat-label">Open Slots</div></div></div></div><div class="calendar-section"><div class="calendar">
 <div class="cal-header"><div class="label">Time</div></div>
 <div class="cal-header day"><div class="day-kr">화요일</div><div class="day-en">TUE</div></div>
 <div class="cal-header day"><div class="day-kr">목요일</div><div class="day-en">THU</div></div>
@@ -710,7 +699,7 @@ h1.headline em { font-style: italic; font-weight: 400; color: var(--accent); }
 <div class="cell"></div>
 <div class="cell"></div>
 <div class="cal-time"><div class="hour">19</div><div class="span">19 – 21</div><div class="part">5부 · 평일2부</div></div>
-<div class="cell"><div class="class-card GD"><div class="class-subj">Debate</div><div class="class-code">GD3_11</div><div class="class-orig">← Elle</div><div class="class-students">박준우 <span class="en-name">(Ryan)</span> · 김나언 <span class="en-name">(Diana)</span> · 최서길 <span class="en-name">(Seogil Choi)</span> · 진예린 <span class="en-name">(Yerin)</span> · 이지안 <span class="en-name">(LEE JIAN)</span> · 최윤서 <span class="en-name">(Lily)</span> <span class="scount">(6)</span></div></div></div>
+<div class="cell"><div class="class-card GD"><div class="class-subj">Debate</div><div class="class-code">GD3_11</div><div class="class-orig">← Elle</div><div class="class-students">김나언 <span class="en-name">(Diana)</span> · 박준우 <span class="en-name">(Ryan)</span> · 이지안 <span class="en-name">(LEE JIAN)</span> · 진예린 <span class="en-name">(Yerin)</span> · 최서길 <span class="en-name">(Seogil Choi)</span> · 최윤서 <span class="en-name">(Lily)</span> <span class="scount">(6)</span></div></div></div>
 <div class="cell"></div>
 <div class="cell"></div>
 <div class="cell"></div>
@@ -721,14 +710,7 @@ h1.headline em { font-style: italic; font-weight: 400; color: var(--accent); }
 <div class="cell offduty"></div>
 </div></div></section>
 <section class="teacher-view" data-teacher="황예슬">
-<div class="teacher-meta">
-<div class="teacher-name">황예슬<span class="en">Noelle</span></div>
-<div class="teacher-role">Topia Live · Instructor</div>
-<div class="teacher-stats">
-<div class="stat"><div class="stat-num classes">4</div><div class="stat-label">Classes</div></div>
-<div class="stat"><div class="stat-num avail">12</div><div class="stat-label">Open Slots</div></div>
-</div></div>
-<div class="calendar-section"><div class="calendar">
+<div class="teacher-meta"><div class="teacher-name">황예슬<span class="en">Noelle</span></div><div class="teacher-role">Topia Live · Instructor</div><div class="teacher-stats"><div class="stat"><div class="stat-num classes">4</div><div class="stat-label">Classes</div></div><div class="stat"><div class="stat-num avail">12</div><div class="stat-label">Open Slots</div></div></div></div><div class="calendar-section"><div class="calendar">
 <div class="cal-header"><div class="label">Time</div></div>
 <div class="cal-header day"><div class="day-kr">화요일</div><div class="day-en">TUE</div></div>
 <div class="cal-header day"><div class="day-kr">목요일</div><div class="day-en">THU</div></div>
@@ -755,25 +737,18 @@ h1.headline em { font-style: italic; font-weight: 400; color: var(--accent); }
 <div class="cell"></div>
 <div class="cell"></div>
 <div class="cal-time"><div class="hour">19</div><div class="span">19 – 21</div><div class="part">5부 · 평일2부</div></div>
-<div class="cell"><div class="class-card GW"><div class="class-subj">Writing</div><div class="class-code">GW4_3</div><div class="class-orig">← David</div><div class="class-students">문지윤 · 김건율 <span class="en-name">(Alvin)</span> · 이아린 <span class="en-name">(Ahlynn)</span> · 김세찬 <span class="en-name">(Aiden)</span> · 이태온 <span class="en-name">(Ethan)</span> <span class="scount">(5)</span></div></div></div>
-<div class="cell"><div class="class-card SR"><div class="class-subj">Reading</div><div class="class-code">SR5_1</div><div class="class-orig">← 일19 이동</div><div class="class-students">송민찬 <span class="en-name">(Chany)</span> · 김서현 <span class="en-name">(ella)</span> <span class="scount">(2)</span></div></div></div>
+<div class="cell"><div class="class-card GW"><div class="class-subj">Writing</div><div class="class-code">GW4_3</div><div class="class-orig">← David</div><div class="class-students">김건율 <span class="en-name">(Alvin)</span> · 김세찬 <span class="en-name">(Aiden)</span> · 문지윤 <span class="en-name">(Jiyun)</span> · 이아린 <span class="en-name">(Ahlynn)</span> · 이태온 <span class="en-name">(Ethan)</span> <span class="scount">(5)</span></div></div></div>
+<div class="cell"><div class="class-card SR"><div class="class-subj">Reading</div><div class="class-code">SR5_1</div><div class="class-orig">← 일19 이동</div><div class="class-students">김서현 <span class="en-name">(ella)</span> · 송민찬 <span class="en-name">(Chany)</span> <span class="scount">(2)</span></div></div></div>
 <div class="cell"></div>
 <div class="cell"></div>
 <div class="cal-time"><div class="hour">21</div><div class="span">21 – 23</div><div class="part">평일 3부</div></div>
-<div class="cell"><div class="class-card SG"><div class="class-subj">Grammar</div><div class="class-code">SG2_3</div><div class="class-orig">← Danny</div><div class="class-students">김수완 <span class="en-name">(Suwan)</span> · 김초율 <span class="en-name">(Rapha)</span> · 박영록 <span class="en-name">(Chloe)</span> · 장하윤 <span class="en-name">(hayun chang)</span> <span class="scount">(4)</span></div></div></div>
-<div class="cell"><div class="class-card GW"><div class="class-subj">Writing</div><div class="class-code">GW4_14</div><div class="class-orig">← David</div><div class="class-students">이지율 <span class="en-name">(Lee Jiyul)</span> · 정성오 <span class="en-name">(Alex)</span> · 홍소연 <span class="en-name">(Lucy)</span> · 홍은재 <span class="en-name">(Eunjae Hong)</span> <span class="scount">(4)</span></div></div></div>
+<div class="cell"><div class="class-card SG"><div class="class-subj">Grammar</div><div class="class-code">SG2_3</div><div class="class-orig">← Danny</div><div class="class-students">김도윤 <span class="en-name">(DoYoon)</span> · 김수완 <span class="en-name">(Suwan)</span> · 김초율 <span class="en-name">(Rapha)</span> · 박영록 <span class="en-name">(Chloe)</span> · 장하윤 <span class="en-name">(hayun chang)</span> <span class="scount">(5)</span></div></div></div>
+<div class="cell"><div class="class-card GW"><div class="class-subj">Writing</div><div class="class-code">GW4_14</div><div class="class-orig">← David</div><div class="class-students">오슬아 <span class="en-name">(Alice)</span> · 이주하 <span class="en-name">(Paul)</span> · 이지율 <span class="en-name">(Lee Jiyul)</span> · 정성오 <span class="en-name">(Alex)</span> · 홍소연 <span class="en-name">(Lucy)</span> · 홍은재 <span class="en-name">(Eunjae Hong)</span> <span class="scount">(6)</span></div></div></div>
 <div class="cell offduty"></div>
 <div class="cell offduty"></div>
 </div></div></section>
 <section class="teacher-view" data-teacher="Kimberley">
-<div class="teacher-meta">
-<div class="teacher-name">Kimberley</div>
-<div class="teacher-role">Topia Live · Instructor</div>
-<div class="teacher-stats">
-<div class="stat"><div class="stat-num classes">8</div><div class="stat-label">Classes</div></div>
-<div class="stat"><div class="stat-num avail">8</div><div class="stat-label">Open Slots</div></div>
-</div></div>
-<div class="calendar-section"><div class="calendar">
+<div class="teacher-meta"><div class="teacher-name">Kimberley</div><div class="teacher-role">Topia Live · Instructor</div><div class="teacher-stats"><div class="stat"><div class="stat-num classes">8</div><div class="stat-label">Classes</div></div><div class="stat"><div class="stat-num avail">8</div><div class="stat-label">Open Slots</div></div></div></div><div class="calendar-section"><div class="calendar">
 <div class="cal-header"><div class="label">Time</div></div>
 <div class="cal-header day"><div class="day-kr">화요일</div><div class="day-en">TUE</div></div>
 <div class="cal-header day"><div class="day-kr">목요일</div><div class="day-en">THU</div></div>
@@ -795,30 +770,23 @@ h1.headline em { font-style: italic; font-weight: 400; color: var(--accent); }
 <div class="cell"></div>
 <div class="cell"></div>
 <div class="cal-time"><div class="hour">17</div><div class="span">17 – 19</div><div class="part">4부 · 평일1부</div></div>
-<div class="cell"><div class="class-card GD"><div class="class-subj">Debate</div><div class="class-code">GD4_6</div><div class="class-orig"></div><div class="class-students">임서준 <span class="en-name">(Jason)</span> <span class="scount">(1)</span></div></div></div>
-<div class="cell"><div class="class-card GW"><div class="class-subj">Writing</div><div class="class-code">GW3_19</div><div class="class-orig"></div><div class="class-students">박태서 <span class="en-name">(Park Taeseo)</span> <span class="scount">(1)</span></div></div></div>
-<div class="cell"><div class="class-card GW"><div class="class-subj">Writing</div><div class="class-code">GW3_18</div><div class="class-orig"></div><div class="class-students">최우림 <span class="en-name">(Woorim choi)</span> · 윤아 <span class="en-name">(Yoon A)</span> · 이지안 <span class="en-name">(JiahnLee)</span> <span class="scount">(3)</span></div></div></div>
-<div class="cell"><div class="class-card GW"><div class="class-subj">Writing</div><div class="class-code">GW4_15</div><div class="class-orig">← David</div><div class="class-students">박유나 <span class="en-name">(Yuna)</span> · 김태인 <span class="en-name">(Jason)</span> · 남예지 <span class="en-name">(YeJi)</span> · 당시원 <span class="en-name">(Siwon)</span> <span class="scount">(4)</span></div></div></div>
+<div class="cell"><div class="class-card GD"><div class="class-subj">Debate</div><div class="class-code">GD4_6</div><div class="class-orig"></div><div class="class-students">임서준 <span class="en-name">(Jason)</span> · 함유진 <span class="en-name">(Eugene)</span> <span class="scount">(2)</span></div></div></div>
+<div class="cell"><div class="class-card GW"><div class="class-subj">Writing</div><div class="class-code">GW3_19</div><div class="class-orig"></div><div class="class-students">박태서 <span class="en-name">(park taeseo)</span> <span class="scount">(1)</span></div></div></div>
+<div class="cell"><div class="class-card GW"><div class="class-subj">Writing</div><div class="class-code">GW3_18</div><div class="class-orig"></div><div class="class-students">윤아 <span class="en-name">(Yoon A)</span> · 이지안 <span class="en-name">(JiahnLee)</span> · 최우림 <span class="en-name">(Woorim choi)</span> <span class="scount">(3)</span></div></div></div>
+<div class="cell"><div class="class-card GW"><div class="class-subj">Writing</div><div class="class-code">GW4_15</div><div class="class-orig">← David</div><div class="class-students">김태인 <span class="en-name">(Jason)</span> · 남예지 <span class="en-name">(YeJi)</span> · 당시원 <span class="en-name">(Siwon)</span> · 문지윤 <span class="en-name">(Jiyun)</span> · 박유나 <span class="en-name">(Yuna)</span> <span class="scount">(5)</span></div></div></div>
 <div class="cal-time"><div class="hour">19</div><div class="span">19 – 21</div><div class="part">5부 · 평일2부</div></div>
 <div class="cell"><div class="class-card GD"><div class="class-subj">Debate</div><div class="class-code">GD5_3</div><div class="class-orig"></div><div class="class-students">가반석 <span class="en-name">(Peter Kah)</span> · 송민호 <span class="en-name">(Songcrow)</span> · 윤서아 <span class="en-name">(Irene)</span> <span class="scount">(3)</span></div></div></div>
-<div class="cell"><div class="class-card GD"><div class="class-subj">Debate</div><div class="class-code">GD4_7</div><div class="class-orig"></div><div class="class-students">김여리 <span class="en-name">(KimYeoRi)</span> · 백준 <span class="en-name">(Roy Baek)</span> · 이아린 <span class="en-name">(Ahlynn)</span> · 하지원 <span class="en-name">(Jiwon)</span> <span class="scount">(4)</span></div></div></div>
-<div class="cell"><div class="class-card GD"><div class="class-subj">Debate</div><div class="class-code">GD2_1</div><div class="class-orig"></div><div class="class-students">주완 <span class="en-name">(Nathan)</span> · 김규빈 <span class="en-name">(Abigael)</span> <span class="scount">(2)</span></div></div></div>
+<div class="cell"><div class="class-card GD"><div class="class-subj">Debate</div><div class="class-code">GD4_7</div><div class="class-orig"></div><div class="class-students">김여리 <span class="en-name">(KimYeoRi)</span> · 백준 <span class="en-name">(Roy Baek)</span> · 이아린 <span class="en-name">(Ahlynn)</span> · 하지원 <span class="en-name">(Jiwon)</span> · 함유진 <span class="en-name">(Eugene)</span> <span class="scount">(5)</span></div></div></div>
+<div class="cell"><div class="class-card GD"><div class="class-subj">Debate</div><div class="class-code">GD2_1</div><div class="class-orig"></div><div class="class-students">가노아 <span class="en-name">(Noah Kah)</span> · 김규빈 <span class="en-name">(Eileen)</span> · 백준 <span class="en-name">(Roy Baek)</span> · 주완 <span class="en-name">(Nathan)</span> <span class="scount">(4)</span></div></div></div>
 <div class="cell"></div>
 <div class="cal-time"><div class="hour">21</div><div class="span">21 – 23</div><div class="part">평일 3부</div></div>
 <div class="cell"></div>
-<div class="cell"><div class="class-card GD"><div class="class-subj">Debate</div><div class="class-code">GD4_4</div><div class="class-orig"></div><div class="class-students">이지유 <span class="en-name">(Vanessa)</span> · 이승하 <span class="en-name">(Seungha)</span> <span class="scount">(2)</span></div></div></div>
+<div class="cell"><div class="class-card GD"><div class="class-subj">Debate</div><div class="class-code">GD4_4</div><div class="class-orig"></div><div class="class-students">이승하 <span class="en-name">(Seungha)</span> · 이지유 <span class="en-name">(Vanessa)</span> <span class="scount">(2)</span></div></div></div>
 <div class="cell offduty"></div>
 <div class="cell offduty"></div>
 </div></div></section>
 <section class="teacher-view" data-teacher="김예원">
-<div class="teacher-meta">
-<div class="teacher-name">김예원<span class="en">Angie</span></div>
-<div class="teacher-role">Topia Live · Instructor</div>
-<div class="teacher-stats">
-<div class="stat"><div class="stat-num classes">6</div><div class="stat-label">Classes</div></div>
-<div class="stat"><div class="stat-num avail">10</div><div class="stat-label">Open Slots</div></div>
-</div></div>
-<div class="calendar-section"><div class="calendar">
+<div class="teacher-meta"><div class="teacher-name">김예원<span class="en">Angie</span></div><div class="teacher-role">Topia Live · Instructor</div><div class="teacher-stats"><div class="stat"><div class="stat-num classes">6</div><div class="stat-label">Classes</div></div><div class="stat"><div class="stat-num avail">10</div><div class="stat-label">Open Slots</div></div></div></div><div class="calendar-section"><div class="calendar">
 <div class="cal-header"><div class="label">Time</div></div>
 <div class="cal-header day"><div class="day-kr">화요일</div><div class="day-en">TUE</div></div>
 <div class="cal-header day"><div class="day-kr">목요일</div><div class="day-en">THU</div></div>
@@ -837,16 +805,16 @@ h1.headline em { font-style: italic; font-weight: 400; color: var(--accent); }
 <div class="cal-time"><div class="hour">15</div><div class="span">15 – 17</div><div class="part">주말 3부</div></div>
 <div class="cell offduty"></div>
 <div class="cell offduty"></div>
-<div class="cell"><div class="class-card GW"><div class="class-subj">Writing</div><div class="class-code">GW4_6</div><div class="class-orig"></div><div class="class-students">안시유 <span class="en-name">(Siyu)</span> · 이다해 <span class="en-name">(Sophia)</span> · 정여은 <span class="en-name">(Yeo eun)</span> <span class="scount">(3)</span></div></div></div>
+<div class="cell"><div class="class-card GW"><div class="class-subj">Writing</div><div class="class-code">GW4_6</div><div class="class-orig"></div><div class="class-students">안시유 <span class="en-name">(Siyu)</span> · 정여은 <span class="en-name">(Yeo eun)</span> <span class="scount">(2)</span></div></div></div>
 <div class="cell"></div>
 <div class="cal-time"><div class="hour">17</div><div class="span">17 – 19</div><div class="part">4부 · 평일1부</div></div>
-<div class="cell"><div class="class-card GW"><div class="class-subj">Writing</div><div class="class-code">GW2_1</div><div class="class-orig"></div><div class="class-students">김유나 <span class="en-name">(YUNA)</span> · 안시우 <span class="en-name">(Siwoo)</span> · 한지우 <span class="en-name">(Jun)</span> · 여민준 <span class="en-name">(Minjun)</span> <span class="scount">(4)</span></div></div></div>
+<div class="cell"><div class="class-card GW"><div class="class-subj">Writing</div><div class="class-code">GW2_1</div><div class="class-orig"></div><div class="class-students">김유나 <span class="en-name">(YUNA)</span> · 안시우 <span class="en-name">(Siwoo)</span> · 여민준 <span class="en-name">(Minjun)</span> · 한지우 <span class="en-name">(Jun)</span> <span class="scount">(4)</span></div></div></div>
 <div class="cell"></div>
-<div class="cell"><div class="class-card GW"><div class="class-subj">Writing</div><div class="class-code">GW2_4</div><div class="class-orig"></div><div class="class-students">김명진 <span class="en-name">(Jin)</span> · 장하윤 <span class="en-name">(hayun chang)</span> <span class="scount">(2)</span></div></div></div>
-<div class="cell"><div class="class-card GW"><div class="class-subj">Writing</div><div class="class-code">GW3_14</div><div class="class-orig">← Elle</div><div class="class-students">박다미 <span class="en-name">(Dami)</span> · 함유진 <span class="en-name">(Eugene)</span> · 고수영 <span class="en-name">(CHLOE)</span> · 홍지율 <span class="en-name">(RUBY)</span> · 정예원 <span class="en-name">(Yewon Chung)</span> <span class="scount">(5)</span></div></div></div>
+<div class="cell"><div class="class-card GW"><div class="class-subj">Writing</div><div class="class-code">GW2_4</div><div class="class-orig"></div><div class="class-students">김명진 <span class="en-name">(Jin)</span> · 장하윤 <span class="en-name">(hayun chang)</span> · 정다원 <span class="en-name">(Dawon jung)</span> <span class="scount">(3)</span></div></div></div>
+<div class="cell"><div class="class-card GW"><div class="class-subj">Writing</div><div class="class-code">GW3_14</div><div class="class-orig">← Elle</div><div class="class-students">고수영 <span class="en-name">(CHLOE)</span> · 김도휘 <span class="en-name">(Dohwi Kim)</span> · 박다미 <span class="en-name">(Dami)</span> · 정예원 <span class="en-name">(Yewon Chung)</span> · 함유진 <span class="en-name">(Eugene)</span> · 홍지율 <span class="en-name">(RUBY)</span> <span class="scount">(6)</span></div></div></div>
 <div class="cal-time"><div class="hour">19</div><div class="span">19 – 21</div><div class="part">5부 · 평일2부</div></div>
-<div class="cell"><div class="class-card GW"><div class="class-subj">Writing</div><div class="class-code">GW4_23</div><div class="class-orig"></div><div class="class-students">김기성 <span class="en-name">(Kisung)</span> · 이라윤 <span class="en-name">(Olivia)</span> <span class="scount">(2)</span></div></div></div>
-<div class="cell"><div class="class-card GW"><div class="class-subj">Writing</div><div class="class-code">GW3_13</div><div class="class-orig"></div><div class="class-students">김나윤 <span class="en-name">(Nayun Kim)</span> · 박준우 <span class="en-name">(Ryan)</span> · 권태욱 <span class="en-name">(Evan)</span> · 이은준 <span class="en-name">(EunJunLee)</span> · 이준범 <span class="en-name">(junbeom)</span> · 임재이 <span class="en-name">(Lim Jay)</span> <span class="scount">(6)</span></div></div></div>
+<div class="cell"><div class="class-card GW"><div class="class-subj">Writing</div><div class="class-code">GW4_23</div><div class="class-orig"></div><div class="class-students">김기성 <span class="en-name">(Kisung)</span> · 이라윤 <span class="en-name">(Olivia)</span> · 전지호 <span class="en-name">(Jiho)</span> <span class="scount">(3)</span></div></div></div>
+<div class="cell"><div class="class-card GW"><div class="class-subj">Writing</div><div class="class-code">GW3_13</div><div class="class-orig"></div><div class="class-students">권태욱 <span class="en-name">(Evan)</span> · 김나윤 <span class="en-name">(Nayun Kim)</span> · 박준우 <span class="en-name">(Ryan)</span> · 이은준 <span class="en-name">(EunJunLee)</span> · 이준범 <span class="en-name">(junbeom)</span> · 임재이 <span class="en-name">(Lim Jay)</span> <span class="scount">(6)</span></div></div></div>
 <div class="cell"></div>
 <div class="cell"></div>
 <div class="cal-time"><div class="hour">21</div><div class="span">21 – 23</div><div class="part">평일 3부</div></div>
@@ -856,14 +824,7 @@ h1.headline em { font-style: italic; font-weight: 400; color: var(--accent); }
 <div class="cell offduty"></div>
 </div></div></section>
 <section class="teacher-view" data-teacher="Andrew">
-<div class="teacher-meta">
-<div class="teacher-name">Andrew</div>
-<div class="teacher-role">Topia Live · Instructor</div>
-<div class="teacher-stats">
-<div class="stat"><div class="stat-num classes">6</div><div class="stat-label">Classes</div></div>
-<div class="stat"><div class="stat-num avail">10</div><div class="stat-label">Open Slots</div></div>
-</div></div>
-<div class="calendar-section"><div class="calendar">
+<div class="teacher-meta"><div class="teacher-name">Andrew</div><div class="teacher-role">Topia Live · Instructor</div><div class="teacher-stats"><div class="stat"><div class="stat-num classes">6</div><div class="stat-label">Classes</div></div><div class="stat"><div class="stat-num avail">10</div><div class="stat-label">Open Slots</div></div></div></div><div class="calendar-section"><div class="calendar">
 <div class="cal-header"><div class="label">Time</div></div>
 <div class="cal-header day"><div class="day-kr">화요일</div><div class="day-en">TUE</div></div>
 <div class="cal-header day"><div class="day-kr">목요일</div><div class="day-en">THU</div></div>
@@ -873,17 +834,17 @@ h1.headline em { font-style: italic; font-weight: 400; color: var(--accent); }
 <div class="cell offduty"></div>
 <div class="cell offduty"></div>
 <div class="cell"><div class="class-card GD"><div class="class-subj">Debate</div><div class="class-code">GD4_11</div><div class="class-orig"></div><div class="class-students">전준범 <span class="en-name">(Ted)</span> · 차정우 <span class="en-name">(Brandon)</span> <span class="scount">(2)</span></div></div></div>
-<div class="cell"><div class="class-card GW"><div class="class-subj">Writing</div><div class="class-code">GW3_17</div><div class="class-orig"></div><div class="class-students">박정현 <span class="en-name">(Luna)</span> · 김여리 <span class="en-name">(KimYeoRi)</span> <span class="scount">(2)</span></div></div></div>
+<div class="cell"><div class="class-card GW"><div class="class-subj">Writing</div><div class="class-code">GW3_17</div><div class="class-orig"></div><div class="class-students">김여리 <span class="en-name">(KimYeoRi)</span> · 박정현 <span class="en-name">(Luna)</span> <span class="scount">(2)</span></div></div></div>
 <div class="cal-time"><div class="hour">11</div><div class="span">11 – 13</div><div class="part">주말 2부</div></div>
 <div class="cell offduty"></div>
 <div class="cell offduty"></div>
 <div class="cell"><div class="class-card GD"><div class="class-subj">Debate</div><div class="class-code">GD4_10</div><div class="class-orig"></div><div class="class-students">김이재 <span class="en-name">(Yijae)</span> · 장서준 <span class="en-name">(Seojun)</span> <span class="scount">(2)</span></div></div></div>
-<div class="cell"><div class="class-card GD"><div class="class-subj">Debate</div><div class="class-code">GD3_10</div><div class="class-orig"></div><div class="class-students">김수현 <span class="en-name">(Simon Kim)</span> · 고수영 <span class="en-name">(CHLOE)</span> · 권태욱 <span class="en-name">(Evan)</span> · 이준범 <span class="en-name">(junbeom)</span> · 홍득경 <span class="en-name">(Lucas)</span> <span class="scount">(5)</span></div></div></div>
+<div class="cell"><div class="class-card GD"><div class="class-subj">Debate</div><div class="class-code">GD3_10</div><div class="class-orig"></div><div class="class-students">고수영 <span class="en-name">(CHLOE)</span> · 권태욱 <span class="en-name">(Evan)</span> · 김수현 <span class="en-name">(Simon Kim)</span> · 도윤하 <span class="en-name">(YunHa)</span> · 이준범 <span class="en-name">(junbeom)</span> · 홍득경 <span class="en-name">(Lucas)</span> <span class="scount">(6)</span></div></div></div>
 <div class="cal-time"><div class="hour">15</div><div class="span">15 – 17</div><div class="part">주말 3부</div></div>
 <div class="cell offduty"></div>
 <div class="cell offduty"></div>
 <div class="cell"></div>
-<div class="cell"><div class="class-card GW"><div class="class-subj">Writing</div><div class="class-code">GW4_25</div><div class="class-orig">← Elle</div><div class="class-students">장서준 <span class="en-name">(Seojun)</span> · 장건 <span class="en-name">(William Jang)</span> <span class="scount">(2)</span></div></div></div>
+<div class="cell"><div class="class-card GW"><div class="class-subj">Writing</div><div class="class-code">GW4_25</div><div class="class-orig">← Elle</div><div class="class-students">장건 <span class="en-name">(William Jang)</span> · 장서준 <span class="en-name">(Seojun)</span> <span class="scount">(2)</span></div></div></div>
 <div class="cal-time"><div class="hour">17</div><div class="span">17 – 19</div><div class="part">4부 · 평일1부</div></div>
 <div class="cell"></div>
 <div class="cell"></div>
@@ -901,14 +862,7 @@ h1.headline em { font-style: italic; font-weight: 400; color: var(--accent); }
 <div class="cell offduty"></div>
 </div></div></section>
 <section class="teacher-view" data-teacher="조경">
-<div class="teacher-meta">
-<div class="teacher-name">조경<span class="en">Danny</span></div>
-<div class="teacher-role">Topia Live · Instructor</div>
-<div class="teacher-stats">
-<div class="stat"><div class="stat-num classes">2</div><div class="stat-label">Classes</div></div>
-<div class="stat"><div class="stat-num avail">14</div><div class="stat-label">Open Slots</div></div>
-</div></div>
-<div class="calendar-section"><div class="calendar">
+<div class="teacher-meta"><div class="teacher-name">조경<span class="en">Danny</span></div><div class="teacher-role">Topia Live · Instructor</div><div class="teacher-stats"><div class="stat"><div class="stat-num classes">2</div><div class="stat-label">Classes</div></div><div class="stat"><div class="stat-num avail">14</div><div class="stat-label">Open Slots</div></div></div></div><div class="calendar-section"><div class="calendar">
 <div class="cal-header"><div class="label">Time</div></div>
 <div class="cal-header day"><div class="day-kr">화요일</div><div class="day-en">TUE</div></div>
 <div class="cal-header day"><div class="day-kr">목요일</div><div class="day-en">THU</div></div>
@@ -917,7 +871,7 @@ h1.headline em { font-style: italic; font-weight: 400; color: var(--accent); }
 <div class="cal-time"><div class="hour">9</div><div class="span">9 – 11</div><div class="part">주말 1부</div></div>
 <div class="cell offduty"></div>
 <div class="cell offduty"></div>
-<div class="cell"><div class="class-card SG"><div class="class-subj">Grammar</div><div class="class-code">SG2_4</div><div class="class-orig">기존 유지</div><div class="class-students">송시은 <span class="en-name">(sienna)</span> · 신승민 <span class="en-name">(Shin Seungmin)</span> · 정우현 <span class="en-name">(Woohyun)</span> <span class="scount">(3)</span></div></div></div>
+<div class="cell"><div class="class-card SG"><div class="class-subj">Grammar</div><div class="class-code">SG2_4</div><div class="class-orig"></div><div class="class-students">문가윤 <span class="en-name">(Jenny)</span> · 송시은(단과반) <span class="en-name">(sienna)</span> · 신승민 <span class="en-name">(Shin Seungmin)</span> · 정우현 <span class="en-name">(Woohyun)</span> <span class="scount">(4)</span></div></div></div>
 <div class="cell"></div>
 <div class="cal-time"><div class="hour">11</div><div class="span">11 – 13</div><div class="part">주말 2부</div></div>
 <div class="cell offduty"></div>
@@ -946,14 +900,7 @@ h1.headline em { font-style: italic; font-weight: 400; color: var(--accent); }
 <div class="cell offduty"></div>
 </div></div></section>
 <section class="teacher-view" data-teacher="김태은">
-<div class="teacher-meta">
-<div class="teacher-name">김태은<span class="en">Joanne</span></div>
-<div class="teacher-role">Topia Live · Instructor</div>
-<div class="teacher-stats">
-<div class="stat"><div class="stat-num classes">1</div><div class="stat-label">Classes</div></div>
-<div class="stat"><div class="stat-num avail">15</div><div class="stat-label">Open Slots</div></div>
-</div></div>
-<div class="calendar-section"><div class="calendar">
+<div class="teacher-meta"><div class="teacher-name">김태은<span class="en">Joanne</span></div><div class="teacher-role">Topia Live · Instructor</div><div class="teacher-stats"><div class="stat"><div class="stat-num classes">1</div><div class="stat-label">Classes</div></div><div class="stat"><div class="stat-num avail">15</div><div class="stat-label">Open Slots</div></div></div></div><div class="calendar-section"><div class="calendar">
 <div class="cal-header"><div class="label">Time</div></div>
 <div class="cal-header day"><div class="day-kr">화요일</div><div class="day-en">TUE</div></div>
 <div class="cal-header day"><div class="day-kr">목요일</div><div class="day-en">THU</div></div>
@@ -972,7 +919,7 @@ h1.headline em { font-style: italic; font-weight: 400; color: var(--accent); }
 <div class="cal-time"><div class="hour">15</div><div class="span">15 – 17</div><div class="part">주말 3부</div></div>
 <div class="cell offduty"></div>
 <div class="cell offduty"></div>
-<div class="cell"><div class="class-card SR"><div class="class-subj">Reading</div><div class="class-code">SR2_2</div><div class="class-orig">← 토9 이동</div><div class="class-students">김도윤 <span class="en-name">(DoYoon)</span> <span class="scount">(1)</span></div></div></div>
+<div class="cell"><div class="class-card SR"><div class="class-subj">Reading</div><div class="class-code">SR2_2</div><div class="class-orig">← 토9 이동</div><div class="class-students">김도윤 <span class="en-name">(DoYoon)</span> · 박영록 <span class="en-name">(Chloe)</span> · 박영록 <span class="en-name">(Chloe)</span> <span class="scount">(3)</span></div></div></div>
 <div class="cell"></div>
 <div class="cal-time"><div class="hour">17</div><div class="span">17 – 19</div><div class="part">4부 · 평일1부</div></div>
 <div class="cell"></div>
@@ -991,14 +938,7 @@ h1.headline em { font-style: italic; font-weight: 400; color: var(--accent); }
 <div class="cell offduty"></div>
 </div></div></section>
 <section class="teacher-view" data-teacher="남유진">
-<div class="teacher-meta">
-<div class="teacher-name">남유진<span class="en">Rachel</span></div>
-<div class="teacher-role">Topia Live · Instructor</div>
-<div class="teacher-stats">
-<div class="stat"><div class="stat-num classes">2</div><div class="stat-label">Classes</div></div>
-<div class="stat"><div class="stat-num avail">14</div><div class="stat-label">Open Slots</div></div>
-</div></div>
-<div class="calendar-section"><div class="calendar">
+<div class="teacher-meta"><div class="teacher-name">남유진<span class="en">Rachel</span></div><div class="teacher-role">Topia Live · Instructor</div><div class="teacher-stats"><div class="stat"><div class="stat-num classes">2</div><div class="stat-label">Classes</div></div><div class="stat"><div class="stat-num avail">14</div><div class="stat-label">Open Slots</div></div></div></div><div class="calendar-section"><div class="calendar">
 <div class="cal-header"><div class="label">Time</div></div>
 <div class="cal-header day"><div class="day-kr">화요일</div><div class="day-en">TUE</div></div>
 <div class="cal-header day"><div class="day-kr">목요일</div><div class="day-en">THU</div></div>
@@ -1007,7 +947,7 @@ h1.headline em { font-style: italic; font-weight: 400; color: var(--accent); }
 <div class="cal-time"><div class="hour">9</div><div class="span">9 – 11</div><div class="part">주말 1부</div></div>
 <div class="cell offduty"></div>
 <div class="cell offduty"></div>
-<div class="cell"><div class="class-card SG"><div class="class-subj">Grammar</div><div class="class-code">SG3_2</div><div class="class-orig"></div><div class="class-students">김시원 <span class="en-name">(Siwon)</span> · 강유나 <span class="en-name">(YUNA)</span> <span class="scount">(2)</span></div></div></div>
+<div class="cell"><div class="class-card SG"><div class="class-subj">Grammar</div><div class="class-code">SG3_2</div><div class="class-orig"></div><div class="class-students">강유나 <span class="en-name">(YUNA)</span> · 김시원 <span class="en-name">(Siwon)</span> <span class="scount">(2)</span></div></div></div>
 <div class="cell"><div class="class-card SR"><div class="class-subj">Reading</div><div class="class-code">SR1_1</div><div class="class-orig"></div><div class="class-students">김단아 <span class="en-name">(Danah Kim)</span> · 이정원 <span class="en-name">(IJEONGWON)</span> · 정우현 <span class="en-name">(Woohyun)</span> <span class="scount">(3)</span></div></div></div>
 <div class="cal-time"><div class="hour">11</div><div class="span">11 – 13</div><div class="part">주말 2부</div></div>
 <div class="cell offduty"></div>
@@ -1036,14 +976,7 @@ h1.headline em { font-style: italic; font-weight: 400; color: var(--accent); }
 <div class="cell offduty"></div>
 </div></div></section>
 <section class="teacher-view" data-teacher="David">
-<div class="teacher-meta">
-<div class="teacher-name">David</div>
-<div class="teacher-role">Topia Live · Instructor</div>
-<div class="teacher-stats">
-<div class="stat"><div class="stat-num classes">2</div><div class="stat-label">Classes</div></div>
-<div class="stat"><div class="stat-num avail">14</div><div class="stat-label">Open Slots</div></div>
-</div></div>
-<div class="calendar-section"><div class="calendar">
+<div class="teacher-meta"><div class="teacher-name">David</div><div class="teacher-role">Topia Live · Instructor</div><div class="teacher-stats"><div class="stat"><div class="stat-num classes">2</div><div class="stat-label">Classes</div></div><div class="stat"><div class="stat-num avail">14</div><div class="stat-label">Open Slots</div></div></div></div><div class="calendar-section"><div class="calendar">
 <div class="cal-header"><div class="label">Time</div></div>
 <div class="cal-header day"><div class="day-kr">화요일</div><div class="day-en">TUE</div></div>
 <div class="cal-header day"><div class="day-kr">목요일</div><div class="day-en">THU</div></div>
