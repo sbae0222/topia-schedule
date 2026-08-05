@@ -273,43 +273,10 @@ h1.headline em { font-style: italic; font-weight: 400; color: var(--accent); }
 .cell.offduty { background: var(--bg-2); }
 
 /* AVAILABLE */
-.cell.available {
-  background: var(--avail-bg);
-}
-.avail-mark {
-  margin: auto;
-  text-align: center;
-  pointer-events: none;
-}
-.avail-mark .dot {
-  display: inline-block;
-  width: 5px;
-  height: 5px;
-  background: var(--avail-line);
-  border-radius: 50%;
-  margin-right: 6px;
-  vertical-align: middle;
-  animation: pulse 2.4s ease-in-out infinite;
-}
+
 @keyframes pulse {
   0%, 100% { opacity: 0.4; transform: scale(1); }
   50% { opacity: 1; transform: scale(1.3); }
-}
-.avail-mark .label {
-  font-family: 'Inter', sans-serif;
-  font-size: 10px;
-  font-weight: 600;
-  letter-spacing: 0.22em;
-  color: var(--avail-fg);
-  text-transform: uppercase;
-}
-.avail-mark .sub {
-  font-family: 'Cormorant Garamond', serif;
-  font-style: italic;
-  font-size: 11px;
-  color: var(--avail-fg);
-  opacity: 0.7;
-  margin-top: 4px;
 }
 
 /* CLASS CARD */
@@ -364,21 +331,6 @@ h1.headline em { font-style: italic; font-weight: 400; color: var(--accent); }
   margin-top: auto;
   letter-spacing: 0.02em;
 }
-
-.badge {
-  position: absolute;
-  top: -7px;
-  right: -7px;
-  font-family: 'Inter', sans-serif;
-  font-size: 9px;
-  font-weight: 700;
-  padding: 3px 7px;
-  letter-spacing: 0.1em;
-  z-index: 2;
-  border-radius: 2px;
-}
-.badge.new { background: var(--accent); color: var(--paper); }
-.badge.kept { background: var(--gold); color: var(--paper); }
 
 /* === LEGEND === */
 .legend-section { padding: 32px 0 56px; }
@@ -452,7 +404,6 @@ h1.headline em { font-style: italic; font-weight: 400; color: var(--accent); }
   letter-spacing: 0.15em;
   text-transform: uppercase;
 }
-
 
 .books-section {
   padding: 24px 0 56px;
@@ -548,30 +499,6 @@ h1.headline em { font-style: italic; font-weight: 400; color: var(--accent); }
   .book-title { font-size: 12px; min-height: 34px; }
 }
 
-
-.class-card.empty {
-  background: var(--bg-2);
-  border-color: var(--border);
-  border-left-color: var(--text-4) !important;
-  opacity: 0.85;
-}
-.class-card.empty .class-code { color: var(--text-3); }
-.class-card.empty .class-subj { opacity: 0.6; }
-.class-card .empty-label {
-  margin-top: 6px;
-  padding: 4px 8px;
-  background: var(--paper);
-  border: 1px dashed var(--border);
-  font-family: 'Inter', sans-serif;
-  font-size: 9px;
-  font-weight: 600;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--text-3);
-  text-align: center;
-  border-radius: 2px;
-}
-
 @media (max-width: 900px) {
   .container { padding: 0 20px; }
   .masthead { padding: 48px 0 36px; }
@@ -589,74 +516,92 @@ h1.headline em { font-style: italic; font-weight: 400; color: var(--accent); }
   .class-code { font-size: 18px; }
   .class-subj { font-size: 8px; }
   .class-orig { font-size: 9px; }
-  .avail-mark .label { font-size: 8px; letter-spacing: 0.15em; }
-  .avail-mark .sub { display: none; }
-  .badge { font-size: 8px; padding: 2px 5px; }
+  
+  
+  
 }
 
-.class-students{font-size:11px;line-height:1.5;color:var(--text-2,#555);margin-top:6px;padding-top:6px;border-top:1px dashed var(--border,#ddd);}
-.class-students .scount{color:var(--text-3,#999);font-size:10px;}
-@media(max-width:768px){.class-students{font-size:10px;}}
+/* ==== polish: start ==== */
+/* 대비 실측 후 조정: 이전 #8B7D6F 는 흰 배경에서 3.99:1 로 미달이었다 */
+:root { --text-3: #6F6153; --meta: #6F6153; }
 
-.class-students{font-size:11px;line-height:1.6;color:var(--text-2,#555);margin-top:6px;padding-top:6px;border-top:1px dashed var(--border,#ddd);}
-.class-students .scount{color:var(--text-3,#999);font-size:10px;}
-.class-students .en-name{color:var(--text-3,#999);font-style:italic;font-size:10px;}
-@media(max-width:768px){.class-students{font-size:10px;}}
+/* 숫자는 시간표의 뼈대다 — 자릿수 고정 */
+.stat-num, .cal-time .hour, .cal-time .span, .teacher-tab .count,
+.class-students .scount, .seats, .seats b, .period, .day-meta,
+.hour, .span { font-variant-numeric: tabular-nums; font-feature-settings: "tnum" 1; }
 
-.class-students{font-size:11px;line-height:1.6;color:var(--text-2,#555);margin-top:6px;padding-top:6px;border-top:1px dashed var(--border,#ddd);}
-.class-students .scount{color:var(--text-3,#999);font-size:10px;}
-.class-students .en-name{color:var(--text-3,#999);font-style:italic;font-size:10px;}
-@media(max-width:768px){.class-students{font-size:10px;}}
+/* 한글은 어절 단위로 끊는다 */
+.summary, .class-students, .class-orig, .note, .day-kr, .teacher-name,
+.notice, .voca-notice, .books-group-desc, .seats { word-break: keep-all; line-break: strict; }
+.headline, .teacher-name, .section-title { text-wrap: balance; }
 
-.class-students{font-size:11px;line-height:1.6;color:var(--text-2,#555);margin-top:6px;padding-top:6px;border-top:1px dashed var(--border,#ddd);}
-.class-students .scount{color:var(--text-3,#999);font-size:10px;}
-.class-students .en-name{color:var(--text-3,#999);font-style:italic;font-size:10px;}
-@media(max-width:768px){.class-students{font-size:10px;}}
+/* 키보드 초점 — 이전에는 규칙이 하나도 없었다 */
+a:focus-visible, button:focus-visible, [tabindex]:focus-visible {
+  outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px;
+}
+.teacher-tab:focus-visible { outline-offset: 4px; }
 
-.class-students{font-size:11px;line-height:1.6;color:var(--text-2,#555);margin-top:6px;padding-top:6px;border-top:1px dashed var(--border,#ddd);}
-.class-students .scount{color:var(--text-3,#999);font-size:10px;}
-.class-students .en-name{color:var(--text-3,#999);font-style:italic;font-size:10px;}
-@media(max-width:768px){.class-students{font-size:10px;}}
+/* 전환은 한 순간만, 이미 보이는 상태에서 지수 감쇠로 */
+@keyframes revealUp { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+@media (prefers-reduced-motion: reduce) {
+  .teacher-view, .teacher-view.active { animation: none !important; }
+  * { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
+}
 
-.class-students{font-size:11px;line-height:1.6;color:var(--text-2,#555);margin-top:6px;padding-top:6px;border-top:1px dashed var(--border,#ddd);}
-.class-students .scount{color:var(--text-3,#999);font-size:10px;}
-.class-students .en-name{color:var(--text-3,#999);font-style:italic;font-size:10px;}
-@media(max-width:768px){.class-students{font-size:10px;}}
+/* --- 강사용: 본인 시간표를 폰에서 확인하는 장면이 기준 --- */
+.teacher-view { animation: revealUp 0.34s cubic-bezier(0.16, 1, 0.3, 1) both; }
+.class-card { transition: border-color 0.18s cubic-bezier(0.16,1,0.3,1), background-color 0.18s cubic-bezier(0.16,1,0.3,1), box-shadow 0.18s cubic-bezier(0.16,1,0.3,1); }
+.class-card:hover { box-shadow: 0 1px 2px rgba(43,36,32,0.05), 0 6px 16px -8px rgba(43,36,32,0.18); }
 
-.class-students{font-size:11px;line-height:1.6;color:var(--text-2,#555);margin-top:6px;padding-top:6px;border-top:1px dashed var(--border,#ddd);}
-.class-students .scount{color:var(--text-3,#999);font-size:10px;}
-.class-students .en-name{color:var(--text-3,#999);font-style:italic;font-size:10px;}
-@media(max-width:768px){.class-students{font-size:10px;}}
+/* 열이 내용량에 따라 찌그러지던 것 고정 (목요일이 32px 로 눌렸다) */
+.calendar { grid-template-columns: 90px repeat(4, minmax(0, 1fr)); }
 
-.class-students{font-size:11px;line-height:1.6;color:var(--text-2,#555);margin-top:6px;padding-top:6px;border-top:1px dashed var(--border,#ddd);}
-.class-students .scount{color:var(--text-3,#999);font-size:10px;}
-.class-students .en-name{color:var(--text-3,#999);font-style:italic;font-size:10px;}
-@media(max-width:768px){.class-students{font-size:10px;}}
+/* 작은 메타 텍스트 하한: 9px 은 한글·영문 모두 읽히지 않는다 */
+.cal-time .part { font-size: 10px; color: var(--text-3); letter-spacing: 0.1em; }
+.cal-time .span { color: var(--text-3); }
+.rail-label, .teacher-role, .stat-label { color: var(--text-3); }
+.class-card .class-subj { font-size: 10px; letter-spacing: 0.16em; }
+.cal-header.day .day-en { font-size: 10px; letter-spacing: 0.18em; }
+.teacher-tab .count { font-size: 10px; }
+/* 탭의 영문명은 강사가 자기 이름을 찾는 표지다 — 2.47:1 이었다 */
+.teacher-tab .en { color: var(--text-3); }
+.teacher-tab.active .en { color: var(--bg-3); }
+.teacher-tab:hover .en { color: var(--accent-deep); }
+/* 28px 이어도 2.73:1 은 큰 텍스트 기준(3:1)에도 못 미쳤다 */
+.stat-num.avail { color: var(--accent-deep); }
+.class-card .class-orig { font-size: 11px; color: var(--text-3); letter-spacing: 0; }
 
-.class-students{font-size:11px;line-height:1.6;color:var(--text-2,#555);margin-top:6px;padding-top:6px;border-top:1px dashed var(--border,#ddd);}
-.class-students .scount{color:var(--text-3,#999);font-size:10px;}
-.class-students .en-name{color:var(--text-3,#999);font-style:italic;font-size:10px;}
-@media(max-width:768px){.class-students{font-size:10px;}}
+/* 학생 명단 — 원어민 선생님이 영어 이름을 읽는 줄 */
+.class-students { font-size: 11.5px; line-height: 1.65; color: var(--text-2);
+  margin-top: 8px; padding-top: 8px; border-top: 1px solid var(--border-soft); }
+.class-students .en-name { font-family: 'Inter', sans-serif; font-size: 11px;
+  font-style: normal; color: var(--text-3); letter-spacing: 0; }
+.class-students .scount { font-family: 'Inter', sans-serif; font-size: 11px; color: var(--text-3); }
 
-.class-students{font-size:11px;line-height:1.6;color:var(--text-2,#555);margin-top:6px;padding-top:6px;border-top:1px dashed var(--border,#ddd);}
-.class-students .scount{color:var(--text-3,#999);font-size:10px;}
-.class-students .en-name{color:var(--text-3,#999);font-style:italic;font-size:10px;}
-@media(max-width:768px){.class-students{font-size:10px;}}
+/* 제목 위 여백 > 아래 여백 */
+.teacher-meta { padding: 64px 0 28px; }
 
-.class-students{font-size:11px;line-height:1.6;color:var(--text-2,#555);margin-top:6px;padding-top:6px;border-top:1px dashed var(--border,#ddd);}
-.class-students .scount{color:var(--text-3,#999);font-size:10px;}
-.class-students .en-name{color:var(--text-3,#999);font-style:italic;font-size:10px;}
-@media(max-width:768px){.class-students{font-size:10px;}}
+@media (max-width: 900px) {
+  /* 4열을 억지로 밀어넣지 않고, 읽히는 폭을 지키며 가로로 흐르게 */
+  .calendar-section { overflow-x: auto; overscroll-behavior-x: contain;
+    -webkit-overflow-scrolling: touch; padding-bottom: 4px; }
+  .calendar { min-width: 660px; grid-template-columns: 64px repeat(4, minmax(148px, 1fr)); }
+  .cal-time { min-height: 104px; }
+  .cal-time .span, .cal-time .part { display: block; }
+  .class-card .class-code { font-size: 21px; }
+  .class-students { font-size: 11px; }
+  .teacher-meta { padding: 44px 0 24px; }
+}
 
-.class-students{font-size:11px;line-height:1.6;color:var(--text-2,#555);margin-top:6px;padding-top:6px;border-top:1px dashed var(--border,#ddd);}
-.class-students .scount{color:var(--text-3,#999);font-size:10px;}
-.class-students .en-name{color:var(--text-3,#999);font-style:italic;font-size:10px;}
-@media(max-width:768px){.class-students{font-size:10px;}}
-
-.class-students{font-size:11px;line-height:1.6;color:var(--text-2,#555);margin-top:6px;padding-top:6px;border-top:1px dashed var(--border,#ddd);}
-.class-students .scount{color:var(--text-3,#999);font-size:10px;}
-.class-students .en-name{color:var(--text-3,#999);font-style:italic;font-size:10px;}
-@media(max-width:768px){.class-students{font-size:10px;}}
+@media print {
+  .teacher-rail-wrap, .rail-label { display: none; }
+  .teacher-view { animation: none; }
+  .calendar-section { overflow: visible; }
+  .calendar { min-width: 0; }
+  .cal-header { background: #fff; color: #000; border-bottom: 1px solid #000; }
+  .class-card { break-inside: avoid; }
+}
+/* ==== polish: end ==== */
 </style>
 <body>
 <div class="container">
