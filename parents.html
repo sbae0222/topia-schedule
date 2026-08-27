@@ -149,6 +149,13 @@ h1.headline em { font-style: italic; font-weight: 400; color: var(--accent); }
 }
 
 /* ==== polish: start ==== */
+.source-stamp { margin: 12px 0 0; color: var(--text-3); font-size: 12px; line-height: 1.7; }
+.review-banner { margin: 18px 0; padding: 12px 16px; border: 1px solid #b99459; background: #fff6e5; color: #6d4a1a; font-size: 14px; line-height: 1.7; }
+.class-card[data-review="true"] { border-style: dashed; }
+.class-id { color: var(--text-3); font-size: 11px; margin: -4px 0 8px; }
+.cell.multi-class { flex-direction: column; gap: 10px; }
+.cell.multi-class > .class-card { width: 100%; }
+
 /* 대비 실측 후 조정: 이전 #8B7D6F 는 흰 배경에서 3.99:1 로 미달이었다 */
 :root { --text-3: #6F6153; --meta: #6F6153; }
 
@@ -210,17 +217,20 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible {
 }
 /* ==== polish: end ==== */
 </style>
+</head>
 <body>
 <div class="container">
 <header class="masthead">
 <div class="brand-line"><span>Topia Live</span><span class="term">2026 September Term</span></div>
 <h1 class="headline">9월 학기 <em>시간표</em> 안내</h1>
 <div class="headline-en">September Term Class Schedule</div>
-<p class="summary">학부모님께 9월 학기 개설 예정 수업을 안내드립니다. 본 안내는 현재 확정된 수업을 기준으로 작성되었으며, 수강 신청 현황에 따라 변동이 있을 수 있습니다.</p>
+<p class="summary">학부모님께 9월 학기 수업 배정 현황을 안내드립니다. 개설 여부와 담당을 확인 중인 수업은 별도로 표시했으며, 수강 신청 현황에 따라 변동될 수 있습니다.</p>
+<p class="source-stamp">LM 확인 자료 2026-08-27 14:10 KST · 편성 결정 반영</p>
+
 <div class="summary-stats">
-<div class="stat"><div class="stat-num">44</div><div class="stat-label">개설 수업</div></div>
+<div class="stat"><div class="stat-num">45</div><div class="stat-label">시간표 반</div></div>
 <div class="stat"><div class="stat-num">4</div><div class="stat-label">과목 영역</div></div>
-<div class="stat"><div class="stat-num">12</div><div class="stat-label">주 수업 횟수</div></div>
+<div class="stat"><div class="stat-num">12</div><div class="stat-label">반별 수업 횟수</div></div>
 </div></header>
 <section class="section"><h2 class="section-title">학기 기간</h2><div class="section-title-en">Term Period</div>
 <div class="term-grid">
@@ -233,11 +243,11 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible {
 <div class="notice-stack">
 <div class="notice urgent"><div class="label">Payment</div><strong>계속 수강을 원하시면 따로 신청하실 것이 없습니다.</strong> 등록해 두신 카드로 <strong>9월 수강료가 8월 20일에 자동 결제</strong>됩니다. 9월 학기부터 써밋·글로벌 수업도 프리미엄·리터니와 동일하게 월별 결제로 전환됩니다.</div>
 <div class="notice"><div class="label">Tuition</div><strong>9월 학기부터 수강료가 월 16만원으로 인하됩니다.</strong> 대신 수업 운영 시간이 <strong>55분 + 휴식 5분 + 55분(총 1시간 55분)</strong>에서 <strong>50분 + 휴식 5분 + 50분(총 1시간 45분)</strong>으로 조정됩니다. 프리미엄·리터니 수업과 시간대를 맞추기 위한 변경입니다.</div>
-<div class="notice"><div class="label">Update</div><strong>현재 확정된 수업을 안내드립니다.</strong> 시간표는 수시로 업데이트되며, 새로운 수업이 추가되거나 변경될 수 있으니 자주 확인해 주시기 바랍니다. 각 수업의 <strong>예상 인원</strong>은 현재 등록 기준이며 변동될 수 있습니다.</div>
+<div class="notice"><div class="label">Update</div><strong>현재 배정 현황을 안내드립니다.</strong> 시간표는 수시로 업데이트되며, 새로운 수업이 추가되거나 변경될 수 있으니 자주 확인해 주시기 바랍니다. 각 수업의 <strong>예상 인원</strong>은 현재 등록 기준이며 변동될 수 있습니다.</div>
 <div class="notice"><div class="label">Calendar</div><strong>추석 연휴 주간(9월 22일~27일)에는 전 요일 수업이 휴원합니다.</strong> 이를 반영하여 각 요일 모두 학기 중 총 12회 수업으로 운영됩니다.</div>
 <div class="notice urgent"><div class="label">Notice</div><strong>등록은 빠를수록 좋습니다.</strong> 일정 기간 내 수강생 모집이 부족한 반은 수요가 더 많은 다른 수업으로 변경될 수 있는 점 양해 부탁드립니다. 특히 <strong>현재 인원이 1명인 반은 개설되지 않을 가능성이 높으며</strong>, 해당 수업 카드에 별도로 표시해 두었습니다.</div>
 </div></section>
-<section class="section"><h2 class="section-title">개설 수업</h2><div class="section-title-en">Class Schedule</div>
+<section class="section"><h2 class="section-title">수업 배정 현황</h2><div class="section-title-en">Class Schedule</div>
 <div class="filter-section"><div class="filter-row"><span class="filter-row-label">Subject</span>
 <button class="filter-btn active" data-filter="subj" data-val="ALL">전체</button>
 <button class="filter-btn" data-filter="subj" data-val="GD">Debate · 토론</button>
@@ -255,37 +265,38 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible {
 <div class="filter-row"><span class="filter-row-label">Teacher</span>
 <button class="filter-btn active" data-filter="teacher" data-val="ALL">전체</button>
 <button class="filter-btn" data-filter="teacher" data-val="Skye">Skye</button>
-<button class="filter-btn" data-filter="teacher" data-val="Angie">Angie</button>
 <button class="filter-btn" data-filter="teacher" data-val="Kimberley">Kimberley</button>
 <button class="filter-btn" data-filter="teacher" data-val="Andrew">Andrew</button>
+<button class="filter-btn" data-filter="teacher" data-val="Angie">Angie</button>
 <button class="filter-btn" data-filter="teacher" data-val="Chloe">Chloe</button>
+<button class="filter-btn" data-filter="teacher" data-val="David">David</button>
 <button class="filter-btn" data-filter="teacher" data-val="Jess">Jess</button>
 <button class="filter-btn" data-filter="teacher" data-val="Danny">Danny</button>
-<button class="filter-btn" data-filter="teacher" data-val="David">David</button>
 <button class="filter-btn" data-filter="teacher" data-val="Joanne">Joanne</button>
 </div></div>
 <div class="day-section">
-<div class="day-header"><div class="day-header-left"><div class="day-kr">화요일</div><div class="day-en">Tuesday</div></div><div class="day-meta">8 Classes</div></div>
+<div class="day-header"><div class="day-header-left"><div class="day-kr">화요일</div><div class="day-en">Tuesday</div></div><div class="day-meta">9 Classes</div></div>
 <div class="day-period">9월 1일 ~ 11월 24일<span class="holiday">9월 22일 휴원 (추석 연휴) · 총 12회</span></div>
 <div class="time-block">
 <div class="time-block-header"><div class="hour">17:00</div><div class="span">~ 18:45</div><div class="part">1부</div></div>
 <div class="classes-grid">
-<div class="class-card GW" data-lvl="2" data-subj="GW" data-teacher="Angie"><div class="subj-line"><span class="subj">Writing</span><span class="level-badge">Level 2</span></div><div class="code">GW2B</div><div class="teacher">김예원<span class="en">Angie</span></div><div class="seats">예상 <b>4</b>명</div><div class="note"></div></div>
-<div class="class-card SG" data-lvl="3" data-subj="SG" data-teacher="Skye"><div class="subj-line"><span class="subj">Grammar</span><span class="level-badge">Level 3</span></div><div class="code">SG3B</div><div class="teacher">박수정<span class="en">Skye</span></div><div class="seats">예상 <b>5</b>명</div><div class="note"></div></div>
+<div class="class-card GW" data-lvl="2" data-subj="GW" data-teacher="Angie" data-class-code="GW2_1(Tu1)" data-day="화" data-time="17" data-review="false"><div class="subj-line"><span class="subj">Writing</span><span class="level-badge">Level 2</span></div><div class="code">GW2B</div><div class="class-id">GW2_1</div><div class="teacher">김예원<span class="en">Angie</span></div><div class="seats">예상 <b>5</b>명</div><div class="note"></div></div>
+<div class="class-card SG" data-lvl="3" data-subj="SG" data-teacher="Skye" data-class-code="SG3_17(Tu1)" data-day="화" data-time="17" data-review="false"><div class="subj-line"><span class="subj">Grammar</span><span class="level-badge">Level 3</span></div><div class="code">SG3B</div><div class="class-id">SG3_17</div><div class="teacher">박수정<span class="en">Skye</span></div><div class="seats">예상 <b>5</b>명</div><div class="note"></div></div>
 </div></div>
 <div class="time-block">
 <div class="time-block-header"><div class="hour">19:00</div><div class="span">~ 20:45</div><div class="part">2부</div></div>
 <div class="classes-grid">
-<div class="class-card GD" data-lvl="3" data-subj="GD" data-teacher="Jess"><div class="subj-line"><span class="subj">Debate</span><span class="level-badge">Level 3</span></div><div class="code">GD3B</div><div class="teacher">Jess</div><div class="seats">예상 <b>6</b>명</div><div class="note"></div></div>
-<div class="class-card GD" data-lvl="5" data-subj="GD" data-teacher="Kimberley"><div class="subj-line"><span class="subj">Debate</span><span class="level-badge">Level 5</span></div><div class="code">GD5B</div><div class="teacher">Kimberley</div><div class="seats">예상 <b>3</b>명</div><div class="note"></div></div>
-<div class="class-card GW" data-lvl="4" data-subj="GW" data-teacher="Angie"><div class="subj-line"><span class="subj">Writing</span><span class="level-badge">Level 4</span></div><div class="code">GW4B</div><div class="teacher">김예원<span class="en">Angie</span></div><div class="seats">예상 <b>6</b>명</div><div class="note"></div></div>
-<div class="class-card SG" data-lvl="5" data-subj="SG" data-teacher="Skye"><div class="subj-line"><span class="subj">Grammar</span><span class="level-badge">Level 5</span></div><div class="code">SG5B</div><div class="teacher">박수정<span class="en">Skye</span></div><div class="seats">예상 <b>2</b>명</div><div class="note"></div></div>
+<div class="class-card GD" data-lvl="3" data-subj="GD" data-teacher="Jess" data-class-code="GD3_11(Tu2)" data-day="화" data-time="19" data-review="false"><div class="subj-line"><span class="subj">Debate</span><span class="level-badge">Level 3</span></div><div class="code">GD3B</div><div class="class-id">GD3_11</div><div class="teacher">Jess</div><div class="seats">예상 <b>4</b>명</div><div class="note"></div></div>
+<div class="class-card GD" data-lvl="5" data-subj="GD" data-teacher="Kimberley" data-class-code="GD5_3(Tu2)" data-day="화" data-time="19" data-review="false"><div class="subj-line"><span class="subj">Debate</span><span class="level-badge">Level 5</span></div><div class="code">GD5B</div><div class="class-id">GD5_3</div><div class="teacher">Kimberley</div><div class="seats">예상 <b>4</b>명</div><div class="note"></div></div>
+<div class="class-card GW" data-lvl="4" data-subj="GW" data-teacher="Angie" data-class-code="GW4_23(Tu2)" data-day="화" data-time="19" data-review="false"><div class="subj-line"><span class="subj">Writing</span><span class="level-badge">Level 4</span></div><div class="code">GW4B</div><div class="class-id">GW4_23</div><div class="teacher">김예원<span class="en">Angie</span></div><div class="seats">예상 <b>2</b>명</div><div class="note"></div></div>
+<div class="class-card GW" data-lvl="4" data-subj="GW" data-teacher="David" data-class-code="GW4_3(Tu2)" data-day="화" data-time="19" data-review="false"><div class="subj-line"><span class="subj">Writing</span><span class="level-badge">Level 4</span></div><div class="code">GW4B</div><div class="class-id">GW4_3</div><div class="teacher">David</div><div class="seats">예상 <b>3</b>명</div><div class="note"></div></div>
+<div class="class-card SG" data-lvl="5" data-subj="SG" data-teacher="Skye" data-class-code="SG5_3(Tu2)" data-day="화" data-time="19" data-review="false"><div class="subj-line"><span class="subj">Grammar</span><span class="level-badge">Level 5</span></div><div class="code">SG5B</div><div class="class-id">SG5_3</div><div class="teacher">박수정<span class="en">Skye</span></div><div class="seats">예상 <b>2</b>명</div><div class="note"></div></div>
 </div></div>
 <div class="time-block">
 <div class="time-block-header"><div class="hour">21:00</div><div class="span">~ 22:45</div><div class="part">3부</div></div>
 <div class="classes-grid">
-<div class="class-card SG" data-lvl="2" data-subj="SG" data-teacher="Danny"><div class="subj-line"><span class="subj">Grammar</span><span class="level-badge">Level 2</span></div><div class="code">SG2B</div><div class="teacher">조경<span class="en">Danny</span></div><div class="seats">예상 <b>4</b>명</div><div class="note"></div></div>
-<div class="class-card SG" data-lvl="4" data-subj="SG" data-teacher="Skye"><div class="subj-line"><span class="subj">Grammar</span><span class="level-badge">Level 4</span></div><div class="code">SG4B</div><div class="teacher">박수정<span class="en">Skye</span></div><div class="seats">예상 <b>1</b>명</div><div class="note">현재 인원 1명, 개설되지 않을 가능성이 높습니다</div></div>
+<div class="class-card SG" data-lvl="2" data-subj="SG" data-teacher="Danny" data-class-code="SG2_3(Tu3)" data-day="화" data-time="21" data-review="false"><div class="subj-line"><span class="subj">Grammar</span><span class="level-badge">Level 2</span></div><div class="code">SG2B</div><div class="class-id">SG2_3</div><div class="teacher">조경<span class="en">Danny</span></div><div class="seats">예상 <b>5</b>명</div><div class="note"></div></div>
+<div class="class-card SG" data-lvl="4" data-subj="SG" data-teacher="Skye" data-class-code="SG4_14(Tu3)" data-day="화" data-time="21" data-review="false"><div class="subj-line"><span class="subj">Grammar</span><span class="level-badge">Level 4</span></div><div class="code">SG4B</div><div class="class-id">SG4_14</div><div class="teacher">박수정<span class="en">Skye</span></div><div class="seats">예상 <b>2</b>명</div><div class="note"></div></div>
 </div></div>
 </div>
 <div class="day-section">
@@ -294,20 +305,20 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible {
 <div class="time-block">
 <div class="time-block-header"><div class="hour">17:00</div><div class="span">~ 18:45</div><div class="part">1부</div></div>
 <div class="classes-grid">
-<div class="class-card GW" data-lvl="3" data-subj="GW" data-teacher="Kimberley"><div class="subj-line"><span class="subj">Writing</span><span class="level-badge">Level 3</span></div><div class="code">GW3B</div><div class="teacher">Kimberley</div><div class="seats">예상 <b>2</b>명</div><div class="note"></div></div>
+<div class="class-card GW" data-lvl="3" data-subj="GW" data-teacher="Kimberley" data-class-code="GW3_19(Th1)" data-day="목" data-time="17" data-review="false"><div class="subj-line"><span class="subj">Writing</span><span class="level-badge">Level 3</span></div><div class="code">GW3B</div><div class="class-id">GW3_19</div><div class="teacher">Kimberley</div><div class="seats">예상 <b>2</b>명</div><div class="note"></div></div>
 </div></div>
 <div class="time-block">
 <div class="time-block-header"><div class="hour">19:00</div><div class="span">~ 20:45</div><div class="part">2부</div></div>
 <div class="classes-grid">
-<div class="class-card GD" data-lvl="4" data-subj="GD" data-teacher="Kimberley"><div class="subj-line"><span class="subj">Debate</span><span class="level-badge">Level 4</span></div><div class="code">GD4B</div><div class="teacher">Kimberley</div><div class="seats">예상 <b>4</b>명</div><div class="note"></div></div>
-<div class="class-card GD" data-lvl="5" data-subj="GD" data-teacher="Jess"><div class="subj-line"><span class="subj">Debate</span><span class="level-badge">Level 5</span></div><div class="code">GD5B</div><div class="teacher">Jess</div><div class="seats">예상 <b>2</b>명</div><div class="note"></div></div>
-<div class="class-card GW" data-lvl="3" data-subj="GW" data-teacher="Angie"><div class="subj-line"><span class="subj">Writing</span><span class="level-badge">Level 3</span></div><div class="code">GW3B</div><div class="teacher">김예원<span class="en">Angie</span></div><div class="seats">예상 <b>5</b>명</div><div class="note"></div></div>
+<div class="class-card GD" data-lvl="4" data-subj="GD" data-teacher="Kimberley" data-class-code="GD4_7(Th2)" data-day="목" data-time="19" data-review="false"><div class="subj-line"><span class="subj">Debate</span><span class="level-badge">Level 4</span></div><div class="code">GD4B</div><div class="class-id">GD4_7</div><div class="teacher">Kimberley</div><div class="seats">예상 <b>3</b>명</div><div class="note"></div></div>
+<div class="class-card GD" data-lvl="5" data-subj="GD" data-teacher="Jess" data-class-code="GD5_4(Th2)" data-day="목" data-time="19" data-review="true"><div class="subj-line"><span class="subj">Debate</span><span class="level-badge">Level 5</span></div><div class="code">GD5B</div><div class="class-id">GD5_4</div><div class="teacher">Jess</div><div class="seats">예상 <b>2</b>명</div><div class="note">시간표 설정 확인 중</div></div>
+<div class="class-card GW" data-lvl="3" data-subj="GW" data-teacher="Angie" data-class-code="GW3_13(Th2)" data-day="목" data-time="19" data-review="false"><div class="subj-line"><span class="subj">Writing</span><span class="level-badge">Level 3</span></div><div class="code">GW3B</div><div class="class-id">GW3_13</div><div class="teacher">김예원<span class="en">Angie</span></div><div class="seats">예상 <b>4</b>명</div><div class="note"></div></div>
 </div></div>
 <div class="time-block">
 <div class="time-block-header"><div class="hour">21:00</div><div class="span">~ 22:45</div><div class="part">3부</div></div>
 <div class="classes-grid">
-<div class="class-card GD" data-lvl="4" data-subj="GD" data-teacher="Kimberley"><div class="subj-line"><span class="subj">Debate</span><span class="level-badge">Level 4</span></div><div class="code">GD4B</div><div class="teacher">Kimberley</div><div class="seats">예상 <b>2</b>명</div><div class="note"></div></div>
-<div class="class-card GW" data-lvl="4" data-subj="GW" data-teacher="Jess"><div class="subj-line"><span class="subj">Writing</span><span class="level-badge">Level 4</span></div><div class="code">GW4B</div><div class="teacher">Jess</div><div class="seats">예상 <b>4</b>명</div><div class="note"></div></div>
+<div class="class-card GD" data-lvl="4" data-subj="GD" data-teacher="Kimberley" data-class-code="GD4_4(Th3)" data-day="목" data-time="21" data-review="false"><div class="subj-line"><span class="subj">Debate</span><span class="level-badge">Level 4</span></div><div class="code">GD4B</div><div class="class-id">GD4_4</div><div class="teacher">Kimberley</div><div class="seats">예상 <b>1</b>명</div><div class="note">현재 인원 1명, 개설되지 않을 가능성이 높습니다</div></div>
+<div class="class-card GW" data-lvl="4" data-subj="GW" data-teacher="Jess" data-class-code="GW4_14(Th3)" data-day="목" data-time="21" data-review="false"><div class="subj-line"><span class="subj">Writing</span><span class="level-badge">Level 4</span></div><div class="code">GW4B</div><div class="class-id">GW4_14</div><div class="teacher">Jess</div><div class="seats">예상 <b>4</b>명</div><div class="note"></div></div>
 </div></div>
 </div>
 <div class="day-section">
@@ -316,38 +327,38 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible {
 <div class="time-block">
 <div class="time-block-header"><div class="hour">9:00</div><div class="span">~ 10:45</div><div class="part">1부</div></div>
 <div class="classes-grid">
-<div class="class-card GD" data-lvl="4" data-subj="GD" data-teacher="Andrew"><div class="subj-line"><span class="subj">Debate</span><span class="level-badge">Level 4</span></div><div class="code">GD4B</div><div class="teacher">Andrew</div><div class="seats">예상 <b>2</b>명</div><div class="note"></div></div>
-<div class="class-card SG" data-lvl="2" data-subj="SG" data-teacher="Danny"><div class="subj-line"><span class="subj">Grammar</span><span class="level-badge">Level 2</span></div><div class="code">SG2B</div><div class="teacher">조경<span class="en">Danny</span></div><div class="seats">예상 <b>4</b>명</div><div class="note"></div></div>
-<div class="class-card SG" data-lvl="3" data-subj="SG" data-teacher="Chloe"><div class="subj-line"><span class="subj">Grammar</span><span class="level-badge">Level 3</span></div><div class="code">SG3B</div><div class="teacher">Chloe</div><div class="seats">예상 <b>2</b>명</div><div class="note"></div></div>
-<div class="class-card SR" data-lvl="2" data-subj="SR" data-teacher="Joanne"><div class="subj-line"><span class="subj">Reading</span><span class="level-badge">Level 2</span></div><div class="code">SR2B</div><div class="teacher">김태은<span class="en">Joanne</span></div><div class="seats">예상 <b>2</b>명</div><div class="note"></div></div>
-<div class="class-card SR" data-lvl="3" data-subj="SR" data-teacher="Skye"><div class="subj-line"><span class="subj">Reading</span><span class="level-badge">Level 3</span></div><div class="code">SR3B</div><div class="teacher">박수정<span class="en">Skye</span></div><div class="seats">예상 <b>4</b>명</div><div class="note"></div></div>
+<div class="class-card GD" data-lvl="4" data-subj="GD" data-teacher="Andrew" data-class-code="GD4_11(Sat1)" data-day="토" data-time="9" data-review="false"><div class="subj-line"><span class="subj">Debate</span><span class="level-badge">Level 4</span></div><div class="code">GD4B</div><div class="class-id">GD4_11</div><div class="teacher">Andrew</div><div class="seats">예상 <b>2</b>명</div><div class="note"></div></div>
+<div class="class-card SG" data-lvl="2" data-subj="SG" data-teacher="Danny" data-class-code="SG2_4(Sat1)" data-day="토" data-time="9" data-review="false"><div class="subj-line"><span class="subj">Grammar</span><span class="level-badge">Level 2</span></div><div class="code">SG2B</div><div class="class-id">SG2_4</div><div class="teacher">조경<span class="en">Danny</span></div><div class="seats">예상 <b>3</b>명</div><div class="note"></div></div>
+<div class="class-card SG" data-lvl="3" data-subj="SG" data-teacher="Chloe" data-class-code="SG3_2(Sat1)" data-day="토" data-time="9" data-review="false"><div class="subj-line"><span class="subj">Grammar</span><span class="level-badge">Level 3</span></div><div class="code">SG3B</div><div class="class-id">SG3_2</div><div class="teacher">Chloe</div><div class="seats">예상 <b>3</b>명</div><div class="note"></div></div>
+<div class="class-card SR" data-lvl="2" data-subj="SR" data-teacher="Joanne" data-class-code="SR2_2(Sat1)" data-day="토" data-time="9" data-review="false"><div class="subj-line"><span class="subj">Reading</span><span class="level-badge">Level 2</span></div><div class="code">SR2B</div><div class="class-id">SR2_2</div><div class="teacher">김태은<span class="en">Joanne</span></div><div class="seats">예상 <b>1</b>명</div><div class="note">현재 인원 1명, 개설되지 않을 가능성이 높습니다</div></div>
+<div class="class-card SR" data-lvl="3" data-subj="SR" data-teacher="Skye" data-class-code="SR3_2(Sat1)" data-day="토" data-time="9" data-review="false"><div class="subj-line"><span class="subj">Reading</span><span class="level-badge">Level 3</span></div><div class="code">SR3B</div><div class="class-id">SR3_2</div><div class="teacher">박수정<span class="en">Skye</span></div><div class="seats">예상 <b>4</b>명</div><div class="note"></div></div>
 </div></div>
 <div class="time-block">
 <div class="time-block-header"><div class="hour">11:00</div><div class="span">~ 12:45</div><div class="part">2부</div></div>
 <div class="classes-grid">
-<div class="class-card GD" data-lvl="4" data-subj="GD" data-teacher="Andrew"><div class="subj-line"><span class="subj">Debate</span><span class="level-badge">Level 4</span></div><div class="code">GD4B</div><div class="teacher">Andrew</div><div class="seats">예상 <b>2</b>명</div><div class="note"></div></div>
-<div class="class-card SG" data-lvl="1" data-subj="SG" data-teacher="Joanne"><div class="subj-line"><span class="subj">Grammar</span><span class="level-badge">Level 1</span></div><div class="code">SG1B</div><div class="teacher">김태은<span class="en">Joanne</span></div><div class="seats">예상 <b>1</b>명</div><div class="note">현재 인원 1명, 개설되지 않을 가능성이 높습니다</div></div>
-<div class="class-card SG" data-lvl="3" data-subj="SG" data-teacher="Skye"><div class="subj-line"><span class="subj">Grammar</span><span class="level-badge">Level 3</span></div><div class="code">SG3B</div><div class="teacher">박수정<span class="en">Skye</span></div><div class="seats">예상 <b>3</b>명</div><div class="note"></div></div>
+<div class="class-card GD" data-lvl="4" data-subj="GD" data-teacher="Andrew" data-class-code="GD4_10(Sat2)" data-day="토" data-time="11" data-review="false"><div class="subj-line"><span class="subj">Debate</span><span class="level-badge">Level 4</span></div><div class="code">GD4B</div><div class="class-id">GD4_10</div><div class="teacher">Andrew</div><div class="seats">예상 <b>1</b>명</div><div class="note">현재 인원 1명, 개설되지 않을 가능성이 높습니다</div></div>
+<div class="class-card SG" data-lvl="1" data-subj="SG" data-teacher="Joanne" data-class-code="SG1_1(Sat2)" data-day="토" data-time="11" data-review="false"><div class="subj-line"><span class="subj">Grammar</span><span class="level-badge">Level 1</span></div><div class="code">SG1B</div><div class="class-id">SG1_1</div><div class="teacher">김태은<span class="en">Joanne</span></div><div class="seats">예상 <b>1</b>명</div><div class="note">현재 인원 1명, 개설되지 않을 가능성이 높습니다</div></div>
+<div class="class-card SG" data-lvl="3" data-subj="SG" data-teacher="Skye" data-class-code="SG3_14(Sat2)" data-day="토" data-time="11" data-review="false"><div class="subj-line"><span class="subj">Grammar</span><span class="level-badge">Level 3</span></div><div class="code">SG3B</div><div class="class-id">SG3_14</div><div class="teacher">박수정<span class="en">Skye</span></div><div class="seats">예상 <b>2</b>명</div><div class="note"></div></div>
 </div></div>
 <div class="time-block">
 <div class="time-block-header"><div class="hour">15:00</div><div class="span">~ 16:45</div><div class="part">3부</div></div>
 <div class="classes-grid">
-<div class="class-card GW" data-lvl="4" data-subj="GW" data-teacher="Angie"><div class="subj-line"><span class="subj">Writing</span><span class="level-badge">Level 4</span></div><div class="code">GW4B</div><div class="teacher">김예원<span class="en">Angie</span></div><div class="seats">예상 <b>3</b>명</div><div class="note"></div></div>
-<div class="class-card SR" data-lvl="4" data-subj="SR" data-teacher="Skye"><div class="subj-line"><span class="subj">Reading</span><span class="level-badge">Level 4</span></div><div class="code">SR4B</div><div class="teacher">박수정<span class="en">Skye</span></div><div class="seats">예상 <b>2</b>명</div><div class="note"></div></div>
+<div class="class-card GW" data-lvl="4" data-subj="GW" data-teacher="Angie" data-class-code="GW4_6(Sat3)" data-day="토" data-time="15" data-review="false"><div class="subj-line"><span class="subj">Writing</span><span class="level-badge">Level 4</span></div><div class="code">GW4B</div><div class="class-id">GW4_6</div><div class="teacher">김예원<span class="en">Angie</span></div><div class="seats">예상 <b>1</b>명</div><div class="note">현재 인원 1명, 개설되지 않을 가능성이 높습니다</div></div>
+<div class="class-card SR" data-lvl="4" data-subj="SR" data-teacher="Skye" data-class-code="SR4_7(Sat3)" data-day="토" data-time="15" data-review="false"><div class="subj-line"><span class="subj">Reading</span><span class="level-badge">Level 4</span></div><div class="code">SR4B</div><div class="class-id">SR4_7</div><div class="teacher">박수정<span class="en">Skye</span></div><div class="seats">예상 <b>2</b>명</div><div class="note"></div></div>
 </div></div>
 <div class="time-block">
 <div class="time-block-header"><div class="hour">17:00</div><div class="span">~ 18:45</div><div class="part">4부</div></div>
 <div class="classes-grid">
-<div class="class-card GW" data-lvl="2" data-subj="GW" data-teacher="Angie"><div class="subj-line"><span class="subj">Writing</span><span class="level-badge">Level 2</span></div><div class="code">GW2B</div><div class="teacher">김예원<span class="en">Angie</span></div><div class="seats">예상 <b>3</b>명</div><div class="note"></div></div>
-<div class="class-card GW" data-lvl="3" data-subj="GW" data-teacher="David"><div class="subj-line"><span class="subj">Writing</span><span class="level-badge">Level 3</span></div><div class="code">GW3B</div><div class="teacher">David</div><div class="seats">예상 <b>5</b>명</div><div class="note"></div></div>
-<div class="class-card GW" data-lvl="3" data-subj="GW" data-teacher="Kimberley"><div class="subj-line"><span class="subj">Writing</span><span class="level-badge">Level 3</span></div><div class="code">GW3B</div><div class="teacher">Kimberley</div><div class="seats">예상 <b>3</b>명</div><div class="note"></div></div>
-<div class="class-card SG" data-lvl="3" data-subj="SG" data-teacher="Skye"><div class="subj-line"><span class="subj">Grammar</span><span class="level-badge">Level 3</span></div><div class="code">SG3B</div><div class="teacher">박수정<span class="en">Skye</span></div><div class="seats">예상 <b>2</b>명</div><div class="note"></div></div>
+<div class="class-card GW" data-lvl="2" data-subj="GW" data-teacher="Angie" data-class-code="GW2_4(Sat4)" data-day="토" data-time="17" data-review="false"><div class="subj-line"><span class="subj">Writing</span><span class="level-badge">Level 2</span></div><div class="code">GW2B</div><div class="class-id">GW2_4</div><div class="teacher">김예원<span class="en">Angie</span></div><div class="seats">예상 <b>2</b>명</div><div class="note"></div></div>
+<div class="class-card GW" data-lvl="3" data-subj="GW" data-teacher="David" data-class-code="GW3_1(Sat4)" data-day="토" data-time="17" data-review="false"><div class="subj-line"><span class="subj">Writing</span><span class="level-badge">Level 3</span></div><div class="code">GW3B</div><div class="class-id">GW3_1</div><div class="teacher">David</div><div class="seats">예상 <b>5</b>명</div><div class="note"></div></div>
+<div class="class-card GW" data-lvl="3" data-subj="GW" data-teacher="Kimberley" data-class-code="GW3_18(Sat4)" data-day="토" data-time="17" data-review="false"><div class="subj-line"><span class="subj">Writing</span><span class="level-badge">Level 3</span></div><div class="code">GW3B</div><div class="class-id">GW3_18</div><div class="teacher">Kimberley</div><div class="seats">예상 <b>3</b>명</div><div class="note"></div></div>
+<div class="class-card SG" data-lvl="3" data-subj="SG" data-teacher="Skye" data-class-code="SG3_15(Sat4)" data-day="토" data-time="17" data-review="false"><div class="subj-line"><span class="subj">Grammar</span><span class="level-badge">Level 3</span></div><div class="code">SG3B</div><div class="class-id">SG3_15</div><div class="teacher">박수정<span class="en">Skye</span></div><div class="seats">예상 <b>1</b>명</div><div class="note">현재 인원 1명, 개설되지 않을 가능성이 높습니다</div></div>
 </div></div>
 <div class="time-block">
 <div class="time-block-header"><div class="hour">19:00</div><div class="span">~ 20:45</div><div class="part">5부</div></div>
 <div class="classes-grid">
-<div class="class-card GD" data-lvl="2" data-subj="GD" data-teacher="Kimberley"><div class="subj-line"><span class="subj">Debate</span><span class="level-badge">Level 2</span></div><div class="code">GD2B</div><div class="teacher">Kimberley</div><div class="seats">예상 <b>3</b>명</div><div class="note"></div></div>
-<div class="class-card SG" data-lvl="5" data-subj="SG" data-teacher="Skye"><div class="subj-line"><span class="subj">Grammar</span><span class="level-badge">Level 5</span></div><div class="code">SG5B</div><div class="teacher">박수정<span class="en">Skye</span></div><div class="seats">예상 <b>1</b>명</div><div class="note">현재 인원 1명, 개설되지 않을 가능성이 높습니다</div></div>
+<div class="class-card GD" data-lvl="2" data-subj="GD" data-teacher="Kimberley" data-class-code="GD2_1(Sat5)" data-day="토" data-time="19" data-review="false"><div class="subj-line"><span class="subj">Debate</span><span class="level-badge">Level 2</span></div><div class="code">GD2B</div><div class="class-id">GD2_1</div><div class="teacher">Kimberley</div><div class="seats">예상 <b>4</b>명</div><div class="note"></div></div>
+<div class="class-card SG" data-lvl="5" data-subj="SG" data-teacher="Skye" data-class-code="SG5_4(Sat5)" data-day="토" data-time="19" data-review="false"><div class="subj-line"><span class="subj">Grammar</span><span class="level-badge">Level 5</span></div><div class="code">SG5B</div><div class="class-id">SG5_4</div><div class="teacher">박수정<span class="en">Skye</span></div><div class="seats">예상 <b>1</b>명</div><div class="note">현재 인원 1명, 개설되지 않을 가능성이 높습니다</div></div>
 </div></div>
 </div>
 <div class="day-section">
@@ -356,36 +367,36 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible {
 <div class="time-block">
 <div class="time-block-header"><div class="hour">9:00</div><div class="span">~ 10:45</div><div class="part">1부</div></div>
 <div class="classes-grid">
-<div class="class-card GW" data-lvl="3" data-subj="GW" data-teacher="Andrew"><div class="subj-line"><span class="subj">Writing</span><span class="level-badge">Level 3</span></div><div class="code">GW3B</div><div class="teacher">Andrew</div><div class="seats">예상 <b>2</b>명</div><div class="note"></div></div>
-<div class="class-card GW" data-lvl="4" data-subj="GW" data-teacher="David"><div class="subj-line"><span class="subj">Writing</span><span class="level-badge">Level 4</span></div><div class="code">GW4B</div><div class="teacher">David</div><div class="seats">예상 <b>4</b>명</div><div class="note"></div></div>
-<div class="class-card SR" data-lvl="1" data-subj="SR" data-teacher="Chloe"><div class="subj-line"><span class="subj">Reading</span><span class="level-badge">Level 1</span></div><div class="code">SR1B</div><div class="teacher">Chloe</div><div class="seats">예상 <b>3</b>명</div><div class="note"></div></div>
-<div class="class-card SR" data-lvl="2" data-subj="SR" data-teacher="Skye"><div class="subj-line"><span class="subj">Reading</span><span class="level-badge">Level 2</span></div><div class="code">SR2B</div><div class="teacher">박수정<span class="en">Skye</span></div><div class="seats">예상 <b>3</b>명</div><div class="note"></div></div>
+<div class="class-card GW" data-lvl="3" data-subj="GW" data-teacher="Andrew" data-class-code="GW3_17(Sun1)" data-day="일" data-time="9" data-review="false"><div class="subj-line"><span class="subj">Writing</span><span class="level-badge">Level 3</span></div><div class="code">GW3B</div><div class="class-id">GW3_17</div><div class="teacher">Andrew</div><div class="seats">예상 <b>3</b>명</div><div class="note"></div></div>
+<div class="class-card GW" data-lvl="4" data-subj="GW" data-teacher="David" data-class-code="GW4_8(Sun1)" data-day="일" data-time="9" data-review="false"><div class="subj-line"><span class="subj">Writing</span><span class="level-badge">Level 4</span></div><div class="code">GW4B</div><div class="class-id">GW4_8</div><div class="teacher">David</div><div class="seats">예상 <b>6</b>명</div><div class="note"></div></div>
+<div class="class-card SR" data-lvl="1" data-subj="SR" data-teacher="Chloe" data-class-code="SR1_1(Sun1)" data-day="일" data-time="9" data-review="false"><div class="subj-line"><span class="subj">Reading</span><span class="level-badge">Level 1</span></div><div class="code">SR1B</div><div class="class-id">SR1_1</div><div class="teacher">Chloe</div><div class="seats">예상 <b>3</b>명</div><div class="note"></div></div>
+<div class="class-card SR" data-lvl="2" data-subj="SR" data-teacher="Skye" data-class-code="SR2_1(Sun1)" data-day="일" data-time="9" data-review="false"><div class="subj-line"><span class="subj">Reading</span><span class="level-badge">Level 2</span></div><div class="code">SR2B</div><div class="class-id">SR2_1</div><div class="teacher">박수정<span class="en">Skye</span></div><div class="seats">예상 <b>3</b>명</div><div class="note"></div></div>
 </div></div>
 <div class="time-block">
 <div class="time-block-header"><div class="hour">11:00</div><div class="span">~ 12:45</div><div class="part">2부</div></div>
 <div class="classes-grid">
-<div class="class-card GD" data-lvl="3" data-subj="GD" data-teacher="Andrew"><div class="subj-line"><span class="subj">Debate</span><span class="level-badge">Level 3</span></div><div class="code">GD3B</div><div class="teacher">Andrew</div><div class="seats">예상 <b>6</b>명</div><div class="note"></div></div>
-<div class="class-card SR" data-lvl="4" data-subj="SR" data-teacher="Skye"><div class="subj-line"><span class="subj">Reading</span><span class="level-badge">Level 4</span></div><div class="code">SR4B</div><div class="teacher">박수정<span class="en">Skye</span></div><div class="seats">예상 <b>1</b>명</div><div class="note">현재 인원 1명, 개설되지 않을 가능성이 높습니다</div></div>
+<div class="class-card GD" data-lvl="3" data-subj="GD" data-teacher="Andrew" data-class-code="GD3_10(Sun2)" data-day="일" data-time="11" data-review="false"><div class="subj-line"><span class="subj">Debate</span><span class="level-badge">Level 3</span></div><div class="code">GD3B</div><div class="class-id">GD3_10</div><div class="teacher">Andrew</div><div class="seats">예상 <b>5</b>명</div><div class="note"></div></div>
+<div class="class-card SR" data-lvl="4" data-subj="SR" data-teacher="Skye" data-class-code="SR4_6(Sun2)" data-day="일" data-time="11" data-review="false"><div class="subj-line"><span class="subj">Reading</span><span class="level-badge">Level 4</span></div><div class="code">SR4B</div><div class="class-id">SR4_6</div><div class="teacher">박수정<span class="en">Skye</span></div><div class="seats">예상 <b>1</b>명</div><div class="note">현재 인원 1명, 개설되지 않을 가능성이 높습니다</div></div>
 </div></div>
 <div class="time-block">
 <div class="time-block-header"><div class="hour">15:00</div><div class="span">~ 16:45</div><div class="part">3부</div></div>
 <div class="classes-grid">
-<div class="class-card GD" data-lvl="5" data-subj="GD" data-teacher="Angie"><div class="subj-line"><span class="subj">Debate</span><span class="level-badge">Level 5</span></div><div class="code">GD5B</div><div class="teacher">김예원<span class="en">Angie</span></div><div class="seats">예상 <b>2</b>명</div><div class="note"></div></div>
-<div class="class-card GW" data-lvl="4" data-subj="GW" data-teacher="Andrew"><div class="subj-line"><span class="subj">Writing</span><span class="level-badge">Level 4</span></div><div class="code">GW4B</div><div class="teacher">Andrew</div><div class="seats">예상 <b>1</b>명</div><div class="note">현재 인원 1명, 개설되지 않을 가능성이 높습니다</div></div>
+<div class="class-card GW" data-lvl="4" data-subj="GW" data-teacher="Andrew" data-class-code="GW4_25(Sun3)" data-day="일" data-time="15" data-review="false"><div class="subj-line"><span class="subj">Writing</span><span class="level-badge">Level 4</span></div><div class="code">GW4B</div><div class="class-id">GW4_25</div><div class="teacher">Andrew</div><div class="seats">예상 <b>1</b>명</div><div class="note">현재 인원 1명, 개설되지 않을 가능성이 높습니다</div></div>
+<div class="class-card SG" data-lvl="4" data-subj="SG" data-teacher="Skye" data-class-code="SG4_11(Sun3)" data-day="일" data-time="15" data-review="false"><div class="subj-line"><span class="subj">Grammar</span><span class="level-badge">Level 4</span></div><div class="code">SG4B</div><div class="class-id">SG4_11</div><div class="teacher">박수정<span class="en">Skye</span></div><div class="seats">예상 <b>1</b>명</div><div class="note">현재 인원 1명, 개설되지 않을 가능성이 높습니다</div></div>
 </div></div>
 <div class="time-block">
 <div class="time-block-header"><div class="hour">17:00</div><div class="span">~ 18:45</div><div class="part">4부</div></div>
 <div class="classes-grid">
-<div class="class-card GD" data-lvl="4" data-subj="GD" data-teacher="Andrew"><div class="subj-line"><span class="subj">Debate</span><span class="level-badge">Level 4</span></div><div class="code">GD4B</div><div class="teacher">Andrew</div><div class="seats">예상 <b>3</b>명</div><div class="note"></div></div>
-<div class="class-card GW" data-lvl="3" data-subj="GW" data-teacher="Angie"><div class="subj-line"><span class="subj">Writing</span><span class="level-badge">Level 3</span></div><div class="code">GW3B</div><div class="teacher">김예원<span class="en">Angie</span></div><div class="seats">예상 <b>4</b>명</div><div class="note"></div></div>
-<div class="class-card GW" data-lvl="4" data-subj="GW" data-teacher="Kimberley"><div class="subj-line"><span class="subj">Writing</span><span class="level-badge">Level 4</span></div><div class="code">GW4B</div><div class="teacher">Kimberley</div><div class="seats">예상 <b>5</b>명</div><div class="note"></div></div>
-<div class="class-card SG" data-lvl="3" data-subj="SG" data-teacher="Skye"><div class="subj-line"><span class="subj">Grammar</span><span class="level-badge">Level 3</span></div><div class="code">SG3B</div><div class="teacher">박수정<span class="en">Skye</span></div><div class="seats">예상 <b>2</b>명</div><div class="note"></div></div>
+<div class="class-card GD" data-lvl="4" data-subj="GD" data-teacher="Andrew" data-class-code="GD4_12(Sun4)" data-day="일" data-time="17" data-review="false"><div class="subj-line"><span class="subj">Debate</span><span class="level-badge">Level 4</span></div><div class="code">GD4B</div><div class="class-id">GD4_12</div><div class="teacher">Andrew</div><div class="seats">예상 <b>3</b>명</div><div class="note"></div></div>
+<div class="class-card GW" data-lvl="3" data-subj="GW" data-teacher="Angie" data-class-code="GW3_14(Sun4)" data-day="일" data-time="17" data-review="false"><div class="subj-line"><span class="subj">Writing</span><span class="level-badge">Level 3</span></div><div class="code">GW3B</div><div class="class-id">GW3_14</div><div class="teacher">김예원<span class="en">Angie</span></div><div class="seats">예상 <b>2</b>명</div><div class="note"></div></div>
+<div class="class-card GW" data-lvl="4" data-subj="GW" data-teacher="Kimberley" data-class-code="GW4_15(Sun4)" data-day="일" data-time="17" data-review="false"><div class="subj-line"><span class="subj">Writing</span><span class="level-badge">Level 4</span></div><div class="code">GW4B</div><div class="class-id">GW4_15</div><div class="teacher">Kimberley</div><div class="seats">예상 <b>5</b>명</div><div class="note"></div></div>
+<div class="class-card SG" data-lvl="3" data-subj="SG" data-teacher="Skye" data-class-code="SG3_8(Sun4)" data-day="일" data-time="17" data-review="false"><div class="subj-line"><span class="subj">Grammar</span><span class="level-badge">Level 3</span></div><div class="code">SG3B</div><div class="class-id">SG3_8</div><div class="teacher">박수정<span class="en">Skye</span></div><div class="seats">예상 <b>3</b>명</div><div class="note"></div></div>
 </div></div>
 <div class="time-block">
 <div class="time-block-header"><div class="hour">19:00</div><div class="span">~ 20:45</div><div class="part">5부</div></div>
 <div class="classes-grid">
-<div class="class-card SG" data-lvl="2" data-subj="SG" data-teacher="Chloe"><div class="subj-line"><span class="subj">Grammar</span><span class="level-badge">Level 2</span></div><div class="code">SG2B</div><div class="teacher">Chloe</div><div class="seats">예상 <b>2</b>명</div><div class="note"></div></div>
-<div class="class-card SR" data-lvl="5" data-subj="SR" data-teacher="Skye"><div class="subj-line"><span class="subj">Reading</span><span class="level-badge">Level 5</span></div><div class="code">SR5B</div><div class="teacher">박수정<span class="en">Skye</span></div><div class="seats">예상 <b>2</b>명</div><div class="note"></div></div>
+<div class="class-card SG" data-lvl="2" data-subj="SG" data-teacher="Chloe" data-class-code="SG2_5(Sun5)" data-day="일" data-time="19" data-review="false"><div class="subj-line"><span class="subj">Grammar</span><span class="level-badge">Level 2</span></div><div class="code">SG2B</div><div class="class-id">SG2_5</div><div class="teacher">Chloe</div><div class="seats">예상 <b>1</b>명</div><div class="note">현재 인원 1명, 개설되지 않을 가능성이 높습니다</div></div>
+<div class="class-card SR" data-lvl="5" data-subj="SR" data-teacher="Skye" data-class-code="SR5_1(Sun5)" data-day="일" data-time="19" data-review="false"><div class="subj-line"><span class="subj">Reading</span><span class="level-badge">Level 5</span></div><div class="code">SR5B</div><div class="class-id">SR5_1</div><div class="teacher">박수정<span class="en">Skye</span></div><div class="seats">예상 <b>2</b>명</div><div class="note"></div></div>
 </div></div>
 </div>
 </section>
@@ -448,3 +459,5 @@ function apply() {
   });
 }
 </script>
+</body>
+</html>
