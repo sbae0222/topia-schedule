@@ -11,7 +11,7 @@ def main():
  p.add_argument('--output',type=Path,default=ROOT/'index.html')
  args=p.parse_args()
  d=json.loads(args.data.read_text(encoding='utf-8'))
- assert set(d)=={'version','term','updatedKst','teachers','groups','classes','closing','available','rosterUrl'}
+ assert set(d)=={'version','term','updatedKst','teachers','groups','classes','closing','available','rosterUrl','availabilityNotes'}
  assert d['term']=='2026-12'
  names={x['key'] for x in d['teachers']}
  assert len(names)==len(d['teachers'])

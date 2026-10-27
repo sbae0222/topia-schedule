@@ -631,6 +631,7 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible {
 <div class="teacher-rail-wrap"><div class="rail-label">Select Instructor</div><nav class="teacher-rail" id="teacher-rail" aria-label="강사 선택"></nav><select id="teacher-select" class="faculty-select" aria-label="강사 선택"></select></div>
 <div class="faculty-tools"><span class="time-note">모든 시간은 한국시간 · KST (UTC+9)</span><div><a id="roster-link" target="_blank" rel="noopener">등록 현황</a> <button id="print" type="button">인쇄 · Print</button></div></div>
 <main><section class="teacher-view active"><div class="teacher-meta"><div><h2 class="teacher-name" id="teacher-heading"></h2><div class="teacher-role">TOPIA LIVE · Instructor</div></div><div class="teacher-stats" id="teacher-stats"></div></div>
+<p id="availability-note" class="source-stamp" style="margin:12px 0;line-height:1.65"></p>
 <div class="schedule-legend"><span><i class="legend-dot new"></i>신규 · New</span><span><i class="legend-dot available"></i>추가 수업 가능 · Available</span><span>각 시간대 하단에 추가 가능한 강사를 표시합니다.</span></div>
 <div class="calendar-section" tabindex="0" aria-label="요일별 주간 시간표. 작은 화면에서는 좌우로 이동하세요."><div class="calendar" id="calendar"></div></div>
 <section class="class-list-section"><h3>My classes <span class="source-stamp" id="current-teacher-caption"></span></h3><div class="table-wrap"><table class="class-list"><thead><tr><th>시간 · KST</th><th>수업</th><th>반 코드</th></tr></thead><tbody id="class-list"></tbody></table></div></section></section>
@@ -669,6 +670,8 @@ function render(t,update=true){
  $('calendar').innerHTML=html;
  $('class-list').innerHTML=own.map(c=>{const g=S.groups[c.group];return '<tr data-list-code="'+esc(c.code)+'"><td>'+g.dayKo+' '+g.start+'–'+g.end+'</td><td><b>'+esc(c.level)+'</b>'+(c.isNew?' <span class="new-badge">NEW</span>':'')+'</td><td>'+esc(c.code)+'</td></tr>';}).join('');
  $('current-teacher-caption').textContent=teacher.name+' · '+own.length+' classes';
+ $('availability-note').textContent=S.availabilityNotes?.[t]||'';
+ $('availability-note').hidden=!S.availabilityNotes?.[t];
  if(update)history.replaceState(null,'','#'+teacher.slug);
 }
 $('teacher-rail').innerHTML=S.teachers.map(t=>'<button class="teacher-tab" data-teacher="'+esc(t.key)+'" aria-pressed="false"><span>'+esc(t.name)+'<span class="count">'+count(t.key)+'</span></span>'+(t.ko?'<span class="en">'+esc(t.ko)+'</span>':'')+'</button>').join('');
