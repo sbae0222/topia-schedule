@@ -1,25 +1,29 @@
-# 이 저장소의 HTML 은 생성물이다 — 직접 고치지 않는다
+# Schedule pages are generated
 
-`index.html`(강사별 시간표)과 `parents.html`(학부모 시간표)은 **스크립트가 만들어 넣는 파일**이다.
-여기서 손으로 고치면 다음 생성 때 사라진다.
+The December 2026 faculty page is generated from a sanitized public schedule snapshot.
+The site owner approved this replacement generator on 2026-10-27 because the former
+private generator was unavailable. The former topia-admin pipeline is not the source
+for this December faculty page.
 
-## 무엇을 어디서 고치는가
+## Edit and build
 
-| 바꾸려는 것 | 고칠 곳 |
-|---|---|
-| 반·강사·인원·학사일정·교재 | **생성기** (아래) |
-| 디자인(CSS) | `<style>` 안 `/* ==== polish: start ==== */ … /* ==== polish: end ==== */` 블록. 생성기가 그대로 이어받는다 |
+- Approved classes, instructors and available times: tools/schedule-pages/schedule-december-2026.json
+- Layout and styles: tools/schedule-pages/faculty_template.html
+- Generator: tools/schedule-pages/generate_teacher_schedule.py
+- Generated output: index.html. Do not hand-edit it.
 
-생성기는 이 저장소에 없다. **비공개 저장소 `topia-admin` 의 `tools/schedule-pages/`** 에 있고,
-실행 순서·데이터 출처·알려진 예외는 그 폴더의 `README.md` 가 정본이다.
+Run: python tools/schedule-pages/generate_teacher_schedule.py
+The generator uses Python's standard library and has no database or account access.
 
-## 왜 생성기가 여기 없는가
+## Public repository boundary
 
-🔴 **이 저장소는 공개(public)다.** 생성기는 DB 키로 학생 이름·보호자 연락처를 읽는다.
-그래서 스크립트도, 키도, 학생 개인정보도 이쪽에 두지 않는다. **커밋 메시지도 공개된다** —
-인사·기밀 내용을 메시지에 쓰지 않는다.
+Keep only the sanitized course/teacher/time snapshot here. Never commit student names,
+student IDs, guardian contacts, assessments, counseling, credentials, database exports
+or internal source messages. Commit messages are public too.
 
-## 배포
+parents.html is a separate legacy September page and was not part of the December
+faculty replacement. Do not overwrite it with the faculty generator. Changes to it
+need their own current source and request.
 
-`git push` 하면 GitHub Pages 가 배포한다(반영까지 보통 30초~1분).
-페이지 상단에 `<!DOCTYPE html>` 이 첫 줄이어야 한다 — 앞에 무엇이든 붙으면 레이아웃이 깨진다.
+A push to the Pages source branch deploys the generated index.html. The first line
+must remain the HTML doctype declaration.

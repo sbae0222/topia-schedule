@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="ko"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="TOPIA LIVE 2026년 12월 학기 강사별 예정 시간표. 한국시간 KST 기준.">
+<title>토피아 라이브 — 12월 학기 강사별 시간표</title>
+<link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --bg: #FAF8F4; --bg-2: #F4EFE7; --bg-3: #ECE4D5;
+  --ink: #2B2420; --text: #3E332C; --text-2: #6B5D52; --text-3: #8B7D6F; --text-4: #B0A395;
+  --border: #DDD2BF; --border-soft: #E8DFCE;
+  --accent: #8B6F47; --accent-deep: #6B5337; --accent-soft: #F0E8DA;
+  --gold: #B5934F; --paper: #FFFFFF;
+  --avail-bg: #FBF6EC; --avail-line: #D4B98A; --avail-fg: #806237;
+  
+  --subj-GD: #8B4A6B;
+  --subj-GW: #4A6585;
+  --subj-SG: #4F6B4A;
+  --subj-SR: #8B5C3D;
+}
+
+html, body { background: var(--bg); color: var(--text); font-family: 'Pretendard', -apple-system, sans-serif; -webkit-font-smoothing: antialiased; line-height: 1.55; letter-spacing: -0.01em; min-height: 100vh; }
+
+.container { max-width: 1200px; margin: 0 auto; padding: 0 32px; }
+
+/* === MASTHEAD === */
+.masthead {
+  padding: 72px 0 56px;
+  border-bottom: 1px solid var(--border);
+}
+.brand-line {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  color: var(--text-3);
+  text-transform: uppercase;
+  margin-bottom: 32px;
+}
+.brand-line .term { border: 1px solid var(--border); padding: 5px 14px; border-radius: 2px; }
+h1.headline {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(40px, 6vw, 60px);
+  font-weight: 500;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+  margin-bottom: 8px;
+}
+h1.headline em { font-style: italic; font-weight: 400; color: var(--accent); }
+.headline-en {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 22px;
+  color: var(--text-3);
+  font-weight: 400;
+  margin-bottom: 24px;
+}
+.summary { font-size: 15px; color: var(--text-2); max-width: 620px; line-height: 1.7; }
+
+/* === TEACHER RAIL === */
+.teacher-rail-wrap {
+  margin: 48px 0 0;
+  padding: 24px 0;
+  border-top: 1px solid var(--border-soft);
+  border-bottom: 1px solid var(--border-soft);
+}
+.rail-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-3);
+  margin-bottom: 14px;
+}
+.teacher-rail {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.teacher-tab {
+  padding: 10px 18px;
+  border: 1px solid var(--border);
+  background: var(--paper);
+  font-family: 'Pretendard', sans-serif;
+  font-weight: 500;
+  font-size: 13px;
+  color: var(--text-2);
+  cursor: pointer;
+  transition: all 0.15s ease;
+  letter-spacing: -0.005em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  line-height: 1.2;
+  min-width: 80px;
+}
+.teacher-tab .en {
+  font-family: 'Inter', sans-serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 10px;
+  color: var(--text-4);
+  letter-spacing: 0.02em;
+}
+.teacher-tab:hover { border-color: var(--accent); color: var(--accent); }
+.teacher-tab:hover .en { color: var(--accent); }
+.teacher-tab.active {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: var(--paper);
+}
+.teacher-tab.active .en { color: var(--bg-3); }
+.teacher-tab .count {
+  font-family: 'Inter', sans-serif;
+  font-size: 9px;
+  font-weight: 600;
+  opacity: 0.6;
+  margin-left: 4px;
+}
+
+/* === TEACHER VIEW === */
+.teacher-view { display: none; animation: fadeIn 0.4s ease; }
+.teacher-view.active { display: block; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+
+.teacher-meta {
+  padding: 56px 0 32px;
+}
+.teacher-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 56px;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -0.025em;
+  color: var(--ink);
+  margin-bottom: 4px;
+}
+.teacher-name .en {
+  font-style: italic;
+  font-weight: 400;
+  color: var(--text-3);
+  margin-left: 12px;
+}
+.teacher-role {
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  color: var(--text-3);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-bottom: 28px;
+}
+
+.teacher-stats {
+  display: flex;
+  gap: 48px;
+  flex-wrap: wrap;
+  padding-top: 24px;
+  border-top: 1px solid var(--border-soft);
+}
+.stat { display: flex; flex-direction: column; gap: 4px; }
+.stat-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 36px;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+.stat-num.classes { color: var(--accent-deep); }
+.stat-num.avail { color: var(--gold); }
+.stat-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  color: var(--text-3);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+/* === CALENDAR === */
+.calendar-section {
+  padding: 24px 0 56px;
+}
+
+.calendar {
+  display: grid;
+  grid-template-columns: 90px repeat(4, 1fr);
+  border: 1px solid var(--border);
+  background: var(--border);
+  gap: 1px;
+}
+
+.cal-header {
+  background: var(--ink);
+  color: var(--paper);
+  padding: 16px 12px;
+  text-align: center;
+}
+.cal-header .label {
+  font-family: 'Inter', sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  opacity: 0.6;
+}
+.cal-header.day .day-kr {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 17px;
+  font-weight: 500;
+  margin-bottom: 2px;
+  letter-spacing: -0.01em;
+}
+.cal-header.day .day-en {
+  font-family: 'Inter', sans-serif;
+  font-size: 9px;
+  letter-spacing: 0.2em;
+  opacity: 0.5;
+}
+
+.cal-time {
+  background: var(--bg-2);
+  padding: 16px 8px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 124px;
+}
+.cal-time .hour {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px;
+  font-weight: 500;
+  color: var(--ink);
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+.cal-time .span {
+  font-family: 'Inter', sans-serif;
+  font-size: 10px;
+  color: var(--text-3);
+  margin-top: 4px;
+  letter-spacing: 0.05em;
+}
+.cal-time .part {
+  font-family: 'Inter', sans-serif;
+  font-size: 9px;
+  color: var(--text-4);
+  margin-top: 4px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.cell {
+  background: var(--paper);
+  padding: 12px;
+  min-height: 124px;
+  position: relative;
+  display: flex;
+  align-items: stretch;
+}
+.cell.offduty { background: var(--bg-2); }
+
+/* AVAILABLE */
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.4; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.3); }
+}
+
+/* CLASS CARD */
+.class-card {
+  width: 100%;
+  padding: 12px 14px;
+  background: var(--paper);
+  border: 1px solid var(--border);
+  border-left: 3px solid;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  position: relative;
+  transition: all 0.15s ease;
+}
+.class-card:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(43, 36, 32, 0.06);
+}
+
+.class-card.GD { border-left-color: var(--subj-GD); }
+.class-card.GW { border-left-color: var(--subj-GW); }
+.class-card.SG { border-left-color: var(--subj-SG); }
+.class-card.SR { border-left-color: var(--subj-SR); }
+
+.class-subj {
+  font-family: 'Inter', sans-serif;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-bottom: 2px;
+}
+.class-card.GD .class-subj { color: var(--subj-GD); }
+.class-card.GW .class-subj { color: var(--subj-GW); }
+.class-card.SG .class-subj { color: var(--subj-SG); }
+.class-card.SR .class-subj { color: var(--subj-SR); }
+
+.class-code {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--ink);
+  letter-spacing: -0.025em;
+  line-height: 1;
+}
+
+.class-orig {
+  font-family: 'Inter', sans-serif;
+  font-size: 10px;
+  color: var(--text-3);
+  margin-top: auto;
+  letter-spacing: 0.02em;
+}
+
+/* === LEGEND === */
+.legend-section { padding: 32px 0 56px; }
+.legend-title {
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-3);
+  margin-bottom: 16px;
+}
+.legend {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 14px;
+}
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 13px;
+  color: var(--text-2);
+}
+.legend-bar {
+  width: 4px;
+  height: 24px;
+  flex-shrink: 0;
+}
+.legend-bar.GD { background: var(--subj-GD); }
+.legend-bar.GW { background: var(--subj-GW); }
+.legend-bar.SG { background: var(--subj-SG); }
+.legend-bar.SR { background: var(--subj-SR); }
+.legend-swatch {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  border: 1px solid var(--border);
+}
+.legend-swatch.avail { background: var(--avail-bg); border-color: var(--avail-line); }
+.legend-swatch.off { background: var(--bg-2); }
+.legend-item .text strong { font-weight: 600; color: var(--ink); }
+.legend-item .text .en {
+  display: block;
+  font-family: 'Inter', sans-serif;
+  font-size: 10px;
+  color: var(--text-3);
+  letter-spacing: 0.1em;
+  margin-top: 2px;
+}
+
+/* === FOOTER === */
+.footer {
+  padding: 56px 0 64px;
+  text-align: center;
+  border-top: 1px solid var(--border-soft);
+  margin-top: 24px;
+}
+.footer-mark {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 24px;
+  font-weight: 500;
+  color: var(--ink);
+  letter-spacing: -0.01em;
+  margin-bottom: 6px;
+}
+.footer-text {
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  color: var(--text-3);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.books-section {
+  padding: 24px 0 56px;
+  border-top: 1px solid var(--border-soft);
+  margin-top: 24px;
+}
+.books-section-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 24px;
+  font-weight: 500;
+  color: var(--ink);
+  letter-spacing: -0.015em;
+  margin-bottom: 4px;
+}
+.books-section-en {
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  color: var(--text-3);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+.books-section-desc {
+  font-size: 13px;
+  color: var(--text-2);
+  margin-bottom: 24px;
+  max-width: 620px;
+  line-height: 1.65;
+}
+.books-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 14px;
+}
+.book-card {
+  background: var(--paper);
+  border: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  transition: all 0.2s ease;
+}
+.book-card:hover { border-color: var(--accent); box-shadow: 0 4px 14px rgba(139, 111, 71, 0.08); }
+.book-cover {
+  width: 100%;
+  aspect-ratio: 3/4;
+  background: var(--bg-2);
+  overflow: hidden;
+  position: relative;
+}
+.book-cover img { width: 100%; height: 100%; object-fit: contain; background: var(--paper); }
+.book-cover .no-image {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 32px;
+  color: var(--text-4);
+  font-style: italic;
+  width: 100%; height: 100%;
+  display: flex; align-items: center; justify-content: center;
+}
+.book-info { padding: 14px 16px 16px; display: flex; flex-direction: column; flex: 1; }
+.book-code {
+  font-family: 'Inter', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  color: var(--accent);
+  margin-bottom: 6px;
+  text-transform: uppercase;
+}
+.book-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 8px;
+  line-height: 1.4;
+  letter-spacing: -0.005em;
+  min-height: 36px;
+}
+.book-tag {
+  display: inline-block;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  padding: 3px 8px;
+  background: var(--accent-soft);
+  color: var(--accent-deep);
+  border-radius: 2px;
+  align-self: flex-start;
+  margin-top: auto;
+}
+@media (max-width: 768px) {
+  .books-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
+  .book-title { font-size: 12px; min-height: 34px; }
+}
+
+@media (max-width: 900px) {
+  .container { padding: 0 20px; }
+  .masthead { padding: 48px 0 36px; }
+  .teacher-name { font-size: 40px; }
+  .teacher-stats { gap: 24px; }
+  .stat-num { font-size: 28px; }
+  .calendar { grid-template-columns: 60px repeat(4, 1fr); }
+  .cal-header { padding: 10px 4px; }
+  .cal-header.day .day-kr { font-size: 13px; }
+  .cal-time { padding: 10px 4px; min-height: 90px; }
+  .cal-time .hour { font-size: 16px; }
+  .cal-time .span, .cal-time .part { display: none; }
+  .cell { padding: 6px; min-height: 90px; }
+  .class-card { padding: 8px 10px; }
+  .class-code { font-size: 18px; }
+  .class-subj { font-size: 8px; }
+  .class-orig { font-size: 9px; }
+  
+  
+  
+}
+
+/* ==== polish: start ==== */
+.source-stamp { margin: 12px 0 0; color: var(--text-3); font-size: 12px; line-height: 1.7; }
+.review-banner { margin: 18px 0; padding: 12px 16px; border: 1px solid #b99459; background: #fff6e5; color: #6d4a1a; font-size: 14px; line-height: 1.7; }
+.class-card[data-review="true"] { border-style: dashed; }
+.class-id { color: var(--text-3); font-size: 11px; margin: -4px 0 8px; }
+.cell.multi-class { flex-direction: column; gap: 10px; }
+.cell.multi-class > .class-card { width: 100%; }
+
+/* 대비 실측 후 조정: 이전 #8B7D6F 는 흰 배경에서 3.99:1 로 미달이었다 */
+:root { --text-3: #6F6153; --meta: #6F6153; }
+
+/* 숫자는 시간표의 뼈대다 — 자릿수 고정 */
+.stat-num, .cal-time .hour, .cal-time .span, .teacher-tab .count,
+.class-students .scount, .seats, .seats b, .period, .day-meta,
+.hour, .span { font-variant-numeric: tabular-nums; font-feature-settings: "tnum" 1; }
+
+/* 한글은 어절 단위로 끊는다 */
+.summary, .class-students, .class-orig, .note, .day-kr, .teacher-name,
+.notice, .voca-notice, .books-group-desc, .seats { word-break: keep-all; line-break: strict; }
+.headline, .teacher-name, .section-title { text-wrap: balance; }
+
+/* 키보드 초점 — 이전에는 규칙이 하나도 없었다 */
+a:focus-visible, button:focus-visible, [tabindex]:focus-visible {
+  outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px;
+}
+.teacher-tab:focus-visible { outline-offset: 4px; }
+
+/* 전환은 한 순간만, 이미 보이는 상태에서 지수 감쇠로 */
+@keyframes revealUp { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+@media (prefers-reduced-motion: reduce) {
+  .teacher-view, .teacher-view.active { animation: none !important; }
+  * { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
+}
+
+/* --- 강사용: 본인 시간표를 폰에서 확인하는 장면이 기준 --- */
+.teacher-view { animation: revealUp 0.34s cubic-bezier(0.16, 1, 0.3, 1) both; }
+.class-card { transition: border-color 0.18s cubic-bezier(0.16,1,0.3,1), background-color 0.18s cubic-bezier(0.16,1,0.3,1), box-shadow 0.18s cubic-bezier(0.16,1,0.3,1); }
+.class-card:hover { box-shadow: 0 1px 2px rgba(43,36,32,0.05), 0 6px 16px -8px rgba(43,36,32,0.18); }
+
+/* 열이 내용량에 따라 찌그러지던 것 고정 (목요일이 32px 로 눌렸다) */
+.calendar { grid-template-columns: 90px repeat(4, minmax(0, 1fr)); }
+
+/* 작은 메타 텍스트 하한: 9px 은 한글·영문 모두 읽히지 않는다 */
+.cal-time .part { font-size: 10px; color: var(--text-3); letter-spacing: 0.1em; }
+.cal-time .span { color: var(--text-3); }
+.rail-label, .teacher-role, .stat-label { color: var(--text-3); }
+.class-card .class-subj { font-size: 10px; letter-spacing: 0.16em; }
+.cal-header.day .day-en { font-size: 10px; letter-spacing: 0.18em; }
+.teacher-tab .count { font-size: 10px; }
+/* 탭의 영문명은 강사가 자기 이름을 찾는 표지다 — 2.47:1 이었다 */
+.teacher-tab .en { color: var(--text-3); }
+.teacher-tab.active .en { color: var(--bg-3); }
+.teacher-tab:hover .en { color: var(--accent-deep); }
+/* 28px 이어도 2.73:1 은 큰 텍스트 기준(3:1)에도 못 미쳤다 */
+.stat-num.avail { color: var(--accent-deep); }
+.class-card .class-orig { font-size: 11px; color: var(--text-3); letter-spacing: 0; }
+
+/* 학생 명단 — 원어민 선생님이 영어 이름을 읽는 줄 */
+.class-students { font-size: 11.5px; line-height: 1.65; color: var(--text-2);
+  margin-top: 8px; padding-top: 8px; border-top: 1px solid var(--border-soft); }
+.class-students .en-name { font-family: 'Inter', sans-serif; font-size: 11px;
+  font-style: normal; color: var(--text-3); letter-spacing: 0; }
+.class-students .scount { font-family: 'Inter', sans-serif; font-size: 11px; color: var(--text-3); }
+
+/* 제목 위 여백 > 아래 여백 */
+.teacher-meta { padding: 64px 0 28px; }
+
+@media (max-width: 900px) {
+  /* 4열을 억지로 밀어넣지 않고, 읽히는 폭을 지키며 가로로 흐르게 */
+  .calendar-section { overflow-x: auto; overscroll-behavior-x: contain;
+    -webkit-overflow-scrolling: touch; padding-bottom: 4px; }
+  .calendar { min-width: 660px; grid-template-columns: 64px repeat(4, minmax(148px, 1fr)); }
+  .cal-time { min-height: 104px; }
+  .cal-time .span, .cal-time .part { display: block; }
+  .class-card .class-code { font-size: 21px; }
+  .class-students { font-size: 11px; }
+  .teacher-meta { padding: 44px 0 24px; }
+}
+
+@media print {
+  .teacher-rail-wrap, .rail-label { display: none; }
+  .teacher-view { animation: none; }
+  .calendar-section { overflow: visible; }
+  .calendar { min-width: 0; }
+  .cal-header { background: #fff; color: #000; border-bottom: 1px solid #000; }
+  .class-card { break-inside: avoid; }
+}
+
+/* December faculty view: generated from the approved schedule snapshot. */
+.masthead{padding:44px 0 30px}.headline-en{font-size:20px}.summary{max-width:760px;line-height:1.8}.source-stamp{font-size:11px;color:var(--text-3);margin-top:12px}
+.teacher-meta{padding:36px 0 22px;display:flex;align-items:end;justify-content:space-between;gap:22px;flex-wrap:wrap}.teacher-name{font-size:46px}.teacher-name .en{font-size:15px;font-family:Inter,Pretendard,sans-serif}.teacher-stats{margin:0;gap:30px}.stat-num.new{color:#3976b3}
+.teacher-rail-wrap{top:0;background:var(--bg);padding:18px 0;border-bottom:1px solid var(--border-soft)}.teacher-rail{flex-wrap:wrap}.teacher-tab{padding:10px 15px;min-height:52px}.teacher-tab .count{margin-left:8px}.faculty-tools{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:18px 0 0}.faculty-tools a,.faculty-tools button{font:12px Inter,Pretendard,sans-serif;color:var(--accent-deep);background:transparent;border:1px solid var(--border);padding:8px 12px;border-radius:6px;text-decoration:none;cursor:pointer}
+.time-note{font-size:12px;color:var(--text-2)}.faculty-select{display:none;width:100%;padding:12px;border:1px solid var(--border);background:#fff;font:14px Inter,Pretendard,sans-serif;color:var(--ink);border-radius:7px}
+.calendar{grid-template-columns:74px repeat(4,minmax(0,1fr))}.cal-time{min-height:116px}.cell{min-height:116px;display:flex;flex-direction:column;gap:9px;padding:10px}.cell-main{flex:1;display:flex;align-items:stretch}.class-card{padding:11px 12px;gap:6px}.class-card.is-new{background:#f0f6ff;border-top:1px solid #c2d8f2;border-right:1px solid #c2d8f2;border-bottom:1px solid #c2d8f2}.card-top{display:flex;justify-content:space-between;gap:5px;align-items:start;flex-wrap:wrap}.class-subj{font-size:9px;letter-spacing:.09em}.class-code{font-size:28px}.new-badge{display:inline-block;font:600 9px Inter,Pretendard,sans-serif;letter-spacing:.03em;background:#dceaff;color:#2e629c;border-radius:4px;padding:3px 5px;white-space:nowrap}.class-orig{font-size:10px;word-break:break-word}
+.available-cell{background:#fbf6ec}.available-label{display:flex;flex-direction:column;justify-content:center;align-items:center;width:100%;color:#806237;gap:5px;padding:10px;text-align:center}.available-label b{font-size:13px}.available-label small{font-size:9px;line-height:1.5}.avail-dot{width:5px;height:5px;border-radius:100%;background:#b2945c}.empty-label{display:flex;align-items:center;justify-content:center;flex-direction:column;gap:4px;width:100%;font-size:11px;color:#a69887;min-height:65px}.empty-label small{font-size:9px}.nonexistent{justify-content:center;align-items:center;color:#c4b9a8}.slot-available{font-size:9px;line-height:1.7;color:#7c766a;border-top:1px solid #eae2d5;padding-top:6px}.slot-available span{color:#948772;margin-right:3px}.slot-available b{font-weight:500;color:#657451}
+.review-badge{font-size:9px;color:#8c6d35}.calendar-section{padding-bottom:26px}.schedule-legend{display:flex;gap:18px;align-items:center;flex-wrap:wrap;font-size:11px;color:var(--text-2);margin:18px 0}.legend-dot{display:inline-block;width:10px;height:10px;margin-right:5px;border:1px solid #dfd2bd;background:#fff}.legend-dot.new{background:#dceaff;border-color:#bfd3ee}.legend-dot.available{background:#fbf1d9;border-color:#c4a76d}
+.class-list-section{padding:20px 0 30px}.class-list-section h3{font:500 24px Cormorant Garamond,Pretendard,serif;color:var(--ink);margin-bottom:12px}.table-wrap{overflow:auto}.class-list{width:100%;border-collapse:collapse;text-align:left;font-size:12px;min-width:400px}.class-list th{font-size:10px;color:var(--text-3);font-weight:500;letter-spacing:.04em}.class-list th,.class-list td{padding:11px 12px;border-bottom:1px solid var(--border-soft)}.class-list td:first-child{white-space:nowrap}
+.closing-note{display:flex;align-items:center;flex-wrap:wrap;gap:8px 14px;background:#f3eee7;border:1px solid var(--border-soft);border-radius:7px;padding:13px 16px;font-size:11px;margin:22px 0 12px;color:#8c6151}.closing-note span{font-size:10px}.closing-note small{color:var(--text-3)}.footer{padding:24px 0 32px;margin-top:20px}.footer-note{font-size:11px;color:var(--text-3);line-height:1.8;margin-bottom:12px}
+@media(max-width:720px){.masthead{padding:30px 0 24px}.brand-line{margin-bottom:22px;font-size:9px}.brand-line .term{padding:4px 8px}.teacher-rail{display:none}.faculty-select{display:block}.rail-label{margin-bottom:10px}.teacher-rail-wrap{padding:13px 0}.teacher-meta{padding-top:26px}.teacher-name{font-size:38px}.teacher-stats{gap:24px}.faculty-tools{align-items:start;flex-wrap:wrap}.calendar{min-width:715px;grid-template-columns:64px repeat(4,minmax(155px,1fr))}.calendar-section{overflow-x:auto;overscroll-behavior-x:contain;-webkit-overflow-scrolling:touch}.container{padding:0 18px}.cal-header{padding:12px 8px}.cell{padding:8px}.class-code{font-size:25px}.time-note{font-size:11px}.closing-note{line-height:1.7}.table-wrap{margin:0 -2px}.summary{font-size:12px}}
+@media print{.masthead{padding-top:10px}.faculty-tools,.teacher-rail-wrap{display:none!important}.calendar{min-width:0;grid-template-columns:55px repeat(4,minmax(0,1fr))}.calendar-section{overflow:visible}.class-list-section{display:none}.cell,.cal-time{min-height:80px}.container{padding:0}.teacher-meta{padding-top:16px}.closing-note{break-inside:avoid}.class-card{break-inside:avoid}.cell,.class-card{print-color-adjust:exact;-webkit-print-color-adjust:exact}}
+
+
+/* ==== polish: end ==== */
+</style>
+</head><body><div class="container">
+<header class="masthead"><div class="brand-line"><span>TOPIA LIVE</span><span class="term">2026 December Term · Faculty</span></div>
+<h1 class="headline"><em>12월 강사별</em> 시간표</h1><div class="headline-en">December Term Schedule by Instructor</div>
+<p class="summary">상단에서 본인 이름을 선택해 12월 예정 수업을 확인하세요. 신규 수업은 파란색으로 표시합니다.<br>Select your name to view your December teaching schedule. New classes are highlighted in blue.</p>
+<p class="source-stamp"><span id="overall-count"></span> · <span id="updated"></span></p></header>
+<div class="teacher-rail-wrap"><div class="rail-label">Select Instructor</div><nav class="teacher-rail" id="teacher-rail" aria-label="강사 선택"></nav><select id="teacher-select" class="faculty-select" aria-label="강사 선택"></select></div>
+<div class="faculty-tools"><span class="time-note">모든 시간은 한국시간 · KST (UTC+9)</span><div><a id="roster-link" target="_blank" rel="noopener">등록 현황</a> <button id="print" type="button">인쇄 · Print</button></div></div>
+<main><section class="teacher-view active"><div class="teacher-meta"><div><h2 class="teacher-name" id="teacher-heading"></h2><div class="teacher-role">TOPIA LIVE · Instructor</div></div><div class="teacher-stats" id="teacher-stats"></div></div>
+<div class="schedule-legend"><span><i class="legend-dot new"></i>신규 · New</span><span><i class="legend-dot available"></i>추가 수업 가능 · Available</span><span>각 시간대 하단에 추가 가능한 강사를 표시합니다.</span></div>
+<div class="calendar-section" tabindex="0" aria-label="요일별 주간 시간표. 작은 화면에서는 좌우로 이동하세요."><div class="calendar" id="calendar"></div></div>
+<section class="class-list-section"><h3>My classes <span class="source-stamp" id="current-teacher-caption"></span></h3><div class="table-wrap"><table class="class-list"><thead><tr><th>시간 · KST</th><th>수업</th><th>반 코드</th></tr></thead><tbody id="class-list"></tbody></table></div></section></section>
+<div class="closing-note" id="closing-note"></div></main>
+<footer class="footer"><p class="footer-note">12월 예정 편성입니다. 수강신청 현황에 따라 조정될 수 있습니다.<br>Planned December schedule · Subject to enrollment changes.</p><div class="footer-mark">Topia Live</div><div class="footer-text">Summit &amp; Global Track</div></footer></div>
+<noscript>시간표를 확인하려면 JavaScript를 허용해 주세요. Please enable JavaScript to view the schedule.</noscript>
+<script id="schedule-data" type="application/json">__SCHEDULE_DATA__</script>
+<script>const S=JSON.parse(document.getElementById('schedule-data').textContent);
+const $=id=>document.getElementById(id);
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const days=[['Tu','화요일','TUE'],['Th','목요일','THU'],['Sat','토요일','SAT'],['Sun','일요일','SUN']];
+const times=['09:00','11:00','15:00','17:00','19:00','21:00'];
+const subjects={GW:'Global Writing',GD:'Global Debate',SG:'Summit Grammar',SR:'Summit Reading'};
+const short=t=>S.teachers.find(x=>x.key===t)?.name||t;
+const count=t=>S.classes.filter(c=>c.teacher===t).length;
+let selected=S.teachers[0].key;
+function card(c){return '<article class="class-card '+c.level.slice(0,2)+(c.isNew?' is-new':'')+'" data-code="'+esc(c.code)+'"><div class="card-top"><span class="class-subj">'+subjects[c.level.slice(0,2)]+'</span>'+(c.isNew?'<span class="new-badge">신규 · NEW</span>':'')+'</div><div class="class-code">'+esc(c.level)+'</div><div class="class-orig">'+esc(c.code)+'</div>'+(c.duplicate?'<span class="review-badge">동시간 중복 검토 · Schedule review</span>':'')+'</article>';}
+function cell(t,day,time){
+ const match=Object.entries(S.groups).find(([g,x])=>x.day===day&&x.start===time);
+ if(!match)return '<div class="cell offduty nonexistent" aria-label="'+esc(day+' '+time)+'">—</div>';
+ const [group,meta]=match,rows=S.classes.filter(c=>c.teacher===t&&c.group===group),free=S.available[group]||[];
+ const currentFree=free.includes(t);
+ let main=rows.map(card).join('');
+ if(!rows.length)main=currentFree?'<div class="available-label"><span class="avail-dot"></span><b>추가 수업 가능</b><small>Available for an additional class</small></div>':'<div class="empty-label">수업 없음<small>No class assigned</small></div>';
+ return '<div class="cell '+(!rows.length&&!currentFree?'offduty ':'')+(currentFree?'available-cell':'')+'" data-slot="'+group+'" data-free="'+free.map(esc).join('|')+'"><div class="cell-main">'+main+'</div><div class="slot-available"><span>가능 강사</span> '+(free.length?free.map(x=>'<b>'+esc(short(x))+'</b>').join(' · '):'—')+'</div></div>';
+}
+function render(t,update=true){
+ const teacher=S.teachers.find(x=>x.key===t);if(!teacher)return;selected=t;
+ document.querySelectorAll('.teacher-tab').forEach(b=>{const active=b.dataset.teacher===t;b.classList.toggle('active',active);b.setAttribute('aria-pressed',String(active));});
+ $('teacher-select').value=t;
+ const own=S.classes.filter(r=>r.teacher===t),frees=Object.values(S.available).filter(a=>a.includes(t)).length;
+ $('teacher-heading').innerHTML=esc(teacher.name)+(teacher.ko?'<span class="en">'+esc(teacher.ko)+'</span>':'');
+ $('teacher-stats').innerHTML=[['Classes',own.length,'classes'],['New',own.filter(r=>r.isNew).length,'new'],['Available slots',frees,'avail']].map(([label,n,c])=>'<div class="stat"><div class="stat-num '+c+'">'+n+'</div><div class="stat-label">'+label+'</div></div>').join('');
+ let html='<div class="cal-header"><div class="label">KST</div></div>'+days.map(([d,ko,en])=>'<div class="cal-header day"><div class="day-kr">'+ko+'</div><div class="day-en">'+en+'</div></div>').join('');
+ for(const time of times){const end=String(Number(time.slice(0,2))+1).padStart(2,'0')+':45';html+='<div class="cal-time"><div class="hour">'+time+'</div><div class="span">– '+end+'</div></div>'+days.map(([d])=>cell(t,d,time)).join('');}
+ $('calendar').innerHTML=html;
+ $('class-list').innerHTML=own.map(c=>{const g=S.groups[c.group];return '<tr data-list-code="'+esc(c.code)+'"><td>'+g.dayKo+' '+g.start+'–'+g.end+'</td><td><b>'+esc(c.level)+'</b>'+(c.isNew?' <span class="new-badge">NEW</span>':'')+'</td><td>'+esc(c.code)+'</td></tr>';}).join('');
+ $('current-teacher-caption').textContent=teacher.name+' · '+own.length+' classes';
+ if(update)history.replaceState(null,'','#'+teacher.slug);
+}
+$('teacher-rail').innerHTML=S.teachers.map(t=>'<button class="teacher-tab" data-teacher="'+esc(t.key)+'" aria-pressed="false"><span>'+esc(t.name)+'<span class="count">'+count(t.key)+'</span></span>'+(t.ko?'<span class="en">'+esc(t.ko)+'</span>':'')+'</button>').join('');
+$('teacher-select').innerHTML=S.teachers.map(t=>'<option value="'+esc(t.key)+'">'+esc(t.name)+' · '+count(t.key)+' classes</option>').join('');
+document.querySelectorAll('.teacher-tab').forEach(b=>b.addEventListener('click',()=>render(b.dataset.teacher)));
+$('teacher-select').addEventListener('change',e=>render(e.target.value));
+$('print').addEventListener('click',()=>window.print());
+$('overall-count').textContent=S.classes.length+' classes · '+S.classes.filter(r=>r.isNew).length+' new';
+$('updated').textContent='편성 업데이트 '+S.updatedKst.slice(0,16).replace('T',' ')+' KST';
+$('roster-link').href=S.rosterUrl;
+$('closing-note').innerHTML=S.closing.map(c=>{const g=S.groups[c.group];return '<span>폐강 예정 · Pending closure</span><b>'+g.dayKo+' '+g.start+' '+esc(c.level)+'</b><small>'+esc(c.code)+'</small>';}).join('');
+const initial=S.teachers.find(t=>'#'+t.slug===location.hash);
+render(initial?.key||S.teachers[0].key,false);
+window.facultyScheduleVersion=S.version;
+
+</script></body></html>
