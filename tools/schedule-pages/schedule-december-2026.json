@@ -1,7 +1,7 @@
 {
-  "version": "2026-12-faculty-v2",
+  "version": "2026-12-faculty-v3",
   "term": "2026-12",
-  "updatedKst": "2026-10-27T22:09:37+09:00",
+  "updatedKst": "2026-10-28T17:29:42+09:00",
   "teachers": [
     {
       "key": "Skye",
@@ -56,6 +56,12 @@
       "name": "Madelein",
       "ko": "",
       "slug": "madelein"
+    },
+    {
+      "key": "Joanne",
+      "name": "Joanne",
+      "ko": "",
+      "slug": "joanne"
     }
   ],
   "groups": {
@@ -644,7 +650,8 @@
     "Sat1": [],
     "Sat2": [],
     "Sat3": [
-      "Danny C"
+      "Danny C",
+      "Joanne"
     ],
     "Sat4": [],
     "Sat5": [
@@ -661,6 +668,7 @@
   },
   "rosterUrl": "https://topia-december-2026-review-20261021.vercel.app/",
   "availabilityNotes": {
-    "Chloe J": "평일 하루 최대 4시간 · 화17 또는 화21 중 한 타임만 추가 가능 · 목21 추가 배정 불가. / Weekday limit: 4 hours per day. One additional Tuesday slot (17:00 or 21:00); Thursday 21:00 unavailable."
+    "Chloe J": "평일 하루 최대 4시간 · 화17 또는 화21 중 한 타임만 추가 가능 · 목21 추가 배정 불가. / Weekday limit: 4 hours per day. One additional Tuesday slot (17:00 or 21:00); Thursday 21:00 unavailable.",
+    "Joanne": "써밋 강사 · 토요일 15:00 가능 / Summit teacher · Available Saturday 15:00 KST."
   }
 }
