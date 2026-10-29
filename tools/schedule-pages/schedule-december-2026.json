@@ -1,7 +1,7 @@
 {
-  "version": "2026-12-faculty-v3",
+  "version": "2026-12-faculty-v4",
   "term": "2026-12",
-  "updatedKst": "2026-10-28T17:29:42+09:00",
+  "updatedKst": "2026-10-29T11:47:59+09:00",
   "teachers": [
     {
       "key": "Skye",
@@ -201,7 +201,10 @@
       "group": "Tu1",
       "teacher": "Angie K",
       "isNew": false,
-      "duplicate": false
+      "duplicate": false,
+      "currentCount": 3,
+      "scheduledCount": 0,
+      "registeredCount": 3
     },
     {
       "code": "SG4_17(Tu1)",
@@ -209,7 +212,10 @@
       "group": "Tu1",
       "teacher": "Skye",
       "isNew": false,
-      "duplicate": false
+      "duplicate": false,
+      "currentCount": 4,
+      "scheduledCount": 0,
+      "registeredCount": 4
     },
     {
       "code": "GD4_11(Tu2)",
@@ -217,7 +223,10 @@
       "group": "Tu2",
       "teacher": "Jess AS",
       "isNew": false,
-      "duplicate": false
+      "duplicate": false,
+      "currentCount": 6,
+      "scheduledCount": 0,
+      "registeredCount": 6
     },
     {
       "code": "GD5_3(Tu2)",
@@ -225,7 +234,10 @@
       "group": "Tu2",
       "teacher": "Kimberley R",
       "isNew": false,
-      "duplicate": false
+      "duplicate": false,
+      "currentCount": 1,
+      "scheduledCount": 0,
+      "registeredCount": 1
     },
     {
       "code": "GW5_3(Tu2)",
@@ -233,7 +245,10 @@
       "group": "Tu2",
       "teacher": "David B",
       "isNew": false,
-      "duplicate": false
+      "duplicate": false,
+      "currentCount": 4,
+      "scheduledCount": 0,
+      "registeredCount": 4
     },
     {
       "code": "SG5_3(Tu2)",
@@ -241,7 +256,10 @@
       "group": "Tu2",
       "teacher": "Skye",
       "isNew": false,
-      "duplicate": false
+      "duplicate": false,
+      "currentCount": 2,
+      "scheduledCount": 0,
+      "registeredCount": 2
     },
     {
       "code": "SG3_3(Tu3)",
@@ -249,7 +267,10 @@
       "group": "Tu3",
       "teacher": "Danny C",
       "isNew": false,
-      "duplicate": false
+      "duplicate": false,
+      "currentCount": 4,
+      "scheduledCount": 0,
+      "registeredCount": 4
     },
     {
       "code": "SG5_14(Tu3)",
@@ -257,7 +278,10 @@
       "group": "Tu3",
       "teacher": "Skye",
       "isNew": false,
-      "duplicate": false
+      "duplicate": false,
+      "currentCount": 0,
+      "scheduledCount": 0,
+      "registeredCount": 0
     },
     {
       "code": "GD5_4(Th2)",
@@ -265,7 +289,10 @@
       "group": "Th2",
       "teacher": "Jess AS",
       "isNew": false,
-      "duplicate": false
+      "duplicate": false,
+      "currentCount": 3,
+      "scheduledCount": 0,
+      "registeredCount": 3
     },
     {
       "code": "GD5_7(Th2)",
@@ -273,7 +300,10 @@
       "group": "Th2",
       "teacher": "Kimberley R",
       "isNew": false,
-      "duplicate": false
+      "duplicate": false,
+      "currentCount": 4,
+      "scheduledCount": 0,
+      "registeredCount": 4
     },
     {
       "code": "GW4_13(Th2)",
@@ -281,7 +311,10 @@
       "group": "Th2",
       "teacher": "Angie K",
       "isNew": false,
-      "duplicate": false
+      "duplicate": false,
+      "currentCount": 6,
+      "scheduledCount": 0,
+      "registeredCount": 6
     },
     {
       "code": "GW5_14(Th3)",
@@ -289,7 +322,10 @@
       "group": "Th3",
       "teacher": "Jess AS",
       "isNew": false,
-      "duplicate": false
+      "duplicate": false,
+      "currentCount": 2,
+      "scheduledCount": 0,
+      "registeredCount": 2
     },
     {
       "code": "GD5_11(Sat1)",
@@ -297,7 +333,10 @@
       "group": "Sat1",
       "teacher": "Andrew A",
       "isNew": false,
-      "duplicate": false
+      "duplicate": false,
+      "currentCount": 2,
+      "scheduledCount": 0,
+      "registeredCount": 2
     },
     {
       "code": "SG3_4(Sat1)",
@@ -305,7 +344,10 @@
       "group": "Sat1",
       "teacher": "Danny C",
       "isNew": false,
-      "duplicate": false
+      "duplicate": false,
+      "currentCount": 5,
+      "scheduledCount": 0,
+      "registeredCount": 5
     },
     {
       "code": "SG4_2(Sat1)",
@@ -313,7 +355,10 @@
       "group": "Sat1",
       "teacher": "Chloe J",
       "isNew": false,
-      "duplicate": false
+      "duplicate": false,
+      "currentCount": 2,
+      "scheduledCount": 0,
+      "registeredCount": 2
     },
     {
       "code": "SR4_2(Sat1)",
@@ -321,7 +366,10 @@
       "group": "Sat1",
       "teacher": "Skye",
       "isNew": false,
-      "duplicate": false
+      "duplicate": false,
+      "currentCount": 5,
+      "scheduledCount": 0,
+      "registeredCount": 5
     },
     {
       "code": "GD5_10(Sat2)",
@@ -329,7 +377,10 @@
       "group": "Sat2",
       "teacher": "Andrew A",
       "isNew": false,
-      "duplicate": false
+      "duplicate": false,
+      "currentCount": 1,
+      "scheduledCount": 0,
+      "registeredCount": 1
     },
     {
       "code": "SG2_1(Sat2)",
@@ -337,7 +388,10 @@
       "group": "Sat2",
       "teacher": "Danny C",
       "isNew": false,
-      "duplicate": false
+      "duplicate": false,
+      "currentCount": 2,
+      "scheduledCount": 1,
+      "registeredCount": 3
     },
     {
       "code": "SG4_14(Sat2)",
@@ -345,7 +399,10 @@
       "group": "Sat2",
       "teacher": "Skye",
       "isNew": false,
-      "duplicate": false
+      "duplicate": false,
+      "currentCount": 1,
+      "scheduledCount": 0,
+      "registeredCount": 1
     },
     {
       "code": "GW5_6(Sat3)",
@@ -353,7 +410,10 @@
       "group": "Sat3",
       "teacher": "Angie K",
       "isNew": false,
-      "duplicate": false
+      "duplicate": false,
+      "currentCount": 1,
+      "scheduledCount": 0,
+      "registeredCount": 1
     },
     {
       "code": "SG5_15(Sat3)",
@@ -361,7 +421,10 @@
       "group": "Sat3",
       "teacher": "Skye",
       "isNew": false,
-      "duplicate": false
+      "duplicate": false,
+      "currentCount": 1,
+      "scheduledCount": 0,
+      "registeredCount": 1
     },
     {
       "code": "GW3_4(Sat4)",
@@ -369,7 +432,10 @@
       "group": "Sat4",
       "teacher": "Angie K",
       "isNew": false,
-      "duplicate": false
+      "duplicate": false,
+      "currentCount": 3,
+      "scheduledCount": 0,
+      "registeredCount": 3
     },
     {
       "code": "GW4_1(Sat4)",
@@ -377,7 +443,10 @@
       "group": "Sat4",
       "teacher": "David B",
       "isNew": false,
-      "duplicate": true
+      "duplicate": true,
+      "currentCount": 3,
+      "scheduledCount": 0,
+      "registeredCount": 3
     },
     {
       "code": "GW4_18(Sat4)",
@@ -385,7 +454,10 @@
       "group": "Sat4",
       "teacher": "Kimberley R",
       "isNew": false,
-      "duplicate": true
+      "duplicate": true,
+      "currentCount": 4,
+      "scheduledCount": 0,
+      "registeredCount": 4
     },
     {
       "code": "SG4_15(Sat4)",
@@ -393,7 +465,10 @@
       "group": "Sat4",
       "teacher": "Skye",
       "isNew": false,
-      "duplicate": false
+      "duplicate": false,
+      "currentCount": 1,
+      "scheduledCount": 0,
+      "registeredCount": 1
     },
     {
       "code": "GD3_1(Sat5)",
@@ -401,7 +476,10 @@
       "group": "Sat5",
       "teacher": "Kimberley R",
       "isNew": false,
-      "duplicate": false
+      "duplicate": false,
+      "currentCount": 3,
+      "scheduledCount": 1,
+      "registeredCount": 4
     },
     {
       "code": "SG5_4(Sat5)",
@@ -409,7 +487,10 @@
       "group": "Sat5",
       "teacher": "Skye",
       "isNew": false,
-      "duplicate": false
+      "duplicate": false,
+      "currentCount": 1,
+      "scheduledCount": 0,
+      "registeredCount": 1
     },
     {
       "code": "GW4_17(Sun1)",
@@ -417,7 +498,10 @@
       "group": "Sun1",
       "teacher": "Andrew A",
       "isNew": false,
-      "duplicate": false
+      "duplicate": false,
+      "currentCount": 5,
+      "scheduledCount": 0,
+      "registeredCount": 5
     },
     {
       "code": "GW5_8(Sun1)",
@@ -425,7 +509,10 @@
       "group": "Sun1",
       "teacher": "David B",
       "isNew": false,
-      "duplicate": false
+      "duplicate": false,
+      "currentCount": 5,
+      "scheduledCount": 0,
+      "registeredCount": 5
     },
     {
       "code": "SR2_1(Sun1)",
@@ -433,7 +520,10 @@
       "group": "Sun1",
       "teacher": "Chloe J",
       "isNew": false,
-      "duplicate": false
+      "duplicate": false,
+      "currentCount": 4,
+      "scheduledCount": 0,
+      "registeredCount": 4
     },
     {
       "code": "SR3_1(Sun1)",
@@ -441,7 +531,10 @@
       "group": "Sun1",
       "teacher": "Skye",
       "isNew": false,
-      "duplicate": false
+      "duplicate": false,
+      "currentCount": 6,
+      "scheduledCount": 0,
+      "registeredCount": 6
     },
     {
       "code": "GD4_10(Sun2)",
@@ -449,7 +542,10 @@
       "group": "Sun2",
       "teacher": "Andrew A",
       "isNew": false,
-      "duplicate": false
+      "duplicate": false,
+      "currentCount": 6,
+      "scheduledCount": 0,
+      "registeredCount": 6
     },
     {
       "code": "SR5_6(Sun2)",
@@ -457,7 +553,10 @@
       "group": "Sun2",
       "teacher": "Skye",
       "isNew": false,
-      "duplicate": false
+      "duplicate": false,
+      "currentCount": 1,
+      "scheduledCount": 0,
+      "registeredCount": 1
     },
     {
       "code": "GW5_25(Sun3)",
@@ -465,7 +564,10 @@
       "group": "Sun3",
       "teacher": "Andrew A",
       "isNew": false,
-      "duplicate": false
+      "duplicate": false,
+      "currentCount": 2,
+      "scheduledCount": 0,
+      "registeredCount": 2
     },
     {
       "code": "SG5_11(Sun3)",
@@ -473,7 +575,10 @@
       "group": "Sun3",
       "teacher": "Skye",
       "isNew": false,
-      "duplicate": false
+      "duplicate": false,
+      "currentCount": 0,
+      "scheduledCount": 0,
+      "registeredCount": 0
     },
     {
       "code": "GD5_12(Sun4)",
@@ -481,7 +586,10 @@
       "group": "Sun4",
       "teacher": "Andrew A",
       "isNew": false,
-      "duplicate": false
+      "duplicate": false,
+      "currentCount": 2,
+      "scheduledCount": 0,
+      "registeredCount": 2
     },
     {
       "code": "GW4_14(Sun4)",
@@ -489,7 +597,10 @@
       "group": "Sun4",
       "teacher": "Madelein L",
       "isNew": false,
-      "duplicate": false
+      "duplicate": false,
+      "currentCount": 6,
+      "scheduledCount": 0,
+      "registeredCount": 6
     },
     {
       "code": "SG4_8(Sun4)",
@@ -497,7 +608,10 @@
       "group": "Sun4",
       "teacher": "Skye",
       "isNew": false,
-      "duplicate": false
+      "duplicate": false,
+      "currentCount": 3,
+      "scheduledCount": 0,
+      "registeredCount": 3
     },
     {
       "code": "SG3_5(Sun5)",
@@ -505,7 +619,10 @@
       "group": "Sun5",
       "teacher": "Chloe J",
       "isNew": false,
-      "duplicate": false
+      "duplicate": false,
+      "currentCount": 1,
+      "scheduledCount": 0,
+      "registeredCount": 1
     },
     {
       "code": "SR5_1(Sun5)",
@@ -513,7 +630,10 @@
       "group": "Sun5",
       "teacher": "Skye",
       "isNew": false,
-      "duplicate": false
+      "duplicate": false,
+      "currentCount": 3,
+      "scheduledCount": 0,
+      "registeredCount": 3
     },
     {
       "code": "GW1_1(Tu1)",
@@ -521,7 +641,10 @@
       "group": "Tu1",
       "teacher": "Kimberley R",
       "isNew": true,
-      "duplicate": false
+      "duplicate": false,
+      "currentCount": 0,
+      "scheduledCount": 0,
+      "registeredCount": 0
     },
     {
       "code": "GD2_1(Tu1)",
@@ -529,7 +652,10 @@
       "group": "Tu1",
       "teacher": "Jess AS",
       "isNew": true,
-      "duplicate": false
+      "duplicate": false,
+      "currentCount": 0,
+      "scheduledCount": 0,
+      "registeredCount": 0
     },
     {
       "code": "SG1_1(Tu1)",
@@ -537,7 +663,10 @@
       "group": "Tu1",
       "teacher": "Danny C",
       "isNew": true,
-      "duplicate": false
+      "duplicate": false,
+      "currentCount": 0,
+      "scheduledCount": 0,
+      "registeredCount": 0
     },
     {
       "code": "GW2_1(Tu2)",
@@ -545,7 +674,10 @@
       "group": "Tu2",
       "teacher": "Chloe J",
       "isNew": true,
-      "duplicate": false
+      "duplicate": false,
+      "currentCount": 0,
+      "scheduledCount": 0,
+      "registeredCount": 0
     },
     {
       "code": "SG2_2(Tu2)",
@@ -553,7 +685,10 @@
       "group": "Tu2",
       "teacher": "Danny C",
       "isNew": true,
-      "duplicate": false
+      "duplicate": false,
+      "currentCount": 0,
+      "scheduledCount": 1,
+      "registeredCount": 1
     },
     {
       "code": "GD1_1(Th1)",
@@ -561,7 +696,10 @@
       "group": "Th1",
       "teacher": "Kimberley R",
       "isNew": true,
-      "duplicate": false
+      "duplicate": false,
+      "currentCount": 0,
+      "scheduledCount": 0,
+      "registeredCount": 0
     },
     {
       "code": "SR1_1(Th1)",
@@ -569,7 +707,10 @@
       "group": "Th1",
       "teacher": "Chloe J",
       "isNew": true,
-      "duplicate": false
+      "duplicate": false,
+      "currentCount": 0,
+      "scheduledCount": 1,
+      "registeredCount": 1
     },
     {
       "code": "SR2_2(Th2)",
@@ -577,23 +718,32 @@
       "group": "Th2",
       "teacher": "Danny C",
       "isNew": true,
-      "duplicate": false
+      "duplicate": false,
+      "currentCount": 0,
+      "scheduledCount": 1,
+      "registeredCount": 1
     },
     {
-      "code": "GW2_2(Sat1)",
+      "code": "GW2_2(Sat2)",
       "level": "GW2",
-      "group": "Sat1",
-      "teacher": "Angie K",
-      "isNew": true,
-      "duplicate": false
-    },
-    {
-      "code": "GD2_2(Sat2)",
-      "level": "GD2",
       "group": "Sat2",
       "teacher": "Angie K",
       "isNew": true,
-      "duplicate": false
+      "duplicate": false,
+      "currentCount": 0,
+      "scheduledCount": 1,
+      "registeredCount": 1
+    },
+    {
+      "code": "GD2_2(Sat1)",
+      "level": "GD2",
+      "group": "Sat1",
+      "teacher": "Angie K",
+      "isNew": true,
+      "duplicate": false,
+      "currentCount": 0,
+      "scheduledCount": 0,
+      "registeredCount": 0
     },
     {
       "code": "GW2_3(Sun3)",
@@ -601,7 +751,10 @@
       "group": "Sun3",
       "teacher": "Madelein L",
       "isNew": true,
-      "duplicate": false
+      "duplicate": false,
+      "currentCount": 0,
+      "scheduledCount": 0,
+      "registeredCount": 0
     },
     {
       "code": "GD3_2(Tu2)",
@@ -609,7 +762,10 @@
       "group": "Tu2",
       "teacher": "Angie K",
       "isNew": true,
-      "duplicate": false
+      "duplicate": false,
+      "currentCount": 0,
+      "scheduledCount": 0,
+      "registeredCount": 0
     },
     {
       "code": "GW3_5(Th2)",
@@ -617,7 +773,10 @@
       "group": "Th2",
       "teacher": "Chloe J",
       "isNew": true,
-      "duplicate": false
+      "duplicate": false,
+      "currentCount": 0,
+      "scheduledCount": 0,
+      "registeredCount": 0
     }
   ],
   "closing": [

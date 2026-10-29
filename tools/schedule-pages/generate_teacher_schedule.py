@@ -17,9 +17,11 @@ def main():
  assert len(names)==len(d['teachers'])
  assert len({r['code'] for r in d['classes']})==len(d['classes'])
  for r in d['classes']:
-  assert set(r)=={'code','level','group','teacher','isNew','duplicate'}
+  assert set(r)=={'code','level','group','teacher','isNew','duplicate','currentCount','scheduledCount','registeredCount'}
   assert re.fullmatch(r'(?:GW|GD|SG|SR)[1-5]',r['level'])
   assert re.fullmatch(r'(?:GW|GD|SG|SR)[1-5]_\d+\([^)]+\)',r['code'])
+  assert all(isinstance(r[k],int) and r[k]>=0 for k in ['currentCount','scheduledCount','registeredCount'])
+  assert r['registeredCount']==r['currentCount']+r['scheduledCount']
   assert r['teacher'] in names and r['group'] in d['groups']
  for g,ts in d['available'].items():
   assert g in d['groups'] and set(ts)<=names
