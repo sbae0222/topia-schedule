@@ -1,7 +1,7 @@
 {
-  "version": "2026-12-faculty-v4",
+  "version": "2026-12-faculty-v5",
   "term": "2026-12",
-  "updatedKst": "2026-10-29T11:47:59+09:00",
+  "updatedKst": "2026-10-29T12:23:36+09:00",
   "teachers": [
     {
       "key": "Skye",
@@ -510,9 +510,9 @@
       "teacher": "David B",
       "isNew": false,
       "duplicate": false,
-      "currentCount": 5,
+      "currentCount": 4,
       "scheduledCount": 0,
-      "registeredCount": 5
+      "registeredCount": 4
     },
     {
       "code": "SR2_1(Sun1)",
