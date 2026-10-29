@@ -648,7 +648,7 @@ const subjects={GW:'Global Writing',GD:'Global Debate',SG:'Summit Grammar',SR:'S
 const short=t=>S.teachers.find(x=>x.key===t)?.name||t;
 const count=t=>S.classes.filter(c=>c.teacher===t).length;
 let selected=S.teachers[0].key;
-function card(c){return '<article class="class-card '+c.level.slice(0,2)+(c.isNew?' is-new':'')+'" data-code="'+esc(c.code)+'"><div class="card-top"><span class="class-subj">'+subjects[c.level.slice(0,2)]+'</span>'+(c.isNew?'<span class="new-badge">신규 · NEW</span>':'')+'</div><div class="class-code">'+esc(c.level)+'</div><div class="class-orig">'+esc(c.code)+'</div><div class="class-students">등록 '+c.registeredCount+'명'+(c.scheduledCount?' · 시작예정 '+c.scheduledCount+'명':'')+'</div>'+(c.duplicate?'<span class="review-badge">동시간 중복 검토 · Schedule review</span>':'')+'</article>';}
+function card(c){return '<article class="class-card '+c.level.slice(0,2)+(c.isNew?' is-new':'')+'" data-code="'+esc(c.code)+'"><div class="card-top"><span class="class-subj">'+subjects[c.level.slice(0,2)]+'</span>'+(c.isNew?'<span class="new-badge">신규 · NEW</span>':'')+'</div><div class="class-code">'+esc(c.level)+'</div><div class="class-orig">'+esc(c.code)+'</div><div class="class-students">등록 '+c.registeredCount+'명'+(c.scheduledCount?' · 시작예정 '+c.scheduledCount+'명':'')+(c.pendingCount?' · 확인필요 '+c.pendingCount+'명 (등록 제외)':'')+'</div>'+(c.duplicate?'<span class="review-badge">동시간 중복 검토 · Schedule review</span>':'')+'</article>';}
 function cell(t,day,time){
  const match=Object.entries(S.groups).find(([g,x])=>x.day===day&&x.start===time);
  if(!match)return '<div class="cell offduty nonexistent" aria-label="'+esc(day+' '+time)+'">—</div>';
@@ -668,7 +668,7 @@ function render(t,update=true){
  let html='<div class="cal-header"><div class="label">KST</div></div>'+days.map(([d,ko,en])=>'<div class="cal-header day"><div class="day-kr">'+ko+'</div><div class="day-en">'+en+'</div></div>').join('');
  for(const time of times){const end=String(Number(time.slice(0,2))+1).padStart(2,'0')+':45';html+='<div class="cal-time"><div class="hour">'+time+'</div><div class="span">– '+end+'</div></div>'+days.map(([d])=>cell(t,d,time)).join('');}
  $('calendar').innerHTML=html;
- $('class-list').innerHTML=own.map(c=>{const g=S.groups[c.group];return '<tr data-list-code="'+esc(c.code)+'"><td>'+g.dayKo+' '+g.start+'–'+g.end+'</td><td><b>'+esc(c.level)+'</b>'+(c.isNew?' <span class="new-badge">NEW</span>':'')+'</td><td>'+esc(c.code)+'</td><td>등록 '+c.registeredCount+'명'+(c.scheduledCount?' · 시작예정 '+c.scheduledCount+'명':'')+'</td></tr>';}).join('');
+ $('class-list').innerHTML=own.map(c=>{const g=S.groups[c.group];return '<tr data-list-code="'+esc(c.code)+'"><td>'+g.dayKo+' '+g.start+'–'+g.end+'</td><td><b>'+esc(c.level)+'</b>'+(c.isNew?' <span class="new-badge">NEW</span>':'')+'</td><td>'+esc(c.code)+'</td><td>등록 '+c.registeredCount+'명'+(c.scheduledCount?' · 시작예정 '+c.scheduledCount+'명':'')+(c.pendingCount?' · 확인필요 '+c.pendingCount+'명 (등록 제외)':'')+'</td></tr>';}).join('');
  $('current-teacher-caption').textContent=teacher.name+' · '+own.length+' classes';
  $('availability-note').textContent=S.availabilityNotes?.[t]||'';
  $('availability-note').hidden=!S.availabilityNotes?.[t];

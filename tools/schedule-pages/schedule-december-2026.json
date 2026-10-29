@@ -1,7 +1,7 @@
 {
-  "version": "2026-12-faculty-v5",
+  "version": "2026-12-faculty-v6",
   "term": "2026-12",
-  "updatedKst": "2026-10-29T12:23:36+09:00",
+  "updatedKst": "2026-10-29T12:42:53+09:00",
   "teachers": [
     {
       "key": "Skye",
@@ -204,7 +204,8 @@
       "duplicate": false,
       "currentCount": 3,
       "scheduledCount": 0,
-      "registeredCount": 3
+      "registeredCount": 3,
+      "pendingCount": 0
     },
     {
       "code": "SG4_17(Tu1)",
@@ -215,7 +216,8 @@
       "duplicate": false,
       "currentCount": 4,
       "scheduledCount": 0,
-      "registeredCount": 4
+      "registeredCount": 4,
+      "pendingCount": 0
     },
     {
       "code": "GD4_11(Tu2)",
@@ -226,7 +228,8 @@
       "duplicate": false,
       "currentCount": 6,
       "scheduledCount": 0,
-      "registeredCount": 6
+      "registeredCount": 6,
+      "pendingCount": 0
     },
     {
       "code": "GD5_3(Tu2)",
@@ -237,7 +240,8 @@
       "duplicate": false,
       "currentCount": 1,
       "scheduledCount": 0,
-      "registeredCount": 1
+      "registeredCount": 1,
+      "pendingCount": 0
     },
     {
       "code": "GW5_3(Tu2)",
@@ -248,7 +252,8 @@
       "duplicate": false,
       "currentCount": 4,
       "scheduledCount": 0,
-      "registeredCount": 4
+      "registeredCount": 4,
+      "pendingCount": 0
     },
     {
       "code": "SG5_3(Tu2)",
@@ -259,7 +264,8 @@
       "duplicate": false,
       "currentCount": 2,
       "scheduledCount": 0,
-      "registeredCount": 2
+      "registeredCount": 2,
+      "pendingCount": 0
     },
     {
       "code": "SG3_3(Tu3)",
@@ -270,7 +276,8 @@
       "duplicate": false,
       "currentCount": 4,
       "scheduledCount": 0,
-      "registeredCount": 4
+      "registeredCount": 4,
+      "pendingCount": 0
     },
     {
       "code": "SG5_14(Tu3)",
@@ -281,7 +288,8 @@
       "duplicate": false,
       "currentCount": 0,
       "scheduledCount": 0,
-      "registeredCount": 0
+      "registeredCount": 0,
+      "pendingCount": 0
     },
     {
       "code": "GD5_4(Th2)",
@@ -292,7 +300,8 @@
       "duplicate": false,
       "currentCount": 3,
       "scheduledCount": 0,
-      "registeredCount": 3
+      "registeredCount": 3,
+      "pendingCount": 0
     },
     {
       "code": "GD5_7(Th2)",
@@ -303,7 +312,8 @@
       "duplicate": false,
       "currentCount": 4,
       "scheduledCount": 0,
-      "registeredCount": 4
+      "registeredCount": 4,
+      "pendingCount": 0
     },
     {
       "code": "GW4_13(Th2)",
@@ -314,7 +324,8 @@
       "duplicate": false,
       "currentCount": 6,
       "scheduledCount": 0,
-      "registeredCount": 6
+      "registeredCount": 6,
+      "pendingCount": 0
     },
     {
       "code": "GW5_14(Th3)",
@@ -325,7 +336,8 @@
       "duplicate": false,
       "currentCount": 2,
       "scheduledCount": 0,
-      "registeredCount": 2
+      "registeredCount": 2,
+      "pendingCount": 0
     },
     {
       "code": "GD5_11(Sat1)",
@@ -336,7 +348,8 @@
       "duplicate": false,
       "currentCount": 2,
       "scheduledCount": 0,
-      "registeredCount": 2
+      "registeredCount": 2,
+      "pendingCount": 0
     },
     {
       "code": "SG3_4(Sat1)",
@@ -347,7 +360,8 @@
       "duplicate": false,
       "currentCount": 5,
       "scheduledCount": 0,
-      "registeredCount": 5
+      "registeredCount": 5,
+      "pendingCount": 0
     },
     {
       "code": "SG4_2(Sat1)",
@@ -358,7 +372,8 @@
       "duplicate": false,
       "currentCount": 2,
       "scheduledCount": 0,
-      "registeredCount": 2
+      "registeredCount": 2,
+      "pendingCount": 0
     },
     {
       "code": "SR4_2(Sat1)",
@@ -369,7 +384,8 @@
       "duplicate": false,
       "currentCount": 5,
       "scheduledCount": 0,
-      "registeredCount": 5
+      "registeredCount": 5,
+      "pendingCount": 0
     },
     {
       "code": "GD5_10(Sat2)",
@@ -380,7 +396,8 @@
       "duplicate": false,
       "currentCount": 1,
       "scheduledCount": 0,
-      "registeredCount": 1
+      "registeredCount": 1,
+      "pendingCount": 0
     },
     {
       "code": "SG2_1(Sat2)",
@@ -391,7 +408,8 @@
       "duplicate": false,
       "currentCount": 2,
       "scheduledCount": 1,
-      "registeredCount": 3
+      "registeredCount": 3,
+      "pendingCount": 0
     },
     {
       "code": "SG4_14(Sat2)",
@@ -402,7 +420,8 @@
       "duplicate": false,
       "currentCount": 1,
       "scheduledCount": 0,
-      "registeredCount": 1
+      "registeredCount": 1,
+      "pendingCount": 0
     },
     {
       "code": "GW5_6(Sat3)",
@@ -413,7 +432,8 @@
       "duplicate": false,
       "currentCount": 1,
       "scheduledCount": 0,
-      "registeredCount": 1
+      "registeredCount": 1,
+      "pendingCount": 0
     },
     {
       "code": "SG5_15(Sat3)",
@@ -424,7 +444,8 @@
       "duplicate": false,
       "currentCount": 1,
       "scheduledCount": 0,
-      "registeredCount": 1
+      "registeredCount": 1,
+      "pendingCount": 0
     },
     {
       "code": "GW3_4(Sat4)",
@@ -435,7 +456,8 @@
       "duplicate": false,
       "currentCount": 3,
       "scheduledCount": 0,
-      "registeredCount": 3
+      "registeredCount": 3,
+      "pendingCount": 0
     },
     {
       "code": "GW4_1(Sat4)",
@@ -444,9 +466,10 @@
       "teacher": "David B",
       "isNew": false,
       "duplicate": true,
-      "currentCount": 3,
+      "currentCount": 2,
       "scheduledCount": 0,
-      "registeredCount": 3
+      "registeredCount": 2,
+      "pendingCount": 1
     },
     {
       "code": "GW4_18(Sat4)",
@@ -457,7 +480,8 @@
       "duplicate": true,
       "currentCount": 4,
       "scheduledCount": 0,
-      "registeredCount": 4
+      "registeredCount": 4,
+      "pendingCount": 0
     },
     {
       "code": "SG4_15(Sat4)",
@@ -468,7 +492,8 @@
       "duplicate": false,
       "currentCount": 1,
       "scheduledCount": 0,
-      "registeredCount": 1
+      "registeredCount": 1,
+      "pendingCount": 0
     },
     {
       "code": "GD3_1(Sat5)",
@@ -479,7 +504,8 @@
       "duplicate": false,
       "currentCount": 3,
       "scheduledCount": 1,
-      "registeredCount": 4
+      "registeredCount": 4,
+      "pendingCount": 0
     },
     {
       "code": "SG5_4(Sat5)",
@@ -490,7 +516,8 @@
       "duplicate": false,
       "currentCount": 1,
       "scheduledCount": 0,
-      "registeredCount": 1
+      "registeredCount": 1,
+      "pendingCount": 0
     },
     {
       "code": "GW4_17(Sun1)",
@@ -501,7 +528,8 @@
       "duplicate": false,
       "currentCount": 5,
       "scheduledCount": 0,
-      "registeredCount": 5
+      "registeredCount": 5,
+      "pendingCount": 0
     },
     {
       "code": "GW5_8(Sun1)",
@@ -512,7 +540,8 @@
       "duplicate": false,
       "currentCount": 4,
       "scheduledCount": 0,
-      "registeredCount": 4
+      "registeredCount": 4,
+      "pendingCount": 0
     },
     {
       "code": "SR2_1(Sun1)",
@@ -523,7 +552,8 @@
       "duplicate": false,
       "currentCount": 4,
       "scheduledCount": 0,
-      "registeredCount": 4
+      "registeredCount": 4,
+      "pendingCount": 0
     },
     {
       "code": "SR3_1(Sun1)",
@@ -534,7 +564,8 @@
       "duplicate": false,
       "currentCount": 6,
       "scheduledCount": 0,
-      "registeredCount": 6
+      "registeredCount": 6,
+      "pendingCount": 0
     },
     {
       "code": "GD4_10(Sun2)",
@@ -545,7 +576,8 @@
       "duplicate": false,
       "currentCount": 6,
       "scheduledCount": 0,
-      "registeredCount": 6
+      "registeredCount": 6,
+      "pendingCount": 0
     },
     {
       "code": "SR5_6(Sun2)",
@@ -556,7 +588,8 @@
       "duplicate": false,
       "currentCount": 1,
       "scheduledCount": 0,
-      "registeredCount": 1
+      "registeredCount": 1,
+      "pendingCount": 0
     },
     {
       "code": "GW5_25(Sun3)",
@@ -567,7 +600,8 @@
       "duplicate": false,
       "currentCount": 2,
       "scheduledCount": 0,
-      "registeredCount": 2
+      "registeredCount": 2,
+      "pendingCount": 0
     },
     {
       "code": "SG5_11(Sun3)",
@@ -578,7 +612,8 @@
       "duplicate": false,
       "currentCount": 0,
       "scheduledCount": 0,
-      "registeredCount": 0
+      "registeredCount": 0,
+      "pendingCount": 0
     },
     {
       "code": "GD5_12(Sun4)",
@@ -589,7 +624,8 @@
       "duplicate": false,
       "currentCount": 2,
       "scheduledCount": 0,
-      "registeredCount": 2
+      "registeredCount": 2,
+      "pendingCount": 0
     },
     {
       "code": "GW4_14(Sun4)",
@@ -600,7 +636,8 @@
       "duplicate": false,
       "currentCount": 6,
       "scheduledCount": 0,
-      "registeredCount": 6
+      "registeredCount": 6,
+      "pendingCount": 0
     },
     {
       "code": "SG4_8(Sun4)",
@@ -611,7 +648,8 @@
       "duplicate": false,
       "currentCount": 3,
       "scheduledCount": 0,
-      "registeredCount": 3
+      "registeredCount": 3,
+      "pendingCount": 0
     },
     {
       "code": "SG3_5(Sun5)",
@@ -622,7 +660,8 @@
       "duplicate": false,
       "currentCount": 1,
       "scheduledCount": 0,
-      "registeredCount": 1
+      "registeredCount": 1,
+      "pendingCount": 0
     },
     {
       "code": "SR5_1(Sun5)",
@@ -633,7 +672,8 @@
       "duplicate": false,
       "currentCount": 3,
       "scheduledCount": 0,
-      "registeredCount": 3
+      "registeredCount": 3,
+      "pendingCount": 0
     },
     {
       "code": "GW1_1(Tu1)",
@@ -644,7 +684,8 @@
       "duplicate": false,
       "currentCount": 0,
       "scheduledCount": 0,
-      "registeredCount": 0
+      "registeredCount": 0,
+      "pendingCount": 0
     },
     {
       "code": "GD2_1(Tu1)",
@@ -655,7 +696,8 @@
       "duplicate": false,
       "currentCount": 0,
       "scheduledCount": 0,
-      "registeredCount": 0
+      "registeredCount": 0,
+      "pendingCount": 0
     },
     {
       "code": "SG1_1(Tu1)",
@@ -666,7 +708,8 @@
       "duplicate": false,
       "currentCount": 0,
       "scheduledCount": 0,
-      "registeredCount": 0
+      "registeredCount": 0,
+      "pendingCount": 0
     },
     {
       "code": "GW2_1(Tu2)",
@@ -677,7 +720,8 @@
       "duplicate": false,
       "currentCount": 0,
       "scheduledCount": 0,
-      "registeredCount": 0
+      "registeredCount": 0,
+      "pendingCount": 0
     },
     {
       "code": "SG2_2(Tu2)",
@@ -688,7 +732,8 @@
       "duplicate": false,
       "currentCount": 0,
       "scheduledCount": 1,
-      "registeredCount": 1
+      "registeredCount": 1,
+      "pendingCount": 0
     },
     {
       "code": "GD1_1(Th1)",
@@ -699,7 +744,8 @@
       "duplicate": false,
       "currentCount": 0,
       "scheduledCount": 0,
-      "registeredCount": 0
+      "registeredCount": 0,
+      "pendingCount": 0
     },
     {
       "code": "SR1_1(Th1)",
@@ -710,7 +756,8 @@
       "duplicate": false,
       "currentCount": 0,
       "scheduledCount": 1,
-      "registeredCount": 1
+      "registeredCount": 1,
+      "pendingCount": 0
     },
     {
       "code": "SR2_2(Th2)",
@@ -721,7 +768,8 @@
       "duplicate": false,
       "currentCount": 0,
       "scheduledCount": 1,
-      "registeredCount": 1
+      "registeredCount": 1,
+      "pendingCount": 0
     },
     {
       "code": "GW2_2(Sat2)",
@@ -732,7 +780,8 @@
       "duplicate": false,
       "currentCount": 0,
       "scheduledCount": 1,
-      "registeredCount": 1
+      "registeredCount": 1,
+      "pendingCount": 0
     },
     {
       "code": "GD2_2(Sat1)",
@@ -743,7 +792,8 @@
       "duplicate": false,
       "currentCount": 0,
       "scheduledCount": 0,
-      "registeredCount": 0
+      "registeredCount": 0,
+      "pendingCount": 0
     },
     {
       "code": "GW2_3(Sun3)",
@@ -754,7 +804,8 @@
       "duplicate": false,
       "currentCount": 0,
       "scheduledCount": 0,
-      "registeredCount": 0
+      "registeredCount": 0,
+      "pendingCount": 0
     },
     {
       "code": "GD3_2(Tu2)",
@@ -765,7 +816,8 @@
       "duplicate": false,
       "currentCount": 0,
       "scheduledCount": 0,
-      "registeredCount": 0
+      "registeredCount": 0,
+      "pendingCount": 0
     },
     {
       "code": "GW3_5(Th2)",
@@ -776,7 +828,8 @@
       "duplicate": false,
       "currentCount": 0,
       "scheduledCount": 0,
-      "registeredCount": 0
+      "registeredCount": 0,
+      "pendingCount": 0
     }
   ],
   "closing": [
