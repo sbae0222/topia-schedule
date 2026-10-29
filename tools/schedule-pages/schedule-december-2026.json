@@ -1,7 +1,7 @@
 {
-  "version": "2026-12-faculty-v6",
+  "version": "2026-12-faculty-v7",
   "term": "2026-12",
-  "updatedKst": "2026-10-29T12:42:53+09:00",
+  "updatedKst": "2026-10-29T20:39:38+09:00",
   "teachers": [
     {
       "key": "Skye",
@@ -232,18 +232,6 @@
       "pendingCount": 0
     },
     {
-      "code": "GD5_3(Tu2)",
-      "level": "GD5",
-      "group": "Tu2",
-      "teacher": "Kimberley R",
-      "isNew": false,
-      "duplicate": false,
-      "currentCount": 1,
-      "scheduledCount": 0,
-      "registeredCount": 1,
-      "pendingCount": 0
-    },
-    {
       "code": "GW5_3(Tu2)",
       "level": "GW5",
       "group": "Tu2",
@@ -277,18 +265,6 @@
       "currentCount": 4,
       "scheduledCount": 0,
       "registeredCount": 4,
-      "pendingCount": 0
-    },
-    {
-      "code": "SG5_14(Tu3)",
-      "level": "SG5",
-      "group": "Tu3",
-      "teacher": "Skye",
-      "isNew": false,
-      "duplicate": false,
-      "currentCount": 0,
-      "scheduledCount": 0,
-      "registeredCount": 0,
       "pendingCount": 0
     },
     {
@@ -358,9 +334,9 @@
       "teacher": "Danny C",
       "isNew": false,
       "duplicate": false,
-      "currentCount": 5,
+      "currentCount": 4,
       "scheduledCount": 0,
-      "registeredCount": 5,
+      "registeredCount": 4,
       "pendingCount": 0
     },
     {
@@ -388,18 +364,6 @@
       "pendingCount": 0
     },
     {
-      "code": "GD5_10(Sat2)",
-      "level": "GD5",
-      "group": "Sat2",
-      "teacher": "Andrew A",
-      "isNew": false,
-      "duplicate": false,
-      "currentCount": 1,
-      "scheduledCount": 0,
-      "registeredCount": 1,
-      "pendingCount": 0
-    },
-    {
       "code": "SG2_1(Sat2)",
       "level": "SG2",
       "group": "Sat2",
@@ -409,42 +373,6 @@
       "currentCount": 2,
       "scheduledCount": 1,
       "registeredCount": 3,
-      "pendingCount": 0
-    },
-    {
-      "code": "SG4_14(Sat2)",
-      "level": "SG4",
-      "group": "Sat2",
-      "teacher": "Skye",
-      "isNew": false,
-      "duplicate": false,
-      "currentCount": 1,
-      "scheduledCount": 0,
-      "registeredCount": 1,
-      "pendingCount": 0
-    },
-    {
-      "code": "GW5_6(Sat3)",
-      "level": "GW5",
-      "group": "Sat3",
-      "teacher": "Angie K",
-      "isNew": false,
-      "duplicate": false,
-      "currentCount": 1,
-      "scheduledCount": 0,
-      "registeredCount": 1,
-      "pendingCount": 0
-    },
-    {
-      "code": "SG5_15(Sat3)",
-      "level": "SG5",
-      "group": "Sat3",
-      "teacher": "Skye",
-      "isNew": false,
-      "duplicate": false,
-      "currentCount": 1,
-      "scheduledCount": 0,
-      "registeredCount": 1,
       "pendingCount": 0
     },
     {
@@ -484,18 +412,6 @@
       "pendingCount": 0
     },
     {
-      "code": "SG4_15(Sat4)",
-      "level": "SG4",
-      "group": "Sat4",
-      "teacher": "Skye",
-      "isNew": false,
-      "duplicate": false,
-      "currentCount": 1,
-      "scheduledCount": 0,
-      "registeredCount": 1,
-      "pendingCount": 0
-    },
-    {
       "code": "GD3_1(Sat5)",
       "level": "GD3",
       "group": "Sat5",
@@ -505,18 +421,6 @@
       "currentCount": 3,
       "scheduledCount": 1,
       "registeredCount": 4,
-      "pendingCount": 0
-    },
-    {
-      "code": "SG5_4(Sat5)",
-      "level": "SG5",
-      "group": "Sat5",
-      "teacher": "Skye",
-      "isNew": false,
-      "duplicate": false,
-      "currentCount": 1,
-      "scheduledCount": 0,
-      "registeredCount": 1,
       "pendingCount": 0
     },
     {
@@ -580,18 +484,6 @@
       "pendingCount": 0
     },
     {
-      "code": "SR5_6(Sun2)",
-      "level": "SR5",
-      "group": "Sun2",
-      "teacher": "Skye",
-      "isNew": false,
-      "duplicate": false,
-      "currentCount": 1,
-      "scheduledCount": 0,
-      "registeredCount": 1,
-      "pendingCount": 0
-    },
-    {
       "code": "GW5_25(Sun3)",
       "level": "GW5",
       "group": "Sun3",
@@ -601,18 +493,6 @@
       "currentCount": 2,
       "scheduledCount": 0,
       "registeredCount": 2,
-      "pendingCount": 0
-    },
-    {
-      "code": "SG5_11(Sun3)",
-      "level": "SG5",
-      "group": "Sun3",
-      "teacher": "Skye",
-      "isNew": false,
-      "duplicate": false,
-      "currentCount": 0,
-      "scheduledCount": 0,
-      "registeredCount": 0,
       "pendingCount": 0
     },
     {
@@ -814,9 +694,9 @@
       "teacher": "Angie K",
       "isNew": true,
       "duplicate": false,
-      "currentCount": 0,
+      "currentCount": 1,
       "scheduledCount": 0,
-      "registeredCount": 0,
+      "registeredCount": 1,
       "pendingCount": 0
     },
     {
@@ -832,22 +712,19 @@
       "pendingCount": 0
     }
   ],
-  "closing": [
-    {
-      "code": "GW5_15(Sun4)",
-      "level": "GW5",
-      "group": "Sun4"
-    }
-  ],
+  "closing": [],
   "available": {
     "Tu1": [
       "Chloe J"
     ],
-    "Tu2": [],
+    "Tu2": [
+      "Kimberley R"
+    ],
     "Tu3": [
       "Angie K",
       "Kimberley R",
-      "Chloe J"
+      "Chloe J",
+      "Skye"
     ],
     "Th1": [
       "Angie K",
@@ -860,18 +737,30 @@
       "Danny C"
     ],
     "Sat1": [],
-    "Sat2": [],
+    "Sat2": [
+      "Andrew A",
+      "Skye"
+    ],
     "Sat3": [
+      "Angie K",
       "Danny C",
+      "Skye",
       "Joanne"
     ],
-    "Sat4": [],
+    "Sat4": [
+      "Skye"
+    ],
     "Sat5": [
-      "Angie K"
+      "Angie K",
+      "Skye"
     ],
     "Sun1": [],
-    "Sun2": [],
-    "Sun3": [],
+    "Sun2": [
+      "Skye"
+    ],
+    "Sun3": [
+      "Skye"
+    ],
     "Sun4": [],
     "Sun5": [
       "Danny C",
