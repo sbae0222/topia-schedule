@@ -1,7 +1,7 @@
 {
-  "version": "2026-12-faculty-v10",
+  "version": "2026-12-faculty-v11",
   "term": "2026-12",
-  "updatedKst": "2026-10-30T14:14:58+09:00",
+  "updatedKst": "2026-11-09T17:00:32+09:00",
   "teachers": [
     {
       "key": "Skye",
@@ -226,9 +226,9 @@
       "teacher": "Jess AS",
       "isNew": false,
       "duplicate": false,
-      "currentCount": 6,
+      "currentCount": 2,
       "scheduledCount": 0,
-      "registeredCount": 6,
+      "registeredCount": 2,
       "pendingCount": 0
     },
     {
@@ -262,9 +262,9 @@
       "teacher": "Danny C",
       "isNew": false,
       "duplicate": false,
-      "currentCount": 4,
+      "currentCount": 5,
       "scheduledCount": 0,
-      "registeredCount": 4,
+      "registeredCount": 5,
       "pendingCount": 0
     },
     {
@@ -298,9 +298,9 @@
       "teacher": "Angie K",
       "isNew": false,
       "duplicate": false,
-      "currentCount": 6,
+      "currentCount": 4,
       "scheduledCount": 0,
-      "registeredCount": 6,
+      "registeredCount": 4,
       "pendingCount": 0
     },
     {
@@ -322,9 +322,9 @@
       "teacher": "Andrew A",
       "isNew": false,
       "duplicate": false,
-      "currentCount": 2,
+      "currentCount": 1,
       "scheduledCount": 0,
-      "registeredCount": 2,
+      "registeredCount": 1,
       "pendingCount": 0
     },
     {
@@ -358,8 +358,8 @@
       "teacher": "Skye",
       "isNew": false,
       "duplicate": false,
-      "currentCount": 5,
-      "scheduledCount": 0,
+      "currentCount": 4,
+      "scheduledCount": 1,
       "registeredCount": 5,
       "pendingCount": 0
     },
@@ -382,9 +382,9 @@
       "teacher": "Angie K",
       "isNew": false,
       "duplicate": false,
-      "currentCount": 3,
+      "currentCount": 4,
       "scheduledCount": 0,
-      "registeredCount": 3,
+      "registeredCount": 4,
       "pendingCount": 0
     },
     {
@@ -395,8 +395,8 @@
       "isNew": false,
       "duplicate": true,
       "currentCount": 2,
-      "scheduledCount": 0,
-      "registeredCount": 2,
+      "scheduledCount": 2,
+      "registeredCount": 4,
       "pendingCount": 1
     },
     {
@@ -478,9 +478,9 @@
       "teacher": "Andrew A",
       "isNew": false,
       "duplicate": false,
-      "currentCount": 6,
+      "currentCount": 4,
       "scheduledCount": 0,
-      "registeredCount": 6,
+      "registeredCount": 4,
       "pendingCount": 0
     },
     {
@@ -574,9 +574,9 @@
       "teacher": "Jess AS",
       "isNew": true,
       "duplicate": false,
-      "currentCount": 0,
+      "currentCount": 1,
       "scheduledCount": 0,
-      "registeredCount": 0,
+      "registeredCount": 1,
       "pendingCount": 0
     },
     {
@@ -610,9 +610,9 @@
       "teacher": "Danny C",
       "isNew": true,
       "duplicate": false,
-      "currentCount": 0,
+      "currentCount": 1,
       "scheduledCount": 1,
-      "registeredCount": 1,
+      "registeredCount": 2,
       "pendingCount": 0
     },
     {
@@ -647,8 +647,8 @@
       "isNew": true,
       "duplicate": false,
       "currentCount": 0,
-      "scheduledCount": 1,
-      "registeredCount": 1,
+      "scheduledCount": 2,
+      "registeredCount": 2,
       "pendingCount": 0
     },
     {
@@ -671,8 +671,8 @@
       "isNew": true,
       "duplicate": false,
       "currentCount": 0,
-      "scheduledCount": 0,
-      "registeredCount": 0,
+      "scheduledCount": 2,
+      "registeredCount": 2,
       "pendingCount": 0
     },
     {
@@ -694,9 +694,9 @@
       "teacher": "Angie K",
       "isNew": true,
       "duplicate": false,
-      "currentCount": 1,
+      "currentCount": 4,
       "scheduledCount": 0,
-      "registeredCount": 1,
+      "registeredCount": 4,
       "pendingCount": 0
     },
     {
@@ -707,8 +707,8 @@
       "isNew": true,
       "duplicate": false,
       "currentCount": 0,
-      "scheduledCount": 0,
-      "registeredCount": 0,
+      "scheduledCount": 1,
+      "registeredCount": 1,
       "pendingCount": 0
     },
     {
@@ -779,8 +779,8 @@
       "isNew": true,
       "duplicate": false,
       "currentCount": 0,
-      "scheduledCount": 0,
-      "registeredCount": 0,
+      "scheduledCount": 1,
+      "registeredCount": 1,
       "pendingCount": 0
     },
     {
@@ -818,6 +818,18 @@
       "scheduledCount": 0,
       "registeredCount": 0,
       "pendingCount": 0
+    },
+    {
+      "code": "SG3_8(Th1)",
+      "level": "SG3",
+      "group": "Th1",
+      "teacher": "Danny C",
+      "isNew": true,
+      "duplicate": false,
+      "currentCount": 0,
+      "scheduledCount": 0,
+      "registeredCount": 0,
+      "pendingCount": 0
     }
   ],
   "closing": [],
@@ -834,8 +846,7 @@
       "Chloe J"
     ],
     "Th1": [
-      "Angie K",
-      "Danny C"
+      "Angie K"
     ],
     "Th2": [],
     "Th3": [
@@ -863,10 +874,11 @@
   },
   "rosterUrl": "https://topia-december-2026-review-20261021.vercel.app/",
   "availabilityNotes": {
-    "Chloe J": "평일 하루 최대 4시간 · 화17 또는 화21 중 한 타임만 추가 가능 · 목21 추가 배정 불가. / Weekday limit: 4 hours per day. One additional Tuesday slot (17:00 or 21:00); Thursday 21:00 unavailable. / Sunday17:00 is a conditional additional slot; reconfirm after agreement to retain Sunday09:00.",
+    "Chloe J": "평일 하루 최대 2수업 · 화17 또는 화21 중 한 타임만 추가 가능 · 목21 추가 배정 불가. / Weekday limit: 4 hours per day. One additional Tuesday slot (17:00 or 21:00); Thursday 21:00 unavailable. / Sunday17:00 is a conditional additional slot; reconfirm after agreement to retain Sunday09:00.",
     "Joanne": "써밋 강사 · 토요일 15:00 가능 / Summit teacher · Available Saturday 15:00 KST.",
     "Skye": "화요일3반·토요일5반·일요일5반 편성. 모든 시간은 한국시간입니다.",
     "Angie K": "토15 GW1 신규반의 LM 과목·강사 저장 확인 완료.",
-    "Madelein L": "일15·17 배정. 일19 추가는20:45 종료 가능 여부 확인 필요. / Sunday19:00 needs confirmation of availability until20:45 KST."
+    "Madelein L": "11/4 회신: 화·목17/19/21, 일15/17 가능. 일19 가능 회신 없음. / Reported availability Tue/Thu17,19,21; Sun15,17 KST.",
+    "Danny C": "목17 SG3 신규 배정 완료. 화3·목2·토2 총7타임. / Thursday17:00 SG3 added; 7 weekly classes."
   }
 }
