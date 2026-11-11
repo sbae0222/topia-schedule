@@ -1,7 +1,7 @@
 {
-  "version": "2026-12-faculty-v11",
+  "version": "2026-12-faculty-v12",
   "term": "2026-12",
-  "updatedKst": "2026-11-09T17:04:30+09:00",
+  "updatedKst": "2026-11-11T21:08:05+09:00",
   "teachers": [
     {
       "key": "Skye",
@@ -262,9 +262,9 @@
       "teacher": "Danny C",
       "isNew": false,
       "duplicate": false,
-      "currentCount": 5,
+      "currentCount": 6,
       "scheduledCount": 0,
-      "registeredCount": 5,
+      "registeredCount": 6,
       "pendingCount": 0
     },
     {
@@ -286,9 +286,9 @@
       "teacher": "Kimberley R",
       "isNew": false,
       "duplicate": false,
-      "currentCount": 4,
+      "currentCount": 6,
       "scheduledCount": 0,
-      "registeredCount": 4,
+      "registeredCount": 6,
       "pendingCount": 0
     },
     {
@@ -334,9 +334,9 @@
       "teacher": "Danny C",
       "isNew": false,
       "duplicate": false,
-      "currentCount": 4,
+      "currentCount": 3,
       "scheduledCount": 0,
-      "registeredCount": 4,
+      "registeredCount": 3,
       "pendingCount": 0
     },
     {
@@ -370,9 +370,9 @@
       "teacher": "Danny C",
       "isNew": false,
       "duplicate": false,
-      "currentCount": 2,
+      "currentCount": 3,
       "scheduledCount": 1,
-      "registeredCount": 3,
+      "registeredCount": 4,
       "pendingCount": 0
     },
     {
@@ -397,7 +397,7 @@
       "currentCount": 2,
       "scheduledCount": 2,
       "registeredCount": 4,
-      "pendingCount": 1
+      "pendingCount": 0
     },
     {
       "code": "GW4_18(Sat4)",
@@ -406,9 +406,9 @@
       "teacher": "Kimberley R",
       "isNew": false,
       "duplicate": true,
-      "currentCount": 4,
+      "currentCount": 3,
       "scheduledCount": 0,
-      "registeredCount": 4,
+      "registeredCount": 3,
       "pendingCount": 0
     },
     {
@@ -419,8 +419,8 @@
       "isNew": false,
       "duplicate": false,
       "currentCount": 3,
-      "scheduledCount": 1,
-      "registeredCount": 4,
+      "scheduledCount": 2,
+      "registeredCount": 5,
       "pendingCount": 0
     },
     {
@@ -490,9 +490,9 @@
       "teacher": "Andrew A",
       "isNew": false,
       "duplicate": false,
-      "currentCount": 2,
+      "currentCount": 3,
       "scheduledCount": 0,
-      "registeredCount": 2,
+      "registeredCount": 3,
       "pendingCount": 0
     },
     {
@@ -539,8 +539,8 @@
       "isNew": false,
       "duplicate": false,
       "currentCount": 1,
-      "scheduledCount": 0,
-      "registeredCount": 1,
+      "scheduledCount": 1,
+      "registeredCount": 2,
       "pendingCount": 0
     },
     {
@@ -574,9 +574,9 @@
       "teacher": "Jess AS",
       "isNew": true,
       "duplicate": false,
-      "currentCount": 1,
+      "currentCount": 3,
       "scheduledCount": 0,
-      "registeredCount": 1,
+      "registeredCount": 3,
       "pendingCount": 0
     },
     {
@@ -598,9 +598,9 @@
       "teacher": "Chloe J",
       "isNew": true,
       "duplicate": false,
-      "currentCount": 0,
+      "currentCount": 1,
       "scheduledCount": 0,
-      "registeredCount": 0,
+      "registeredCount": 1,
       "pendingCount": 0
     },
     {
@@ -659,8 +659,8 @@
       "isNew": true,
       "duplicate": false,
       "currentCount": 0,
-      "scheduledCount": 1,
-      "registeredCount": 1,
+      "scheduledCount": 2,
+      "registeredCount": 2,
       "pendingCount": 0
     },
     {
@@ -694,9 +694,9 @@
       "teacher": "Angie K",
       "isNew": true,
       "duplicate": false,
-      "currentCount": 4,
+      "currentCount": 5,
       "scheduledCount": 0,
-      "registeredCount": 4,
+      "registeredCount": 5,
       "pendingCount": 0
     },
     {
@@ -706,9 +706,9 @@
       "teacher": "Chloe J",
       "isNew": true,
       "duplicate": false,
-      "currentCount": 0,
+      "currentCount": 1,
       "scheduledCount": 1,
-      "registeredCount": 1,
+      "registeredCount": 2,
       "pendingCount": 0
     },
     {
@@ -755,8 +755,8 @@
       "isNew": true,
       "duplicate": false,
       "currentCount": 0,
-      "scheduledCount": 0,
-      "registeredCount": 0,
+      "scheduledCount": 1,
+      "registeredCount": 1,
       "pendingCount": 0
     },
     {
@@ -766,9 +766,9 @@
       "teacher": "Skye",
       "isNew": true,
       "duplicate": false,
-      "currentCount": 0,
+      "currentCount": 1,
       "scheduledCount": 0,
-      "registeredCount": 0,
+      "registeredCount": 1,
       "pendingCount": 0
     },
     {
@@ -803,8 +803,8 @@
       "isNew": true,
       "duplicate": false,
       "currentCount": 0,
-      "scheduledCount": 0,
-      "registeredCount": 0,
+      "scheduledCount": 1,
+      "registeredCount": 1,
       "pendingCount": 0
     },
     {
@@ -815,8 +815,8 @@
       "isNew": true,
       "duplicate": false,
       "currentCount": 0,
-      "scheduledCount": 0,
-      "registeredCount": 0,
+      "scheduledCount": 1,
+      "registeredCount": 1,
       "pendingCount": 0
     },
     {
@@ -824,6 +824,30 @@
       "level": "SG3",
       "group": "Th1",
       "teacher": "Danny C",
+      "isNew": true,
+      "duplicate": false,
+      "currentCount": 0,
+      "scheduledCount": 0,
+      "registeredCount": 0,
+      "pendingCount": 0
+    },
+    {
+      "code": "GW3_6(Tu3)",
+      "level": "GW3",
+      "group": "Tu3",
+      "teacher": "Kimberley R",
+      "isNew": true,
+      "duplicate": false,
+      "currentCount": 0,
+      "scheduledCount": 0,
+      "registeredCount": 0,
+      "pendingCount": 0
+    },
+    {
+      "code": "GD3_4(Th3)",
+      "level": "GD3",
+      "group": "Th3",
+      "teacher": "Angie K",
       "isNew": true,
       "duplicate": false,
       "currentCount": 0,
@@ -842,7 +866,6 @@
     ],
     "Tu3": [
       "Angie K",
-      "Kimberley R",
       "Chloe J"
     ],
     "Th1": [
@@ -850,7 +873,6 @@
     ],
     "Th2": [],
     "Th3": [
-      "Angie K",
       "Kimberley R",
       "Danny C"
     ],
