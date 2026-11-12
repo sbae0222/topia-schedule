@@ -1,7 +1,7 @@
 {
-  "version": "2026-12-faculty-v12",
+  "version": "2026-12-faculty-v13",
   "term": "2026-12",
-  "updatedKst": "2026-11-11T21:08:05+09:00",
+  "updatedKst": "2026-11-12T10:24:51+09:00",
   "teachers": [
     {
       "key": "Skye",
@@ -62,6 +62,12 @@
       "name": "Joanne",
       "ko": "",
       "slug": "joanne"
+    },
+    {
+      "key": "Kc B",
+      "name": "KC",
+      "ko": "",
+      "slug": "kc"
     }
   ],
   "groups": {
@@ -214,9 +220,9 @@
       "teacher": "Skye",
       "isNew": false,
       "duplicate": false,
-      "currentCount": 4,
+      "currentCount": 5,
       "scheduledCount": 0,
-      "registeredCount": 4,
+      "registeredCount": 5,
       "pendingCount": 0
     },
     {
@@ -854,12 +860,37 @@
       "scheduledCount": 0,
       "registeredCount": 0,
       "pendingCount": 0
+    },
+    {
+      "code": "GD2_3(Tu3)",
+      "level": "GD2",
+      "group": "Tu3",
+      "teacher": "Kc B",
+      "isNew": true,
+      "duplicate": false,
+      "currentCount": 0,
+      "scheduledCount": 0,
+      "registeredCount": 0,
+      "pendingCount": 0
+    },
+    {
+      "code": "GW2_4(Th3)",
+      "level": "GW2",
+      "group": "Th3",
+      "teacher": "Madelein L",
+      "isNew": true,
+      "duplicate": false,
+      "currentCount": 0,
+      "scheduledCount": 0,
+      "registeredCount": 0,
+      "pendingCount": 0
     }
   ],
   "closing": [],
   "available": {
     "Tu1": [
-      "Chloe J"
+      "Chloe J",
+      "Kc B"
     ],
     "Tu2": [
       "Kimberley R"
@@ -869,12 +900,16 @@
       "Chloe J"
     ],
     "Th1": [
-      "Angie K"
+      "Angie K",
+      "Kc B"
     ],
-    "Th2": [],
+    "Th2": [
+      "Kc B"
+    ],
     "Th3": [
       "Kimberley R",
-      "Danny C"
+      "Danny C",
+      "Kc B"
     ],
     "Sat1": [],
     "Sat2": [],
@@ -882,16 +917,20 @@
       "Danny C",
       "Joanne"
     ],
-    "Sat4": [],
+    "Sat4": [
+      "Kc B"
+    ],
     "Sat5": [
-      "Angie K"
+      "Angie K",
+      "Kc B"
     ],
     "Sun1": [],
     "Sun2": [],
     "Sun3": [],
     "Sun4": [],
     "Sun5": [
-      "Danny C"
+      "Danny C",
+      "Kc B"
     ]
   },
   "rosterUrl": "https://topia-december-2026-review-20261021.vercel.app/",
@@ -901,6 +940,7 @@
     "Skye": "화요일3반·토요일5반·일요일5반 편성. 모든 시간은 한국시간입니다.",
     "Angie K": "토15 GW1 신규반의 LM 과목·강사 저장 확인 완료.",
     "Madelein L": "11/4 회신: 화·목17/19/21, 일15/17 가능. 일19 가능 회신 없음. / Reported availability Tue/Thu17,19,21; Sun15,17 KST.",
-    "Danny C": "목17 SG3 신규 배정 완료. 화3·목2·토2 총7타임. / Thursday17:00 SG3 added; 7 weekly classes."
+    "Danny C": "목17 SG3 신규 배정 완료. 화3·목2·토2 총7타임. / Thursday17:00 SG3 added; 7 weekly classes.",
+    "Kc B": "첫 시즌 저레벨 위주. 화21 GD2 배정 완료. / First term; Tuesday21:00 GD2 assigned."
   }
 }
