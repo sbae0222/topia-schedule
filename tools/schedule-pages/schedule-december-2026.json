@@ -1,7 +1,7 @@
 {
-  "version": "2026-12-faculty-v14",
+  "version": "2026-12-faculty-v15",
   "term": "2026-12",
-  "updatedKst": "2026-11-17T14:33:49+09:00",
+  "updatedKst": "2026-11-17T17:49:22+09:00",
   "teachers": [
     {
       "key": "Skye",
@@ -241,7 +241,7 @@
       "code": "GW5_3(Tu2)",
       "level": "GW5",
       "group": "Tu2",
-      "teacher": "David B",
+      "teacher": "Kimberley R",
       "isNew": false,
       "duplicate": false,
       "currentCount": 4,
@@ -903,9 +903,7 @@
     "Tu1": [
       "Kc B"
     ],
-    "Tu2": [
-      "Kimberley R"
-    ],
+    "Tu2": [],
     "Tu3": [
       "Angie K"
     ],
@@ -951,6 +949,7 @@
     "Angie K": "토15 GW1 신규반의 LM 과목·강사 저장 확인 완료.",
     "Madelein L": "11/4 회신: 화·목17/19/21, 일15/17 가능. 일19 가능 회신 없음. / Reported availability Tue/Thu17,19,21; Sun15,17 KST.",
     "Danny C": "목17 SG3 신규 배정 완료. 화3·목2·토2 총7타임. / Thursday17:00 SG3 added; 7 weekly classes.",
-    "Kc B": "첫 시즌 저레벨 위주. 화21 GD2 배정 완료. / First term; Tuesday21:00 GD2 assigned."
+    "Kc B": "첫 시즌 저레벨 위주. 화21 GD2 배정 완료. / First term; Tuesday21:00 GD2 assigned.",
+    "David B": "화요일 휴무 / Tuesdays off."
   }
 }
