@@ -22,7 +22,8 @@ def main():
   assert re.fullmatch(r'(?:GW|GD|SG|SR)[1-5]_\d+\([^)]+\)',r['code'])
   assert all(isinstance(r[k],int) and r[k]>=0 for k in ['currentCount','scheduledCount','registeredCount','pendingCount'])
   assert r['registeredCount']==r['currentCount']+r['scheduledCount']
-  assert r['teacher'] in names and r['group'] in d['groups']
+  assert r['group'] in d['groups']
+  assert r['teacher'] in names or (r['teacher'] is None and r['registeredCount']==0)
  for g,ts in d['available'].items():
   assert g in d['groups'] and set(ts)<=names
   assert not any(r['group']==g and r['teacher'] in ts for r in d['classes'])

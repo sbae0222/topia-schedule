@@ -1,7 +1,7 @@
 {
-  "version": "2026-12-faculty-v16",
+  "version": "2026-12-faculty-v17",
   "term": "2026-12",
-  "updatedKst": "2026-11-20T12:53:18+09:00",
+  "updatedKst": "2026-11-23T15:51:37+09:00",
   "teachers": [
     {
       "key": "Skye",
@@ -373,7 +373,7 @@
       "code": "SG2_1(Sat2)",
       "level": "SG2",
       "group": "Sat2",
-      "teacher": "Danny C",
+      "teacher": "Skye",
       "isNew": false,
       "duplicate": false,
       "currentCount": 3,
@@ -733,7 +733,7 @@
       "code": "SR1_2(Sat2)",
       "level": "SR1",
       "group": "Sat2",
-      "teacher": "Skye",
+      "teacher": null,
       "isNew": true,
       "duplicate": false,
       "currentCount": 0,
