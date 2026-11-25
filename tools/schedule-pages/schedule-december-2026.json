@@ -1,7 +1,7 @@
 {
-  "version": "2026-12-faculty-v17",
+  "version": "2026-12-faculty-v18",
   "term": "2026-12",
-  "updatedKst": "2026-11-23T15:51:37+09:00",
+  "updatedKst": "2026-11-25T17:42:34+09:00",
   "teachers": [
     {
       "key": "Skye",
@@ -208,9 +208,9 @@
       "teacher": "Angie K",
       "isNew": false,
       "duplicate": false,
-      "currentCount": 3,
       "scheduledCount": 0,
-      "registeredCount": 3,
+      "currentCount": 2,
+      "registeredCount": 2,
       "pendingCount": 0
     },
     {
@@ -220,8 +220,8 @@
       "teacher": "Skye",
       "isNew": false,
       "duplicate": false,
-      "currentCount": 5,
       "scheduledCount": 0,
+      "currentCount": 5,
       "registeredCount": 5,
       "pendingCount": 0
     },
@@ -232,9 +232,9 @@
       "teacher": "Jess AS",
       "isNew": false,
       "duplicate": false,
-      "currentCount": 3,
       "scheduledCount": 0,
-      "registeredCount": 3,
+      "currentCount": 2,
+      "registeredCount": 2,
       "pendingCount": 0
     },
     {
@@ -244,9 +244,9 @@
       "teacher": "Kimberley R",
       "isNew": false,
       "duplicate": false,
-      "currentCount": 4,
       "scheduledCount": 0,
-      "registeredCount": 4,
+      "currentCount": 2,
+      "registeredCount": 2,
       "pendingCount": 0
     },
     {
@@ -256,9 +256,9 @@
       "teacher": "Skye",
       "isNew": false,
       "duplicate": false,
-      "currentCount": 2,
       "scheduledCount": 0,
-      "registeredCount": 2,
+      "currentCount": 1,
+      "registeredCount": 1,
       "pendingCount": 0
     },
     {
@@ -268,9 +268,9 @@
       "teacher": "Danny C",
       "isNew": false,
       "duplicate": false,
-      "currentCount": 5,
       "scheduledCount": 0,
-      "registeredCount": 5,
+      "currentCount": 6,
+      "registeredCount": 6,
       "pendingCount": 0
     },
     {
@@ -280,8 +280,8 @@
       "teacher": "Jess AS",
       "isNew": false,
       "duplicate": false,
-      "currentCount": 3,
       "scheduledCount": 0,
+      "currentCount": 3,
       "registeredCount": 3,
       "pendingCount": 0
     },
@@ -292,8 +292,8 @@
       "teacher": "Kimberley R",
       "isNew": false,
       "duplicate": false,
-      "currentCount": 6,
       "scheduledCount": 0,
+      "currentCount": 6,
       "registeredCount": 6,
       "pendingCount": 0
     },
@@ -304,9 +304,9 @@
       "teacher": "Angie K",
       "isNew": false,
       "duplicate": false,
+      "scheduledCount": 2,
       "currentCount": 3,
-      "scheduledCount": 0,
-      "registeredCount": 3,
+      "registeredCount": 5,
       "pendingCount": 0
     },
     {
@@ -316,21 +316,9 @@
       "teacher": "Jess AS",
       "isNew": false,
       "duplicate": false,
+      "scheduledCount": 0,
       "currentCount": 2,
-      "scheduledCount": 0,
       "registeredCount": 2,
-      "pendingCount": 0
-    },
-    {
-      "code": "GD5_11(Sat1)",
-      "level": "GD5",
-      "group": "Sat1",
-      "teacher": "Andrew A",
-      "isNew": false,
-      "duplicate": false,
-      "currentCount": 1,
-      "scheduledCount": 0,
-      "registeredCount": 1,
       "pendingCount": 0
     },
     {
@@ -340,8 +328,8 @@
       "teacher": "Danny C",
       "isNew": false,
       "duplicate": false,
-      "currentCount": 3,
       "scheduledCount": 3,
+      "currentCount": 3,
       "registeredCount": 6,
       "pendingCount": 0
     },
@@ -352,9 +340,9 @@
       "teacher": "Chloe J",
       "isNew": false,
       "duplicate": false,
-      "currentCount": 2,
       "scheduledCount": 0,
-      "registeredCount": 2,
+      "currentCount": 1,
+      "registeredCount": 1,
       "pendingCount": 0
     },
     {
@@ -364,8 +352,8 @@
       "teacher": "Skye",
       "isNew": false,
       "duplicate": false,
-      "currentCount": 4,
       "scheduledCount": 1,
+      "currentCount": 4,
       "registeredCount": 5,
       "pendingCount": 0
     },
@@ -376,8 +364,8 @@
       "teacher": "Skye",
       "isNew": false,
       "duplicate": false,
-      "currentCount": 3,
       "scheduledCount": 1,
+      "currentCount": 3,
       "registeredCount": 4,
       "pendingCount": 0
     },
@@ -388,9 +376,9 @@
       "teacher": "Angie K",
       "isNew": false,
       "duplicate": false,
-      "currentCount": 3,
       "scheduledCount": 1,
-      "registeredCount": 4,
+      "currentCount": 4,
+      "registeredCount": 5,
       "pendingCount": 0
     },
     {
@@ -400,8 +388,8 @@
       "teacher": "David B",
       "isNew": false,
       "duplicate": true,
-      "currentCount": 2,
       "scheduledCount": 2,
+      "currentCount": 2,
       "registeredCount": 4,
       "pendingCount": 0
     },
@@ -412,8 +400,8 @@
       "teacher": "Kimberley R",
       "isNew": false,
       "duplicate": true,
-      "currentCount": 2,
       "scheduledCount": 0,
+      "currentCount": 2,
       "registeredCount": 2,
       "pendingCount": 0
     },
@@ -424,8 +412,8 @@
       "teacher": "Kimberley R",
       "isNew": false,
       "duplicate": false,
-      "currentCount": 3,
       "scheduledCount": 2,
+      "currentCount": 3,
       "registeredCount": 5,
       "pendingCount": 0
     },
@@ -436,8 +424,8 @@
       "teacher": "Andrew A",
       "isNew": false,
       "duplicate": false,
-      "currentCount": 5,
       "scheduledCount": 1,
+      "currentCount": 5,
       "registeredCount": 6,
       "pendingCount": 0
     },
@@ -448,9 +436,9 @@
       "teacher": "David B",
       "isNew": false,
       "duplicate": false,
-      "currentCount": 4,
       "scheduledCount": 0,
-      "registeredCount": 4,
+      "currentCount": 5,
+      "registeredCount": 5,
       "pendingCount": 0
     },
     {
@@ -460,8 +448,8 @@
       "teacher": "Chloe J",
       "isNew": false,
       "duplicate": false,
-      "currentCount": 4,
       "scheduledCount": 1,
+      "currentCount": 4,
       "registeredCount": 5,
       "pendingCount": 0
     },
@@ -472,8 +460,8 @@
       "teacher": "Skye",
       "isNew": false,
       "duplicate": false,
-      "currentCount": 5,
       "scheduledCount": 0,
+      "currentCount": 5,
       "registeredCount": 5,
       "pendingCount": 0
     },
@@ -484,9 +472,9 @@
       "teacher": "Andrew A",
       "isNew": false,
       "duplicate": false,
+      "scheduledCount": 1,
       "currentCount": 4,
-      "scheduledCount": 0,
-      "registeredCount": 4,
+      "registeredCount": 5,
       "pendingCount": 0
     },
     {
@@ -496,8 +484,8 @@
       "teacher": "Andrew A",
       "isNew": false,
       "duplicate": false,
-      "currentCount": 3,
       "scheduledCount": 0,
+      "currentCount": 3,
       "registeredCount": 3,
       "pendingCount": 0
     },
@@ -508,9 +496,9 @@
       "teacher": "Andrew A",
       "isNew": false,
       "duplicate": false,
-      "currentCount": 3,
       "scheduledCount": 0,
-      "registeredCount": 3,
+      "currentCount": 2,
+      "registeredCount": 2,
       "pendingCount": 0
     },
     {
@@ -520,8 +508,8 @@
       "teacher": "Madelein L",
       "isNew": false,
       "duplicate": false,
-      "currentCount": 6,
       "scheduledCount": 0,
+      "currentCount": 6,
       "registeredCount": 6,
       "pendingCount": 0
     },
@@ -532,9 +520,9 @@
       "teacher": "Skye",
       "isNew": false,
       "duplicate": false,
-      "currentCount": 4,
       "scheduledCount": 0,
-      "registeredCount": 4,
+      "currentCount": 5,
+      "registeredCount": 5,
       "pendingCount": 0
     },
     {
@@ -544,8 +532,8 @@
       "teacher": "Chloe J",
       "isNew": false,
       "duplicate": false,
-      "currentCount": 1,
       "scheduledCount": 2,
+      "currentCount": 1,
       "registeredCount": 3,
       "pendingCount": 0
     },
@@ -556,9 +544,9 @@
       "teacher": "Skye",
       "isNew": false,
       "duplicate": false,
-      "currentCount": 3,
       "scheduledCount": 0,
-      "registeredCount": 3,
+      "currentCount": 4,
+      "registeredCount": 4,
       "pendingCount": 0
     },
     {
@@ -568,8 +556,8 @@
       "teacher": "Kimberley R",
       "isNew": true,
       "duplicate": false,
-      "currentCount": 1,
       "scheduledCount": 0,
+      "currentCount": 1,
       "registeredCount": 1,
       "pendingCount": 0
     },
@@ -580,8 +568,8 @@
       "teacher": "Jess AS",
       "isNew": true,
       "duplicate": false,
-      "currentCount": 3,
       "scheduledCount": 0,
+      "currentCount": 3,
       "registeredCount": 3,
       "pendingCount": 0
     },
@@ -592,9 +580,9 @@
       "teacher": "Danny C",
       "isNew": true,
       "duplicate": false,
-      "currentCount": 0,
       "scheduledCount": 0,
-      "registeredCount": 0,
+      "currentCount": 1,
+      "registeredCount": 1,
       "pendingCount": 0
     },
     {
@@ -604,9 +592,9 @@
       "teacher": "Chloe J",
       "isNew": true,
       "duplicate": false,
-      "currentCount": 2,
       "scheduledCount": 0,
-      "registeredCount": 2,
+      "currentCount": 3,
+      "registeredCount": 3,
       "pendingCount": 0
     },
     {
@@ -616,9 +604,9 @@
       "teacher": "Danny C",
       "isNew": true,
       "duplicate": false,
+      "scheduledCount": 0,
       "currentCount": 1,
-      "scheduledCount": 1,
-      "registeredCount": 2,
+      "registeredCount": 1,
       "pendingCount": 0
     },
     {
@@ -628,9 +616,9 @@
       "teacher": "Kimberley R",
       "isNew": true,
       "duplicate": false,
+      "scheduledCount": 1,
       "currentCount": 0,
-      "scheduledCount": 0,
-      "registeredCount": 0,
+      "registeredCount": 1,
       "pendingCount": 0
     },
     {
@@ -640,8 +628,8 @@
       "teacher": "Chloe J",
       "isNew": true,
       "duplicate": false,
-      "currentCount": 0,
       "scheduledCount": 1,
+      "currentCount": 0,
       "registeredCount": 1,
       "pendingCount": 0
     },
@@ -652,9 +640,9 @@
       "teacher": "Danny C",
       "isNew": true,
       "duplicate": false,
+      "scheduledCount": 1,
       "currentCount": 0,
-      "scheduledCount": 2,
-      "registeredCount": 2,
+      "registeredCount": 1,
       "pendingCount": 0
     },
     {
@@ -664,9 +652,9 @@
       "teacher": "Angie K",
       "isNew": true,
       "duplicate": false,
+      "scheduledCount": 3,
       "currentCount": 0,
-      "scheduledCount": 2,
-      "registeredCount": 2,
+      "registeredCount": 3,
       "pendingCount": 0
     },
     {
@@ -676,8 +664,8 @@
       "teacher": "Angie K",
       "isNew": true,
       "duplicate": false,
-      "currentCount": 0,
       "scheduledCount": 2,
+      "currentCount": 0,
       "registeredCount": 2,
       "pendingCount": 0
     },
@@ -688,9 +676,9 @@
       "teacher": "Madelein L",
       "isNew": true,
       "duplicate": false,
+      "scheduledCount": 1,
       "currentCount": 0,
-      "scheduledCount": 0,
-      "registeredCount": 0,
+      "registeredCount": 1,
       "pendingCount": 0
     },
     {
@@ -700,8 +688,8 @@
       "teacher": "Angie K",
       "isNew": true,
       "duplicate": false,
-      "currentCount": 4,
       "scheduledCount": 0,
+      "currentCount": 4,
       "registeredCount": 4,
       "pendingCount": 0
     },
@@ -712,9 +700,9 @@
       "teacher": "Chloe J",
       "isNew": true,
       "duplicate": false,
+      "scheduledCount": 4,
       "currentCount": 1,
-      "scheduledCount": 2,
-      "registeredCount": 3,
+      "registeredCount": 5,
       "pendingCount": 0
     },
     {
@@ -724,21 +712,9 @@
       "teacher": "Skye",
       "isNew": true,
       "duplicate": false,
+      "scheduledCount": 0,
       "currentCount": 1,
-      "scheduledCount": 0,
       "registeredCount": 1,
-      "pendingCount": 0
-    },
-    {
-      "code": "SR1_2(Sat2)",
-      "level": "SR1",
-      "group": "Sat2",
-      "teacher": null,
-      "isNew": true,
-      "duplicate": false,
-      "currentCount": 0,
-      "scheduledCount": 0,
-      "registeredCount": 0,
       "pendingCount": 0
     },
     {
@@ -760,8 +736,8 @@
       "teacher": "Skye",
       "isNew": true,
       "duplicate": false,
-      "currentCount": 0,
       "scheduledCount": 1,
+      "currentCount": 0,
       "registeredCount": 1,
       "pendingCount": 0
     },
@@ -772,8 +748,8 @@
       "teacher": "Skye",
       "isNew": true,
       "duplicate": false,
-      "currentCount": 1,
       "scheduledCount": 0,
+      "currentCount": 1,
       "registeredCount": 1,
       "pendingCount": 0
     },
@@ -784,8 +760,8 @@
       "teacher": "Skye",
       "isNew": true,
       "duplicate": false,
-      "currentCount": 0,
       "scheduledCount": 2,
+      "currentCount": 0,
       "registeredCount": 2,
       "pendingCount": 0
     },
@@ -802,27 +778,15 @@
       "pendingCount": 0
     },
     {
-      "code": "GW1_2(Sat3)",
-      "level": "GW1",
-      "group": "Sat3",
-      "teacher": "Angie K",
-      "isNew": true,
-      "duplicate": false,
-      "currentCount": 0,
-      "scheduledCount": 1,
-      "registeredCount": 1,
-      "pendingCount": 0
-    },
-    {
       "code": "GD3_3(Sat2)",
       "level": "GD3",
       "group": "Sat2",
       "teacher": "Andrew A",
       "isNew": true,
       "duplicate": false,
+      "scheduledCount": 2,
       "currentCount": 0,
-      "scheduledCount": 1,
-      "registeredCount": 1,
+      "registeredCount": 2,
       "pendingCount": 0
     },
     {
@@ -844,9 +808,9 @@
       "teacher": "Kimberley R",
       "isNew": true,
       "duplicate": false,
-      "currentCount": 1,
       "scheduledCount": 0,
-      "registeredCount": 1,
+      "currentCount": 3,
+      "registeredCount": 3,
       "pendingCount": 0
     },
     {
@@ -856,8 +820,8 @@
       "teacher": "Angie K",
       "isNew": true,
       "duplicate": false,
-      "currentCount": 1,
       "scheduledCount": 0,
+      "currentCount": 1,
       "registeredCount": 1,
       "pendingCount": 0
     },
@@ -868,16 +832,16 @@
       "teacher": "Kc B",
       "isNew": true,
       "duplicate": false,
-      "currentCount": 2,
       "scheduledCount": 0,
+      "currentCount": 2,
       "registeredCount": 2,
       "pendingCount": 0
     },
     {
-      "code": "GW2_4(Th3)",
-      "level": "GW2",
-      "group": "Th3",
-      "teacher": "Madelein L",
+      "code": "SG2_3(Tu1)",
+      "level": "SG2",
+      "group": "Tu1",
+      "teacher": "Chloe J",
       "isNew": true,
       "duplicate": false,
       "currentCount": 0,
@@ -886,16 +850,40 @@
       "pendingCount": 0
     },
     {
-      "code": "SG2_3(Tu1)",
-      "group": "Tu1",
-      "level": "SG2",
-      "teacher": "Chloe J",
+      "code": "SR3_4(Sat2)",
+      "level": "SR3",
+      "group": "Sat2",
+      "teacher": "Danny C",
       "isNew": true,
       "duplicate": false,
-      "pendingCount": 0,
       "currentCount": 0,
       "scheduledCount": 0,
-      "registeredCount": 0
+      "registeredCount": 0,
+      "pendingCount": 0
+    },
+    {
+      "code": "GD2_4(Sat3)",
+      "level": "GD2",
+      "group": "Sat3",
+      "teacher": "Angie K",
+      "isNew": true,
+      "duplicate": false,
+      "currentCount": 0,
+      "scheduledCount": 0,
+      "registeredCount": 0,
+      "pendingCount": 0
+    },
+    {
+      "code": "GW3_8(Th3)",
+      "level": "GW3",
+      "group": "Th3",
+      "teacher": "Madelein L",
+      "isNew": true,
+      "duplicate": false,
+      "scheduledCount": 1,
+      "currentCount": 0,
+      "registeredCount": 1,
+      "pendingCount": 0
     }
   ],
   "closing": [],
@@ -945,10 +933,10 @@
   "availabilityNotes": {
     "Chloe J": "화17 SG2 · 화19 GW2 배정. 평일 하루 최대 2수업. / Tuesday 17:00 SG2 and 19:00 GW2. Weekday limit: two classes.",
     "Joanne": "써밋 강사 · 토요일 15:00 가능 / Summit teacher · Available Saturday 15:00 KST.",
-    "Skye": "화요일3반·토요일5반·일요일5반 편성. 모든 시간은 한국시간입니다.",
-    "Angie K": "토15 GW1 신규반의 LM 과목·강사 저장 확인 완료.",
+    "Skye": "모든 시간은 한국시간입니다. / All times are KST.",
+    "Angie K": "토 15:00 GD2 담당. / Saturday 15:00 GD2.",
     "Madelein L": "11/4 회신: 화·목17/19/21, 일15/17 가능. 일19 가능 회신 없음. / Reported availability Tue/Thu17,19,21; Sun15,17 KST.",
-    "Danny C": "목17 SG3 신규 배정 완료. 화3·목2·토2 총7타임. / Thursday17:00 SG3 added; 7 weekly classes.",
+    "Danny C": "토 11:00 SR3 담당. / Saturday 11:00 SR3.",
     "Kc B": "첫 시즌 저레벨 위주. 화21 GD2 배정 완료. / First term; Tuesday21:00 GD2 assigned.",
     "David B": "화요일 휴무 / Tuesdays off."
   }
