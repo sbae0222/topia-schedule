@@ -1,7 +1,7 @@
 {
-  "version": "2026-12-faculty-v19",
+  "version": "2026-12-faculty-v20",
   "term": "2026-12",
-  "updatedKst": "2026-11-26T11:45:33+09:00",
+  "updatedKst": "2026-11-26T16:46:18+09:00",
   "teachers": [
     {
       "key": "Skye",
@@ -838,18 +838,6 @@
       "pendingCount": 0
     },
     {
-      "code": "SG2_3(Tu1)",
-      "level": "SG2",
-      "group": "Tu1",
-      "teacher": "Chloe J",
-      "isNew": true,
-      "duplicate": false,
-      "currentCount": 0,
-      "scheduledCount": 0,
-      "registeredCount": 0,
-      "pendingCount": 0
-    },
-    {
       "code": "SR3_4(Sat2)",
       "level": "SR3",
       "group": "Sat2",
@@ -890,6 +878,18 @@
       "level": "GW3",
       "group": "Sat1",
       "teacher": "Andrew A",
+      "isNew": true,
+      "duplicate": false,
+      "currentCount": 0,
+      "scheduledCount": 0,
+      "registeredCount": 0,
+      "pendingCount": 0
+    },
+    {
+      "code": "SR2_4(Tu3)",
+      "level": "SR2",
+      "group": "Tu3",
+      "teacher": "Chloe J",
       "isNew": true,
       "duplicate": false,
       "currentCount": 0,
@@ -943,7 +943,7 @@
   },
   "rosterUrl": "https://topia-december-2026-review-20261021.vercel.app/",
   "availabilityNotes": {
-    "Chloe J": "화17 SG2 · 화19 GW2 배정. 평일 하루 최대 2수업. / Tuesday 17:00 SG2 and 19:00 GW2. Weekday limit: two classes.",
+    "Chloe J": "화 19:00 GW2 · 화 21:00 SR2. / Tuesday 19:00 GW2 and 21:00 SR2.",
     "Joanne": "써밋 강사 · 토요일 15:00 가능 / Summit teacher · Available Saturday 15:00 KST.",
     "Skye": "모든 시간은 한국시간입니다. / All times are KST.",
     "Angie K": "토 15:00 GD2 담당. / Saturday 15:00 GD2.",
