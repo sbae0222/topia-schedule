@@ -1,7 +1,7 @@
 {
-  "version": "2026-12-faculty-v18",
+  "version": "2026-12-faculty-v19",
   "term": "2026-12",
-  "updatedKst": "2026-11-25T17:42:34+09:00",
+  "updatedKst": "2026-11-26T11:45:33+09:00",
   "teachers": [
     {
       "key": "Skye",
@@ -883,6 +883,18 @@
       "scheduledCount": 1,
       "currentCount": 0,
       "registeredCount": 1,
+      "pendingCount": 0
+    },
+    {
+      "code": "GW3_9(Sat1)",
+      "level": "GW3",
+      "group": "Sat1",
+      "teacher": "Andrew A",
+      "isNew": true,
+      "duplicate": false,
+      "currentCount": 0,
+      "scheduledCount": 0,
+      "registeredCount": 0,
       "pendingCount": 0
     }
   ],
